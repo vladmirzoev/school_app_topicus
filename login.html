@@ -19,13 +19,13 @@
 
 <div class="tab-form">
     <div class="tab-header">
-        <div class="active" onclick="parentLogIn()">Log In</div>
-        <div onclick="adminLogIn()">Log In-Admin</div>
+        <div class="active" onclick="parentLogIn()" id="parentLogIn-btn">Log In</div>
+        <div onclick="adminLogIn()" id="adminLogIn-btn">Log In-Admin</div>
     </div>
 
     <div class="tab-body">
 
-        <div class="LogInParent active">
+        <div class="LogInParent">
             <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
             <div class="form-input">
                 <label style="color: #FFFFFF">Email</label>
@@ -39,7 +39,7 @@
                 <button>Log In</button>
             </div>
             <div>
-                <a href="" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
             </div>
         </div>
 
