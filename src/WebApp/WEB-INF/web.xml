@@ -5,67 +5,16 @@
                       https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
+        <servlet>
+            <servlet-name>org.glassfish.jersey.servlet.ServletContainer</servlet-name>
+            <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>org.glassfish.jersey.servlet.ServletContainer</servlet-name>
+            <url-pattern>/api/*</url-pattern>
+        </servlet-mapping>
 
-<!--    <description>Sign up page</description>-->
-<!--    <display-name>Sign up</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>SignUp</servlet-name>-->
-<!--        <servlet-class>servlets.SignupServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>SignUp</servlet-name>-->
-<!--        <url-pattern>/signup</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <description>Login page</description>-->
-<!--    <display-name>Login</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Login</servlet-name>-->
-<!--        <servlet-class>servlets.LoginServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Login</servlet-name>-->
-<!--        <url-pattern>/login</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <description>Log out</description>-->
-<!--    <display-name>Log out</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Logout</servlet-name>-->
-<!--        <servlet-class>servlets.LogoutServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Logout</servlet-name>-->
-<!--        <url-pattern>/logout</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <description>Parent page</description>-->
-<!--    <display-name>Parent</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Parent</servlet-name>-->
-<!--        <servlet-class>servlets.ParentServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Parent</servlet-name>-->
-<!--        <url-pattern>/parenthomepage</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <description>Registration page</description>-->
-<!--    <display-name>Registration</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Registration</servlet-name>-->
-<!--        <servlet-class>servlets.RegistrationServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Registration</servlet-name>-->
-<!--        <url-pattern>/registration</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <description>Admin page</description>-->
-<!--    <display-name>Admin</display-name>-->
-<!--    <servlet>-->
-<!--        <servlet-name>Admin</servlet-name>-->
-<!--        <servlet-class>servlets.SchoolAdminServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Admin</servlet-name>-->
-<!--        <url-pattern>/admin</url-pattern>-->
-<!--    </servlet-mapping>-->
+    </web-app>
 
 
 </web-app>
