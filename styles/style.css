@@ -1,6 +1,13 @@
-body{
+
+.dark{
     background-color: #242F36;
     /*background-color: #0a53be;*/
+}
+.light{
+    background-color: #EAEDF0;
+}
+.houseColour{
+    background-color: #F8E800;
 }
 
 /*Home page*/
@@ -16,7 +23,69 @@ body{
 #loginFormBtn{
     margin-top: 32px;
 }
-/*Headers*/
+#openBtn-div{
+    transition: 0.5s;
+}
+/*Dashboard*/
+.dashboardContainer{
+    padding: 20px 60px;
+}
+.side-bar-menu{
+    width: 250px;
+    /*height: 100vh;*/
+    /*position: fixed;*/
+    padding: 20px 30px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+.nav-links{
+    list-style: none;
+    position: relative;
+    padding: 0;
+    transition: 0.5s;
+}
+.nav-links li{
+    margin: 24px 0px;
+}
+.nav-links li a{
+    font: 16px Helvetica;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+.nameBox{
+    position: absolute;
+    bottom: 20px;
+}
+.children{
+    margin-bottom: 20px;
+}
+.column2{
+    margin-left: 20px;
+}
+.visualBox{
+    border-radius: 12px;
+    padding: 12px;
+}
+#dashboardHeading{
+    margin: 60px 0px;
+    font-family: 'Helvetica', serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -1.8px;
+    color: #404040;
+}
+
+.userAvatar{
+    margin-top: 16px;
+}
+
+#lastElement{
+    margin-bottom: 600px;
+}
+/*Text*/
 .mainHeader{
     font: 64px Helvetica;
     align-content: center;
@@ -33,6 +102,20 @@ body{
     color: #ffffff;
 }
 
+.miniHeader{
+    font: 24px Helvetica;
+    align-content: center;
+    font-weight: 700;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+}
+p{
+    font: 16px Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
 /*Bootstrap*/
 .row{
 
