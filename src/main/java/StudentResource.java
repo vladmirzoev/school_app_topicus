@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 import java.sql.*;
 
-@Path("/login.html/{id}")
+@Path("/student")
 public class StudentResource {
 
     String host = "bronto.ewi.utwente.nl";
@@ -31,14 +31,24 @@ public class StudentResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public JSONArray findStudent(@PathParam("id") int id) throws Exception {
+    public JSONArray findStudent() throws Exception {
         establishConnection();
-        String query = "SELECT * FROM student WHERE student_id = ?";
+        String query = "SELECT * FROM student WHERE student_id = 1";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, String.valueOf(id));
         ResultSet resultSet = st.executeQuery();
         return convert(resultSet);
     }
+
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public JSONArray findStudent(@PathParam("id") int id) throws Exception {
+//        establishConnection();
+//        String query = "SELECT * FROM student WHERE student_id = ?";
+//        PreparedStatement st = db.prepareStatement(query);
+//        st.setString(1, String.valueOf(id));
+//        ResultSet resultSet = st.executeQuery();
+//        return convert(resultSet);
+//    }
 
     public static JSONArray convert(ResultSet resultSet) throws Exception {
 

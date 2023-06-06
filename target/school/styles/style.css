@@ -1,0 +1,255 @@
+p{
+    font: 16px Helvetica;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+.dark{
+    background-color: #242F36;
+    /*background-color: #0a53be;*/
+}
+.light{
+    background-color: #EAEDF0;
+}
+.houseColour{
+    background-color: #F8E800;
+}
+
+/*Home page*/
+#superHeading{
+    margin-top: 96px;
+}
+#loginButtons{
+    margin-top: 160px;
+}
+#loginSubheading{
+    margin-top: 64px;
+}
+#loginFormBtn{
+    margin-top: 32px;
+}
+/*Dashboard*/
+.side-bar-menu{
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    padding: 20px 30px;
+    top: 0;
+    left: 0;
+}
+.nav-links{
+    list-style: none;
+    position: relative;
+}
+.nav-links li{
+    padding: 10px 0;
+}
+.nav-links li a{
+    font: 16px Helvetica;
+    font-weight: bold;
+    color: #ffffff;
+}
+.nameBox{
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+}
+/*Text*/
+.mainHeaderHP{
+    font: 64px Helvetica;
+    align-content: center;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+}
+
+.mainHeader{
+    font: 24px Helvetica;
+    align-content: center;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+}
+
+.subHeader{
+    font: 32px Helvetica;
+    align-content: center;
+    font-weight: 700;
+    letter-spacing: -1.0px;
+    color: #ffffff;
+}
+
+.forms{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+}
+.box{
+    height: 50px;
+    margin-top: 50px;
+}
+
+.formText{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 120% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+}
+
+.formText2{
+    font-family: 'Helvetica';
+    font-style: normal;
+    /*font-weight: 600;*/
+    font-size: 15px;
+    line-height: 24px;
+    /* or 120% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    margin-top: 30px;
+
+    color: #FFFFFF;
+}
+
+.formText3{
+    font-family: 'Helvetica';
+    font-style: normal;
+    /*font-weight: 600;*/
+    font-size: 15px;
+    line-height: 24px;
+    /* or 120% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    /*margin-top: 30px;*/
+
+    color: #FFFFFF;
+}
+
+.formBox{
+    margin: 32px 0px;
+
+}
+
+.blackbox {
+    background: #242F36;
+    border-radius: 16px;
+    width: 700px;
+    display: block;
+    margin: 30px;
+    text-align: center;
+    padding: 50px;
+    height: 700px;
+    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.8);
+}
+
+.blackbox2 {
+    background: #242F36;
+    border-radius: 10px;
+    width: 700px;
+    display: block;
+    margin: 30px;
+    text-align: center;
+    padding: 50px;
+    height: 600px;
+}
+
+.inputs{
+    margin-bottom: 10px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.btn-primary{
+    padding: 10px;
+    font: 15px Helvetica;
+    font-weight: 600;
+    outline: 2px solid #242F36;
+    border-radius: 8px;
+    width: 50%;
+    margin-top: 10px;
+    border: none;
+    /*outline: none;*/
+    cursor: pointer;
+    background: #F8E800;
+    color: #000000;
+}
+
+.btn-primaryHP{
+    padding: 16px 64px;
+    font: 15px Helvetica;
+    font-weight: bold;
+    background-color: #F8E800;
+    outline: 2px solid #F8E800;
+    border-radius: 8px;
+    /*width: 50%;*/
+    /*margin-top: 10px;*/
+    /*border: none;*/
+    /*!*outline: none;*!*/
+    /*cursor: pointer;*/
+    /*color: #000000;*/
+}
+
+.btn-primaryHP:hover{
+    color: #F8E800;
+}
+
+
+.btn-secondary{
+    padding: 16px 64px;
+    font: 15px Helvetica;
+    font-weight: 600;
+    color: #F8E800;
+    background-color: transparent;
+    outline: 2px solid #F8E800;
+    border-radius: 8px;
+}
+
+.blackbox2 {
+    background: #242F36;
+    border-radius: 10px;
+    width: 700px;
+    display: block;
+    margin: 30px;
+    text-align: center;
+    padding: 50px;
+    height: 600px;
+}
+
+.hyperlink{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -1.8px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.placeholder{
+    font-family: "Helvetica";
+    font-size: 12px;
+}
+
+#loginHeader{
+    margin-bottom: 160px;
+}
+
+
+#formNext{
+    font: 25px Helvetica;
+    font-weight: bold;
+}
