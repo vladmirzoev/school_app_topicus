@@ -11,7 +11,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>org.glassfish.jersey.servlet.ServletContainer</servlet-name>
-        <url-pattern>/Topicus/*</url-pattern>
+        <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

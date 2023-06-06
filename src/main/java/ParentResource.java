@@ -31,9 +31,9 @@ public class ParentResource {
     }
 
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public void
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public void
 
 
 }

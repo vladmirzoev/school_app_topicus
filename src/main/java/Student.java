@@ -1,3 +1,6 @@
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Student {
     private int id;
     private String bsn;

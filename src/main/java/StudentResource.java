@@ -6,6 +6,7 @@ import jakarta.ws.rs.core.MediaType;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.print.attribute.standard.Media;
 import java.sql.*;
 
 @Path("/student")
@@ -29,42 +30,24 @@ public class StudentResource {
         }
     }
 
+    @Path("{id}")
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public JSONArray findStudent() throws Exception {
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Student findStudent(@PathParam("id") int id) throws Exception {
         establishConnection();
-        String query = "SELECT * FROM student WHERE student_id = 1";
+        String query = "SELECT * FROM student WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, String.valueOf(id));
         ResultSet resultSet = st.executeQuery();
-        return convert(resultSet);
-    }
 
-//    @GET
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public JSONArray findStudent(@PathParam("id") int id) throws Exception {
-//        establishConnection();
-//        String query = "SELECT * FROM student WHERE student_id = ?";
-//        PreparedStatement st = db.prepareStatement(query);
-//        st.setString(1, String.valueOf(id));
-//        ResultSet resultSet = st.executeQuery();
-//        return convert(resultSet);
-//    }
+        int queriedId = resultSet.getInt(0);
+        String queriedBsn = resultSet.getString(1);
+        String queriedName = resultSet.getString(2);
+        String queriedBirthDate = resultSet.getString(3);
+        int queriedGuardian_id = resultSet.getInt(4);
 
-    public static JSONArray convert(ResultSet resultSet) throws Exception {
-
-        JSONArray jsonArray = new JSONArray();
-
-        while (resultSet.next()) {
-
-            int columns = resultSet.getMetaData().getColumnCount();
-            JSONObject obj = new JSONObject();
-
-            for (int i = 0; i < columns; i++)
-                obj.put(resultSet.getMetaData().getColumnLabel(i + 1).toLowerCase(), resultSet.getObject(i + 1));
-
-            jsonArray.put(obj);
-        }
-        return jsonArray;
+        Student queriedStudent = new Student(queriedId, queriedBsn, queriedName, queriedBirthDate, queriedGuardian_id);
+        return queriedStudent;
     }
 }
 
