@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 import java.sql.*;
 
-@Path("/student/{id}")
+@Path("/login.html/{id}")
 public class StudentResource {
 
     String host = "bronto.ewi.utwente.nl";
