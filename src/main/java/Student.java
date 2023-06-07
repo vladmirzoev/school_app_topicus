@@ -1,5 +1,7 @@
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+import java.util.Date;
+
 @XmlRootElement
 public class Student {
     private int id;
@@ -8,11 +10,47 @@ public class Student {
     private String birthdate;
     private int guardian_id;
 
-    public Student(int id, String bsn, String name, String birthdate, int guardian_id) {
+    public Student(){
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getBsn() {
+        return bsn;
+    }
+
+    public void setBsn(String bsn) {
         this.bsn = bsn;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public int getGuardian_id() {
+        return guardian_id;
+    }
+
+    public void setGuardian_id(int guardian_id) {
         this.guardian_id = guardian_id;
     }
 }

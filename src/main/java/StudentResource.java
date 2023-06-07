@@ -14,16 +14,14 @@ public class StudentResource {
 
     String host = "bronto.ewi.utwente.nl";
     String dbName = "dab_di22232b_81";
-    String url = "jdbc:postgresql://" + host + ":5432/" +
-            dbName + "?currentSchema=TopicusDatabase";
+    String url = "jdbc:postgresql://" + host + ":5432/" + dbName + "?currentSchema=TopicusDatabase";
     String username = "dab_di22232b_81";
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
     public void establishConnection() {
         try {
-            db = DriverManager.getConnection(url, username,
-                    password);
+            db = DriverManager.getConnection(url, username, password);
         } catch (
                 SQLException e) {
             throw new RuntimeException(e);
@@ -35,19 +33,37 @@ public class StudentResource {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Student findStudent(@PathParam("id") int id) throws Exception {
         establishConnection();
+
         String query = "SELECT * FROM student WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, String.valueOf(id));
-        ResultSet resultSet = st.executeQuery();
+        st.setInt(1, id);
+        ResultSet rs = st.executeQuery();
 
-        int queriedId = resultSet.getInt(0);
-        String queriedBsn = resultSet.getString(1);
-        String queriedName = resultSet.getString(2);
-        String queriedBirthDate = resultSet.getString(3);
-        int queriedGuardian_id = resultSet.getInt(4);
-
-        Student queriedStudent = new Student(queriedId, queriedBsn, queriedName, queriedBirthDate, queriedGuardian_id);
+        Student queriedStudent = new Student();
+        while (rs.next()) {
+            queriedStudent.setId(rs.getInt(1));
+            queriedStudent.setBsn(rs.getString(2));
+            queriedStudent.setName(rs.getString(3));
+            queriedStudent.setBirthdate(String.valueOf(rs.getDate(4)));
+            queriedStudent.setGuardian_id(rs.getInt(5));
+        }
         return queriedStudent;
+//
+//        int queriedId = -1;
+//        String queriedBsn = null;
+//        String queriedName = null;
+//        String queriedBirthDate = null;
+//        int queriedGuardian_id = -1;
+//
+//        while (rs.next()) {
+//            queriedId = rs.getInt(1);
+//            queriedBsn = rs.getString(2);
+//            queriedName = rs.getString(3);
+//            queriedBirthDate = String.valueOf(rs.getDate(4));
+//            queriedGuardian_id = rs.getInt(5);
+//        }
+
+//        return new Student(queriedId, queriedBsn, queriedName, queriedBirthDate, queriedGuardian_id);
     }
 }
 
