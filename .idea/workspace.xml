@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="Fixed file structure" />
-    <list id="a610afe9-7ce4-43c6-99cb-7ed2a3f48eda" name="Changes by samer" comment="" />
+    <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="today's progress:&#10;FormRegistrationResource.java&#10;registrationForm.html">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
