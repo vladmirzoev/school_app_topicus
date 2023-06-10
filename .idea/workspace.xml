@@ -10,8 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="today's progress:&#10;FormRegistrationResource.java&#10;registrationForm.html">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b300f05-3324-4317-b3ec-93c4772a87af/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +211,7 @@
       <workItem from="1686070622900" duration="554000" />
       <workItem from="1686125414705" duration="4865000" />
       <workItem from="1686403019030" duration="1072000" />
+      <workItem from="1686411030800" duration="1502000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

@@ -3,10 +3,6 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import javax.print.attribute.standard.Media;
 import java.sql.*;
 
 @Path("/student")
@@ -45,7 +41,7 @@ public class StudentResource {
             queriedStudent.setBsn(rs.getString(2));
             queriedStudent.setName(rs.getString(3));
             queriedStudent.setBirthdate(String.valueOf(rs.getDate(4)));
-            queriedStudent.setGuardian_id(rs.getInt(5));
+            queriedStudent.setGuardian_id(rs.getString(5));
         }
         return queriedStudent;
 //

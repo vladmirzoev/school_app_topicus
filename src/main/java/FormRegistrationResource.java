@@ -48,8 +48,8 @@ public class FormRegistrationResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void uploadRegistration(@FormParam("childname") String childName,
-                                   @FormParam("guardian") String guardian,
+    public void uploadRegistration(@FormParam("childName") String childName,
+                                   @FormParam("guardianName") String guardianName,
                                    @FormParam("telephone1") String telephone1,
                                    @FormParam("telephone2") String telephone2,
                                    @FormParam("guardianEmail") String email,
@@ -79,10 +79,10 @@ public class FormRegistrationResource {
         reg.setInt(4, student_id);
         reg.setInt(5, school_id);
 
-        String account = "INSERT INTO account(phone_number_1, phone_number_2, address ) VALUES (?,?,?)";
+        String account = "INSERT INTO account (phone_number_1, phone_number_2, address ) VALUES (?,?,?)";
         PreparedStatement acc = db.prepareStatement(account);
         acc.setString(1, telephone1);
-        acc.setString(2,telephone2);
+        acc.setString(2, telephone2);
         acc.setString(3, address);
     }
 
@@ -151,7 +151,7 @@ public class FormRegistrationResource {
      * Create a registration id by getting the max(registration_id) + 1
      */
     public int newRegistrationID() throws Exception {
-        String query = "SELECT MAX(registration_id) FROM registrations;";
+        String query = "SELECT MAX(registration_id) FROM registration";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
 
@@ -177,7 +177,7 @@ public class FormRegistrationResource {
      * Gets the school id from a particular school name
      */
     public int getSchoolID(String schoolName) throws Exception {
-        String query = "SELECT school_id FROM school WHERE school_id LIKE /'&?&/'";
+        String query = "SELECT school_id FROM school WHERE school_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, schoolName);
         ResultSet rs = st.executeQuery();

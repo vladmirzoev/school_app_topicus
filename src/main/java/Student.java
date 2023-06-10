@@ -8,7 +8,7 @@ public class Student {
     private String bsn;
     private String name;
     private String birthdate;
-    private int guardian_id;
+    private String guardian_id;
 
     public Student(){
 
@@ -46,11 +46,11 @@ public class Student {
         this.birthdate = birthdate;
     }
 
-    public int getGuardian_id() {
+    public String getGuardian_id() {
         return guardian_id;
     }
 
-    public void setGuardian_id(int guardian_id) {
+    public void setGuardian_id(String guardian_id) {
         this.guardian_id = guardian_id;
     }
 }
