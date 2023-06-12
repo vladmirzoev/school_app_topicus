@@ -87,6 +87,19 @@ body{
     color: #000000;
     font-weight: 600;
 }
+.form-input button{
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #F8E800;
+    color: #000000;
+    font-weight: 600;
+}
 
 .LogInAdmin{
     display: none;
