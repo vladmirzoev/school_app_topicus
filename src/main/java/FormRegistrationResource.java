@@ -44,7 +44,7 @@ public class FormRegistrationResource {
     /**
      * Parent registering their child to a school
      */
-    @Path("/uploadBasicReg")
+    @Path("/uploadBasicReq")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -70,20 +70,36 @@ public class FormRegistrationResource {
         st.setString(3, childName);
         st.setDate(4, birth_date);
         st.setString(5, email);
+        st.execute();
 
         String registration = "INSERT INTO registration (registration_id, grade, registration_date, student_id, school_id) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement reg = db.prepareStatement(registration);
         reg.setInt(1, registration_id);
         reg.setInt(2, grade);
-        reg.setString(3, String.valueOf(java.time.LocalDate.now()));
+        reg.setDate(3, Date.valueOf(java.time.LocalDate.now()));
         reg.setInt(4, student_id);
         reg.setInt(5, school_id);
+        reg.execute();
 
-        String account = "INSERT INTO account (phone_number_1, phone_number_2, address ) VALUES (?,?,?)";
-        PreparedStatement acc = db.prepareStatement(account);
-        acc.setString(1, telephone1);
-        acc.setString(2, telephone2);
-        acc.setString(3, address);
+        if (!accountExists(email)) {
+            String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement acc = db.prepareStatement(account);
+            acc.setString(1, email);
+            acc.setString(2, guardianName);
+            acc.setString(3, address);
+            acc.setString(4, telephone1);
+            acc.setString(5, telephone2);
+            acc.execute();
+        } else {
+            String account = "UPDATE account SET address = ?, phone_number_1 = ?, phone_number_2 = ? WHERE account_id = ?";
+            PreparedStatement acc = db.prepareStatement(account);
+            acc.setString(1, address);
+            acc.setString(2, telephone1);
+            acc.setString(3, telephone2);
+            acc.setString(4, email);
+            acc.execute();
+        }
+
     }
 
     public void establishConnection() {
@@ -95,6 +111,14 @@ public class FormRegistrationResource {
         }
     }
 
+    public boolean accountExists(String email) throws SQLException {
+        String query = "SELECT * FROM account WHERE account_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, email);
+        ResultSet rs = st.executeQuery();
+        return rs.next();
+    }
+
     /**
      * Create a form id by getting the max(form_id) + 1
      */
@@ -102,22 +126,12 @@ public class FormRegistrationResource {
         String query = "SELECT MAX(form_id) FROM form;";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
+        int newID = -1;
 
         // if there are no rows
         if (!rs.next()) {
             return 1;
         }
-
-        int newID = -1;
-        while (rs.next()) {
-            newID = rs.getInt(1) + 1;
-        }
-
-        // catches non-existent forms
-        if (newID == -1) {
-            throw new Exception("No forms found");
-        }
-
         return newID;
     }
 
@@ -128,22 +142,14 @@ public class FormRegistrationResource {
         String query = "SELECT MAX(student_id) FROM student;";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
+        int newID = -1;
 
         // if there are no rows
         if (!rs.next()) {
             return 1;
-        }
-
-        int newID = -1;
-        while (rs.next()) {
+        } else {
             newID = rs.getInt(1) + 1;
         }
-
-        // catches non-existent students
-        if (newID == -1) {
-            throw new Exception("No student found");
-        }
-
         return newID;
     }
 
@@ -154,22 +160,14 @@ public class FormRegistrationResource {
         String query = "SELECT MAX(registration_id) FROM registration";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
+        int newID = -1;
 
         // if there are no rows
         if (!rs.next()) {
             return 1;
-        }
-
-        int newID = -1;
-        while (rs.next()) {
+        } else {
             newID = rs.getInt(1) + 1;
         }
-
-        // catches non-existent registrations
-        if (newID == -1) {
-            throw new Exception("No registration found");
-        }
-
         return newID;
     }
 
@@ -177,21 +175,17 @@ public class FormRegistrationResource {
      * Gets the school id from a particular school name
      */
     public int getSchoolID(String schoolName) throws Exception {
-        String query = "SELECT school_id FROM school WHERE school_id LIKE ?";
+        String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, schoolName);
         ResultSet rs = st.executeQuery();
 
         int schoolID = -1;
-        while (rs.next()) {
+        if (!rs.next()) {
+            throw new Exception("No school found");
+        } else {
             schoolID = rs.getInt(1);
         }
-
-        // catches non-existent schools
-        if (schoolID == -1) {
-            throw new Exception("No school found");
-        }
-
         return schoolID;
     }
 }
