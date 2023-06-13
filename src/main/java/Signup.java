@@ -45,20 +45,21 @@ public class Signup {
         Pattern pattern = Pattern.compile(email_format);
         Matcher matcher = pattern.matcher(email);
         URI success = new java.net.URI("http://localhost:8080/Topicus/signUpSuccessful.html");
-
-        if (!accountExists(email) && pass.equals(conf_pass)) {
-            addAccount(fname + " " + lname, p_no1, p_no2, email, address, pass);
-            return Response.seeOther(success).build();
-        } else if (accountExists(email)) {
-            //TODO: cannot create account as the email already exists
-        } else if (!pass.equals(conf_pass)) {
-            //TODO: wrong password
-        } else if (p_no1.length() != 10) {
-            //TODO: invalid phone number
-        } else if (p_no2 != null && p_no2.length() != 10) {
-            //TODO: invalid phone number
-        } else if (!matcher.matches()) {
-            //TODO: invalid email format
+        if(email.contains("@")) {
+            if (!accountExists(email) && pass.equals(conf_pass)) {
+                addAccount(fname + " " + lname, p_no1, p_no2, email, address, pass);
+                return Response.seeOther(success).build();
+            } else if (accountExists(email)) {
+                //TODO: cannot create account as the email already exists
+            } else if (!pass.equals(conf_pass)) {
+                //TODO: wrong password
+            } else if (p_no1.length() != 10) {
+                //TODO: invalid phone number
+            } else if (p_no2 != null && p_no2.length() != 10) {
+                //TODO: invalid phone number
+            } else if (!matcher.matches()) {
+                //TODO: invalid email format
+            }
         }
 
         return null; //TODO stub

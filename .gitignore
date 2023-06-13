@@ -11,3 +11,6 @@
 .idea/dataSources/fa147f9e-1f28-4067-b9a6-989e5389d7c5/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta
 .idea/workspace.xml
 *.meta
+*.class
+.idea/misc.xml
+.idea/workspace.xml
