@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="Fixed file structure">
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
-    </list>
+    <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="Fixed file structure" />
     <list id="c795c17f-53e0-47be-9de7-9c0dbb429177" name="Changes by reyna" comment="" />
     <list id="a610afe9-7ce4-43c6-99cb-7ed2a3f48eda" name="Changes by samer" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,7 @@
       <workItem from="1686557587214" duration="671000" />
       <workItem from="1686558283424" duration="436000" />
       <workItem from="1686558932224" duration="3609000" />
-      <workItem from="1686662447477" duration="925000" />
+      <workItem from="1686662447477" duration="1440000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
