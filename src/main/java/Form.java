@@ -1,3 +1,6 @@
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Form {
     public int form_id;
     public int grade;

@@ -11,7 +11,8 @@ public class FormRegistrationResource {
     String username = "dab_di22232b_81";
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
-
+    
+    //TODO School Admin form functionality
 //    /**
 //     * Creates a form within the database, with its own form ID
 //     */
@@ -64,13 +65,14 @@ public class FormRegistrationResource {
         int school_id = getSchoolID(schoolName);
 
         if (!accountExists(email)) { //if an account doesnt exist, make a new account entry
-            String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2) VALUES (?, ?, ?, ?, ?)";
+            String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, role) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement acc = db.prepareStatement(account);
             acc.setString(1, email);
             acc.setString(2, guardianName);
             acc.setString(3, address);
             acc.setString(4, telephone1);
             acc.setString(5, telephone2);
+            acc.setString(6, "G");
             acc.execute();
         } else { //if an account exists, update depending on the phone numbers given
             String account = "UPDATE account SET phone_number_1 = ?, phone_number_2 = ? WHERE account_id = ?";

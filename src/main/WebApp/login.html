@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--    <link rel="stylesheet" href="logic/LogIn.js">-->
+    <!--    <link rel="stylesheet" href="logic/LogIn.js">-->
     <link rel="stylesheet" href="styles/style2.css">
-<!--    <link rel="stylesheet" href="styles/bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="styles/bootstrap.css">-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SomStudie Login</title>
 </head>
 <!--<body>-->
 <!--    <script type="text/javascript" src="logic/LogIn.js"></script>-->
@@ -26,38 +26,47 @@
     <div class="tab-body">
 
         <div class="LogInParent">
-            <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
-            <div class="form-input">
-                <label style="color: #FFFFFF">Email</label>
-                <input type="email">
-            </div>
-            <div class="form-input">
-                <label style="color: #FFFFFF">Password</label>
-                <input type="password">
-            </div>
-            <div class="form-input">
-                <button>Log In</button>
-            </div>
-            <div>
-                <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
-            </div>
+            <form action="./api/account/login" method="post">
+                <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Email</label>
+                    <input type="email" name="regularEmail">
+                </div>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Password</label>
+                    <input type="password" name="regularPass">
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Login" class="submitButton">
+                </div>
+                <div>
+                    <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                </div>
+                <div>
+                    <p style="color: #FF0000" id="invalidCredentials"></p> <!--TODO use this to display "wrong email or password message-->
+                </div>
+            </form>
         </div>
 
         <div class="LogInAdmin">
-            <h2 style="color: #FFFFFF">Log in as School Administrator</h2>
-            <div class="form-input">
-                <label style="color: #FFFFFF">Email</label>
-                <input type="email">
-            </div>
-            <div class="form-input">
-                <label style="color: #FFFFFF">Password</label>
-                <input type="password">
-            </div>
-            <div class="form-input">
-                <button>Log In</button>
-            </div>
+            <h2 style="color: #FFFFFF">School Administrator Login</h2>
+            <form action="./api/account/adminLogin" method="post">
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Email</label>
+                    <input type="email" name="adminEmail">
+                </div>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Password</label>
+                    <input type="password" name="adminPass">
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Login" class="submitButton">
+                </div>
+                <div>
+                    <p style="color: #FF0000" id="invalidCredentialsAdmin"></p> <!--same thing here-->
+                </div>
+            </form>
         </div>
-
     </div>
 </div>
 
