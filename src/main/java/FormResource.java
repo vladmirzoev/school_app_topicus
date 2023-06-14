@@ -21,29 +21,30 @@ public class FormResource {
         }
     }
 
-    @Path("/search")
+    @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Form getForm(@QueryParam("schoolid") int id, @QueryParam("grade") int grade) throws SQLException {
+    public Form getForm(@PathParam("id") int id) throws SQLException {
         establishConnection();
         Form form = new Form();
         String query = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND b.form_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setInt(1, grade);
+        st.setInt(1, id);
         ResultSet rs = st.executeQuery();
         while (rs.next()) {
             Form.Field question = new Form.Field();
             question.setQuestion(rs.getString(1));
             form.appendField(question);
         }
-        String query2 = "SELECT * FROM form WHERE form_id = ?";
-        PreparedStatement st2 = db.prepareStatement(query);
+        String query2 = "SELECT a.*, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND form_id = ?";
+        PreparedStatement st2 = db.prepareStatement(query2);
         st2.setInt(1, id);
-        ResultSet rs2 = st.executeQuery();
+        ResultSet rs2 = st2.executeQuery();
         while (rs2.next()) {
-            form.setForm_id(1);
-            form.setGrade(2);
-            form.setSchool_id(3);
+            form.setForm_id(rs2.getInt(1));
+            form.setGrade(rs2.getInt(2));
+            form.setSchool_id(rs2.getInt(3));
+            form.setSchool_name(rs2.getString(4));
         }
         return form;
     }

@@ -5,9 +5,24 @@ import java.util.ArrayList;
 @XmlRootElement
 public class Form {
     public int form_id;
-    public int grade;
     public int school_id;
+
+    public String school_name;
+    public int grade;
+
     public ArrayList<Field> fields;
+
+    public Form() {
+        this.fields = new ArrayList<>();
+    }
+
+    public String getSchool_name() {
+        return school_name;
+    }
+
+    public void setSchool_name(String school_name) {
+        this.school_name = school_name;
+    }
 
 
     public int getForm_id() {
