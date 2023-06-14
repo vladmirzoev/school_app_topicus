@@ -4,6 +4,7 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import java.sql.*;
+import java.util.ArrayList;
 
 @Path("/student")
 public class StudentResource {
@@ -22,6 +23,25 @@ public class StudentResource {
                 SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public ArrayList<Student> findStudent() throws Exception {
+        ArrayList<Student> studentlist = new ArrayList<>();
+        establishConnection();
+
+        String query = "SELECT student_id, name FROM student ";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+
+        while (rs.next()) {
+            Student queriedStudent = new Student();
+            queriedStudent.setId(rs.getInt(1));
+            queriedStudent.setName(rs.getString(2));
+            studentlist.add(queriedStudent);
+        }
+        return studentlist;
     }
 
     @Path("{id}")

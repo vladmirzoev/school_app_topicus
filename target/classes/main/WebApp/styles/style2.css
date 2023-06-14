@@ -106,5 +106,13 @@ body{
     display: none;
 }
 
+#failedAdminLogin {
+    display: block;
+}
+
+#failedAdminLogin2 {
+    display: none;
+}
+
 
 

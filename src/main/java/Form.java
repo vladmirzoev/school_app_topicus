@@ -1,11 +1,18 @@
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+import java.util.ArrayList;
+
 @XmlRootElement
 public class Form {
     public int form_id;
     public int grade;
     public int school_id;
+    public ArrayList<Field> fields;
 
+
+    public int getForm_id() {
+        return form_id;
+    }
 
     public void setForm_id(int form_id) {
         this.form_id = form_id;
@@ -26,22 +33,19 @@ public class Form {
     public void setSchool_id(int school_id) {
         this.school_id = school_id;
     }
-    public int getForm_id() {
-        return form_id;
+
+    public ArrayList<Field> getFields() {
+        return fields;
     }
 
+    public void appendField(Field field) {
+        fields.add(field);
+    }
+
+    @XmlRootElement
+    static
     class Field {
-        public int form_id;
         public String question;
-        public String input_type;
-
-        public int getForm_id() {
-            return form_id;
-        }
-
-        public void setForm_id(int form_id) {
-            this.form_id = form_id;
-        }
 
         public String getQuestion() {
             return question;
@@ -51,13 +55,6 @@ public class Form {
             this.question = question;
         }
 
-        public String getInput_type() {
-            return input_type;
-        }
-
-        public void setInput_type(String input_type) {
-            this.input_type = input_type;
-        }
     }
 }
 

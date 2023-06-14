@@ -44,17 +44,19 @@ public class AccountResource {
         }
     }
 
-    @Path("/adminLogin")
+    @Path("/loginadmin")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response adminLogin(@FormParam("adminEmail") String email,
-                             @FormParam("adminPass") String pass) throws SQLException {
+                             @FormParam("adminPass") String pass) throws SQLException, URISyntaxException {
         establishConnection();
+        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html"); //TODO ask if hard coding is ok
+        URI success = new java.net.URI("http://localhost:8080/Topicus/registrations.html");
         if (!attemptAdminLogin(email, pass)) {
-            return null; //TODO give warning to user that either the email or password is not available
+            return Response.seeOther(failed).build();
         } else {
-            return null; //TODO redirect school admin to their dashboard/webpage
+            return Response.seeOther(success).build();
         }
     }
 
