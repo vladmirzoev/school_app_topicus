@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../../styles/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie</title>
 </head>
 <body class="light" style="display: flex">
+
+<!--MENU-->
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -23,22 +25,18 @@
 
 
     </div>
-    <ul class="nav-links" id="schoolMenu">
+    <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="/images/menu/Registrations.svg" alt="notifications" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href="index.html"><p>registrations</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="/images/menu/Notifications.svg" alt="notifications" width="100%"></a></div>
+            <div class="col-8 sideMenuText"><li><a href="../../index.html"><p>notifications</p></a></li></div>
         </div>
         <div class="row align-items-center">
             <div class="col-4 menuPicture"><a href=""><img src="/images/menu/Messages.svg" alt="messages" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>contact parents</p></a></li></div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="/images/menu/school.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>my school</p></a></li></div>
+            <div class="col-8 sideMenuText"><li><a href=""><p>messages</p></a></li></div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href=""><img src="/images/menu/Forms.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>forms</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="/images/menu/Heart.svg" alt="children" width="100%"></a></div>
+            <div class="col-8 sideMenuText"><li><a href=""><p>my children</p></a></li></div>
         </div>
 
         <div class="row" id="logInText">
@@ -51,18 +49,32 @@
     </ul>
 
 </div>
-<div class="schoolContents">
-    <div class="bgPhoto align-items-center justify-content-center">
-        <h1>School van Enschede</h1>
-        <a href="" onclick="">
-            <div class="editIcon">
-                <img src="/images/children/edit.svg" alt="editData">
+
+<!--CONTENT-->
+
+<div class="container dashboardContainer">
+    <div class="row justify-content-end text-end">
+        <div class="row col-12">
+            <h1 class="mainHeader" id="dashboardHeading">My children</h1>
+        </div>
+
+    </div>
+    <div class="row justify-content-between">
+        <div class="col">
+            <div class="dark visualBox text-center" style="width: 200px">
+                <h3 class="miniHeader">Add new child</h3>
+                <a href="registrationForm.html"><img src="/images/children/plus.svg" alt="add" width="100px"></a>
             </div>
-        </a>
+        </div>
+
+
+        </div>
     </div>
 
-    
 </div>
+
+<!--Script link-->
+<script src="../../scripts/script.js"></script>
+
 </body>
-<script src="scripts/script.js"></script>
 </html>

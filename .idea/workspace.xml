@@ -9,10 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="adminPage + loginAdmin + more features in style2">
+    <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="gio and vlad merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schoolLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userDashboard.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +81,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gifal\OneDrive\Documentos\project cs tpc\di22-topicus6\target\school" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\stat" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\java" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\WEB-INF" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,7 +191,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2de44d3-20a8-43ca-8ea2-0c0925ca86e1" name="Changes" comment="CSS fixes" />
+      <changelist id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="gio and vlad merge" />
       <created>1686061083787</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -195,6 +203,7 @@
       <workItem from="1686065679169" duration="1943000" />
       <workItem from="1686069473329" duration="1127000" />
       <workItem from="1686560286318" duration="366000" />
+      <workItem from="1686736140860" duration="1504000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
@@ -217,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686064032172</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gio and vlad merge">
+      <created>1686565864306</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686565864306</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +252,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed file structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed file structure" />
+    <MESSAGE value="gio and vlad merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="gio and vlad merge" />
   </component>
 </project>
