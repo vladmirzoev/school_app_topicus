@@ -9,9 +9,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="Merge Gio into Main">
+    <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="New Merge (unversioned files)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Signup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StudentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/children/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/children/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Forms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Messages.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Registrations.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/User.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/closeMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/openMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/school.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/school/school1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/children.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/formPhone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/LogIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/signUp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/signUpSuccessful.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/userDashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUpSuccessful.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +71,7 @@
       <list>
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -102,7 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Topicus" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -252,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687183026632</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New Merge (unversioned files)">
+      <created>1687183823871</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687183823871</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +329,7 @@
     <MESSAGE value="Fixed file structure" />
     <MESSAGE value="potentially fixed 404 errors????????" />
     <MESSAGE value="Merge Gio into Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge Gio into Main" />
+    <MESSAGE value="New Merge (unversioned files)" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Merge (unversioned files)" />
   </component>
 </project>

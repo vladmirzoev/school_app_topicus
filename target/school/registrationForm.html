@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleExtras.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,30 +53,12 @@
         <div class="formText3">Grade of study</div>
         <input class="inputs" type="text" style="width: 600px;" name="grade">
         <div class="formText3">School:</div>
-        <h2>Make a drop down list based on JSON data.</h2>
-        <p id="demo"></p>
-
-        <script>
-            const dbParam = JSON.stringify({table:"customers"});
-            const xmlhttp = new XMLHttpRequest();
-            xmlhttp.onload = function() {
-                const myObj = JSON.parse(this.responseText);
-                let text = "<select>"
-                for (let x in myObj) {
-                    text += "<option>" + myObj[x].name + "</option>";
-                }
-                text += "</select>"
-                document.getElementById("demo").innerHTML = text;
-            }
-            xmlhttp.open("POST", "json_demo_html_table.php");
-            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xmlhttp.send("x=" + dbParam);
-        </script>
         <input class="inputs" type="text" style="width: 600px" name="schoolName">
         <div class="row justify-content-center align-items-center">
             <div class="col-6" style="margin-top: 10px">
                 <input type="submit" class="btn btn-primary">
             </div>
+            <script src="scripts/DropdownList.js"></script>
         </div>
     </form>
 </div>
