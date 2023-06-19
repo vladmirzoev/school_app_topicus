@@ -11,16 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="gio and vlad merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schoolLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userDashboard.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,6 +197,7 @@
       <workItem from="1686069473329" duration="1127000" />
       <workItem from="1686560286318" duration="366000" />
       <workItem from="1686736140860" duration="1504000" />
+      <workItem from="1686738370860" duration="1339000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
