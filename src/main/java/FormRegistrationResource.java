@@ -11,11 +11,20 @@ public class FormRegistrationResource {
     String username = "dab_di22232b_81";
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
-    
+
+    public void establishConnection() {
+        try {
+            db = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
+    }
+
     //TODO School Admin form functionality
-//    /**
-//     * Creates a form within the database, with its own form ID
-//     */
 //    @POST
 //    @Consumes(MediaType.APPLICATION_JSON)
 //    public void createForm(Form form) throws SQLException, Exception {
@@ -27,44 +36,30 @@ public class FormRegistrationResource {
 //        st.setInt(2, ); //TODO get the grade as a parameter; done by the school admin while making the form
 //        st.setInt(3, ); //TODO get the current school id from the admins current session
 //        st.executeQuery();
+//        closeConnection();
 //    }
 //
-//    /**
-//     * Creates a field for a particular form ID
-//     */
 //    @POST
 //    public void createField() throws SQLException {
 //        establishConnection();
 //        String query = "INSERT INTO fields (form_id, question, input_type) VALUES (?, ?, ?)";
 //        PreparedStatement st = db.prepareStatement(query);
-//        st.setInt(1, );
-//        st.setString(2, ); //TODO get the question parameter from the form creation by school admin
+//        st.setInt(1, ); st.setString(2, ); //TODO get the question parameter from the form creation by school admin
 //        st.setString(3, ); //TODO get the type parameter from the form creation by school admin
+//        closeConnection();
 //    }
 
-    /**
-     * Parent registering their child to a school
-     */
     @Path("/uploadBasicReq")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void uploadRegistration(@FormParam("childName") String childName,
-                                   @FormParam("guardianName") String guardianName,
-                                   @FormParam("telephone1") String telephone1,
-                                   @FormParam("telephone2") String telephone2,
-                                   @FormParam("email") String email,
-                                   @FormParam("bsn") String bsn,
-                                   @FormParam("birth_date") Date birth_date,
-                                   @FormParam("grade") int grade,
-                                   @FormParam("schoolName") String schoolName,
-                                   @FormParam("address") String address) throws Exception {
+    public void uploadRegistration(@FormParam("childName") String childName, @FormParam("guardianName") String guardianName, @FormParam("telephone1") String telephone1, @FormParam("telephone2") String telephone2, @FormParam("email") String email, @FormParam("bsn") String bsn, @FormParam("birth_date") Date birth_date, @FormParam("grade") int grade, @FormParam("schoolName") String schoolName, @FormParam("address") String address) throws Exception {
         establishConnection();
         int student_id = newStudentID();
         int registration_id = newRegistrationID();
         int school_id = getSchoolID(schoolName);
 
-        if(email.contains("@")) {
+        if (email.contains("@")) {
             if (!accountExists(email)) { //if an account doesnt exist, make a new account entry
                 String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, role) VALUES (?, ?, ?, ?, ?, ?)";
                 PreparedStatement acc = db.prepareStatement(account);
@@ -111,6 +106,7 @@ public class FormRegistrationResource {
             reg.setString(6, "Under review");
             reg.execute();
         }
+        closeConnection();
     }
 
     private boolean checkGuardianExists(String email) throws SQLException {
@@ -121,15 +117,6 @@ public class FormRegistrationResource {
         return rs.next();
     }
 
-    public void establishConnection() {
-        try {
-            db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     public boolean accountExists(String email) throws SQLException {
         String query = "SELECT * FROM account WHERE account_id = ?";
         PreparedStatement st = db.prepareStatement(query);
@@ -138,9 +125,6 @@ public class FormRegistrationResource {
         return rs.next();
     }
 
-    /**
-     * Create a form id by getting the max(form_id) + 1
-     */
     public int newFormID() throws Exception {
         String query = "SELECT MAX(form_id) FROM form;";
         PreparedStatement st = db.prepareStatement(query);
@@ -154,9 +138,6 @@ public class FormRegistrationResource {
         return newID;
     }
 
-    /**
-     * Create a student id by getting the max(student_id) + 1
-     */
     public int newStudentID() throws Exception {
         String query = "SELECT MAX(student_id) FROM student;";
         PreparedStatement st = db.prepareStatement(query);
@@ -172,9 +153,6 @@ public class FormRegistrationResource {
         return newID;
     }
 
-    /**
-     * Create a registration id by getting the max(registration_id) + 1
-     */
     public int newRegistrationID() throws Exception {
         String query = "SELECT MAX(registration_id) FROM registration";
         PreparedStatement st = db.prepareStatement(query);
@@ -190,9 +168,6 @@ public class FormRegistrationResource {
         return newID;
     }
 
-    /**
-     * Gets the school id from a particular school name
-     */
     public int getSchoolID(String schoolName) throws Exception {
         String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
         PreparedStatement st = db.prepareStatement(query);

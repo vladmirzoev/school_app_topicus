@@ -15,31 +15,32 @@ public class AccountResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    /**
-     * Connects to db server.
-     */
     public void establishConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
     }
 
     @Path("/login")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response login(@FormParam("regularEmail") String email,
-                        @FormParam("regularPass") String pass) throws SQLException, URISyntaxException {
+    public Response login(@FormParam("regularEmail") String email, @FormParam("regularPass") String pass) throws SQLException, URISyntaxException {
         establishConnection();
         URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLogin.html"); //TODO ask if hard coding is ok
         URI success = new java.net.URI("http://localhost:8080/Topicus/userDashboard.html");
         if (!attemptRegularLogin(email, pass)) {
+            closeConnection();
             return Response.seeOther(failed).build(); //TODO maybe use document.getElementById.innerHTML
         } else {
             System.out.println("CREDENTIALS OK");
+            closeConnection();
             return Response.seeOther(success).build();
         }
     }
@@ -48,14 +49,15 @@ public class AccountResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response adminLogin(@FormParam("adminEmail") String email,
-                             @FormParam("adminPass") String pass) throws SQLException, URISyntaxException {
+    public Response adminLogin(@FormParam("adminEmail") String email, @FormParam("adminPass") String pass) throws SQLException, URISyntaxException {
         establishConnection();
         URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html"); //TODO ask if hard coding is ok
         URI success = new java.net.URI("http://localhost:8080/Topicus/registrations.html");
         if (!attemptAdminLogin(email, pass)) {
+            closeConnection();
             return Response.seeOther(failed).build();
         } else {
+            closeConnection();
             return Response.seeOther(success).build();
         }
     }

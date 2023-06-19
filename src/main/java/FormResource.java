@@ -15,10 +15,13 @@ public class FormResource {
     public void establishConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
     }
 
     @Path("{id}")
@@ -46,6 +49,7 @@ public class FormResource {
             form.setSchool_id(rs2.getInt(3));
             form.setSchool_name(rs2.getString(4));
         }
+        closeConnection();
         return form;
     }
 

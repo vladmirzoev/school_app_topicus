@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Path("/signup")
-public class Signup {
+public class SignUpResource {
     String host = "bronto.ewi.utwente.nl";
     String dbName = "dab_di22232b_81";
     String url = "jdbc:postgresql://" + host + ":5432/" + dbName + "?currentSchema=TopicusDatabase";
@@ -16,36 +16,29 @@ public class Signup {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    /**
-     * Connects to db server.
-     */
     public void establishConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
     }
 
     @POST
     @Path("/newaccount")
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response CreateAccDB(@FormParam("fname") String fname,
-                                @FormParam("lname") String lname,
-                                @FormParam("email") String email,
-                                @FormParam("p_no1") String p_no1,
-                                @FormParam("p_no2") String p_no2,
-                                @FormParam("address") String address,
-                                @FormParam("pass") String pass,
-                                @FormParam("conf_pass") String conf_pass) throws Exception {
+    public Response CreateAccDB(@FormParam("fname") String fname, @FormParam("lname") String lname, @FormParam("email") String email, @FormParam("p_no1") String p_no1, @FormParam("p_no2") String p_no2, @FormParam("address") String address, @FormParam("pass") String pass, @FormParam("conf_pass") String conf_pass) throws Exception {
         establishConnection();
         String email_format = "^(.+)@(.+)$";
         Pattern pattern = Pattern.compile(email_format);
         Matcher matcher = pattern.matcher(email);
         URI success = new java.net.URI("http://localhost:8080/Topicus/signUpSuccessful.html");
-        if(email.contains("@")) {
+        if (email.contains("@")) {
             if (!accountExists(email) && pass.equals(conf_pass)) {
                 addAccount(fname + " " + lname, p_no1, p_no2, email, address, pass);
                 return Response.seeOther(success).build();
@@ -61,7 +54,7 @@ public class Signup {
                 //TODO: invalid email format
             }
         }
-
+        closeConnection();
         return null; //TODO stub
     }
 
@@ -87,7 +80,7 @@ public class Signup {
             acc.execute();
             String guardian = "INSERT INTO guardian (guardian_id) VALUES (?)";
             PreparedStatement guar = db.prepareStatement(guardian);
-            guar.setString(1,email);
+            guar.setString(1, email);
             guar.execute();
         }
     }

@@ -3,6 +3,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -19,10 +20,13 @@ public class StudentResource {
     public void establishConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
     }
 
     @GET
@@ -41,6 +45,7 @@ public class StudentResource {
             queriedStudent.setName(rs.getString(2));
             studentlist.add(queriedStudent);
         }
+        closeConnection();
         return studentlist;
     }
 
@@ -63,6 +68,7 @@ public class StudentResource {
             queriedStudent.setBirthdate(String.valueOf(rs.getDate(4)));
             queriedStudent.setGuardian_id(rs.getString(5));
         }
+        closeConnection();
         return queriedStudent;
 //
 //        int queriedId = -1;

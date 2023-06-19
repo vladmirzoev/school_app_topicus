@@ -20,10 +20,13 @@ public class RegistrationResource {
     public void establishConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void closeConnection() throws SQLException {
+        db.close();
     }
 
     @GET
@@ -46,6 +49,7 @@ public class RegistrationResource {
             registration.setName(rs.getString(7));
             registrationlist.add(registration);
         }
+        closeConnection();
         return registrationlist;
     }
 
@@ -55,8 +59,7 @@ public class RegistrationResource {
     public Registration findStudent(@PathParam("id") int id) throws Exception {
         establishConnection();
 
-        String query = "SELECT a.registration_id, a.grade, a.registration_date, a.student_id, a.school_id, a.status, b.name " +
-                "FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
+        String query = "SELECT a.registration_id, a.grade, a.registration_date, a.student_id, a.school_id, a.status, b.name " + "FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ResultSet rs = st.executeQuery();
@@ -71,7 +74,7 @@ public class RegistrationResource {
             registration.setStatus(rs.getString(6));
             registration.setName(rs.getString(7));
         }
+        closeConnection();
         return registration;
-
     }
 }

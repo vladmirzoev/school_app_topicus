@@ -15,22 +15,22 @@ public class ParentResource {
 
     String host = "bronto.ewi.utwente.nl";
     String dbName = "dab_di22232b_81";
-    String url = "jdbc:postgresql://" + host + ":5432/" +
-            dbName + "?currentSchema=TopicusDatabase";
+    String url = "jdbc:postgresql://" + host + ":5432/" + dbName + "?currentSchema=TopicusDatabase";
     String username = "dab_di22232b_81";
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
     public void establishConnection() {
         try {
-            db = DriverManager.getConnection(url, username,
-                    password);
-        } catch (
-                SQLException e) {
+            db = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
+    public void closeConnection() throws SQLException {
+        db.close();
+    }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -48,6 +48,7 @@ public class ParentResource {
             queriedParent.setId(rs.getString(1));
             guardianlist.add(queriedParent);
         }
+        closeConnection();
         return guardianlist;
     }
 
@@ -67,9 +68,8 @@ public class ParentResource {
             queriedParent.setName(rs.getString(2));
             queriedParent.setAddress(rs.getString(3));
             queriedParent.setPhone_1(rs.getString(4));
-
-
         }
+        closeConnection();
         return queriedParent;
     }
 }
