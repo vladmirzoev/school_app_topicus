@@ -9,20 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="Fixed file structure">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="Corrected links from menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUpSuccessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/signUpSuccessful.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/dummyPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUpSuccessful.html" afterDir="false" />
     </list>
-    <list id="c795c17f-53e0-47be-9de7-9c0dbb429177" name="Changes by reyna" comment="" />
-    <list id="a610afe9-7ce4-43c6-99cb-7ed2a3f48eda" name="Changes by samer" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -93,11 +85,11 @@
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vladm\OneDrive\Документы\GitHub\di22-topicus6\target\school" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\stat" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\java" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\WEB-INF" />
       <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main" />
     </key>
   </component>
   <component name="RunManager">
