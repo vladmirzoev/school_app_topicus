@@ -42,6 +42,7 @@ public class FormResource {
             question.setQuestion(rs.getString(1));
             form.appendField(question);
         }
+
         String query2 = "SELECT a.*, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND form_id = ?";
         PreparedStatement st2 = db.prepareStatement(query2);
         st2.setInt(1, id);
@@ -56,4 +57,24 @@ public class FormResource {
         return form;
     }
 
+    /**
+     * Make a new field for a particular form ID
+     */
+    @Path("/createField")
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.TEXT_HTML)
+    public void createField(@FormParam("formID") int formID, @FormParam("question") String question, @FormParam("inputType") String inputType) throws SQLException {
+        openConnection();
+        String cmd = "INSERT INTO fields (form_id, question, inputType) VALUES (?, ?, ?)";
+        PreparedStatement st = db.prepareStatement(cmd);
+        st.setInt(1, formID);
+        st.setString(2, question);
+        st.setString(3, inputType);
+        st.execute();
+
+        //TODO make the new field show up in the front end
+
+        closeConnection();
+    }
 }

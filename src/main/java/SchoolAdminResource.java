@@ -1,5 +1,10 @@
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.CacheControl;
 import jakarta.ws.rs.core.MediaType;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import java.sql.*;
 
 
@@ -25,12 +30,12 @@ public class SchoolAdminResource {
         db.close();
     }
 
-    @Path("{id}")
+    @Path("/getStudent/{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Student getStudent(@PathParam("id") String studentID) throws Exception{
         openConnection();
-        String query = "SELECT s.student_id, s.bsn, s.name, s.birth_date, s.guardian_id FROM student s, registration r, schooladmin sa WHERE s.student_id = r.student_id AND r.school_id = sa.school_id AND r.status = 'accepted' AND s.student_id = ?";
+        String query = "SELECT r.registration_id, r.grade, r.registration_date, r.student_id, r.school_id, r.status FROM student s, registration r, schooladmin sa WHERE s.student_id = r.student_id AND r.school_id = sa.school_id AND r.status = 'accepted' AND s.student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, studentID);
         ResultSet result = st.executeQuery();
@@ -45,15 +50,14 @@ public class SchoolAdminResource {
         }
         closeConnection();
         return queriedStudent;
-
     }
 
-    @Path("{school_id}")
+    @Path("/getAllStudents/{sid}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Student getAllStudents(@PathParam("school_id") String schoolID) throws Exception{
+    public Student getAllStudents(@PathParam("sid") String schoolID) throws Exception{
         openConnection();
-        String query = "SELECT s.student_id, s.bsn, s.name, s.birth_date, s.guardian_id FROM student s, registration r, schooladmin sa WHERE s.student_id = r.student_id AND r.school_id = sa.school_id AND r.status = 'accepted' AND sa.school_id = ?";
+        String query = "SELECT r.registration_id, r.grade, r.registration_date, r.student_id, r.school_id, r.status FROM student s, registration r, schooladmin sa WHERE s.student_id = r.student_id AND r.school_id = sa.school_id AND r.status = 'accepted' AND sa.school_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, schoolID);
         ResultSet result = st.executeQuery();
@@ -70,7 +74,5 @@ public class SchoolAdminResource {
         return queriedStudent;
 
     }
-
-
 
 }

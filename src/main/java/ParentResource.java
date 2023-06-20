@@ -2,6 +2,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 
+import javax.print.attribute.standard.Media;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -30,6 +31,7 @@ public class ParentResource {
 
     @Path("{gid}")
     @GET
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Student getChildren(@PathParam("gid") String gid) throws Exception{
         openConnection();

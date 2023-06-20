@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
+import java.util.ArrayList;
 
 @Path("/sysAdmin")
 public class TopicusAdminResource {
@@ -26,6 +27,57 @@ public class TopicusAdminResource {
 
     public void closeConnection() throws SQLException {
         db.close();
+    }
+
+    /**
+     * Fetches all admin account IDs and their associated schools within the system
+     */
+    @Path("/getAdmins")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public ArrayList<SchoolAdmin> allAdmins() throws SQLException {
+        openConnection();
+        ArrayList<SchoolAdmin> adminList = new ArrayList<>();
+
+        String query = "SELECT * FROM schooladmin;";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+
+        while (rs.next()) {
+            SchoolAdmin queriedAdmin = new SchoolAdmin();
+            queriedAdmin.setSchool_id(rs.getInt(1));
+            queriedAdmin.setAccount_id(rs.getString(2));
+            adminList.add(queriedAdmin);
+        }
+
+        closeConnection();
+        return adminList;
+    }
+
+    /**
+     * Fetches all details of a particular admin
+     */
+    @Path("/fetchAdmin/{id}")
+    @GET
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Account getAdmin(@PathParam("id") String accountID) throws SQLException {
+        openConnection();
+        String query = "SELECT * FROM account WHERE account_id LIKE ? AND role = 'A';";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, accountID);
+        ResultSet rs = st.executeQuery();
+
+        Account queriedAdmin = new Account();
+        while (rs.next()) {
+            queriedAdmin.setAccount_id(rs.getString(1));
+            queriedAdmin.setName(rs.getString(2));
+            queriedAdmin.setAddress(rs.getString(3));
+            queriedAdmin.setPhone_number_1(rs.getString(4));
+            queriedAdmin.setPassword(rs.getString(6)); //TODO this method must also get the admin's unhashed password
+        }
+
+        return queriedAdmin;
     }
 
     /**
@@ -88,6 +140,8 @@ public class TopicusAdminResource {
         st2.setInt(1, schoolID);
         st2.setString(2, accountID);
         st2.execute();
+
+        //TODO some response saying 'Successfully added admin!'
 
         closeConnection();
     }
