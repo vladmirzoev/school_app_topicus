@@ -17,7 +17,7 @@ public class StudentResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -29,11 +29,14 @@ public class StudentResource {
         db.close();
     }
 
+    /**
+     * Gets all registered students regardless of school
+     */
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public ArrayList<Student> findStudent() throws Exception {
-        ArrayList<Student> studentlist = new ArrayList<>();
-        establishConnection();
+    public ArrayList<Student> getStudents() throws Exception {
+        ArrayList<Student> studentList = new ArrayList<>();
+        openConnection();
 
         String query = "SELECT student_id, name FROM student ";
         PreparedStatement st = db.prepareStatement(query);
@@ -43,17 +46,22 @@ public class StudentResource {
             Student queriedStudent = new Student();
             queriedStudent.setId(rs.getInt(1));
             queriedStudent.setName(rs.getString(2));
-            studentlist.add(queriedStudent);
+            studentList.add(queriedStudent);
         }
         closeConnection();
-        return studentlist;
+        return studentList;
     }
 
+    //TODO fetch all students under a particular school id
+
+    /**
+     * Fetches a student of a particular student id
+     */
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Student findStudent(@PathParam("id") int id) throws Exception {
-        establishConnection();
+        openConnection();
 
         String query = "SELECT * FROM student WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);

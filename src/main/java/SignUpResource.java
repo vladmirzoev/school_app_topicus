@@ -18,7 +18,7 @@ public class SignUpResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -50,8 +50,15 @@ public class SignUpResource {
     @Path("/newaccount")
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response CreateAccDB(@FormParam("fname") String fname, @FormParam("lname") String lname, @FormParam("email") String email, @FormParam("p_no1") String p_no1, @FormParam("p_no2") String p_no2, @FormParam("address") String address, @FormParam("pass") String pass, @FormParam("conf_pass") String conf_pass) throws Exception {
-        establishConnection();
+    public Response CreateAccDB(@FormParam("fname") String fname,
+                                @FormParam("lname") String lname,
+                                @FormParam("email") String email,
+                                @FormParam("p_no1") String p_no1,
+                                @FormParam("p_no2") String p_no2,
+                                @FormParam("address") String address,
+                                @FormParam("pass") String pass,
+                                @FormParam("conf_pass") String conf_pass) throws Exception {
+        openConnection();
         String email_format = "^(.+)@(.+)$";
         Pattern pattern = Pattern.compile(email_format);
         Matcher matcher = pattern.matcher(email);
@@ -77,7 +84,7 @@ public class SignUpResource {
      * Checks if an account already exists
      */
     public boolean accountExists(String email) throws SQLException {
-        String query = "SELECT * FROM account WHERE account_id = ?";
+        String query = "SELECT * FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         ResultSet rs = st.executeQuery();
@@ -87,7 +94,12 @@ public class SignUpResource {
     /**
      * SQL command for a new account table entry
      */
-    private void addAccount(String guardianName, String telephone1, String telephone2, String email, String address, String pass) throws SQLException {
+    private void addAccount(String guardianName,
+                            String telephone1,
+                            String telephone2,
+                            String email,
+                            String address,
+                            String pass) throws SQLException {
         if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
             String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, password, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement acc = db.prepareStatement(account);

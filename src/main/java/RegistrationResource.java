@@ -17,7 +17,7 @@ public class RegistrationResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -30,13 +30,13 @@ public class RegistrationResource {
     }
 
     /**
-     * Gets all students regardless of school
+     * Gets all registrations regardless of school
      */
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public ArrayList<Registration> getStudents() throws Exception {
+    public ArrayList<Registration> getRegistrations() throws Exception {
         ArrayList<Registration> registrationlist = new ArrayList<>();
-        establishConnection();
+        openConnection();
 
         String query = "SELECT a.*, b.name FROM registration a, student b WHERE a.student_id = b.student_id";
         PreparedStatement st = db.prepareStatement(query);
@@ -56,16 +56,16 @@ public class RegistrationResource {
         return registrationlist;
     }
 
-    //TODO make a method for a student with a specific school
+    //TODO fetch all registrations of a specific school
 
     /**
-     * Gets a specific student depending on their student_id
+     * Gets a specific registration depending on their student_id
      */
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Registration findStudent(@PathParam("id") int id) throws Exception {
-        establishConnection();
+    public Registration findRegistration(@PathParam("id") int id) throws Exception {
+        openConnection();
 
         String query = "SELECT a.registration_id, a.grade, a.registration_date, a.student_id, a.school_id, a.status, b.name FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
         PreparedStatement st = db.prepareStatement(query);

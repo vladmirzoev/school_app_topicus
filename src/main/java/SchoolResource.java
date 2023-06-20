@@ -16,7 +16,7 @@ public class SchoolResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -35,7 +35,7 @@ public class SchoolResource {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public ArrayList<School> getSchools() throws SQLException {
         ArrayList<School> schoolList = new ArrayList<>();
-        establishConnection();
+        openConnection();
 
         String query = "SELECT school_id, school_name FROM school";
         PreparedStatement st = db.prepareStatement(query);
@@ -58,7 +58,7 @@ public class SchoolResource {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public School findSchool(@PathParam("id") String id) throws Exception {
-        establishConnection();
+        openConnection();
         String query = "SELECT school_id, school_name, address, tuition, contact_number FROM school WHERE school_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, id);

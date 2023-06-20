@@ -18,7 +18,7 @@ public class AccountResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -51,8 +51,9 @@ public class AccountResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response login(@FormParam("regularEmail") String email, @FormParam("regularPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
-        establishConnection();
+    public Response login(@FormParam("regularEmail") String email,
+                          @FormParam("regularPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
+        openConnection();
         URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLogin.html");
         URI success = new java.net.URI("http://localhost:8080/Topicus/userDashboard.html");
 
@@ -77,8 +78,9 @@ public class AccountResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response adminLogin(@FormParam("adminEmail") String email, @FormParam("adminPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
-        establishConnection();
+    public Response adminLogin(@FormParam("adminEmail") String email,
+                               @FormParam("adminPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
+        openConnection();
         URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html");
         URI success = new java.net.URI("http://localhost:8080/Topicus/registrations.html");
 
@@ -99,7 +101,7 @@ public class AccountResource {
      * Check account_id, password and role of a parent login
      */
     private boolean attemptRegularLogin(String email, String pass) throws SQLException {
-        String query = "SELECT * FROM account WHERE account_id = ? AND password = ? AND role='G'";
+        String query = "SELECT * FROM account WHERE account_id LIKE ? AND password LIKE ? AND role='G'";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         st.setString(2, pass);
@@ -111,7 +113,7 @@ public class AccountResource {
      * Check account_id, password and role of an admin login
      */
     private boolean attemptAdminLogin(String email, String pass) throws SQLException {
-        String query = "SELECT * FROM account WHERE account_id = ? AND password = ? AND role='A'";
+        String query = "SELECT * FROM account WHERE account_id LIKE ? AND password LIKE ? AND role = 'A'";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         st.setString(2, pass);

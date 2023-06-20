@@ -15,7 +15,7 @@ public class FormRegistrationResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -31,7 +31,7 @@ public class FormRegistrationResource {
 //    @POST
 //    @Consumes(MediaType.APPLICATION_JSON)
 //    public void createForm(Form form) throws SQLException, Exception {
-//        establishConnection();
+//        openConnection();
 //        int form_id = newFormID();
 //        String query = "INSERT INTO form (form_id, grade, school_id) VALUES (?, ?, ?)";
 //        PreparedStatement st = db.prepareStatement(query);
@@ -44,7 +44,7 @@ public class FormRegistrationResource {
 //
 //    @POST
 //    public void createField() throws SQLException {
-//        establishConnection();
+//        openConnection();
 //        String query = "INSERT INTO fields (form_id, question, input_type) VALUES (?, ?, ?)";
 //        PreparedStatement st = db.prepareStatement(query);
 //        st.setInt(1, ); st.setString(2, ); //TODO get the question parameter from the form creation by school admin
@@ -59,8 +59,17 @@ public class FormRegistrationResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void uploadRegistration(@FormParam("childName") String childName, @FormParam("guardianName") String guardianName, @FormParam("telephone1") String telephone1, @FormParam("telephone2") String telephone2, @FormParam("email") String email, @FormParam("bsn") String bsn, @FormParam("birth_date") Date birth_date, @FormParam("grade") int grade, @FormParam("schoolName") String schoolName, @FormParam("address") String address) throws Exception {
-        establishConnection();
+    public void uploadRegistration(@FormParam("childName") String childName,
+                                   @FormParam("guardianName") String guardianName,
+                                   @FormParam("telephone1") String telephone1,
+                                   @FormParam("telephone2") String telephone2,
+                                   @FormParam("email") String email,
+                                   @FormParam("bsn") String bsn,
+                                   @FormParam("birth_date") Date birth_date,
+                                   @FormParam("grade") int grade,
+                                   @FormParam("schoolName") String schoolName,
+                                   @FormParam("address") String address) throws Exception {
+        openConnection();
         int student_id = newStudentID();
         int registration_id = newRegistrationID();
         int school_id = getSchoolID(schoolName);
@@ -73,6 +82,7 @@ public class FormRegistrationResource {
             if (!checkGuardianExists(email)) {
                 createGuardian(email);
             }
+            //TODO check if a student/child already exists. If so, simply assign the school and registration to the student rather than making a new student
             createStudent(childName, email, bsn, birth_date, student_id);
             createRegistration(grade, student_id, registration_id, school_id);
         }
@@ -99,7 +109,7 @@ public class FormRegistrationResource {
      * Updates existing account table entry
      */
     private void updateAccount(String telephone1, String telephone2, String email) throws SQLException {
-        String account = "UPDATE account SET phone_number_1 = ?, phone_number_2 = ? WHERE account_id = ?";
+        String account = "UPDATE account SET phone_number_1 = ?, phone_number_2 = ? WHERE account_id LIKE ?";
         PreparedStatement acc = db.prepareStatement(account);
         acc.setString(1, telephone1);
         acc.setString(2, telephone2);
@@ -179,7 +189,7 @@ public class FormRegistrationResource {
      * Checks if an account already exists
      */
     public boolean accountExists(String email) throws SQLException {
-        String query = "SELECT * FROM account WHERE account_id = ?";
+        String query = "SELECT * FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         ResultSet rs = st.executeQuery();

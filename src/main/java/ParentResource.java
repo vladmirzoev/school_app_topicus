@@ -1,10 +1,6 @@
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.json.JSONArray;
-import org.json.JSONObject;
+
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -20,7 +16,7 @@ public class ParentResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -32,6 +28,46 @@ public class ParentResource {
         db.close();
     }
 
+    @Path("{gid}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Student getChildren(@PathParam("gid") String gid) throws Exception{
+        openConnection();
+        String query = "SELECT s.student_id, s.bsn, s.name, s.birth_date, s.guardian_id FROM STUDENT s, Guardian g WHERE g.guardian_id = s.guardian_id AND g.guardian_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, gid);
+        ResultSet result = st.executeQuery();
+
+        Student queriedStudent = new Student();
+        while (result.next()) {
+            queriedStudent.setId(result.getInt(1));
+            queriedStudent.setBsn(result.getString(2));
+            queriedStudent.setName(result.getString(3));
+            queriedStudent.setBirthdate(String.valueOf(result.getDate(4)));
+            queriedStudent.setGuardian_id(result.getString(5));
+        }
+        closeConnection();
+        return queriedStudent;
+
+    }
+
+//    @Path("{messages}")
+//    @GET
+//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+//    public Messages retrieveMessages() throws exception{
+//
+//    }
+//
+//    @Path("{messages}")
+//    @POST
+//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+//    public Messages sendMessages() throws exception{
+//
+//    }
+
+
+
+
     /**
      * Gets all parents in the system
      */
@@ -39,7 +75,7 @@ public class ParentResource {
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Parent> getGuardians() throws SQLException {
         ArrayList<Parent> guardianlist = new ArrayList<>();
-        establishConnection();
+        openConnection();
 
         String query = "SELECT account_id, name FROM account WHERE role = 'G'";
         PreparedStatement st = db.prepareStatement(query);
@@ -62,8 +98,8 @@ public class ParentResource {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Parent findParent(@PathParam("id") String id) throws Exception {
-        establishConnection();
-        String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id = ?";
+        openConnection();
+        String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, id);
         ResultSet rs = st.executeQuery();

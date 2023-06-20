@@ -12,7 +12,7 @@ public class FormResource {
     String password = "uZQ2Mqk82/Kx6s5l";
     Connection db = null;
 
-    public void establishConnection() {
+    public void openConnection() {
         try {
             db = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -31,7 +31,7 @@ public class FormResource {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Form getForm(@PathParam("id") int id) throws SQLException {
-        establishConnection();
+        openConnection();
         Form form = new Form();
         String query = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND b.form_id = ?";
         PreparedStatement st = db.prepareStatement(query);
