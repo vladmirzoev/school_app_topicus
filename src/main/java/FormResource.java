@@ -24,6 +24,9 @@ public class FormResource {
         db.close();
     }
 
+    /**
+     * Gets school-specific form
+     */
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})

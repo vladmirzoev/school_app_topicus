@@ -4,6 +4,9 @@ import jakarta.ws.rs.core.Response;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
 @Path("/account")
@@ -27,17 +30,39 @@ public class AccountResource {
         db.close();
     }
 
+
+    //Hash login pass to see if it is similar to the hashed pass in the database
+    private static String hashLoginPass(byte[] hash) {
+        StringBuilder hexString = new StringBuilder(2 * hash.length);
+        for (int i = 0; i < hash.length; i++) {
+            String hex = Integer.toHexString(0xff & hash[i]);
+            if(hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+
+    /**
+     * Parent login
+     */
     @Path("/login")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response login(@FormParam("regularEmail") String email, @FormParam("regularPass") String pass) throws SQLException, URISyntaxException {
+    public Response login(@FormParam("regularEmail") String email, @FormParam("regularPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
         establishConnection();
-        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLogin.html"); //TODO ask if hard coding is ok
+        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLogin.html");
         URI success = new java.net.URI("http://localhost:8080/Topicus/userDashboard.html");
-        if (!attemptRegularLogin(email, pass)) {
+
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
+        String hashedPass = hashLoginPass(bytePass);
+
+        if (!attemptRegularLogin(email, hashedPass)) {
             closeConnection();
-            return Response.seeOther(failed).build(); //TODO maybe use document.getElementById.innerHTML
+            return Response.seeOther(failed).build();
         } else {
             System.out.println("CREDENTIALS OK");
             closeConnection();
@@ -45,15 +70,23 @@ public class AccountResource {
         }
     }
 
+    /**
+     * Admin login
+     */
     @Path("/loginadmin")
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response adminLogin(@FormParam("adminEmail") String email, @FormParam("adminPass") String pass) throws SQLException, URISyntaxException {
+    public Response adminLogin(@FormParam("adminEmail") String email, @FormParam("adminPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
         establishConnection();
-        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html"); //TODO ask if hard coding is ok
+        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html");
         URI success = new java.net.URI("http://localhost:8080/Topicus/registrations.html");
-        if (!attemptAdminLogin(email, pass)) {
+
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
+        String hashedPass = hashLoginPass(bytePass);
+
+        if (!attemptAdminLogin(email, hashedPass)) {
             closeConnection();
             return Response.seeOther(failed).build();
         } else {
@@ -62,6 +95,9 @@ public class AccountResource {
         }
     }
 
+    /**
+     * Check account_id, password and role of a parent login
+     */
     private boolean attemptRegularLogin(String email, String pass) throws SQLException {
         String query = "SELECT * FROM account WHERE account_id = ? AND password = ? AND role='G'";
         PreparedStatement st = db.prepareStatement(query);
@@ -71,6 +107,9 @@ public class AccountResource {
         return rs.next();
     }
 
+    /**
+     * Check account_id, password and role of an admin login
+     */
     private boolean attemptAdminLogin(String email, String pass) throws SQLException {
         String query = "SELECT * FROM account WHERE account_id = ? AND password = ? AND role='A'";
         PreparedStatement st = db.prepareStatement(query);

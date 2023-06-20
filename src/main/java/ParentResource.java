@@ -32,6 +32,9 @@ public class ParentResource {
         db.close();
     }
 
+    /**
+     * Gets all parents in the system
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Parent> getGuardians() throws SQLException {
@@ -52,6 +55,9 @@ public class ParentResource {
         return guardianlist;
     }
 
+    /**
+     * Gets specific parent depending on their account ID
+     */
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})

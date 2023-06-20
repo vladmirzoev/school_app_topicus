@@ -3,6 +3,8 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.sql.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,6 +30,22 @@ public class SignUpResource {
         db.close();
     }
 
+    //Hash login pass to see if it is similar to the hashed pass in the database
+    private static String hashLoginPass(byte[] hash) {
+        StringBuilder hexString = new StringBuilder(2 * hash.length);
+        for (int i = 0; i < hash.length; i++) {
+            String hex = Integer.toHexString(0xff & hash[i]);
+            if(hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+
+    /**
+     * Creates a new account table entry using all the fields from the signup page and checks for invalid/empty fields
+     */
     @POST
     @Path("/newaccount")
     @Produces(MediaType.TEXT_HTML)
@@ -38,26 +56,26 @@ public class SignUpResource {
         Pattern pattern = Pattern.compile(email_format);
         Matcher matcher = pattern.matcher(email);
         URI success = new java.net.URI("http://localhost:8080/Topicus/signUpSuccessful.html");
+
+        //hash passwords
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
+        String hashedPass = hashLoginPass(bytePass);
+
+
         if (email.contains("@")) {
             if (!accountExists(email) && pass.equals(conf_pass)) {
-                addAccount(fname + " " + lname, p_no1, p_no2, email, address, pass);
+                addAccount(fname + " " + lname, p_no1, p_no2, email, address, String.valueOf(hashedPass));
                 return Response.seeOther(success).build();
-            } else if (accountExists(email)) {
-                //TODO: cannot create account as the email already exists
-            } else if (!pass.equals(conf_pass)) {
-                //TODO: wrong password
-            } else if (p_no1.length() != 10) {
-                //TODO: invalid phone number
-            } else if (p_no2 != null && p_no2.length() != 10) {
-                //TODO: invalid phone number
-            } else if (!matcher.matches()) {
-                //TODO: invalid email format
             }
         }
         closeConnection();
         return null; //TODO stub
     }
 
+    /**
+     * Checks if an account already exists
+     */
     public boolean accountExists(String email) throws SQLException {
         String query = "SELECT * FROM account WHERE account_id = ?";
         PreparedStatement st = db.prepareStatement(query);
@@ -66,6 +84,9 @@ public class SignUpResource {
         return rs.next();
     }
 
+    /**
+     * SQL command for a new account table entry
+     */
     private void addAccount(String guardianName, String telephone1, String telephone2, String email, String address, String pass) throws SQLException {
         if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
             String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, password, role) VALUES (?, ?, ?, ?, ?, ?, ?)";

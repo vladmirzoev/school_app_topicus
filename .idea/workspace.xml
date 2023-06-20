@@ -10,56 +10,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="New Merge (unversioned files)">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Signup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StudentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/children/edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/children/plus.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Download.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Forms.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Heart.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Messages.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Notifications.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/Registrations.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/User.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/closeMenu.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/openMenu.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/menu/school.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/school/school1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/children.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/form.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/formPhone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/images/svg/notifications.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/LogIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/signUp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/signUpSuccessful.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/userDashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUpSuccessful.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/images/children/edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/images/school/children/edit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/images/children/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/images/school/children/plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Form$Field.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StudentResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form$Field.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Signup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/children/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/children/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Forms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Messages.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/Registrations.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/User.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/closeMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/openMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/menu/school.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/school/school1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/svg/children.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/svg/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/svg/formPhone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/images/svg/notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/LogIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/signUp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/signUpSuccessful.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/userDashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/FastInfoset-1.2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/aopalliance-repackaged-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/hk2-api-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/hk2-locator-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/hk2-utils-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/istack-commons-runtime-3.0.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-annotations-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-core-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-databind-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-jakarta-rs-base-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-jakarta-rs-json-provider-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jackson-module-jakarta-xmlbind-annotations-2.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.activation-api-2.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.inject-api-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.validation-api-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jakarta.xml.bind-api-4.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/javassist-3.29.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jaxb-runtime-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-client-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-common-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-container-servlet-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-container-servlet-core-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-hk2-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/jersey-server-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/json-20230227.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/stax-ex-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/lib/txw2-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/failedLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/children/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/children/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Forms.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Messages.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/Registrations.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/User.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/closeMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/openMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/menu/school.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/school/school1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/svg/children.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/svg/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/svg/formPhone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/svg/notifications.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/loginAdmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/DropdownList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/DropdownList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/LogIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/signUp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/styles/styleExtras.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/styles/styleExtras.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/userLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userLogin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,43 +193,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gugap/OneDrive/Documents/GitHub/di22-topicus6/src/main/WebApp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/gugap/OneDrive/Documents/GitHub/di22-topicus6/src/main/WebApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gugap\OneDrive\Documents\GitHub\di22-topicus6\src\main\WebApp" />
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vladm\OneDrive\Документы\GitHub\di22-topicus6\target\school" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\stat" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\java" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp\WEB-INF" />
-      <recent name="C:\Users\samer\Documents\GitHub\di22-topicus6\src\main\WebApp" />
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\children" />
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\menu" />
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\school" />
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\svg" />
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\scripts" />
     </key>
   </component>
   <component name="RunManager">
@@ -151,8 +244,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 10.1.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Topicus" />
+    <configuration name="Tomcat 10.1.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="school:war">
@@ -162,7 +254,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="04ee01d8-a734-42d9-bc54-bb2a015cfae5" />
+        <option name="BASE_DIRECTORY_NAME" value="7ae514f5-9fa1-4a9b-bebc-e83779802b79" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -170,7 +262,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50968" />
+        <option name="DEBUG_PORT" value="53124" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -243,7 +335,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="639da5f1-315a-4154-84e0-f93a3f5d07e9" name="Changes" comment="" />
+      <changelist id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="New Merge (unversioned files)" />
       <created>1686061083787</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -265,6 +357,7 @@
       <workItem from="1686725323826" duration="13404000" />
       <workItem from="1687172204803" duration="8000" />
       <workItem from="1687174900306" duration="1321000" />
+      <workItem from="1687245811345" duration="2127000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomStudie Sign Up</title>
+<!--    <script>-->
+<!--        let email_format = "^(.+)@(.+)$";-->
+<!--        let pattern = new RegExp(email_format);-->
+<!--        let email = document.getElementById("email")-->
+<!--        let matcher = pattern.test(email);-->
+<!--        if (pass !== conf_pass) {-->
+<!--            console.log("The passwords do not match ... Please re-enter the same password")-->
+<!--        } else if (p_no1.length !== 10) {-->
+<!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
+<!--        } else if (p_no2 !== null && p_no2.length !== 10) {-->
+<!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
+<!--        } else if (!matcher.test(email)) {-->
+<!--            console.log("Invalid email format ... Please re-enter your email.")-->
+<!--        }-->
+
+<!--    </script>-->
+</head>
+<body style="background-color: #EAEDF0;">
+<div class="blackbox mx-auto" style="height: 650px">
+    <div class="container text-center">
+        <h1 class="mainHeader">Sign Up</h1>
+    </div>
+    <form action="./api/signup/newaccount" method="post">
+        <div>
+
+            <div class="formText2">Parent's first name</div>
+            <input class="inputs" type="text" style="width: 600px;" name="fname">
+            <div class="formText2">Parent's last name</div>
+            <input class="inputs" type="text" style="width: 600px;" name="lname">
+            <div class="formText2">Contact e-mail:</div>
+            <input class="inputs" type="email" style="width: 600px;" name="email">
+            <div class="row" style="margin: 0px">
+                <div class="col-6 formText3" style="padding: 0px">
+                    Telephone
+                </div>
+                <div class="col-6 formText3" style="padding-left: 15px">
+                    Telephone 2 (optional)
+                </div>
+
+                <div class="col-6" style="padding: 0px">
+                    <input class="inputs" type="text" style="width: 280px" name="p_no1">
+                </div>
+                <div class="col-6" style="padding: 0px">
+                    <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" name="p_no2">
+                </div>
+            </div>
+            <div class="formText2">Address:</div>
+            <input class="inputs" type="text" style="width: 600px;" name="address">
+            <div class="formText2">Password</div>
+            <input class="inputs" type="password" style="width: 600px;" name="pass">
+            <div class="formText2">Password confirmation:</div>
+            <input class="inputs" type="password" style="width: 600px;" name="conf_pass">
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6" style="margin-top: 20px">
+                <a href="signUpSuccessful.html" class="hyperlink"><input type="submit" value="Confirm" class="btn btn-primary"></a>
+            </div>
+        </div>
+    </form>
+</div>

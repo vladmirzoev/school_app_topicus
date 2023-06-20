@@ -29,9 +29,12 @@ public class RegistrationResource {
         db.close();
     }
 
+    /**
+     * Gets all students regardless of school
+     */
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public ArrayList<Registration> findStudent() throws Exception {
+    public ArrayList<Registration> getStudents() throws Exception {
         ArrayList<Registration> registrationlist = new ArrayList<>();
         establishConnection();
 
@@ -53,13 +56,18 @@ public class RegistrationResource {
         return registrationlist;
     }
 
+    //TODO make a method for a student with a specific school
+
+    /**
+     * Gets a specific student depending on their student_id
+     */
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Registration findStudent(@PathParam("id") int id) throws Exception {
         establishConnection();
 
-        String query = "SELECT a.registration_id, a.grade, a.registration_date, a.student_id, a.school_id, a.status, b.name " + "FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
+        String query = "SELECT a.registration_id, a.grade, a.registration_date, a.student_id, a.school_id, a.status, b.name FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ResultSet rs = st.executeQuery();
