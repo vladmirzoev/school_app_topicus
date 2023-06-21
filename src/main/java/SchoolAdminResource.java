@@ -1,9 +1,5 @@
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.CacheControl;
 import jakarta.ws.rs.core.MediaType;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import java.sql.*;
 

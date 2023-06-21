@@ -1,7 +1,4 @@
-import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.xml.bind.annotation.XmlRootElement;
-
-import java.sql.Date;
 
 
 @XmlRootElement

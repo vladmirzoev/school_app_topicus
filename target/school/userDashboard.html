@@ -7,8 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie</title>
+
+    <script>
+        function replaceTest() {
+            var id = sessionStorage.getItem("id");
+            var methodcall = './api/account/getname/' + id;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', methodcall, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var name = JSON.parse(xhr.responseText).name;
+                        console.log("Received message:", name);
+                        document.getElementById("dashboardHeading").innerHTML = "Welcome, " + name;
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </head>
-<body class="light" style="display: flex">
+<body class="light" style="display: flex" onload="replaceTest()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -20,8 +39,6 @@
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
             </a>
         </div>
-
-
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">

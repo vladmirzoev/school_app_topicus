@@ -1,8 +1,6 @@
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-import java.util.Date;
-
 @XmlRootElement
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Student {

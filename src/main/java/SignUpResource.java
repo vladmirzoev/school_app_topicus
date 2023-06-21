@@ -72,7 +72,7 @@ public class SignUpResource {
 
         if (email.contains("@")) {
             if (!accountExists(email) && pass.equals(conf_pass)) {
-                addAccount(fname + " " + lname, p_no1, p_no2, email, address, String.valueOf(hashedPass));
+                addAccount(fname + " " + lname, p_no1, p_no2, email, address, hashedPass);
                 return Response.seeOther(success).build();
             }
         }

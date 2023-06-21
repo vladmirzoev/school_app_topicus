@@ -2,7 +2,6 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 
-import javax.print.attribute.standard.Media;
 import java.sql.*;
 import java.util.ArrayList;
 

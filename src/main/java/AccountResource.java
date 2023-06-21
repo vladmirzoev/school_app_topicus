@@ -36,7 +36,7 @@ public class AccountResource {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
-            if(hex.length() == 1) {
+            if (hex.length() == 1) {
                 hexString.append('0');
             }
             hexString.append(hex);
@@ -61,11 +61,11 @@ public class AccountResource {
         byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
         String hashedPass = hashLoginPass(bytePass);
 
+
         if (!attemptRegularLogin(email, hashedPass)) {
             closeConnection();
             return Response.seeOther(failed).build();
         } else {
-            System.out.println("CREDENTIALS OK");
             closeConnection();
             return Response.seeOther(success).build();
         }
@@ -95,6 +95,26 @@ public class AccountResource {
             closeConnection();
             return Response.seeOther(success).build();
         }
+    }
+
+    /**
+     * Gets the name of an account
+     */
+    @GET
+    @Path("/getname/{id}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Account getName(@PathParam("id") String id) throws SQLException {
+        openConnection();
+        String query = "SELECT a.name FROM account a WHERE a.account_id LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, id);
+        ResultSet rs = st.executeQuery();
+        Account queriedName = new Account();
+        while (rs.next()) {
+            queriedName.setName(rs.getString(1));
+        }
+        closeConnection();
+        return queriedName;
     }
 
     /**

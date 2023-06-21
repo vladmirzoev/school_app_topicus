@@ -33,7 +33,7 @@ public class FormResource {
     public Form getForm(@PathParam("id") int id) throws SQLException {
         openConnection();
         Form form = new Form();
-        String query = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND b.form_id = ?";
+        String query = "SELECT * from (SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND b.form_id = ?) abq";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ResultSet rs = st.executeQuery();

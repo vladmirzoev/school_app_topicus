@@ -1,7 +1,6 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-import javax.print.attribute.standard.Media;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
