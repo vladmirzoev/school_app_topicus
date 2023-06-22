@@ -105,8 +105,7 @@
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
-                                                           width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications" width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href=""><p>notifications</p></a></li>
             </div>
@@ -119,8 +118,7 @@
             </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children"
-                                                                        width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children" width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="children.html"><p>my children</p></a></li>
             </div>
@@ -145,7 +143,14 @@
 
     </div>
     <div class="dark visualBox text-center justify-content-center">
-        <div class="row messageData light visualBox">
+
+        <div class="popup" id="popup">
+            <h2>New message:</h2>
+            <p>blabla</p>
+            <button type="button" class="btn-secondary" style="font-size: 16px; padding: 0 64px" onclick="closePopup()">OK</button>
+        </div>
+
+        <div class="row messageData light visualBox" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>
@@ -165,7 +170,7 @@
                 <p class="subject messageText">Missing documents!</p>
             </div>
         </div>
-        <div class="row messageData light visualBox">
+        <div class="row messageData light visualBox" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>
@@ -185,7 +190,7 @@
                 <p class="subject messageText">Missing documents!</p>
             </div>
         </div>
-        <div class="row messageData light visualBox">
+        <div class="row messageData light visualBox" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>
@@ -209,6 +214,7 @@
 </div>
 
 <script src="scripts/script.js"></script>
+<script src="scripts/popup.js"></script>
 
 </body>
 </html>

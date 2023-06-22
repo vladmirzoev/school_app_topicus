@@ -28,10 +28,8 @@
                             currentmessage[2] = obj[i].dateSent;
                             currentmessage[3] = obj[i].subject;
                             currentmessage[4] = obj[i].content;
-                            console.log(currentmessage)
                             messages[i] = currentmessage;
                         }
-                        console.log(messages)
                     }
                 }
             }
@@ -59,36 +57,39 @@
             xhr2.send();
         }
 
-        //For sending a message
-        function sendMessage() {
-            let senderid = sessionStorage.getItem("id");
-            let receiverid = document.getElementById("receiverid").value;
-            let subject = document.getElementById("subject").value;
-            let content = document.getElementById("content").value;
-            let receiveridsplit = receiverid.split("");
-
-            let methodcall;
-            if (receiveridsplit.includes("@")){
-                methodcall = "./api/message/sendaccountmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
-            } else {
-                methodcall = "./api/message/sendschoolmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
-            }
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST', methodcall, true);
-            xhr.send();
-            location.reload();
-        }
+        // TODO BELOW IS THE MESSAGE SYSTEM JS
+        // //For sending a message
+        // function sendMessage() {
+        //     let senderid = sessionStorage.getItem("id");
+        //     let receiverid = document.getElementById("receiverid").value;
+        //     let subject = document.getElementById("subject").value;
+        //     let content = document.getElementById("content").value;
+        //     let receiveridsplit = receiverid.split("");
+        //
+        //     let methodcall;
+        //     if (receiveridsplit.includes("@")){
+        //         methodcall = "./api/message/sendaccountmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+        //     } else {
+        //         methodcall = "./api/message/sendschoolmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+        //     }
+        //     let xhr = new XMLHttpRequest();
+        //     xhr.open('POST', methodcall, true);
+        //     xhr.send();
+        //     location.reload();
+        // }
     </script>
 </head>
 <body class="light" style="display: flex" onload="render()">
 
-    <h6>Receiver</h6>
-    <input type="text" id="receiverid">
-    <h6>Subject</h6>
-    <input type="text" id="subject">
-    <h6>Your Message</h6>
-    <input type="text" id="content">
-    <input type="button" value="Send" onclick="sendMessage()">
+<!-- TODO BELOW IS THE MESSAGE SYSTEM INPUTS-->
+
+<!--    Receiver-->
+<!--    <input type="text" id="receiverid">-->
+<!--    Subject-->
+<!--    <input type="text" id="subject">-->
+<!--    Your Message-->
+<!--    <input type="text" id="content">-->
+<!--    <input type="button" value="Send" onclick="sendMessage()">-->
 
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">

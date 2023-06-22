@@ -1,6 +1,8 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
+import java.awt.*;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -92,6 +94,23 @@ public class FormRegistrationResource {
     }
 
     /**
+     * Creates a child as a logged in parent
+     */
+    @Path("/createChild/{accountid}/{name}/{dob}/{bsn}")
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    public void createChild(@PathParam("accountid") String accountid,
+                            @PathParam("name") String childname,
+                            @PathParam("dob") Date birth_date,
+                            @PathParam("bsn") String bsn) throws Exception {
+        openConnection();
+        int student_id = newStudentID();
+        createStudent(childname, accountid, bsn, birth_date, student_id);
+        closeConnection();
+    }
+
+
+    /**
      * Creates new account table entry
      */
     private void createAccount(String guardianName, String telephone1, String telephone2, String email, String address) throws SQLException {
@@ -133,7 +152,7 @@ public class FormRegistrationResource {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
-            if(hex.length() == 1) {
+            if (hex.length() == 1) {
                 hexString.append('0');
             }
             hexString.append(hex);

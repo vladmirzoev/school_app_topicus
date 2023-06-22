@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleExtras.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,11 +54,27 @@
         <div class="formText3">Grade of study</div>
         <input class="inputs" type="text" style="width: 600px;" name="grade">
         <div class="formText3">School:</div>
-        <input class="inputs" type="text" style="width: 600px" name="schoolName">
+        <!--        <input class="inputs" type="text" style="width: 600px" name="schoolName">-->
+        <select class="inputs" type="text" style="width: 600px">
+            <option value="" selected disabled hidden>test</option>
+            <option value="1">School2</option>
+            <option value="1">School3</option>
+        </select>
         <div class="row justify-content-center align-items-center">
             <div class="col-6" style="margin-top: 10px">
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()">
             </div>
+        </div>
+
+        <div class="popup2" id="popup2">
+            <h2>Thank you!</h2>
+            <p style="color: #000000">The registration is successfully completed!</p>
+            <a href="login.html">
+                <input type="submit" class="btn btn-primary" style="font-size: 16px" onclick="closePopup2()" value="Login Now!">
+            </a>
         </div>
     </form>
 </div>
+<script src="scripts/popup.js"></script>
+</body>
+</html>
