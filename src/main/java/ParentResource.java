@@ -28,13 +28,15 @@ public class ParentResource {
         db.close();
     }
 
-    @Path("{gid}")
+    /**
+     * Gets a child depending on the guardian id
+     */
+    @Path("/getchild/{gid}")
     @GET
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Student getChildren(@PathParam("gid") String gid) throws Exception{
+    public Student getChild(@PathParam("gid") String gid) throws Exception{
         openConnection();
-        String query = "SELECT s.student_id, s.bsn, s.name, s.birth_date, s.guardian_id FROM STUDENT s, Guardian g WHERE g.guardian_id = s.guardian_id AND g.guardian_id = ?";
+        String query = "SELECT s.student_id, s.bsn, s.name, s.birth_date, s.guardian_id FROM student s, guardian g WHERE g.guardian_id = s.guardian_id AND g.guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, gid);
         ResultSet result = st.executeQuery();
@@ -49,7 +51,31 @@ public class ParentResource {
         }
         closeConnection();
         return queriedStudent;
+    }
 
+    /**
+     * Gets all children of a particular parent
+     */
+    @Path("/getchildren/{gid}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public ArrayList<Student> getChildren(@PathParam("gid") String gid) throws Exception {
+        openConnection();
+        String query = "SELECT s.student_id, s.name, s.birth_date FROM student s, guardian g WHERE g.guardian_id = s.guardian_id AND g.guardian_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, gid);
+        ResultSet result = st.executeQuery();
+
+        ArrayList<Student> studentList = new ArrayList<>();
+        while (result.next()) {
+            Student queriedStudent = new Student();
+            queriedStudent.setId(result.getInt(1));
+            queriedStudent.setName(result.getString(2));
+            queriedStudent.setBirthdate(String.valueOf(result.getDate(3)));
+            studentList.add(queriedStudent);
+        }
+        closeConnection();
+        return studentList;
     }
 
 //    @Path("{messages}")
@@ -65,9 +91,6 @@ public class ParentResource {
 //    public Messages sendMessages() throws exception{
 //
 //    }
-
-
-
 
     /**
      * Gets all parents in the system
@@ -93,12 +116,12 @@ public class ParentResource {
     }
 
     /**
-     * Gets specific parent depending on their account ID
+     * Gets parent details based on their id
      */
-    @Path("{id}")
+    @Path("/getparentdetails/{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Parent findParent(@PathParam("id") String id) throws Exception {
+    public Parent getParentDetails(@PathParam("id") String id) throws Exception {
         openConnection();
         String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);

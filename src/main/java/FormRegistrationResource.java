@@ -164,7 +164,7 @@ public class FormRegistrationResource {
      * Creates new registration table entry
      */
     private void createRegistration(int grade, int student_id, int registration_id, int school_id) throws SQLException {
-        String registration = "INSERT INTO registration (registration_id, grade, registration_date, student_id, school_id, status) VALUES (?, ?, ?, ?, ?, ?)";
+        String registration = "INSERT INTO registration (registration_id, grade, registration_date, student_id, school_id, status, allowedit) VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement reg = db.prepareStatement(registration);
         reg.setInt(1, registration_id);
         reg.setInt(2, grade);
@@ -172,6 +172,7 @@ public class FormRegistrationResource {
         reg.setInt(4, student_id);
         reg.setInt(5, school_id);
         reg.setString(6, "Under review");
+        reg.setString(7, "N");
         reg.execute();
     }
 

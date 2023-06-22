@@ -9,26 +9,44 @@
     <title>SomStudie</title>
 
     <script>
-        //TODO GET THIS SHIT ON EVERY SINGLE PORTION OF THE WEBPAGE
-        function replaceTest() {
+        function render() {
             var id = sessionStorage.getItem("id");
+
+            // to replace the header and bottom left name
             var methodcall = './api/account/getname/' + id;
             var xhr = new XMLHttpRequest();
+            var date = new Date();
+            var hr = date.getHours();
             xhr.open('GET', methodcall, true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         var name = JSON.parse(xhr.responseText).name;
-                        console.log("Received message:", name);
-                        document.getElementById("dashboardHeading").innerHTML = "Welcome, " + name;
+
+                        const splitname = name.split(" ");
+                        let initials = [];
+                        for (let i = 0; i < splitname.length - 1; i++) {
+                            initials[i] = splitname[i].split("")[0] + ". ";
+                        }
+
+                        document.getElementById("bottomleftname").innerText = initials.toString() + splitname[splitname.length - 1];
+                        if (hr < 12) {
+                            document.getElementById("dashboardHeading").innerHTML = "Good Morning, " + name;
+                        } else if (hr < 18) {
+                            document.getElementById("dashboardHeading").innerHTML = "Good Afternoon, " + name;
+                        } else {
+                            document.getElementById("dashboardHeading").innerHTML = "Good Evening, " + name;
+                        }
                     }
                 }
             };
             xhr.send();
+
+            //TODO maybe add profile picture functionality
         }
     </script>
 </head>
-<body class="light" style="display: flex" onload="replaceTest()">
+<body class="light" style="display: flex" onload="render()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -43,25 +61,36 @@
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
-                                                           width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href="">
+                <img src="images/menu/Notifications.svg" alt="notifications" width="100%"></a>
+            </div>
             <div class="col-8 sideMenuText">
-                <li><a href="index.html"><p>notifications</p></a></li>
+                <li>
+                    <a href="">
+                        <p>notifications</p>
+                    </a>
+                </li> <!-- TODO add notifications page -->
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
-                                                           width="100%"></a></div>
+            <div class="col-4 menuPicture">
+                <a href="messages.html">
+                    <img src="images/menu/Messages.svg" alt="messages" width="100%">
+                </a>
+            </div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>messages</p></a></li>
+                <li><a href="messages.html"><p>messages</p></a></li>
             </div>
         </div>
         <a href="children.html">
             <div class="row align-items-center" id="lastElement">
-                <div class="col-4 menuPicture"><a href=""><img src="images/menu/Heart.svg" alt="children" width="100%"></a>
+                <div class="col-4 menuPicture">
+                    <a href="children.html">
+                        <img src="images/menu/Heart.svg" alt="children" width="100%">
+                    </a>
                 </div>
                 <div class="col-8 sideMenuText">
-                    <li><p>my children</p></li>
+                    <li><a href="children.html"><p>my children</p></a></li>
                 </div>
             </div>
         </a>
@@ -70,7 +99,7 @@
         </div>
         <div class="row align-items-center userAvatar">
             <div class="col-4 menuPicture"><a href=""><img src="images/menu/User.svg" alt="user" width="100%"></a></div>
-            <div class="col 8 sideMenuText"><p>N. Surname</p></div>
+            <div class="col 8 sideMenuText"><p id="bottomleftname"></p></div>
         </div>
     </ul>
 
@@ -79,7 +108,7 @@
 <div class="container dashboardContainer">
     <div class="row justify-content-end text-end">
         <div class="row col-12">
-            <h1 class="mainHeader" id="dashboardHeading">Good morning, Name Surname</h1>
+            <h1 class="mainHeader" id="dashboardHeading"></h1>
         </div>
 
     </div>
@@ -100,10 +129,6 @@
                         <img src="images/svg/children.svg" alt="my children" width="100%">
                     </div>
                 </div>
-                <!--                <div class="dark">-->
-                <!--                    <h2 class="subHeader">my children</h2>-->
-                <!--                    <img src="/images/svg/children.svg" alt="my children" width="100%">-->
-                <!--                </div>-->
             </div>
             <div class="row">
                 <div class="row dark visualBox align-items-center">

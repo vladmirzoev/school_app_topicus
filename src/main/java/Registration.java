@@ -10,6 +10,7 @@ public class Registration {
     private String name;
     private int school_id;
     private String status;
+    private String allowedit;
 
     public int getId() {
         return id;
@@ -66,4 +67,8 @@ public class Registration {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getAllowedit(){return allowedit;}
+
+    public void setAllowedit(String edit){this.allowedit = edit;}
 }

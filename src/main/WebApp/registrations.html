@@ -6,9 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
+    <title>Registrations</title>
+
+    <script>
+        function render() {
+            var id = sessionStorage.getItem("id");
+            var methodcall = './api/schooladmin/getAllStudents/' + id;
+            var req = new XMLHttpRequest();
+            req.open('GET', methodcall, true);
+            req.onreadystatechange = function () {
+                if (req.readyState === XMLHttpRequest.DONE) {
+                    if (req.status === 200) {
+                        var schoolID = JSON.parse(req.responseText).school_id;
+                    }
+                }
+            };
+            req.send();
+        }
+    </script>
 </head>
-<body class="light" style="display: flex">
+<body class="light" style="display: flex" onload="render()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -25,20 +42,32 @@
     </div>
     <ul class="nav-links" id="schoolMenu">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Registrations.svg" alt="notifications" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>registrations</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Registrations.svg" alt="notifications"
+                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>registrations</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>contact parents</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
+                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>contact parents</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>my school</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a>
+            </div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>my school</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>forms</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a>
+            </div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>forms</p></a></li>
+            </div>
         </div>
 
         <div class="row" id="logInText">
@@ -46,7 +75,8 @@
         </div>
         <div class="row align-items-center userAvatar">
             <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
-            <div class="col 8 sideMenuText"><p>N. Surname</p></div>
+            <!-- TODO the bottom left name -->
+            <div class="col 8 sideMenuText"><p id="bottomleftname">N. Surname</p></div>
         </div>
     </ul>
 
@@ -55,7 +85,7 @@
 <div class="container dashboardContainer">
     <div class="row justify-content-end text-end">
         <div class="row col-12">
-            <h1 class="mainHeader" id="dashboardHeading">Messages</h1>
+            <h1 class="mainHeader" id="dashboardHeading">Registrations</h1>
         </div>
 
     </div>

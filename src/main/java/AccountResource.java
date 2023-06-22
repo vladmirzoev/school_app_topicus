@@ -118,6 +118,30 @@ public class AccountResource {
     }
 
     /**
+     * Gets details of a particlar account id
+     */
+    @Path("/fetchaccountdetails/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Parent fetchAccountDetails(@PathParam("id") String id) throws Exception {
+        openConnection();
+        String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, id);
+        ResultSet rs = st.executeQuery();
+
+        Parent queriedParent = new Parent();
+        while (rs.next()) {
+            queriedParent.setId(rs.getString(1));
+            queriedParent.setName(rs.getString(2));
+            queriedParent.setAddress(rs.getString(3));
+            queriedParent.setPhone_1(rs.getString(4));
+        }
+        closeConnection();
+        return queriedParent;
+    }
+
+    /**
      * Check account_id, password and role of a parent login
      */
     private boolean attemptRegularLogin(String email, String pass) throws SQLException {
