@@ -10,38 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b48de91-e54e-4ccf-b6a6-dc5886cf7058" name="Changes" comment="New Merge (unversioned files)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MessageResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
     </list>
-    <list id="5d5d9f96-164b-4cd3-8fca-fa45b60260e8" name="Changes by samer" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
-    </list>
+    <list id="cd74df61-390c-49c9-8c4e-2d01bb9eb86f" name="Changes by samer" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,11 +87,14 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.applicationServers"
+    "settings.editor.selected.configurable": "database.query.execution"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
     ]
   }
 }]]></component>
@@ -258,7 +240,7 @@
       <workItem from="1687362164935" duration="6188000" />
       <workItem from="1687383124522" duration="267000" />
       <workItem from="1687383470883" duration="29000" />
-      <workItem from="1687422772893" duration="8460000" />
+      <workItem from="1687422772893" duration="20899000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

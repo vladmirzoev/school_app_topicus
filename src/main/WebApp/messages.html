@@ -9,10 +9,88 @@
     <title>Messages</title>
 
     <script>
+        function render() {
+            var id = sessionStorage.getItem("id");
 
+            //To fetch all messages
+            var methodcall1 = './api/message/fetchaccountmessages/' + id;
+            var xhr1 = new XMLHttpRequest();
+            xhr1.open('GET', methodcall1, true);
+            xhr1.onreadystatechange = function () {
+                if (xhr1.readyState === XMLHttpRequest.DONE) {
+                    if (xhr1.status === 200) {
+                        let obj = JSON.parse(xhr1.responseText);
+                        let messages = [];
+                        for (let i = 0; i < obj.length; i++) {
+                            let currentmessage = [];
+                            currentmessage[0] = obj[i].sender;
+                            currentmessage[1] = obj[i].receiver;
+                            currentmessage[2] = obj[i].dateSent;
+                            currentmessage[3] = obj[i].subject;
+                            currentmessage[4] = obj[i].content;
+                            messages[i] = currentmessage;
+                        }
+                    }
+                }
+            }
+
+            //To fetch the account name and initials for bottom left
+            var methodcall2 = './api/account/getname/' + id;
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open('GET', methodcall2, true);
+            xhr2.onreadystatechange = function () {
+                if (xhr2.readyState === XMLHttpRequest.DONE) {
+                    if (xhr2.status === 200) {
+                        var name = JSON.parse(xhr2.responseText).name;
+
+                        const splitname = name.split(" ");
+                        let initials = [];
+                        for (let i = 0; i < splitname.length - 1; i++) {
+                            initials[i] = splitname[i].split("")[0] + ". ";
+                        }
+
+                        document.getElementById("bottomleftname").innerText = initials.toString() + splitname[splitname.length - 1];
+                    }
+                }
+            }
+            xhr1.send();
+            xhr2.send();
+        }
+
+        // TODO BELOW IS THE MESSAGE SYSTEM JS
+        // //For sending a message
+        // function sendMessage() {
+        //     let senderid = sessionStorage.getItem("id");
+        //     let receiverid = document.getElementById("receiverid").value;
+        //     let subject = document.getElementById("subject").value;
+        //     let content = document.getElementById("content").value;
+        //     let receiveridsplit = receiverid.split("");
+        //
+        //     let methodcall;
+        //     if (receiveridsplit.includes("@")){
+        //         methodcall = "./api/message/sendaccountmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+        //     } else {
+        //         methodcall = "./api/message/sendschoolmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+        //     }
+        //     let xhr = new XMLHttpRequest();
+        //     xhr.open('POST', methodcall, true);
+        //     xhr.send();
+        //     location.reload();
+        // }
     </script>
 </head>
-<body class="light" style="display: flex">
+<body class="light" style="display: flex" onload="render()">
+
+<!-- TODO BELOW IS THE MESSAGE SYSTEM INPUTS-->
+
+<!--    Receiver-->
+<!--    <input type="text" id="receiverid">-->
+<!--    Subject-->
+<!--    <input type="text" id="subject">-->
+<!--    Your Message-->
+<!--    <input type="text" id="content">-->
+<!--    <input type="button" value="Send" onclick="sendMessage()">-->
+
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -24,21 +102,28 @@
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
             </a>
         </div>
-
-
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>notifications</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
+                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>notifications</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href="messages.html"><p>messages</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
+                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="messages.html"><p>messages</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href="children.html"><p>my children</p></a></li></div>
+            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children"
+                                                                        width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="children.html"><p>my children</p></a></li>
+            </div>
         </div>
 
         <div class="row" id="logInText">
@@ -46,7 +131,7 @@
         </div>
         <div class="row align-items-center userAvatar">
             <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
-            <div class="col 8 sideMenuText"><p>N. Surname</p></div>
+            <div class="col 8 sideMenuText"><p id="bottomleftname"></p></div>
         </div>
     </ul>
 
