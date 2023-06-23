@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-
-    <script>
-        //TODO put javascript to check if fields are filled up here
-
-        //TODO put javascript for getting specific school form here
-    </script>
 </head>
 <body style="background-color: #EAEDF0;">
 <div class="blackbox mx-auto">
@@ -27,19 +21,10 @@
     <input class="inputs" type="text" style="width: 600px;" id="bsn">
     <div class="row justify-content-center align-items-center">
         <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
-        <script>
-            function createChild() {
-                let guardianid = sessionStorage.getItem("id");
-                let childname = document.getElementById("childName").value;
-                let dob = document.getElementById("birth_date").value;
-                let bsn = document.getElementById("bsn").value;
-                let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
-
-                let xhr = new XMLHttpRequest();
-                xhr.open('POST', methodcall, true)
-                xhr.send();
-                window.location.href = "children.html";
-            }
-        </script>
     </div>
 </div>
+
+<script src="scripts/registrationformloggedin.js"></script>
+
+</body>
+</html>
