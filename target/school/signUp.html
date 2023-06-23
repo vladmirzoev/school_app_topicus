@@ -8,63 +8,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie Sign Up</title>
-<!--    <script>-->
-<!--        let email_format = "^(.+)@(.+)$";-->
-<!--        let pattern = new RegExp(email_format);-->
-<!--        let email = document.getElementById("email")-->
-<!--        let matcher = pattern.test(email);-->
-<!--        if (pass !== conf_pass) {-->
-<!--            console.log("The passwords do not match ... Please re-enter the same password")-->
-<!--        } else if (p_no1.length !== 10) {-->
-<!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
-<!--        } else if (p_no2 !== null && p_no2.length !== 10) {-->
-<!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
-<!--        } else if (!matcher.test(email)) {-->
-<!--            console.log("Invalid email format ... Please re-enter your email.")-->
-<!--        }-->
+    <script>
 
-<!--    </script>-->
+    </script>
 </head>
 <body style="background-color: #EAEDF0;">
 <div class="blackbox mx-auto" style="height: 650px">
     <div class="container text-center">
         <h1 class="mainHeader">Sign Up</h1>
     </div>
-    <form action="./api/signup/newaccount" method="post">
         <div>
-
-            <div class="formText2">Parent's first name</div>
-            <input class="inputs" type="text" style="width: 600px;" name="fname">
-            <div class="formText2">Parent's last name</div>
-            <input class="inputs" type="text" style="width: 600px;" name="lname">
-            <div class="formText2">Contact e-mail:</div>
-            <input class="inputs" type="email" style="width: 600px;" name="email">
+            <div class="formText2">Parent's first name *</div>
+            <input class="inputs" type="text" style="width: 600px;" id="fname">
+            <div class="formText2">Parent's last name *</div>
+            <input class="inputs" type="text" style="width: 600px;" id="lname">
+            <div class="formText2">Contact e-mail *</div>
+            <input class="inputs" type="email" style="width: 600px;" id="email">
             <div class="row" style="margin: 0px">
                 <div class="col-6 formText3" style="padding: 0px">
-                    Telephone
+                    Telephone 1 *
                 </div>
                 <div class="col-6 formText3" style="padding-left: 15px">
-                    Telephone 2 (optional)
+                    Telephone 2
                 </div>
 
                 <div class="col-6" style="padding: 0px">
-                    <input class="inputs" type="text" style="width: 280px" name="p_no1">
+                    <input class="inputs" type="text" style="width: 280px" id="p_no1">
                 </div>
                 <div class="col-6" style="padding: 0px">
-                    <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" name="p_no2">
+                    <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" id="p_no2">
                 </div>
             </div>
-            <div class="formText2">Address:</div>
-            <input class="inputs" type="text" style="width: 600px;" name="address">
-            <div class="formText2">Password</div>
-            <input class="inputs" type="password" style="width: 600px;" name="pass">
-            <div class="formText2">Password confirmation:</div>
-            <input class="inputs" type="password" style="width: 600px;" name="conf_pass">
+            <div class="formText2">Address *</div>
+            <input class="inputs" type="text" style="width: 600px;" id="address">
+            <div class="formText2">Password *</div>
+            <input class="inputs" type="password" style="width: 600px;" id="pass">
+            <div class="formText2">Confirm Password *</div>
+            <input class="inputs" type="password" style="width: 600px;" id="conf_pass">
         </div>
         <div class="row justify-content-center align-items-center">
             <div class="col-6" style="margin-top: 20px">
-                <input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()">
-<!--                <a href="signUpSuccessful.html" class="hyperlink"><input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()"></a>-->
+                <input type="button" value="Confirm" class="btn btn-primary" onclick="check()">
+                <!--                <a href="signUpSuccessful.html" class="hyperlink"><input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()"></a>-->
+                <script>
+                    function check() {
+                        let valid = true;
+
+                        let fname = document.getElementById("fname").value;
+                        let lname = document.getElementById("lname").value;
+                        let email = document.getElementById("email").value;
+                        let p_no1 = document.getElementById("p_no1").value;
+                        let p_no2 = document.getElementById("p_no2").value;
+                        let address = document.getElementById("address").value;
+                        let pass = document.getElementById("pass").value;
+                        let conf_pass = document.getElementById("conf_pass").value;
+
+                        let email_format = "^(.+)@(.+)$";
+                        let pattern = new RegExp(email_format);
+                        let matcher = pattern.test(email);
+
+                        if (!fname || !lname) {
+                            document.getElementById("fname").style.borderColor = "red";
+                            document.getElementById("lname").style.borderColor = "red";
+                            valid = false;
+                        }
+
+                        if (pass !== conf_pass.value) {
+                            console.log("The passwords do not match ... Please re-enter the same password")
+                            document.getElementById("pass").style.borderColor = "red";
+                            document.getElementById("conf_pass").style.borderColor = "red";
+                            valid = false;
+                        }
+
+                        if (p_no1 !== 10) {
+                            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
+                            document.getElementById("p_no1").style.borderColor = "red";
+                            valid = false;
+                        }
+
+                        if (p_no2 !== null && p_no2.length !== 10) {
+                            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
+                            document.getElementById("p_no2").style.borderColor = "red";
+                            valid = false;
+                        }
+
+                        if (!matcher.test(email.value)) {
+                            console.log("Invalid email format ... Please re-enter your email.")
+                            document.getElementById("email").style.borderColor = "red";
+                            valid = false;
+                        }
+
+                        if (valid) {
+                            createAccount(fname, lname, email, p_no1, p_no2, address, pass)
+                        }
+                    }
+
+                    function createAccount(fname, lname, email, p_no1, p_no2, address, pass) {
+
+
+
+                        // let methodcall = "./api/signup/newaccount/" + fname +"/"+lname+"/"+email+"/"+p_no1+"/"+p_no2+"/"+address+"/"+pass;
+                        // let xhr = new XMLHttpRequest();
+                        // xhr.open('POST', methodcall, true);
+                        // xhr.send();
+                        //
+                        // openPopup2();
+                    }
+                </script>
             </div>
         </div>
 
@@ -72,11 +122,14 @@
             <h2>Thank you!</h2>
             <p style="color: #000000">You were successfully signed up!</p>
             <a href="login.html">
-                <input type="button" class="btn-primary" style="font-size: 16px" onclick="closePopup2()" value="Login Now!"> <!-- why doesn't it work with submit type? -->
-            </a>
+                <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()"
+                       value="Login Now!">
+                <script>
+                    function redirect() {
+                        window.location.href = "login.html";
+                    }
+                </script>
         </div>
-
-    </form>
 </div>
 <script src="scripts/popup.js"></script>
 </body>

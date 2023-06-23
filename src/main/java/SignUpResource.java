@@ -35,7 +35,7 @@ public class SignUpResource {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
-            if(hex.length() == 1) {
+            if (hex.length() == 1) {
                 hexString.append('0');
             }
             hexString.append(hex);
@@ -47,17 +47,15 @@ public class SignUpResource {
      * Creates a new account table entry using all the fields from the signup page and checks for invalid/empty fields
      */
     @POST
-    @Path("/newaccount")
+    @Path("/newaccount/{fname}/{lname}/{email}/{p_no1}/{p_no2}/{address}/{pass}")
     @Produces(MediaType.TEXT_HTML)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response CreateAccDB(@FormParam("fname") String fname,
-                                @FormParam("lname") String lname,
-                                @FormParam("email") String email,
-                                @FormParam("p_no1") String p_no1,
-                                @FormParam("p_no2") String p_no2,
-                                @FormParam("address") String address,
-                                @FormParam("pass") String pass,
-                                @FormParam("conf_pass") String conf_pass) throws Exception {
+    public Response CreateAccDB(@PathParam("fname") String fname,
+                                @PathParam("lname") String lname,
+                                @PathParam("email") String email,
+                                @PathParam("p_no1") String p_no1,
+                                @PathParam("p_no2") String p_no2,
+                                @PathParam("address") String address,
+                                @PathParam("pass") String pass) throws Exception {
         openConnection();
         String email_format = "^(.+)@(.+)$";
         Pattern pattern = Pattern.compile(email_format);
@@ -70,11 +68,9 @@ public class SignUpResource {
         String hashedPass = hashLoginPass(bytePass);
 
 
-        if (email.contains("@")) {
-            if (!accountExists(email) && pass.equals(conf_pass)) {
-                addAccount(fname + " " + lname, p_no1, p_no2, email, address, hashedPass);
-                return Response.seeOther(success).build();
-            }
+        if (!accountExists(email)) {
+            addAccount(fname + " " + lname, p_no1, p_no2, email, address, hashedPass);
+            return Response.seeOther(success).build();
         }
         closeConnection();
         return null; //TODO stub

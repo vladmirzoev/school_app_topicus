@@ -11,30 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style3.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +247,7 @@
       <workItem from="1687383470883" duration="29000" />
       <workItem from="1687422772893" duration="20899000" />
       <workItem from="1687469060540" duration="1034000" />
-      <workItem from="1687503186928" duration="7106000" />
+      <workItem from="1687503186928" duration="13492000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

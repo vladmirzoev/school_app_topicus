@@ -35,82 +35,91 @@
             };
             req.send();
         }
-
-        // function submitform() {
-        //     let childname = document.getElementById("childName").value;
-        //     let birthdate = document.getElementById("birth_date").value;
-        //     let guardianname = document.getElementById("guardianName").value;
-        //     let telephone1 = document.getElementById("telephone1").value;
-        //     let telephone2 = document.getElementById("telephone2").value;
-        //     let email = document.getElementById("childName").value;
-        //     let address = document.getElementById("childName").value;
-        //     let bsn = document.getElementById("childName").value;
-        //     let grade = document.getElementById("childName").value;
-        //
-        //
-        //     let methodcall = '.api/form/uploadBasicReq/'
-        //     let xhr = new XMLHttpRequest();
-        //     xhr.open('POST', methodcall, true);
-        //     xhr.send()
-        // }
     </script>
 </head>
 <body style="background-color: #EAEDF0;" onload="render()">
 <div class="blackbox mx-auto">
-    <form action="./api/form/uploadBasicReq" method="post">
-        <div class="container text-center">
-            <h1 class="mainHeader">Form</h1>
+    <div class="container text-center">
+        <h1 class="mainHeader">Form</h1>
+    </div>
+    <div>
+        <div class="formText3">Child name</div>
+        <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" id="childname"
+               required onkeyup="enableSubmit()">
+        <div class="formText3">Child Date of Birth</div>
+        <input class="inputs" type="date" style="width: 600px;" id="birthdate" required onkeyup="enableSubmit()">
+        <div class="formText3">Guardian name</div>
+        <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" id="guardianname"
+               required onkeyup="enableSubmit()">
+    </div>
+    <div class="row" style="margin: 0px">
+        <div class="col-6 formText3" style="padding: 0px">
+            Telephone
         </div>
-        <div>
-            <div class="formText3">Child name</div>
-            <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" name="childname" required onkeyup="enableSubmit()">
-            <div class="formText3">Child Date of Birth</div>
-            <input class="inputs" type="date" style="width: 600px;" name="birthdate" required onkeyup="enableSubmit()">
-            <div class="formText3">Guardian name</div>
-            <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" name="guardianname" required onkeyup="enableSubmit()">
-        </div>
-        <div class="row" style="margin: 0px">
-            <div class="col-6 formText3" style="padding: 0px">
-                Telephone
-            </div>
-            <div class="col-6 formText3" style="padding-left: 15px">
-                Telephone 2 (optional)
-            </div>
-
-            <div class="col-6" style="padding: 0px">
-                <input class="inputs" type="text" style="width: 280px" name="telephone1" required onkeyup="enableSubmit()">
-            </div>
-            <div class="col-6" style="padding: 0px">
-                <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" name="telephone2" required onkeyup="enableSubmit()">
-            </div>
-        </div>
-        <div class="formText3">Guardian contact e-mail</div>
-        <input class="inputs" type="email" style="width: 600px;" name="email" required>
-        <div class="formText3">Address</div>
-        <input class="inputs" type="text" style="width: 600px;" name="address" required onkeyup="enableSubmit()">
-        <div class="formText3">Child's BSN number:</div>
-        <input class="inputs" type="text" style="width: 600px;" name="bsn" required onkeyup="enableSubmit()">
-        <div class="formText3">Grade of study</div>
-        <input class="inputs" type="text" style="width: 600px;" name="grade" required onkeyup="enableSubmit()">
-        <div class="formText3">School:</div>
-                <input class="inputs" type="text" style="width: 600px" name="schoolname" required onkeyup="enableSubmit()">
-<!--        <select class="inputs" type="text" style="width: 600px" id="dropdown">-->
-<!--        </select>-->
-        <div class="row justify-content-center align-items-center">
-            <div class="col-6" style="margin-top: 10px">
-                <input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()">
-            </div>
+        <div class="col-6 formText3" style="padding-left: 15px">
+            Telephone 2 (optional)
         </div>
 
-        <div class="popup2" id="popup2">
-            <h2>Thank you!</h2>
-            <p style="color: #000000">The registration is successfully completed!</p>
-            <a href="login.html">
-                <input type="submit" class="btn btn-primary" style="font-size: 16px" onclick="closePopup2()"
-                       value="Login Now!">
-            </a>
+        <div class="col-6" style="padding: 0px">
+            <input class="inputs" type="text" style="width: 280px" id="telephone1" required
+                   onkeyup="enableSubmit()">
         </div>
-    </form>
+        <div class="col-6" style="padding: 0px">
+            <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" id="telephone2" required
+                   onkeyup="enableSubmit()">
+        </div>
+    </div>
+    <div class="formText3">Guardian contact e-mail</div>
+    <input class="inputs" type="email" style="width: 600px;" id="email" required onkeyup="enableSubmit()">
+    <div class="formText3">Address</div>
+    <input class="inputs" type="text" style="width: 600px;" id="address" required onkeyup="enableSubmit()">
+    <div class="formText3">Child's BSN number:</div>
+    <input class="inputs" type="text" style="width: 600px;" id="bsn" required onkeyup="enableSubmit()">
+    <div class="formText3">Grade of study</div>
+    <input class="inputs" type="text" style="width: 600px;" id="grade" required onkeyup="enableSubmit()">
+    <div class="formText3">School:</div>
+    <select class="inputs" type="text" style="width: 600px" id="dropdown"></select>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-6" style="margin-top: 10px">
+            <input type="button" value="Confirm" class="btn btn-primary" onclick="submitform()">
+        </div>
+    </div>
+
+    <script>
+        function submitform() {
+            let childname = document.getElementById("childname").value;
+            let guardianname = document.getElementById("guardianname").value;
+            let telephone1 = document.getElementById("telephone1").value;
+            let telephone2 = document.getElementById("telephone2").value;
+            let email = document.getElementById("email").value;
+            let bsn = document.getElementById("bsn").value;
+            let birthdate = document.getElementById("birthdate").value;
+            let address = document.getElementById("address").value;
+            let grade = document.getElementById("grade").value;
+            let schoolname = document.getElementById("dropdown").value;
+
+            let methodcall = '.api/form/uploadBasicReq/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + email + '/' + bsn + '/' + birthdate + '/' + address + '/' + grade + '/' + schoolname;
+            console.log(methodcall)
+            xhr = new XMLHttpRequest();
+            xhr.open('POST', methodcall, true);
+            xhr.send()
+
+            openPopup2();
+        }
+    </script>
+
+    <div class="popup2" id="popup2">
+        <h2>Thank you!</h2>
+        <p style="color: #000000">The registration is successfully completed!</p>
+        <a href="login.html">
+            <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">
+            <script>
+                function redirect(){
+                    window.location.href = "login.html";
+                }
+            </script>
+        </a>
+    </div>
 </div>
 <script src="scripts/popup.js"></script>
 </body>
