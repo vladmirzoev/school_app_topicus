@@ -10,40 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/session.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/userdashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/newChild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/newChild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +236,7 @@
       <workItem from="1687383470883" duration="29000" />
       <workItem from="1687422772893" duration="20899000" />
       <workItem from="1687469060540" duration="1034000" />
-      <workItem from="1687503186928" duration="17548000" />
+      <workItem from="1687503186928" duration="17718000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

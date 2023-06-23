@@ -46,6 +46,8 @@ function render() {
 }
 
 function addChild(){
+    //TODO change this to the actual addChild function
+
     let div = document.createElement('div');
     div.className = "blackbox";
     div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
