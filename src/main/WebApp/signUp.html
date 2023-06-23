@@ -18,23 +18,25 @@
         <h1 class="mainHeader">Sign Up</h1>
     </div>
     <div>
-        <div class="formText2" id="fnametxt">Parent's first name *</div>
+        <div class="formText2">Parent's first name *</div>
         <input class="inputs" type="text" style="width: 600px;" id="fname">
-        <div class="formText2" id="lnametxt">Parent's last name *</div>
+        <div class="formText2">Parent's last name *</div>
         <input class="inputs" type="text" style="width: 600px;" id="lname">
-        <div class="formText2" id="emailtxt">Contact e-mail *</div>
+        <div class="formText2">Contact e-mail *</div>
         <input class="inputs" type="email" style="width: 600px;" id="email">
         <div class="row" style="margin: 0px">
-            <div class="col-6 formText3" style="padding: 0px" id="pno1txt">Telephone 1 *</div>
-            <div class="col-6 formText3" style="padding-left: 15px" id="pno2txt">Telephone 2</div>
-            <div class="col-6" style="padding: 0px"><input class="inputs" type="text" style="width: 280px" id="p_no1"></div>
-            <div class="col-6" style="padding: 0px"><input class="inputs" type="text" style="width: 285px;margin-left: 15px;" id="p_no2"></div>
+            <div class="col-6 formText3" style="padding: 0px">Telephone 1 *</div>
+            <div class="col-6 formText3" style="padding-left: 15px">Telephone 2</div>
+            <div class="col-6" style="padding: 0px"><input class="inputs" type="text" style="width: 280px" id="p_no1">
+            </div>
+            <div class="col-6" style="padding: 0px"><input class="inputs" type="text"
+                                                           style="width: 285px;margin-left: 15px;" id="p_no2"></div>
         </div>
-        <div class="formText2" id="addresstxt">Address *</div>
+        <div class="formText2">Address *</div>
         <input class="inputs" type="text" style="width: 600px;" id="address">
-        <div class="formText2" id="passtxt">Password *</div>
+        <div class="formText2">Password *</div>
         <input class="inputs" type="password" style="width: 600px;" id="pass">
-        <div class="formText2" id="confpasstxt">Confirm Password *</div>
+        <div class="formText2">Confirm Password *</div>
         <input class="inputs" type="password" style="width: 600px;" id="conf_pass">
     </div>
     <div class="row justify-content-center align-items-center">
@@ -58,38 +60,59 @@
                     let matcher = pattern.test(email);
 
                     if (!fname || !lname) {
-                        document.getElementById("fname").style.borderColor = "red";
-                        document.getElementById("lname").style.borderColor = "red";
+                        document.getElementById("fname").style.borderColor = "#FF0000";
+                        document.getElementById("lname").style.borderColor = "#FF0000";
+                        document.getElementById("fname").style.backgroundColor = "#FFBFBF";
+                        document.getElementById("lname").style.backgroundColor = "#FFBFBF";
+
+                        document.getElementById("fname").placeholder = "Please enter your first name"
+                        document.getElementById("lname").placeholder = "Please enter your last name"
                         valid = false;
                     }
 
-                    if (pass !== conf_pass.value) {
-                        console.log("The passwords do not match ... Please re-enter the same password")
-                        document.getElementById("pass").style.borderColor = "red";
-                        document.getElementById("conf_pass").style.borderColor = "red";
-                        valid = false;
-                    }
-
-                    if (!address) {
-                        document.getElementById("address").style.borderColor = "red";
-                        valid = false;
-                    }
-
-                    if (p_no1 !== 10) {
-                        console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
-                        document.getElementById("p_no1").style.borderColor = "red";
-                        valid = false;
-                    }
-
-                    if (!(!p_no2) && p_no2.length !== 10) {
-                        console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
-                        document.getElementById("p_no2").style.borderColor = "red";
-                        valid = false;
-                    }
-
-                    if (!email || !matcher.test(email.value)) {
+                    //TODO matcher isnt working
+                    // if (!email || !matcher.test(email)) {
+                    if (!email) {
                         console.log("Invalid email format ... Please re-enter your email.")
-                        document.getElementById("email").style.borderColor = "red";
+                        document.getElementById("email").style.borderColor = "#FF0000";
+                        document.getElementById("email").style.backgroundColor = "#FFBFBF";
+
+                        document.getElementById("email").placeholder = "Please enter a valid e-mail"
+                        valid = false;
+                    }
+                    if (pass !== conf_pass) {
+                        console.log("The passwords do not match ... Please re-enter the same password")
+                        document.getElementById("pass").style.borderColor = "#FF0000";
+                        document.getElementById("conf_pass").style.borderColor = "#FF0000";
+                        document.getElementById("pass").style.backgroundColor = "#FFBFBF";
+                        document.getElementById("conf_pass").style.backgroundColor = "#FFBFBF";
+                        valid = false;
+
+                    }
+                    if (!address) {
+                        document.getElementById("address").style.borderColor = "#FF0000";
+                        document.getElementById("address").style.backgroundColor = "#FFBFBF";
+
+                        document.getElementById("address").placeholder = "Please enter your address"
+                        valid = false;
+
+                    }
+
+                    //TODO check for valid phone numbers
+                    // if (p_no1 !== 10) {
+                    if (!p_no1) {
+                        console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
+                        document.getElementById("p_no1").style.borderColor = "#FF0000";
+                        document.getElementById("p_no1").style.backgroundColor = "#FFBFBF";
+                        valid = false;
+
+                    }
+
+                    // if (!(!p_no2) && p_no2.length !== 10) {
+                    if (!(!p_no2) && !p_no2) {
+                        console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
+                        document.getElementById("p_no2").style.borderColor = "#FF0000";
+                        document.getElementById("p_no2").style.backgroundColor = "#FFBFBF";
                         valid = false;
                     }
 
@@ -99,7 +122,7 @@
                 }
 
                 function createAccount(fname, lname, email, p_no1, p_no2, address, pass) {
-                    let methodcall = "./api/signup/newaccount/" + fname +"/"+lname+"/"+email+"/"+p_no1+"/"+p_no2+"/"+address+"/"+pass;
+                    let methodcall = "./api/signup/newaccount/" + fname + "/" + lname + "/" + email + "/" + p_no1 + "/" + p_no2 + "/" + address + "/" + pass;
                     let xhr = new XMLHttpRequest();
                     xhr.open('POST', methodcall, true);
                     xhr.send();
