@@ -61,20 +61,21 @@ public class FormRegistrationResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void uploadRegistration(@FormParam("childName") String childName,
-                                   @FormParam("guardianName") String guardianName,
+    public void uploadRegistration(@FormParam("childname") String childName,
+                                   @FormParam("guardianname") String guardianName,
                                    @FormParam("telephone1") String telephone1,
                                    @FormParam("telephone2") String telephone2,
                                    @FormParam("email") String email,
                                    @FormParam("bsn") String bsn,
-                                   @FormParam("birth_date") Date birth_date,
+                                   @FormParam("birthdate") Date birth_date,
                                    @FormParam("grade") int grade,
-                                   @FormParam("schoolName") String schoolName,
+                                   @FormParam("schoolname") String schoolName,
                                    @FormParam("address") String address) throws Exception {
         openConnection();
         int student_id = newStudentID();
         int registration_id = newRegistrationID();
         int school_id = getSchoolID(schoolName);
+        System.out.println(email);
         if (email.contains("@")) {
             if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
                 createAccount(guardianName, telephone1, telephone2, email, address);

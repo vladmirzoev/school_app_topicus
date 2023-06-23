@@ -8,6 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie Login</title>
+
+    <script>
+        function storeSessionRegular(){
+            var id = document.getElementById("regularEmailValue").value;
+            sessionStorage.setItem("id", id)
+        }
+
+        function storeSessionAdmin(){
+            var id = document.getElementById("adminEmailValue").value;
+            sessionStorage.setItem("id", id)
+        }
+    </script>
 </head>
 <!--<body>-->
 <!--    <script type="text/javascript" src="logic/LogIn.js"></script>-->
@@ -37,7 +49,7 @@
                     <input type="password" name="regularPass">
                 </div>
                 <div class="form-input">
-                    <input type="submit" value="Login" class="submitButton">
+                    <input type="submit" value="Login" class="submitButton" onclick="storeSessionRegular()">
                 </div>
                 <div>
                     <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
@@ -60,7 +72,7 @@
                     <input type="password" name="adminPass">
                 </div>
                 <div class="form-input">
-                    <input type="submit" value="Login" class="submitButton">
+                    <input type="submit" value="Login" class="submitButton" onclick="storeSessionAdmin()">
                 </div>
             </form>
         </div>

@@ -31,6 +31,7 @@ public class SchoolResource {
     /**
      * Gets all schools in the database
      */
+    @Path("/getschools")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public ArrayList<School> getSchools() throws SQLException {

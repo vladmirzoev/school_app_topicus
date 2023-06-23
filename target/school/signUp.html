@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,8 +63,20 @@
         </div>
         <div class="row justify-content-center align-items-center">
             <div class="col-6" style="margin-top: 20px">
-                <a href="signUpSuccessful.html" class="hyperlink"><input type="submit" value="Confirm" class="btn btn-primary"></a>
+                <input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()">
+<!--                <a href="signUpSuccessful.html" class="hyperlink"><input type="submit" value="Confirm" class="btn btn-primary" onclick="openPopup2()"></a>-->
             </div>
         </div>
+
+        <div class="popup2" id="popup2">
+            <h2>Thank you!</h2>
+            <p style="color: #000000">You were successfully signed up!</p>
+            <a href="login.html">
+                <input type="button" class="btn-primary" style="font-size: 16px" onclick="closePopup2()" value="Login Now!"> <!-- why doesn't it work with submit type? -->
+            </a>
+        </div>
+
     </form>
 </div>
+<script src="scripts/popup.js"></script>
+</body>

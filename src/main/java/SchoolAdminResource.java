@@ -103,12 +103,12 @@ public class SchoolAdminResource {
         st.executeQuery();
         closeConnection();
     }
-    
+
     @Path("/deleteregistration/{id}")
     @DELETE
     public void deleteRegistration(@PathParam("id") int studentID) throws Exception{
         openConnection();
-        String query = "DELETE FROM registration WHERE student_id = CAST(? AS int)";
+        String query = "DELETE FROM registration WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1,studentID);
         st.executeQuery();
