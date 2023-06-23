@@ -49,7 +49,7 @@ public class SignUpResource {
     @POST
     @Path("/newaccount/{fname}/{lname}/{email}/{p_no1}/{p_no2}/{address}/{pass}")
     @Produces(MediaType.TEXT_HTML)
-    public Response CreateAccDB(@PathParam("fname") String fname,
+    public void CreateAccDB(@PathParam("fname") String fname,
                                 @PathParam("lname") String lname,
                                 @PathParam("email") String email,
                                 @PathParam("p_no1") String p_no1,
@@ -57,10 +57,6 @@ public class SignUpResource {
                                 @PathParam("address") String address,
                                 @PathParam("pass") String pass) throws Exception {
         openConnection();
-        String email_format = "^(.+)@(.+)$";
-        Pattern pattern = Pattern.compile(email_format);
-        Matcher matcher = pattern.matcher(email);
-        URI success = new java.net.URI("http://localhost:8080/Topicus/signUpSuccessful.html");
 
         //hash passwords
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -70,10 +66,9 @@ public class SignUpResource {
 
         if (!accountExists(email)) {
             addAccount(fname + " " + lname, p_no1, p_no2, email, address, hashedPass);
-            return Response.seeOther(success).build();
         }
+
         closeConnection();
-        return null; //TODO stub
     }
 
     /**

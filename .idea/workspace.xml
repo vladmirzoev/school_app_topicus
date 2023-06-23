@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +241,7 @@
       <workItem from="1687383470883" duration="29000" />
       <workItem from="1687422772893" duration="20899000" />
       <workItem from="1687469060540" duration="1034000" />
-      <workItem from="1687503186928" duration="14691000" />
+      <workItem from="1687503186928" duration="16165000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

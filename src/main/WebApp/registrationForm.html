@@ -11,8 +11,6 @@
     <title>Student Registration</title>
 
     <script>
-        //TODO put javascript to check if fields are filled up here
-
         //TODO put javascript for getting specific school form here
 
         function render() {
@@ -40,7 +38,7 @@
 <body style="background-color: #EAEDF0;" onload="render()">
 <div class="blackbox mx-auto">
     <div class="container text-center">
-        <h1 class="mainHeader">Form</h1>
+        <h1 class="mainHeader">Child Details</h1>
     </div>
     <div>
         <div class="formText3">Child name</div>
@@ -81,12 +79,14 @@
     <select class="inputs" type="text" style="width: 600px" id="dropdown"></select>
     <div class="row justify-content-center align-items-center">
         <div class="col-6" style="margin-top: 10px">
-            <input type="button" value="Confirm" class="btn btn-primary" onclick="submitform()">
+            <input type="button" value="Confirm" class="btn btn-primary" onclick="check()">
         </div>
     </div>
 
     <script>
-        function submitform() {
+        function check() {
+            let valid = true;
+
             let childname = document.getElementById("childname").value;
             let guardianname = document.getElementById("guardianname").value;
             let telephone1 = document.getElementById("telephone1").value;
@@ -98,6 +98,71 @@
             let grade = document.getElementById("grade").value;
             let schoolname = document.getElementById("dropdown").value;
 
+            //TODO elaborate on input validation
+
+            if (!childname) {
+                document.getElementById("childname").style.borderColor = "#FF0000";
+                document.getElementById("childname").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!guardianname) {
+                document.getElementById("guardianname").style.borderColor = "#FF0000";
+                document.getElementById("guardianname").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!telephone1) {
+                document.getElementById("telephone1").style.borderColor = "#FF0000";
+                document.getElementById("telephone1").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!telephone2) {
+                document.getElementById("telephone2").style.borderColor = "#FF0000";
+                document.getElementById("telephone2").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!email) {
+                document.getElementById("email").style.borderColor = "#FF0000";
+                document.getElementById("email").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!bsn) {
+                document.getElementById("bsn").style.borderColor = "#FF0000";
+                document.getElementById("bsn").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!address) {
+                document.getElementById("address").style.borderColor = "#FF0000";
+                document.getElementById("address").style.backgroundColor = "#FFBFBF";
+                valid = false;
+
+            }
+
+            if (!grade) {
+                document.getElementById("grade").style.borderColor = "#FF0000";
+                document.getElementById("grade").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (!birthdate) {
+                document.getElementById("birthdate").style.borderColor = "#FF0000";
+                document.getElementById("birthdate").style.backgroundColor = "#FFBFBF";
+                valid = false;
+            }
+
+            if (valid) {
+                submitform(childname, guardianname, telephone1, telephone2, email, bsn, birthdate, address, grade, schoolname);
+            }
+        }
+
+        function submitform(childname, guardianname, telephone1, telephone2, email, bsn, birthdate, address, grade, schoolname) {
+
+            //TODO this is a security issue if people inspect this script
             let methodcall = '.api/form/uploadBasicReq/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + email + '/' + bsn + '/' + birthdate + '/' + address + '/' + grade + '/' + schoolname;
             console.log(methodcall)
             xhr = new XMLHttpRequest();
@@ -110,11 +175,13 @@
 
     <div class="popup2" id="popup2">
         <h2>Thank you!</h2>
-        <p style="color: #000000">The registration is successfully completed!</p>
+        <p style="color: #000000">The registration is successfully completed!</p><br>
+        <p style="color: #000000">You may now proceed to the school form!</p><br>
         <a href="login.html">
-            <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">
+            <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Continue">
             <script>
                 function redirect(){
+                    //TODO redirect to school form
                     window.location.href = "login.html";
                 }
             </script>

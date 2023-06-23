@@ -2,7 +2,11 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-222.4554.10">
     <data-source name="dab_di22232b_81@bronto.ewi.utwente.nl" uuid="3419c344-51b8-41a8-afeb-496ecdc293f0">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <database-info product="PostgreSQL" version="10.23 (Ubuntu 10.23-0ubuntu0.18.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="10.23" exact-driver-version="42.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>dab_di22232b_81</user-name>
       <schema-mapping />
     </data-source>
   </component>

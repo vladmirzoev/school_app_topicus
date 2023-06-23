@@ -108,6 +108,8 @@
 
                     }
 
+
+
                     // if (!(!p_no2) && p_no2.length !== 10) {
                     if (!(!p_no2) && !p_no2) {
                         console.log("Invalid phone number entered ... Please re-enter a valid phone number.")
@@ -122,6 +124,8 @@
                 }
 
                 function createAccount(fname, lname, email, p_no1, p_no2, address, pass) {
+
+                    //TODO security issue, people can inspect and use this method call
                     let methodcall = "./api/signup/newaccount/" + fname + "/" + lname + "/" + email + "/" + p_no1 + "/" + p_no2 + "/" + address + "/" + pass;
                     let xhr = new XMLHttpRequest();
                     xhr.open('POST', methodcall, true);
