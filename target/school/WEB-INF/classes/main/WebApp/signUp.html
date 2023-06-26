@@ -2,137 +2,68 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie Sign Up</title>
-    <!--    <script>-->
-    <!--        let email_format = "^(.+)@(.+)$";-->
-    <!--        let pattern = new RegExp(email_format);-->
-    <!--        let email = document.getElementById("email")-->
-    <!--        let matcher = pattern.test(email);-->
-    <!--        if (pass !== conf_pass) {-->
-    <!--            console.log("The passwords do not match ... Please re-enter the same password")-->
-    <!--        } else if (p_no1.length !== 10) {-->
-    <!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
-    <!--        } else if (p_no2 !== null && p_no2.length !== 10) {-->
-    <!--            console.log("Invalid phone number entered ... Please re-enter a valid phone number.")-->
-    <!--        } else if (!matcher.test(email)) {-->
-    <!--            console.log("Invalid email format ... Please re-enter your email.")-->
-    <!--        }-->
-
-    <!--    </script>-->
 </head>
 <body style="background-color: #EAEDF0;">
 <div class="blackbox mx-auto" style="height: 650px">
     <div class="container text-center">
         <h1 class="mainHeader">Sign Up</h1>
     </div>
-        <div>
-            <div class="formText2">Parent's first name</div>
-            <input class="inputs required" type="text" style="width: 600px;" name="fname" id="fname" required onkeyup="enableSubmit2()">
-            <div class="formText2">Parent's last name</div>
-            <input class="inputs required" type="text" style="width: 600px;" name="lname" id="lname" required onkeyup="enableSubmit2()">
-            <div class="formText2">Contact e-mail:</div>
-            <input class="inputs required" type="email" style="width: 600px;" name="email" id="email" required onkeyup="enableSubmit2()">
-            <div class="row" style="margin: 0px">
-                <div class="col-6 formText3" style="padding: 0px">
-                    Telephone
-                </div>
-                <div class="col-6 formText3" style="padding-left: 15px">
-                    Telephone 2 (optional)
-                </div>
-
-                <div class="col-6" style="padding: 0px">
-                    <input class="inputs required" type="number" style="width: 280px" name="p_no1" id="p_no1" required onkeyup="enableSubmit2()">
-                </div>
-                <div class="col-6" style="padding: 0px">
-                    <input class="inputs" type="number" style="width: 285px;margin-left: 15px;" name="p_no2" id="p_no2">
-                </div>
+    <div>
+        <div class="formText2">Parent's first name</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="fname" id="fname" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Parent's last name</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="lname" id="lname" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Contact e-mail:</div>
+        <input class="inputs required" type="email" style="width: 600px;" name="email" id="email" required
+               onkeyup="enableSubmit2()">
+        <div class="row" style="margin: 0px">
+            <div class="col-6 formText3" style="padding: 0px">
+                Telephone
             </div>
-            <div class="formText2">Address:</div>
-            <input class="inputs required" type="text" style="width: 600px;" name="address" id="address" required onkeyup="enableSubmit2()">
-            <div class="formText2">Password</div>
-            <input class="inputs required" type="password" style="width: 600px;" name="pass" id="pass" required onkeyup="enableSubmit2()">
-            <div class="formText2">Password confirmation:</div>
-            <input class="inputs required" type="password" style="width: 600px;" name="conf_pass" id="conf_pass" required onkeyup="enableSubmit2()">
-            <span id = "message2" style="color:red" onkeyup="enableSubmit2()"></span>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-6" style="margin-top: 20px">
-                <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="check()">
+            <div class="col-6 formText3" style="padding-left: 15px">
+                Telephone 2 (optional)
+            </div>
+
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs required" type="number" style="width: 280px" name="p_no1" id="p_no1" required
+                       onkeyup="enableSubmit2()">
+            </div>
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs" type="number" style="width: 285px;margin-left: 15px;" name="p_no2" id="p_no2">
             </div>
         </div>
-
-        <div class="popup2" id="popup2">
-            <h2>Thank you!</h2>
-            <p style="color: #000000">You were successfully signed up!</p>
-            <a href="login.html">
-                <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!"> <!-- why doesn't it work with submit type? -->
-            </a>
+        <div class="formText2">Address:</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="address" id="address" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Password</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="pass" id="pass" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Password confirmation:</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="conf_pass" id="conf_pass" required
+               onkeyup="enableSubmit2()">
+        <span id="message2" style="color:red" onkeyup="enableSubmit2()"></span>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-6" style="margin-top: 20px">
+            <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="getValues()">
         </div>
+    </div>
+
+    <div class="popup2" id="popup2">
+        <h2>Thank you!</h2>
+        <p style="color: #000000">You were successfully signed up!</p>
+        <a href="login.html">
+            <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">
+        </a>
+    </div>
 </div>
 <script src="scripts/popup.js"></script>
 <script src="scripts/signup.js"></script>
 </body>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <link rel="stylesheet" href="styles/bootstrap.css">-->
-<!--    <link rel="stylesheet" href="styles/style.css">-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--    <meta id="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>SomStudie Sign Up</title>-->
-<!--</head>-->
-<!--<body style="background-color: #EAEDF0;">-->
-<!--<div class="blackbox mx-auto" style="height: 650px">-->
-<!--    <div class="container text-center">-->
-<!--        <h1 class="mainHeader">Sign Up</h1>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <div class="formText2">Parent's first name *</div>-->
-<!--        <input class="inputs required" type="text" style="width: 600px;" id="fname" required onkeyup="enableSubmit2()">-->
-<!--        <div class="formText2">Parent's last name *</div>-->
-<!--        <input class="inputs required" type="text" style="width: 600px;" id="lname" required onkeyup="enableSubmit2()">-->
-<!--        <div class="formText2">Contact e-mail *</div>-->
-<!--        <input class="inputs required" type="email" style="width: 600px;" id="email" required onkeyup="enableSubmit2()">-->
-<!--        <div class="row" style="margin: 0px">-->
-<!--            <div class="col-6 formText3" style="padding: 0px">Telephone 1 *</div>-->
-<!--            <div class="col-6 formText3" style="padding-left: 15px">Telephone 2</div>-->
-<!--            <div class="col-6" style="padding: 0px"><input class="inputs required" type="number" style="width: 280px"-->
-<!--                                                           id="p_no1" required onkeyup="enableSubmit2()">-->
-<!--            </div>-->
-<!--            <div class="col-6" style="padding: 0px"><input class="inputs" type="number"-->
-<!--                                                           style="width: 285px;margin-left: 15px;" id="p_no2"-->
-<!--                                                           onkeyup="enableSubmit2()"></div>-->
-<!--        </div>-->
-<!--        <div class="formText2">Address *</div>-->
-<!--        <input class="inputs required" type="text" style="width: 600px;" id="address" required-->
-<!--               onkeyup="enableSubmit2()">-->
-<!--        <div class="formText2">Password *</div>-->
-<!--        <input class="inputs required" type="password" style="width: 600px;" id="pass" required-->
-<!--               onkeyup="enableSubmit2()">-->
-<!--        <div class="formText2">Confirm Password *</div>-->
-<!--        <input class="inputs required" type="password" style="width: 600px;" id="conf_pass" required-->
-<!--               onkeyup="enableSubmit2()">-->
-<!--        <span id="message2" style="color:red" onkeyup="enableSubmit2()"></span>-->
-<!--    </div>-->
-<!--    <div class="row justify-content-center align-items-center">-->
-<!--        <div class="col-6" style="margin-top: 20px">-->
-<!--            <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="check()">-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="popup2" id="popup2">-->
-<!--        <h2>Thank you!</h2>-->
-<!--        <p style="color: #000000">You were successfully signed up!</p>-->
-<!--        <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">-->
-<!--    </div>-->
-<!--</div>-->
-<!--<script src="scripts/popup.js"></script>-->
-<!--<script src="scripts/signup.js"></script>-->
-<!--</body>-->

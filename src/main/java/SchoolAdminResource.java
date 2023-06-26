@@ -53,17 +53,50 @@ public class SchoolAdminResource {
 //    }
 
     /**
+     * Gets all registrations concerning the school
+     */
+    @Path("/getschoolregistrations/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<Registration> getSchoolRegistrations(@PathParam("id") String adminID) throws Exception {
+        openConnection();
+        List<Registration> regs = new ArrayList<>();
+
+        String query = "SELECT DISTINCT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit " +
+                "FROM registration r, schooladmin sa, student s " +
+                "WHERE r.student_id = s.student_id AND sa.school_id = r.school_id AND sa.account_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, adminID);
+        ResultSet result = st.executeQuery();
+
+        while (result.next()) {
+            Registration queriedReg = new Registration();
+            queriedReg.setId(result.getInt(1));
+            queriedReg.setGrade(result.getInt(2));
+            queriedReg.setRegistration_date(String.valueOf(result.getDate(3)));
+            queriedReg.setStudent_id(result.getInt(4));
+            queriedReg.setName(result.getString(5));
+            queriedReg.setSchool_id(result.getInt(6));
+            queriedReg.setStatus(result.getString(7));
+            queriedReg.setAllowedit(result.getString(8));
+            regs.add(queriedReg);
+        }
+        closeConnection();
+        return regs;
+    }
+
+    /**
      * Gets all registrations of a specific parent id
      */
     @Path("/getparentstudents/{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Registration> getAllStudents(@PathParam("id") String parentid) throws Exception {
+    public List<Registration> getParentStudents(@PathParam("id") String parentid) throws Exception {
         openConnection();
         List<Registration> regs = new ArrayList<>();
         String query = "SELECT DISTINCT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit" +
-        "FROM registration r, guardian g, student s"+
-        "WHERE r.student_id = s.student_id AND g.guardian_id = s.guardian_id AND g.guardian_id = ?";
+                "FROM registration r, guardian g, student s" +
+                "WHERE r.student_id = s.student_id AND g.guardian_id = s.guardian_id AND g.guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, parentid);
         ResultSet result = st.executeQuery();

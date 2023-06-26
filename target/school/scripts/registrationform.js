@@ -1,6 +1,6 @@
 function render() {
-    var methodcall = './api/school/getschools/';
-    var req = new XMLHttpRequest();
+    let methodcall = './api/school/getschools/';
+    let req = new XMLHttpRequest();
     req.open('GET', methodcall, true);
     req.onreadystatechange = function () {
         if (req.readyState === XMLHttpRequest.DONE) {

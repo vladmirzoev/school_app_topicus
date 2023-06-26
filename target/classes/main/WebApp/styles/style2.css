@@ -1,29 +1,33 @@
 * {
-    margin:0px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Helvetica", sans-serif;
     background: #242F36;
 }
-.tab-form{
+
+.tab-form {
     border-radius: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 95%;
     max-width: 400px;
     background: #242F36;
-    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.8);
 }
-.tab-form .tab-header{
+
+.tab-form .tab-header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-.tab-form .tab-header >div{
+
+.tab-form .tab-header > div {
     border-radius: 16px;
     flex: 1;
     padding: 15px;
@@ -31,16 +35,19 @@ body{
     color: #FFFFFF;
     cursor: pointer;
 }
-.active{
+
+.active {
     border: 1px solid #ffffff;
     /*color: #ffffff;*/
     /*background: #242F36;*/
 }
-.tab-form .tab-body{
+
+.tab-form .tab-body {
     position: relative;
     min-height: 360px;
     overflow: hidden;
 }
+
 .tab-form .tab-body > div {
     /*position: absolute;*/
     width: 100%;
@@ -49,32 +56,38 @@ body{
     padding: 5px 25px;
     transition: opacity 300ms ease-in-out 0ms;
 }
-.tab-form .tab-body >div.active{
+
+.tab-form .tab-body > div.active {
     top: 0px;
     opacity: 1;
     transition: opacity 300ms ease-in-out 0ms;
 }
-.tab-form .tab-body >div hs{
+
+.tab-form .tab-body > div hs {
     font-size: 25px;
     color: #FFFFFF;
     text-align: center;
     margin-bottom: 20px;
 }
-.tab-form .tab-body >div .form-input{
+
+.tab-form .tab-body > div .form-input {
     margin: 10px 0px;
 }
-.tab-form .tab-body >div .form-input label{
+
+.tab-form .tab-body > div .form-input label {
     display: block;
     font-size: 15px;
 }
-.tab-form .tab-body >div .form-input input{
+
+.tab-form .tab-body > div .form-input input {
     border-radius: 8px;
     width: 100%;
     margin-top: 5px;
     font-size: 15px;
     padding: 8px;
 }
-.tab-form .tab-body >div .form-input button {
+
+.tab-form .tab-body > div .form-input button {
     border-radius: 8px;
     width: 100%;
     margin-top: 10px;
@@ -102,7 +115,7 @@ body{
     font-weight: 600;
 }
 
-.LogInAdmin{
+.LogInAdmin {
     display: none;
 }
 
@@ -114,5 +127,8 @@ body{
     display: none;
 }
 
+.loginCode {
+    display: none;
+}
 
 

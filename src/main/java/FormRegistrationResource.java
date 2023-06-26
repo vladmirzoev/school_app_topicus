@@ -226,7 +226,7 @@ public class FormRegistrationResource {
 
     /**
      * Creates new form ID
-//     */
+     */
 //    public int newFormID() throws Exception {
 //        String query = "SELECT MAX(form_id) FROM form;";
 //        PreparedStatement st = db.prepareStatement(query);

@@ -2,6 +2,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 @Path("/form")
 public class FormResource {
@@ -33,36 +34,56 @@ public class FormResource {
     public Form getForm(@PathParam("id") int id, @PathParam("grade") int grade) throws SQLException {
         openConnection();
         Form form = new Form();
-        String query = "SELECT b.grade FROM form WHERE b.school_id = ?";
+        String query = "SELECT grade FROM form WHERE school_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
-        whi
-
-
-        String query3 = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND b.school_id = ? AND b.grade = ?";
-        PreparedStatement st3 = db.prepareStatement(query3);
-        st3.setInt(1, id);
-        st3.setInt(2, grade);
+        ArrayList<Integer> formGrades = new ArrayList<>();
         ResultSet rs = st.executeQuery();
         while (rs.next()) {
+            formGrades.add(rs.getInt(1));
+        }
+
+        int finalgrade = getFinalGrade(grade, formGrades);
+
+        String query2 = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND a.school_id = ? AND a.grade = ?";
+        PreparedStatement st2 = db.prepareStatement(query2);
+        st2.setInt(1, id);
+        st2.setInt(2, finalgrade);
+        ResultSet rs2 = st2.executeQuery();
+        while (rs2.next()) {
             Form.Field question = new Form.Field();
-            question.setQuestion(rs.getString(1));
+            question.setQuestion(rs2.getString(1));
             form.appendField(question);
         }
 
-        String query2 = "SELECT a.*, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.school_id = ? AND a.grade = ?";
-        PreparedStatement st2 = db.prepareStatement(query2);
-        st2.setInt(1, id);
-        st2.setInt(2, grade);
-        ResultSet rs2 = st2.executeQuery();
-        while (rs2.next()) {
-            form.setForm_id(rs2.getInt(1));
-            form.setGrade(rs2.getInt(2));
-            form.setSchool_id(rs2.getInt(3));
-            form.setSchool_name(rs2.getString(4));
+        String query3 = "SELECT a.form_id, a.school_id, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.school_id = ? AND a.grade = ?";
+        PreparedStatement st3 = db.prepareStatement(query3);
+        st3.setInt(1, id);
+        st3.setInt(2, finalgrade);
+        ResultSet rs3 = st3.executeQuery();
+        while (rs3.next()) {
+            form.setForm_id(rs3.getInt(1));
+            form.setGrade(grade);
+            form.setSchool_id(rs3.getInt(2));
+            form.setSchool_name(rs3.getString(3));
         }
         closeConnection();
         return form;
+    }
+
+    private static int getFinalGrade(int grade, ArrayList<Integer> gradeSet) {
+        boolean check = false;
+        while (!check) {
+            for (int comparedGrade : gradeSet) {
+                if (comparedGrade >= grade) {
+                    check = true;
+                    return comparedGrade;
+                } else if (comparedGrade == 12) {
+                    return 12;
+                }
+            }
+        }
+        return 12;
     }
 
     /**

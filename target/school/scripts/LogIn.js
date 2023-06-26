@@ -1,6 +1,6 @@
 let tab = document.querySelector("tab-form");
 
-function adminLogIn(){
+function adminLogIn() {
     let adminTab = document.getElementsByClassName('LogInAdmin')
     adminTab.item(0).style.display = "block"
     let userTab = document.getElementsByClassName("LogInParent")
@@ -11,7 +11,7 @@ function adminLogIn(){
     parentbtn.classList.remove("active")
 }
 
-function parentLogIn(){
+function parentLogIn() {
     let userTab = document.getElementsByClassName('LogInParent')
     userTab.item(0).style.display = "block"
     let adminTab = document.getElementsByClassName("LogInAdmin")
@@ -22,6 +22,19 @@ function parentLogIn(){
     parentbtn.classList.add("active")
 }
 
+function logInCode() {
+    let loginNormal = document.getElementsByClassName("loginNormal")
+    let loginCode = document.getElementsByClassName("loginCode")
+    loginNormal.item(0).style.display = "none"
+    loginCode.item(0).style.display = "block"
+}
+
+function logInNormal() {
+    let loginNormal = document.getElementsByClassName("loginNormal")
+    let loginCode = document.getElementsByClassName("loginCode")
+    loginNormal.item(0).style.display = "block"
+    loginCode.item(0).style.display = "none"
+}
 
 
 // let tabHeader = tab.querySelector("tab-header");

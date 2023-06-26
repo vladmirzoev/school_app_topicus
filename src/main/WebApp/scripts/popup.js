@@ -25,7 +25,7 @@ function enableSubmit(){
     // const tel = document.getElementById("tel")
     // const name = document.getElementById("name")
     let isValid = true
-    for (var i = 0; i < inputs.length; i++){
+    for (let i = 0; i < inputs.length; i++){
         let changedInput = inputs[i]
         if (changedInput.value.trim() === "" || changedInput.value === null){
             document.getElementById("message1").innerHTML = "*Fill in all the required information*"

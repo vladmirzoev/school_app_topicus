@@ -1,8 +1,8 @@
 function render() {
-    var id = sessionStorage.getItem("id");
+    let id = sessionStorage.getItem("id");
     //To fetch all messages
-    var methodcall1 = './api/message/fetchaccountmessages/' + id;
-    var xhr1 = new XMLHttpRequest();
+    let methodcall1 = './api/message/fetchaccountmessages/' + id;
+    let xhr1 = new XMLHttpRequest();
     xhr1.open('GET', methodcall1, true);
     xhr1.onreadystatechange = function () {
         if (xhr1.readyState === XMLHttpRequest.DONE) {
@@ -22,13 +22,13 @@ function render() {
         }
     }
     //To fetch the account name and initials for bottom left
-    var methodcall2 = './api/account/getname/' + id;
-    var xhr2 = new XMLHttpRequest();
+    let methodcall2 = './api/account/getname/' + id;
+    let xhr2 = new XMLHttpRequest();
     xhr2.open('GET', methodcall2, true);
     xhr2.onreadystatechange = function () {
         if (xhr2.readyState === XMLHttpRequest.DONE) {
             if (xhr2.status === 200) {
-                var name = JSON.parse(xhr2.responseText).name;
+                let name = JSON.parse(xhr2.responseText).name;
                 const splitname = name.split(" ");
                 let initials = [];
                 for (let i = 0; i < splitname.length - 1; i++) {
@@ -41,23 +41,23 @@ function render() {
     xhr1.send();
     xhr2.send();
 }
-// TODO BELOW IS THE MESSAGE SYSTEM JS
-// //For sending a message
-// function sendMessage() {
-//     let senderid = sessionStorage.getItem("id");
-//     let receiverid = document.getElementById("receiverid").value;
-//     let subject = document.getElementById("subject").value;
-//     let content = document.getElementById("content").value;
-//     let receiveridsplit = receiverid.split("");
-//
-//     let methodcall;
-//     if (receiveridsplit.includes("@")){
-//         methodcall = "./api/message/sendaccountmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
-//     } else {
-//         methodcall = "./api/message/sendschoolmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
-//     }
-//     let xhr = new XMLHttpRequest();
-//     xhr.open('POST', methodcall, true);
-//     xhr.send();
-//     location.reload();
-// }
+
+//For sending a message
+function sendMessage() {
+    let senderid = sessionStorage.getItem("id");
+    let receiverid = document.getElementById("receiverid").value;
+    let subject = document.getElementById("subject").value;
+    let content = document.getElementById("content").value;
+    let receiveridsplit = receiverid.split("");
+
+    let methodcall;
+    if (receiveridsplit.includes("@")){
+        methodcall = "./api/message/sendaccountmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+    } else {
+        methodcall = "./api/message/sendschoolmessage/" + senderid + "/" + receiverid + "/" + subject + "/" + content;
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', methodcall, true);
+    xhr.send();
+    location.reload();
+}

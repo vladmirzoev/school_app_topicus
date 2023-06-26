@@ -1,16 +1,16 @@
 function render() {
-    var id = sessionStorage.getItem("id");
+    let id = sessionStorage.getItem("id");
 
     // to replace the header and bottom left name
-    var methodcall = './api/account/getname/' + id;
-    var xhr = new XMLHttpRequest();
-    var date = new Date();
-    var hr = date.getHours();
+    let methodcall = './api/account/getname/' + id;
+    let xhr = new XMLHttpRequest();
+    let date = new Date();
+    let hr = date.getHours();
     xhr.open('GET', methodcall, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                var name = JSON.parse(xhr.responseText).name;
+                let name = JSON.parse(xhr.responseText).name;
 
                 const splitname = name.split(" ");
                 let initials = [];

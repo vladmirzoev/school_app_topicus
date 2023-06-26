@@ -23,20 +23,45 @@
 
         <div class="LogInParent">
             <form action="./api/account/login" method="post">
-                <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
-                <div class="form-input">
-                    <label style="color: #FFFFFF">Email</label>
-                    <input type="email" name="regularEmail" id="regularEmailValue">
+                <div class="loginNormal">
+                    <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
+                    <div class="form-input">
+                        <label style="color: #FFFFFF">Email</label>
+                        <input type="email" name="regularEmail" id="regularEmailValue">
+                    </div>
+                    <div class="form-input">
+                        <label style="color: #FFFFFF">Password</label>
+                        <input type="password" name="regularPass">
+                    </div>
+                    <div class="form-input">
+                        <input type="submit" value="Login" class="submitButton" onclick="storeSessionRegular()">
+                    </div>
+                    <div>
+                        <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                    </div>
+                    <div>
+                        <div onclick="logInCode()" class="hyperlink"
+                             style="color: #FFFFFF; cursor: pointer; text-decoration: underline">Login with Parent Code
+                        </div>
+                    </div>
                 </div>
-                <div class="form-input">
-                    <label style="color: #FFFFFF">Password</label>
-                    <input type="password" name="regularPass">
-                </div>
-                <div class="form-input">
-                    <input type="submit" value="Login" class="submitButton" onclick="storeSessionRegular()">
-                </div>
-                <div>
-                    <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                <div class="loginCode">
+                    <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
+                    <div class="form-input">
+                        <label style="color: #FFFFFF">Parent Code</label>
+                        <input type="text" name="parentCode" id="parentCodeValue">
+                    </div>
+                    <div class="form-input">
+                        <input type="submit" value="Login" class="submitButton" onclick="storeSessionRegular()">
+                    </div>
+                    <div>
+                        <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                    </div>
+                    <div>
+                        <div onclick="logInNormal()" class="hyperlink"
+                             style="color: #FFFFFF; cursor: pointer; text-decoration: underline">Login
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -57,6 +82,7 @@
                 </div>
             </form>
         </div>
+
     </div>
 </div>
 </body>

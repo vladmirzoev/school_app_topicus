@@ -1,8 +1,8 @@
 function render() {
-    var id = sessionStorage.getItem("id");
+    let id = sessionStorage.getItem("id");
 
-    var methodcall1 = './api/parent/getchildren/' + id;
-    var xhr1 = new XMLHttpRequest();
+    let methodcall1 = './api/parent/getchildren/' + id;
+    let xhr1 = new XMLHttpRequest();
     xhr1.open('GET', methodcall1, true);
     xhr1.onreadystatechange = function () {
         if (xhr1.readyState === XMLHttpRequest.DONE) {
@@ -25,8 +25,8 @@ function render() {
         }
     }
 
-    var methodcall2 = './api/account/getname/' + id;
-    var xhr2 = new XMLHttpRequest();
+    let methodcall2 = './api/account/getname/' + id;
+    let xhr2 = new XMLHttpRequest();
     xhr2.open('GET', methodcall2, true);
     xhr2.onreadystatechange = function () {
         if (xhr2.readyState === XMLHttpRequest.DONE) {
