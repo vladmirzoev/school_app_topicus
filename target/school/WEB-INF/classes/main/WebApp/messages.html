@@ -74,12 +74,49 @@
     <div class="dark visualBox text-center justify-content-center">
 
         <div class="popup" id="popup">
-            <h2>New message:</h2>
-            <p>blabla</p>
-            <button type="button" class="btn-secondary" style="font-size: 16px; padding: 0 64px" onclick="closePopup()">OK</button>
+            <div class="fixedbar">
+                <h2 style="line-height: 2" id="messageHeader">New message:</h2>
+                <img src="images/menu/closeX.svg" alt="close" class="closeImage" onclick="closePopup()">
+                <!--                <button type="button" class="btn-secondary" style="font-size: 16px;padding: 0 64px;position: fixed;right: 5px;top: 5px;" onclick="closePopup()">X</button>-->
+            </div>
+            <!--            <h2>New message:</h2>-->
+
+            <div style="padding: 0 30px 30px">
+                <div class="row">
+                    <div class="col-8 container">
+                        <p style="color: #000000">Hello. How are you today?</p>
+                        <span class="time-right">11:00</span>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8 container darker">
+                        <p style="color: #000000">Hey! I'm fine. Thanks for asking!</p>
+                        <span class="time-left">11:01</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8 container">
+                        <p style="color: #000000">Sweet! So, what do you wanna do today?</p>
+                        <span class="time-right">11:02</span>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8 container darker">
+                        <p style="color: #000000">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                        <span class="time-left">11:05</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row messageData light visualBox" onclick="openPopup()">
+        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>
@@ -99,7 +136,7 @@
                 <p class="subject messageText">Missing documents!</p>
             </div>
         </div>
-        <div class="row messageData light visualBox" onclick="openPopup()">
+        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>
@@ -119,7 +156,7 @@
                 <p class="subject messageText">Missing documents!</p>
             </div>
         </div>
-        <div class="row messageData light visualBox" onclick="openPopup()">
+        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
             <div class="col-1">
                 <div class="status"></div>
             </div>

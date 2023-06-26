@@ -57,10 +57,10 @@ function enableSubmit(){
 
 function enableSubmit2(){
     let inputs = document.getElementsByClassName('required')
-    let btn = document.querySelector('input[type="submit"]')
-    const email = document.getElementById("mail")
-    let pass = document.getElementById("pass1").value
-    let conf_pass = document.getElementById("pass2").value
+    let btn = document.querySelector('input[type="button"]')
+    const email = document.getElementById("email")
+    let pass = document.getElementById("pass").value
+    let conf_pass = document.getElementById("conf_pass").value
     let isValid = true
     for (var i = 0; i < inputs.length; i++){
         let changedInput = inputs[i]

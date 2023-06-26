@@ -14,29 +14,45 @@
         <h1 class="mainHeader">Sign Up</h1>
     </div>
     <div>
-        <div class="formText2">Parent's first name *</div>
-        <input class="inputs required" type="text" style="width: 600px;" id="fname" required onkeyup="enableSubmit2()">
-        <div class="formText2">Parent's last name *</div>
-        <input class="inputs required" type="text" style="width: 600px;" id="lname" required onkeyup="enableSubmit2()">
-        <div class="formText2">Contact e-mail *</div>
-        <input class="inputs required" type="email" style="width: 600px;" id="email" required onkeyup="enableSubmit2()">
+        <div class="formText2">Parent's first name</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="fname" id="fname" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Parent's last name</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="lname" id="lname" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Contact e-mail:</div>
+        <input class="inputs required" type="email" style="width: 600px;" name="email" id="email" required
+               onkeyup="enableSubmit2()">
         <div class="row" style="margin: 0px">
-            <div class="col-6 formText3" style="padding: 0px">Telephone 1 *</div>
-            <div class="col-6 formText3" style="padding-left: 15px">Telephone 2</div>
-            <div class="col-6" style="padding: 0px"><input class="inputs required" type="number" style="width: 280px" id="p_no1" required onkeyup="enableSubmit2()">
+            <div class="col-6 formText3" style="padding: 0px">
+                Telephone
             </div>
-            <div class="col-6" style="padding: 0px"><input class="inputs" type="number" style="width: 285px;margin-left: 15px;" id="p_no2" onkeyup="enableSubmit2()"></div>
+            <div class="col-6 formText3" style="padding-left: 15px">
+                Telephone 2 (optional)
+            </div>
+
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs required" type="number" style="width: 280px" name="p_no1" id="p_no1" required
+                       onkeyup="enableSubmit2()">
+            </div>
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs" type="number" style="width: 285px;margin-left: 15px;" name="p_no2" id="p_no2">
+            </div>
         </div>
-        <div class="formText2">Address *</div>
-        <input class="inputs required" type="text" style="width: 600px;" id="address" required onkeyup="enableSubmit2()">
-        <div class="formText2">Password *</div>
-        <input class="inputs required" type="password" style="width: 600px;" id="pass" required onkeyup="enableSubmit2()">
-        <div class="formText2">Confirm Password *</div>
-        <input class="inputs required" type="password" style="width: 600px;" id="conf_pass" required onkeyup="enableSubmit2()">
+        <div class="formText2">Address:</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="address" id="address" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Password</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="pass" id="pass" required
+               onkeyup="enableSubmit2()">
+        <div class="formText2">Password confirmation:</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="conf_pass" id="conf_pass" required
+               onkeyup="enableSubmit2()">
+        <span id="message2" style="color:red" onkeyup="enableSubmit2()"></span>
     </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-6" style="margin-top: 20px">
-            <input type="button" value="Confirm" class="btn btn-primary" onclick="check()">
+            <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="getValues()">
         </div>
     </div>
 
@@ -44,8 +60,8 @@
         <h2>Thank you!</h2>
         <p style="color: #000000">You were successfully signed up!</p>
         <a href="login.html">
-            <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()"
-                   value="Login Now!">
+            <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">
+        </a>
     </div>
 </div>
 <script src="scripts/popup.js"></script>

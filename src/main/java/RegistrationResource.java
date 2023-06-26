@@ -122,9 +122,9 @@ public class RegistrationResource {
     }
 
     /**
-     * Returns registration_id of specific registration
+     * Returns registration_id of specific registration for a ghost account
      */
-    @Path("/fetchregistrations/{bsn}")
+    @Path("/fetchregistrationsghost/{bsn}")
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public int fetchRegistrationID(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException {

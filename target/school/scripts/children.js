@@ -78,23 +78,6 @@ function addChild(id, name, birthdate){
     parent.append(cardSpace);
     document.getElementsByClassName('row')
 }
-
-function parseData() {
-    xhr1.open('GET', methodcall1, true);
-    xhr1.onreadystatechange = function () {
-        if (xhr1.readyState === XMLHttpRequest.DONE) {
-            if (xhr1.status === 200) {
-                let obj = JSON.parse(xhr1.responseText);
-                let id = obj[0]
-                let name = obj[1]
-                let bday = obj[2]
-                return id, name, bday;
-
-            }
-
-        }
-    }
-}
 function redirect() {
     window.location.href = "registrationFormLoggedIn.html";
 }

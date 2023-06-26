@@ -226,19 +226,20 @@ public class FormRegistrationResource {
 
     /**
      * Creates new form ID
-     */
-    public int newFormID() throws Exception {
-        String query = "SELECT MAX(form_id) FROM form;";
-        PreparedStatement st = db.prepareStatement(query);
-        ResultSet rs = st.executeQuery();
-        int newID = -1;
-
-        // if there are no rows
-        if (!rs.next()) {
-            return 1;
-        }
-        return newID;
-    }
+//     */
+//    public int newFormID() throws Exception {
+//        String query = "SELECT MAX(form_id) FROM form;";
+//        PreparedStatement st = db.prepareStatement(query);
+//        ResultSet rs = st.executeQuery();
+//        int newID = 1;
+//
+//        while() {
+//
+//        }
+//
+//        // if there are no rows
+//        return ;
+//    }
 
     /**
      * Creates new student ID

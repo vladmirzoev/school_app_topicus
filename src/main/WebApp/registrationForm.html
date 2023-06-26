@@ -12,58 +12,59 @@
 </head>
 <body style="background-color: #EAEDF0;" onload="render()">
 <div class="blackbox mx-auto">
-    <div class="container text-center">
-        <h1 class="mainHeader">Child Details</h1>
-    </div>
-    <div>
-        <div class="formText3">Child name</div>
-        <input class="inputs required" type="text" placeholder="Name and Surname" style="width: 600px;" id="childname"
-               required onkeyup="enableSubmit()">
-        <div class="formText3">Child Date of Birth</div>
-        <input class="inputs required" type="date" style="width: 600px;" id="birthdate" required onkeyup="enableSubmit()">
-        <div class="formText3">Guardian name</div>
-        <input class="inputs required" type="text" placeholder="Name and Surname" style="width: 600px;" id="guardianname"
-               required onkeyup="enableSubmit()">
-    </div>
-    <div class="row" style="margin: 0px">
-        <div class="col-6 formText3" style="padding: 0px">
-            Telephone
+    <form action="./api/form/uploadBasicReq" method="post">
+        <div class="container text-center">
+            <h1 class="mainHeader">Child Details</h1>
         </div>
-        <div class="col-6 formText3" style="padding-left: 15px">
-            Telephone 2 (optional)
+        <div>
+            <div class="formText3">Child name</div>
+            <input class="inputs required" type="text" placeholder="Name and Surname" minlength="2" style="width: 600px;" id="childName" required onkeyup="enableSubmit()">
+            <div class="formText3">Child Date of Birth</div>
+            <input class="inputs required" type="date" style="width: 600px;" id="birth_date" required onkeyup="enableSubmit()">
+            <div class="formText3">Guardian name</div>
+            <input class="inputs required" type="text" placeholder="Name and Surname" style="width: 600px;" id="guardianName" required onkeyup="enableSubmit()">
+        </div>
+        <div class="row" style="margin: 0px">
+            <div class="col-6 formText3" style="padding: 0px">
+                Telephone
+            </div>
+            <div class="col-6 formText3" style="padding-left: 15px">
+                Telephone 2 (optional)
+            </div>
+
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs required" id="tel" type="number" style="width: 280px" id="telephone1" required onkeyup="enableSubmit()">
+            </div>
+            <div class="col-6" style="padding: 0px">
+                <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" id="telephone2">
+            </div>
+        </div>
+        <div class="formText3">Address</div>
+        <input class="inputs required" type="text" style="width: 600px;" id="address" required onkeyup="enableSubmit()">
+        <div class="formText3">Child's BSN number:</div>
+        <input class="inputs required" id="bsn" type="number" min="10000000" max="999999999" style="width: 600px;" id="bsn" required onkeyup="enableSubmit()">
+        <div class="formText3">Grade of study</div>
+        <input class="inputs required" id="grade" type="number" min="1" max="12" placeholder="Only Number" style="width: 600px;" id="grade" required onkeyup="enableSubmit()">
+        <div class="formText3">School:</div>
+        <select class="inputs" type="text" style="width: 600px" required id="dropdown">
+        </select>
+        <span id = "message1" style="color:red" onkeyup="enableSubmit()"></span>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6" style="margin-top: 10px">
+                <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="check()">
+            </div>
         </div>
 
-        <div class="col-6" style="padding: 0px">
-            <input class="inputs" type="text" style="width: 280px" id="telephone1" required
-                   onkeyup="enableSubmit()">
-        </div>
-        <div class="col-6" style="padding: 0px">
-            <input class="inputs" type="text" style="width: 285px;margin-left: 15px;" id="telephone2" required
-                   onkeyup="enableSubmit()">
-        </div>
-    </div>
-    <div class="formText3">Address</div>
-    <input class="inputs required" type="text" style="width: 600px;" id="address" required onkeyup="enableSubmit()">
-    <div class="formText3">Child's BSN number:</div>
-    <input class="inputs required" type="number" min="10000000" max="999999999" style="width: 600px;" id="bsn" required onkeyup="enableSubmit()">
-    <div class="formText3">Grade of study</div>
-    <input class="inputs required" type="number" min="1" max="12" placeholder="Grade from 1 to 12" style="width: 600px;" id="grade" required onkeyup="enableSubmit()">
-    <div class="formText3">School:</div>
-    <select class="inputs required" type="text" style="width: 600px" id="dropdown"></select>
-    <div class="row justify-content-center align-items-center">
-        <div class="col-6" style="margin-top: 10px">
-            <input type="button" value="Confirm" class="btn btn-primary" onclick="check()">
-        </div>
-    </div>
 
-    <div class="popup2" id="popup2">
-        <h2>Thank you!</h2>
-        <p style="color: #000000">The registration is successfully completed!</p><br>
-        <p style="color: #000000">You may now proceed to the school form!</p><br>
-        <a href="login.html">
-            <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Continue">
-        </a>
-    </div>
+
+        <div class="popup2" id="popup2">
+            <h2>Thank you!</h2>
+            <p style="color: #000000">The registration is successfully completed!</p>
+            <a href="login.html">
+                <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Login Now!">
+            </a>
+        </div>
 </div>
 <script src="scripts/popup.js"></script>
 <script src="scripts/registrationform.js"></script>

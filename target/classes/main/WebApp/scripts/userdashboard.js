@@ -33,3 +33,17 @@ function render() {
 
     //TODO maybe add profile picture functionality
 }
+
+function redirectNotifications() {
+    window.location.href = "";
+    //TODO add notifications.html page
+}
+
+function redirectChildren() {
+    window.location.href = "children.html";
+}
+
+function redirectForm() {
+    window.location.href = ""
+    //TODO add form for logged in
+}
