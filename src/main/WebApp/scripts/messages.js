@@ -1,6 +1,5 @@
 function render() {
     var id = sessionStorage.getItem("id");
-
     //To fetch all messages
     var methodcall1 = './api/message/fetchaccountmessages/' + id;
     var xhr1 = new XMLHttpRequest();
@@ -19,11 +18,9 @@ function render() {
                     currentmessage[4] = obj[i].content;
                     messages[i] = currentmessage;
                 }
-                console.log(messages);
             }
         }
     }
-
     //To fetch the account name and initials for bottom left
     var methodcall2 = './api/account/getname/' + id;
     var xhr2 = new XMLHttpRequest();
@@ -32,13 +29,11 @@ function render() {
         if (xhr2.readyState === XMLHttpRequest.DONE) {
             if (xhr2.status === 200) {
                 var name = JSON.parse(xhr2.responseText).name;
-
                 const splitname = name.split(" ");
                 let initials = [];
                 for (let i = 0; i < splitname.length - 1; i++) {
                     initials[i] = splitname[i].split("")[0] + ". ";
                 }
-
                 document.getElementById("bottomleftname").innerText = initials.toString() + splitname[splitname.length - 1];
             }
         }
@@ -46,7 +41,6 @@ function render() {
     xhr1.send();
     xhr2.send();
 }
-
 // TODO BELOW IS THE MESSAGE SYSTEM JS
 // //For sending a message
 // function sendMessage() {

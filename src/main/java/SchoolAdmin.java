@@ -1,3 +1,6 @@
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class SchoolAdmin {
     int school_id;
     String account_id;

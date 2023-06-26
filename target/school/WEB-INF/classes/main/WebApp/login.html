@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomStudie Login</title>
+</head>
+
+<body style="background: #EAEDF0">
+
+<script type="text/javascript" src="scripts/LogIn.js"></script>
+<script src="scripts/session.js"></script>
+
+<div class="tab-form">
+    <div class="tab-header">
+        <div class="active" onclick="parentLogIn()" id="parentLogIn-btn">Log In</div>
+        <div onclick="adminLogIn()" id="adminLogIn-btn">Log In-Admin</div>
+    </div>
+
+    <div class="tab-body">
+
+        <div class="LogInParent">
+            <form action="./api/account/login" method="post">
+                <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Email</label>
+                    <input type="email" name="regularEmail" id="regularEmailValue">
+                </div>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Password</label>
+                    <input type="password" name="regularPass">
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Login" class="submitButton" onclick="storeSessionRegular()">
+                </div>
+                <div>
+                    <a href="signUp.html" class="hyperlink" style="color: #FFFFFF">Create an account</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="LogInAdmin">
+            <form action="./api/account/loginadmin" method="post">
+                <h2 style="color: #FFFFFF">School Administrator Login</h2>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Email</label>
+                    <input type="email" name="adminEmail" id="adminEmailValue">
+                </div>
+                <div class="form-input">
+                    <label style="color: #FFFFFF">Password</label>
+                    <input type="password" name="adminPass">
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Login" class="submitButton" onclick="storeSessionAdmin()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>

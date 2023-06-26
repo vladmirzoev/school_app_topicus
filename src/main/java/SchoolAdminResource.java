@@ -1,6 +1,7 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
+import javax.print.attribute.standard.Media;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,15 +52,20 @@ public class SchoolAdminResource {
 //        return queriedStudent;
 //    }
 
-    @Path("/getAllStudents/{id}")
+    /**
+     * Gets all registrations of a specific parent id
+     */
+    @Path("/getparentstudents/{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Registration> getAllStudents(@PathParam("id") String adminID) throws Exception {
+    public List<Registration> getAllStudents(@PathParam("id") String parentid) throws Exception {
         openConnection();
         List<Registration> regs = new ArrayList<>();
-        String query = "SELECT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, sa.school_id, r.status, r.allowedit FROM registration r, schooladmin sa, student s WHERE s.student_id = r.student_id AND (SELECT sa.school_id FROM schooladmin sa WHERE sa.account_id LIKE ? ) = r.school_id";
+        String query = "SELECT DISTINCT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit" +
+        "FROM registration r, guardian g, student s"+
+        "WHERE r.student_id = s.student_id AND g.guardian_id = s.guardian_id AND g.guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, adminID);
+        st.setString(1, parentid);
         ResultSet result = st.executeQuery();
 
         while (result.next()) {
@@ -78,6 +84,9 @@ public class SchoolAdminResource {
         return regs;
     }
 
+    /**
+     * updates the registration status depending on student id
+     */
     @Path("/updatestatus/{id}/{status}")
     @POST
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -91,6 +100,9 @@ public class SchoolAdminResource {
         closeConnection();
     }
 
+    /**
+     * updates allowedit privilege based on student id
+     */
     @Path("/updateedit/{id}/{edit}")
     @POST
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -104,13 +116,16 @@ public class SchoolAdminResource {
         closeConnection();
     }
 
+    /**
+     * deletes a registration based on student id
+     */
     @Path("/deleteregistration/{id}")
     @DELETE
-    public void deleteRegistration(@PathParam("id") int studentID) throws Exception{
+    public void deleteRegistration(@PathParam("id") int studentID) throws Exception {
         openConnection();
         String query = "DELETE FROM registration WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setInt(1,studentID);
+        st.setInt(1, studentID);
         st.executeQuery();
         closeConnection();
     }

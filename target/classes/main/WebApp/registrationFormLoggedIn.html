@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body style="background-color: #EAEDF0;">
+<div class="blackbox mx-auto">
+    <div class="container text-center">
+        <h1 class="mainHeader">Enter Child Details</h1>
+    </div>
+    <div class="formText3">Child name</div>
+    <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" id="childName">
+    <div class="formText3">Child Date of Birth</div>
+    <input class="inputs" type="date" style="width: 600px;" id="birth_date">
+    <div class="formText3">Child's BSN number:</div>
+    <input class="inputs" type="text" style="width: 600px;" id="bsn">
+    <div class="row justify-content-center align-items-center">
+        <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
+    </div>
+</div>
+
+<script src="scripts/registrationformloggedin.js"></script>
+
+</body>
+</html>

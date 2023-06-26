@@ -14,8 +14,10 @@ function render() {
                     child[0] = obj[i].id;
                     child[1] = obj[i].name;
                     child[2] = obj[i].birthdate;
+                    addChild(obj[i].id, obj[i].name, obj[i].birthdate)
                     children[i] = child;
                 }
+                console.log(children);
             }
             //TODO make cards based off the children array
             //TODO displace the 'Add child' button based on how many cards there are
@@ -45,11 +47,37 @@ function render() {
     xhr2.send();
 }
 
-function addChild(){
-    //TODO change this to the actual addChild function
 
-    let div = document.createElement('div');
-    div.className = "blackbox";
-    div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-    document.body.append(div);
+
+function addChild(id, name, birthdate){
+    let parent = document.getElementById("childrenCards");
+    let cardSpace = document.createElement('div');
+    cardSpace.className = "col-6 childrenRow justify-content-center";
+    let childName = document.createElement('h3')
+    let dateOfBirth = document.createElement("p")
+    let childId = document.createElement("p")
+    let photoFrame = document.createElement("div")
+    photoFrame.className = "align-text-center"
+    photoFrame.style.borderRadius = "50%"
+    photoFrame.style.height = "150px"
+    photoFrame.style.width = "150px"
+    photoFrame.style.display = "inline-block"
+    photoFrame.style.backgroundImage = "url('images/children/girl.jpg')"
+    photoFrame.style.backgroundSize = "cover"
+    childName.className = "miniHeader"
+    childName.innerText = name;
+    dateOfBirth.innerText = birthdate;
+    childId.innerText = id;
+    let childBox = document.createElement('div');
+    childBox.className = "dark visualBox text-center";
+    childBox.append(childName)
+    childBox.append(photoFrame)
+    childBox.append(childId)
+    childBox.append(dateOfBirth)
+    cardSpace.append(childBox);
+    parent.append(cardSpace);
+    document.getElementsByClassName('row')
+}
+function redirect() {
+    window.location.href = "registrationFormLoggedIn.html";
 }

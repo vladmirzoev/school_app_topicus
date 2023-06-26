@@ -98,7 +98,7 @@ function check() {
 function submitform(childname, guardianname, telephone1, telephone2, email, bsn, birthdate, address, grade, schoolname) {
 
     //TODO this is a security issue if people inspect this script
-    let methodcall = '.api/form/uploadBasicReq/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + email + '/' + bsn + '/' + birthdate + '/' + address + '/' + grade + '/' + schoolname;
+    let methodcall = './api/form/uploadBasicReq/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + email + '/' + bsn + '/' + birthdate + '/' + grade + '/' + schoolname + '/' + address;
     console.log(methodcall)
     xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);

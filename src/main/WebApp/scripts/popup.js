@@ -15,24 +15,79 @@ function closePopup2() {
 }
 
 
+
 function enableSubmit(){
     let inputs = document.getElementsByClassName('required')
     let btn = document.querySelector('input[type="submit"]')
+    // const email = document.getElementById("mail")
+    const bsn = document.getElementById("bsn")
+    const grade = document.getElementById("grade")
+    // const tel = document.getElementById("tel")
+    // const name = document.getElementById("name")
     let isValid = true
     for (var i = 0; i < inputs.length; i++){
         let changedInput = inputs[i]
         if (changedInput.value.trim() === "" || changedInput.value === null){
+            document.getElementById("message1").innerHTML = "*Fill in all the required information*"
             isValid = false
             break
         }
+        else if (!bsn.validity.valid){
+            document.getElementById("message1").innerHTML = "*Insert a valid BSN*"
+            isValid = false
+            break
+        }
+        else if (!grade.validity.valid){
+            document.getElementById("message1").innerHTML = "*Insert a valid grade (1-12th)*"
+            isValid = false
+            break
+        }
+        else if(!(changedInput.value.trim() === "") || !(changedInput.value === null)){
+            document.getElementById("message1").innerHTML = ""
+        }
+        else if (bsn.validity.valid){
+            document.getElementById("message1").innerHTML = ""
+        }
+        else if (grade.validity.valid){
+            document.getElementById("message1").innerHTML = ""
+        }
     }
-    // if (!(typeof inputs[4] === "email")){
-    //     isValid = false
-    // }
-
-    // if (!(inputs[4].includes("@"))){
-    //     isValid = false
-    // }
     btn.disabled = !isValid
+}
 
+function enableSubmit2(){
+    let inputs = document.getElementsByClassName('required')
+    let btn = document.querySelector('input[type="submit"]')
+    const email = document.getElementById("mail")
+    let pass = document.getElementById("pass1").value
+    let conf_pass = document.getElementById("pass2").value
+    let isValid = true
+    for (var i = 0; i < inputs.length; i++){
+        let changedInput = inputs[i]
+        if (changedInput.value.trim() === "" || changedInput.value === null){
+            document.getElementById("message2").innerHTML = "*Fill in all the required information*"
+            isValid = false
+            break
+        }
+        else if (!email.validity.valid){
+            document.getElementById("message2").innerHTML = "*Insert a valid email*"
+            isValid = false
+            break
+        }
+        else if (pass != conf_pass){
+            document.getElementById("message2").innerHTML = "*Passwords are not the same!*"
+            isValid = false
+            break
+        }
+        else if (pass == conf_pass){
+            document.getElementById("message2").innerHTML = ""
+        }
+        else if (email.validity.valid || email.value.trim() === "" || email.value === null){
+            document.getElementById("message2").innerHTML = ""
+        }
+        else if (!(changedInput.value.trim() === "") || !(changedInput.value === null)){
+            document.getElementById("message2").innerHTML = ""
+        }
+    }
+    btn.disabled = !isValid
 }

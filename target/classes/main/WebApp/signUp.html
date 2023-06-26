@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomStudie Sign Up</title>
+</head>
+<body style="background-color: #EAEDF0;">
+<div class="blackbox mx-auto" style="height: 650px">
+    <div class="container text-center">
+        <h1 class="mainHeader">Sign Up</h1>
+    </div>
+    <div>
+        <div class="formText2">Parent's first name *</div>
+        <input class="inputs" type="text" style="width: 600px;" id="fname">
+        <div class="formText2">Parent's last name *</div>
+        <input class="inputs" type="text" style="width: 600px;" id="lname">
+        <div class="formText2">Contact e-mail *</div>
+        <input class="inputs" type="email" style="width: 600px;" id="email">
+        <div class="row" style="margin: 0px">
+            <div class="col-6 formText3" style="padding: 0px">Telephone 1 *</div>
+            <div class="col-6 formText3" style="padding-left: 15px">Telephone 2</div>
+            <div class="col-6" style="padding: 0px"><input class="inputs" type="text" style="width: 280px" id="p_no1">
+            </div>
+            <div class="col-6" style="padding: 0px"><input class="inputs" type="text"
+                                                           style="width: 285px;margin-left: 15px;" id="p_no2"></div>
+        </div>
+        <div class="formText2">Address *</div>
+        <input class="inputs" type="text" style="width: 600px;" id="address">
+        <div class="formText2">Password *</div>
+        <input class="inputs" type="password" style="width: 600px;" id="pass">
+        <div class="formText2">Confirm Password *</div>
+        <input class="inputs" type="password" style="width: 600px;" id="conf_pass">
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-6" style="margin-top: 20px">
+            <input type="button" value="Confirm" class="btn btn-primary" onclick="check()">
+        </div>
+    </div>
+
+    <div class="popup2" id="popup2">
+        <h2>Thank you!</h2>
+        <p style="color: #000000">You were successfully signed up!</p>
+        <a href="login.html">
+            <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()"
+                   value="Login Now!">
+    </div>
+</div>
+<script src="scripts/popup.js"></script>
+<script src="scripts/signup.js"></script>
+</body>

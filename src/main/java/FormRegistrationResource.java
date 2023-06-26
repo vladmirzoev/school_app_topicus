@@ -7,6 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 @Path("/form")
 public class FormRegistrationResource {
@@ -160,15 +162,20 @@ public class FormRegistrationResource {
         return hexString.toString();
     }
 
+    private static String hashBSN(String bsn) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] byteBSN = digest.digest(bsn.getBytes(StandardCharsets.UTF_8));
+        String hashedBSN = hashLoginPass(byteBSN);
+        return hashedBSN;
+    }
+
     /**
      * Creates new student entry
      */
     private void createStudent(String childName, String email, String bsn, Date birth_date, int student_id) throws SQLException, NoSuchAlgorithmException {
         String student = "INSERT INTO student (student_id, bsn, name, birth_date, guardian_id) VALUES (?, ?, ?, ?, ?)";
 
-        MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        byte[] byteBSN = digest.digest(bsn.getBytes(StandardCharsets.UTF_8));
-        String hashedBSN = hashLoginPass(byteBSN);
+        String hashedBSN = hashBSN(bsn);
 
         PreparedStatement st = db.prepareStatement(student);
         st.setInt(1, student_id);
@@ -255,17 +262,24 @@ public class FormRegistrationResource {
      * Creates new registration ID
      */
     public int newRegistrationID() throws Exception {
-        String query = "SELECT MAX(registration_id) FROM registration";
+        openConnection();
+        boolean foundID = false;
+        ArrayList<Integer> takenIDs = new ArrayList<>();
+        String query = "SELECT registration_id FROM registration";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
-        int newID;
-
-        // if there are no rows
-        if (!rs.next()) {
-            return 1;
-        } else {
-            newID = rs.getInt(1) + 1;
+        while (rs.next()) {
+            takenIDs.add(rs.getInt(1));
         }
+        int newID = 0;
+        while (!foundID) {
+            Random rnd = new Random();
+            newID = rnd.nextInt(999999);
+            if (!takenIDs.contains(newID)) {
+                foundID = true;
+            }
+        }
+        closeConnection();
         return newID;
     }
 
@@ -286,4 +300,7 @@ public class FormRegistrationResource {
         }
         return schoolID;
     }
+
+
+
 }

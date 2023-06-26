@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,25 +15,24 @@
     </div>
     <div>
         <div class="formText2">Parent's first name *</div>
-        <input class="inputs" type="text" style="width: 600px;" id="fname">
+        <input class="inputs required" type="text" style="width: 600px;" id="fname" required onkeyup="enableSubmit2()">
         <div class="formText2">Parent's last name *</div>
-        <input class="inputs" type="text" style="width: 600px;" id="lname">
+        <input class="inputs required" type="text" style="width: 600px;" id="lname" required onkeyup="enableSubmit2()">
         <div class="formText2">Contact e-mail *</div>
-        <input class="inputs" type="email" style="width: 600px;" id="email">
+        <input class="inputs required" type="email" style="width: 600px;" id="email" required onkeyup="enableSubmit2()">
         <div class="row" style="margin: 0px">
             <div class="col-6 formText3" style="padding: 0px">Telephone 1 *</div>
             <div class="col-6 formText3" style="padding-left: 15px">Telephone 2</div>
-            <div class="col-6" style="padding: 0px"><input class="inputs" type="text" style="width: 280px" id="p_no1">
+            <div class="col-6" style="padding: 0px"><input class="inputs required" type="number" style="width: 280px" id="p_no1" required onkeyup="enableSubmit2()">
             </div>
-            <div class="col-6" style="padding: 0px"><input class="inputs" type="text"
-                                                           style="width: 285px;margin-left: 15px;" id="p_no2"></div>
+            <div class="col-6" style="padding: 0px"><input class="inputs" type="number" style="width: 285px;margin-left: 15px;" id="p_no2" onkeyup="enableSubmit2()"></div>
         </div>
         <div class="formText2">Address *</div>
-        <input class="inputs" type="text" style="width: 600px;" id="address">
+        <input class="inputs required" type="text" style="width: 600px;" id="address" required onkeyup="enableSubmit2()">
         <div class="formText2">Password *</div>
-        <input class="inputs" type="password" style="width: 600px;" id="pass">
+        <input class="inputs required" type="password" style="width: 600px;" id="pass" required onkeyup="enableSubmit2()">
         <div class="formText2">Confirm Password *</div>
-        <input class="inputs" type="password" style="width: 600px;" id="conf_pass">
+        <input class="inputs required" type="password" style="width: 600px;" id="conf_pass" required onkeyup="enableSubmit2()">
     </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-6" style="margin-top: 20px">
