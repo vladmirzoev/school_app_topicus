@@ -1,7 +1,4 @@
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 import java.nio.charset.StandardCharsets;
@@ -116,7 +113,6 @@ public class RegistrationResource {
             current.setAllowedit(rs.getString(8));
             queriedRegistrations.add(current);
         }
-
         closeConnection();
         return queriedRegistrations;
     }
@@ -127,7 +123,7 @@ public class RegistrationResource {
     @Path("/fetchregistrationsghost/{bsn}")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public int fetchRegistrationID(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException {
+    public String fetchGhostLogin(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException {
         String encodedBSN = hashBSN(bsn);
         String query = "SELECT r.registration_id" +
                 "FROM registration r, student s" +
@@ -139,7 +135,7 @@ public class RegistrationResource {
         while (rs.next()) {
             reg_id = rs.getInt(1);
         }
-        return reg_id;
+        return reg_id + "@studieportal.nl" ;
     }
 
     private static String hashBSN(String bsn) throws NoSuchAlgorithmException {
@@ -161,5 +157,19 @@ public class RegistrationResource {
         return hexString.toString();
     }
 
-    @Path("editResponse/{}")
+    @Path("editResponse/{reg_id}/{question_id}/{newResponse}")
+    @POST
+    public void editResponse(@PathParam("reg_id") int r_id,
+                             @PathParam("question_id") int q_id,
+                             @PathParam("newResponse") String newResponse) throws SQLException{
+        openConnection();
+        String query = "UPDATE responses SET response = ? WHERE registration_id = ? AND question_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, newResponse);
+        st.setInt(2, r_id);
+        st.setInt(3, q_id);
+        st.executeQuery();
+
+        closeConnection();
+    }
 }

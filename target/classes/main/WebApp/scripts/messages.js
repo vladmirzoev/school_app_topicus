@@ -21,8 +21,16 @@ function render() {
                 }
                 console.log(messages);
 
+                let prevmessages = [];
                 for (let i = 0; i < messages.length; i++) {
-                    if (messages[i][0] !== id) { //TODO add more if statements
+                    let prev = [];
+                    prev[0] = messages[i][0];
+                    prev[1] = messages[i][3];
+
+                    if (messages[i][0] !== id && !prevmessages.includes(prev)) { //TODO add more if statements
+
+                        prevmessages[i] = prev;
+
                         //makes a popup
                         let popupdiv = document.createElement("div");
                         popupdiv.className = "popup";
@@ -31,43 +39,59 @@ function render() {
                         //creates the header of the popup
                         let subjectheaderdiv = document.createElement("div");
                         subjectheaderdiv.className = "fixedbar";
+                        subjectheaderdiv.style.zIndex = "1";
 
                         let subjectheader = document.createElement("h2");
                         subjectheader.style = "line-height: 2";
                         subjectheader.id = "messageHeader";
+                        subjectheader.innerText = messages[i][3];
+                        subjectheaderdiv.append(subjectheader);
+
                         let exitbutton = document.createElement("img");
                         exitbutton.src = "images/menu/closeX.svg";
                         exitbutton.alt = "close";
                         exitbutton.className = "closeImage";
-                        exitbutton.onclick = function () {closePopup();};
-
-                        subjectheaderdiv.append(subjectheader);
+                        exitbutton.onclick = function () {
+                            let x = document.getElementById(messages[i][0] + "$$$$$" + messages[i][3]);
+                            x.classList.remove("open-popup")
+                            x.style = "";
+                        };
                         subjectheaderdiv.append(exitbutton);
+
                         popupdiv.append(subjectheaderdiv);
 
                         //creates the divs for individual messages
                         let bigmsgdiv = document.createElement("div");
-                        for (let j = 0; j < messages.length; j++) {
-                            let currentsender = messages[i][0];
-                            let currentsubject = messages[i][3];
-                            for (let k = 0; k < messages.length; k++) {
-                                if (messages[k][0] === currentsender && messages[k][3] === currentsubject) {
-                                    let leftbox = document.createElement("div");
-                                    leftbox.className = "col-8 container";
-                                    let leftcontents = document.createElement("p");
-                                    leftcontents.style = "color: #000000";
-                                    leftcontents.append(messages[k][4]);
-                                    leftbox.append(leftcontents);
-                                    bigmsgdiv.append(leftbox);
-                                } else if (messages[k][0] === id && messages[k][3] === currentsubject) {
-                                    let rightbox = document.createElement("div");
-                                    rightbox.className = "col-8 container darker";
-                                    let rightcontents = document.createElement("p");
-                                    rightcontents.style = "color: #000000";
-                                    rightcontents.append(messages[k][4]);
-                                    rightbox.append(rightcontents);
-                                    bigmsgdiv.append(rightbox);
-                                }
+                        bigmsgdiv.style = "padding: 0 30px 30px; position: sticky";
+                        let currentsender = messages[i][0];
+                        let currentsubject = messages[i][3];
+                        for (let k = 0; k < messages.length; k++) {
+                            let bubblerow = document.createElement("div");
+                            bubblerow.className = "row";
+                            if (messages[k][0] === currentsender && messages[k][3] === currentsubject) {
+                                let leftbox = document.createElement("div");
+                                leftbox.className = "col-8 container";
+                                let leftcontents = document.createElement("p");
+                                leftcontents.style = "color: #000000";
+                                let leftspacing = document.createElement("div");
+                                leftspacing.className = "col-4";
+                                leftcontents.append(messages[k][4]);
+                                leftbox.append(leftcontents);
+                                bubblerow.append(leftbox)
+                                bubblerow.append(leftspacing);
+                                bigmsgdiv.append(bubblerow);
+                            } else if (messages[k][0] === id && messages[k][3] === currentsubject) {
+                                let rightbox = document.createElement("div");
+                                rightbox.className = "col-8 container darker";
+                                let rightcontents = document.createElement("p");
+                                rightcontents.style = "color: #000000";
+                                let rightspacing = document.createElement("div");
+                                rightspacing.className = "col-4";
+                                rightcontents.append(messages[k][4]);
+                                rightbox.append(rightcontents);
+                                bubblerow.append(rightspacing);
+                                bubblerow.append(rightbox)
+                                bigmsgdiv.append(bubblerow);
                             }
                         }
                         popupdiv.append(bigmsgdiv);
@@ -81,18 +105,23 @@ function render() {
                         let button = document.createElement("button");
                         button.className = "btn-primary";
                         button.style = "font-size: 15px";
-                        button.value = "Send";
+                        button.innerText = "Send";
 
                         inputdiv.append(inputfield);
                         inputdiv.append(button);
 
                         popupdiv.append(inputdiv);
-                        
+                        document.getElementById("container").append(popupdiv);
+
                         //creates a row
                         let msgrow = document.createElement("div");
                         msgrow.className = "row messageData light visualBox";
                         msgrow.style = "cursor: pointer";
-                        msgrow.onclick = function () {openPopup();};
+                        msgrow.onclick = function () {
+                            let x = document.getElementById(messages[i][0] + "$$$$$" + messages[i][3]);
+                            x.classList.add("open-popup");
+                            x.style = "overflow: auto";
+                        };
 
                         //creates the circle
                         let statusdiv = document.createElement("div");

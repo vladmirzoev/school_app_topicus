@@ -26,7 +26,6 @@ function check() {
     let guardianname = document.getElementById("guardianname").value;
     let telephone1 = document.getElementById("telephone1").value;
     let telephone2 = document.getElementById("telephone2").value;
-    let email = document.getElementById("email").value;
     let bsn = document.getElementById("bsn").value;
     let birthdate = document.getElementById("birthdate").value;
     let address = document.getElementById("address").value;
@@ -59,12 +58,6 @@ function check() {
         valid = false;
     }
 
-    if (!email) {
-        document.getElementById("email").style.borderColor = "#FF0000";
-        document.getElementById("email").style.backgroundColor = "#FFBFBF";
-        valid = false;
-    }
-
     if (!bsn) {
         document.getElementById("bsn").style.borderColor = "#FF0000";
         document.getElementById("bsn").style.backgroundColor = "#FFBFBF";
@@ -91,14 +84,14 @@ function check() {
     }
 
     if (valid) {
-        submitform(childname, guardianname, telephone1, telephone2, email, bsn, birthdate, address, grade, schoolname);
+        submitform(childname, guardianname, telephone1, telephone2, bsn, birthdate, address, grade, schoolname);
     }
 }
 
-function submitform(childname, guardianname, telephone1, telephone2, email, bsn, birthdate, address, grade, schoolname) {
+function submitform(childname, guardianname, telephone1, telephone2, bsn, birthdate, address, grade, schoolname) {
 
     //TODO this is a security issue if people inspect this script
-    let methodcall = './api/form/uploadBasicReq/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + email + '/' + bsn + '/' + birthdate + '/' + grade + '/' + schoolname + '/' + address;
+    let methodcall = './api/form/uploadBasicReqNoAccount/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + bsn + '/' + birthdate + '/' + grade + '/' + schoolname + '/' + address;
     console.log(methodcall)
     xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);

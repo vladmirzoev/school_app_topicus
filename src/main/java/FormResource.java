@@ -80,14 +80,13 @@ public class FormResource {
     /**
      * Uploads basic registration into database
      */
-    @Path("/uploadBasicReq/{childname}/{guardianname}/{telephone1}/{telephone2}/{email}/{bsn}/{birthdate}/{grade}/{schoolname}/{address}")
+    @Path("/uploadBasicReqNoAccount/{childname}/{guardianname}/{telephone1}/{telephone2}/{bsn}/{birthdate}/{grade}/{schoolname}/{address}")
     @POST
     @Produces(MediaType.TEXT_HTML)
-    public void uploadRegistration(@PathParam("childname") String childName,
+    public void uploadRegistrationNoAccount(@PathParam("childname") String childName,
                                    @PathParam("guardianname") String guardianName,
                                    @PathParam("telephone1") String telephone1,
                                    @PathParam("telephone2") String telephone2,
-                                   @PathParam("email") String email,
                                    @PathParam("bsn") String bsn,
                                    @PathParam("birthdate") Date birth_date,
                                    @PathParam("grade") int grade,
@@ -97,21 +96,58 @@ public class FormResource {
         int student_id = newStudentID();
         int registration_id = newRegistrationID();
         int school_id = getSchoolID(schoolName);
-        System.out.println(email);
-        if (email.contains("@")) {
-            if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
-                createAccount(guardianName, telephone1, telephone2, email, address);
-            } else { //if an account exists, update depending on the phone numbers given
-                updateAccount(telephone1, telephone2, email);
-            }
-            if (!checkGuardianExists(email)) {
-                createGuardian(email);
-            }
-            if(!studentExists(bsn)) {
-                createStudent(childName, email, bsn, birth_date, student_id);
-            }
-            createRegistration(grade, student_id, registration_id, school_id);
+        String email = registration_id + "@studieportal.nl";
+
+        if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
+            createAccount(guardianName, telephone1, telephone2, email, address);
+        } else { //if an account exists, update depending on the phone numbers given
+            updateAccount(telephone1, telephone2, email);
         }
+        if (!checkGuardianExists(email)) {
+            createGuardian(email);
+        }
+        if(!studentExists(bsn)) {
+            createStudent(childName, email, bsn, birth_date, student_id);
+        }
+        createRegistration(grade, student_id, registration_id, school_id);
+
+        closeConnection();
+    }
+
+    /**
+     * Uploads basic registration into database
+     */
+    @Path("/uploadBasicReq/{childname}/{guardianname}/{email}/{telephone1}/{telephone2}/{bsn}/{birthdate}/{grade}/{schoolname}/{address}")
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    public void uploadRegistration(@PathParam("childname") String childName,
+                                   @PathParam("guardianname") String guardianName,
+                                   @PathParam("email") String email,
+                                   @PathParam("telephone1") String telephone1,
+                                   @PathParam("telephone2") String telephone2,
+                                   @PathParam("bsn") String bsn,
+                                   @PathParam("birthdate") Date birth_date,
+                                   @PathParam("grade") int grade,
+                                   @PathParam("schoolname") String schoolName,
+                                   @PathParam("address") String address) throws Exception {
+        openConnection();
+        int student_id = newStudentID();
+        int registration_id = newRegistrationID();
+        int school_id = getSchoolID(schoolName);
+
+        if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
+            createAccount(guardianName, telephone1, telephone2, email, address);
+        } else { //if an account exists, update depending on the phone numbers given
+            updateAccount(telephone1, telephone2, email);
+        }
+        if (!checkGuardianExists(email)) {
+            createGuardian(email);
+        }
+        if(!studentExists(bsn)) {
+            createStudent(childName, email, bsn, birth_date, student_id);
+        }
+        createRegistration(grade, student_id, registration_id, school_id);
+
         closeConnection();
     }
 
@@ -123,7 +159,7 @@ public class FormResource {
         if(rs.next()) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     }

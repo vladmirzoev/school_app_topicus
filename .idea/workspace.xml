@@ -13,45 +13,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormRegistrationResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormRegistrationResource.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MessageResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MessageResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StudentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormRegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/MessageResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/MessageResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLoginadmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
     </list>
     <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentResource.java" afterDir="false" />
-    </list>
-    <list id="719d25df-59b4-4b7c-800b-d3949ca0ebb3" name="Changes by samer" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +256,7 @@
       <workItem from="1687503186928" duration="18822000" />
       <workItem from="1687770117089" duration="2523000" />
       <workItem from="1687772947091" duration="19366000" />
-      <workItem from="1687867717599" duration="8913000" />
+      <workItem from="1687867717599" duration="14570000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
