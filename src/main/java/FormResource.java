@@ -1,8 +1,12 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 @Path("/form")
 public class FormResource {
@@ -23,6 +27,335 @@ public class FormResource {
 
     public void closeConnection() throws SQLException {
         db.close();
+    }
+
+    @Path("{id}")
+    @POST
+    public void newForm(@PathParam("id") int school_id) throws SQLException {
+        openConnection();
+        int form_id = newFormID();
+        String query = "INSERT INTO form (form_id, school_id) VALUES (?, ?)";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, form_id);
+        st.setInt(2, school_id);
+        st.executeQuery();
+        closeConnection();
+    }
+
+    @Path("{form_id}/{max_grade}")
+    @POST
+    public void setFormGrade(@PathParam("form_id") int form_id, @PathParam("max_grade") int max_grade) throws SQLException, Exception {
+        openConnection();
+        String query = "UPDATE form SET grade = ? WHERE form_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, form_id);
+        st.setInt(2, max_grade);
+        st.executeQuery();
+        closeConnection();
+    }
+
+    private int newFormID() throws SQLException {
+        String query = "SELECT MAX(form_id) FROM form";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+        int maxID = 0;
+        while(rs.next()) {
+            maxID = rs.getInt(1);
+        }
+        return maxID + 1;
+    }
+
+    @Path("/field/{form_id}/{question}/{input_type}")
+    @POST
+    public void createField(@PathParam("form_id") int id, @PathParam("question") String question, @PathParam("input_type") String type) throws SQLException {
+        openConnection();
+        String query = "INSERT INTO fields (form_id, question, input_type) VALUES (?, ?, ?)";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, id);st.setString(2, question);
+        st.setString(3, type);
+        st.executeQuery();
+        closeConnection();
+    }
+
+    /**
+     * Uploads basic registration into database
+     */
+    @Path("/uploadBasicReq/{childname}/{guardianname}/{telephone1}/{telephone2}/{email}/{bsn}/{birthdate}/{grade}/{schoolname}/{address}")
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    public void uploadRegistration(@PathParam("childname") String childName,
+                                   @PathParam("guardianname") String guardianName,
+                                   @PathParam("telephone1") String telephone1,
+                                   @PathParam("telephone2") String telephone2,
+                                   @PathParam("email") String email,
+                                   @PathParam("bsn") String bsn,
+                                   @PathParam("birthdate") Date birth_date,
+                                   @PathParam("grade") int grade,
+                                   @PathParam("schoolname") String schoolName,
+                                   @PathParam("address") String address) throws Exception {
+        openConnection();
+        int student_id = newStudentID();
+        int registration_id = newRegistrationID();
+        int school_id = getSchoolID(schoolName);
+        System.out.println(email);
+        if (email.contains("@")) {
+            if (!accountExists(email)) { //if an account doesn't exist, make a new account entry
+                createAccount(guardianName, telephone1, telephone2, email, address);
+            } else { //if an account exists, update depending on the phone numbers given
+                updateAccount(telephone1, telephone2, email);
+            }
+            if (!checkGuardianExists(email)) {
+                createGuardian(email);
+            }
+            if(!studentExists(bsn)) {
+                createStudent(childName, email, bsn, birth_date, student_id);
+            }
+            createRegistration(grade, student_id, registration_id, school_id);
+        }
+        closeConnection();
+    }
+
+    private boolean studentExists(String bsn) throws SQLException {
+        String query = "SELECT * FROM STUDENT WHERE bsn = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, bsn);
+        ResultSet rs = st.executeQuery();
+        if(rs.next()) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    /**
+     * Creates a child as a logged in parent
+     */
+    @Path("/createChild/{accountid}/{name}/{dob}/{bsn}")
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    public void createChild(@PathParam("accountid") String accountid,
+                            @PathParam("name") String childname,
+                            @PathParam("dob") Date birth_date,
+                            @PathParam("bsn") String bsn) throws Exception {
+        openConnection();
+        int student_id = newStudentID();
+        createStudent(childname, accountid, bsn, birth_date, student_id);
+        closeConnection();
+    }
+
+
+    /**
+     * Creates new account table entry
+     */
+    private void createAccount(String guardianName, String telephone1, String telephone2, String email, String address) throws SQLException {
+        String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, role) VALUES (?, ?, ?, ?, ?, ?)";
+        PreparedStatement acc = db.prepareStatement(account);
+        acc.setString(1, email);
+        acc.setString(2, guardianName);
+        acc.setString(3, address);
+        acc.setString(4, telephone1);
+        acc.setString(5, telephone2);
+        acc.setString(6, "G");
+        acc.execute();
+    }
+
+    /**
+     * Updates existing account table entry
+     */
+    private void updateAccount(String telephone1, String telephone2, String email) throws SQLException {
+        String account = "UPDATE account SET phone_number_1 = ?, phone_number_2 = ? WHERE account_id LIKE ?";
+        PreparedStatement acc = db.prepareStatement(account);
+        acc.setString(1, telephone1);
+        acc.setString(2, telephone2);
+        acc.setString(3, email);
+        acc.execute();
+    }
+
+    /**
+     * Creates new guardian table entry
+     */
+    private void createGuardian(String email) throws SQLException {
+        String guardian = "INSERT INTO guardian VALUES (?)";
+        PreparedStatement guard = db.prepareStatement(guardian);
+        guard.setString(1, email);
+        guard.execute();
+    }
+
+    //Hash BSN
+    private static String hashLoginPass(byte[] hash) {
+        StringBuilder hexString = new StringBuilder(2 * hash.length);
+        for (int i = 0; i < hash.length; i++) {
+            String hex = Integer.toHexString(0xff & hash[i]);
+            if (hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+
+    private static String hashBSN(String bsn) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] byteBSN = digest.digest(bsn.getBytes(StandardCharsets.UTF_8));
+        String hashedBSN = hashLoginPass(byteBSN);
+        return hashedBSN;
+    }
+
+    /**
+     * Creates new student entry
+     */
+    private void createStudent(String childName, String email, String bsn, Date birth_date, int student_id) throws SQLException, NoSuchAlgorithmException {
+        String student = "INSERT INTO student (student_id, bsn, name, birth_date, guardian_id) VALUES (?, ?, ?, ?, ?)";
+
+        String hashedBSN = hashBSN(bsn);
+
+        PreparedStatement st = db.prepareStatement(student);
+        st.setInt(1, student_id);
+        st.setString(2, hashedBSN);
+        st.setString(3, childName);
+        st.setDate(4, birth_date);
+        st.setString(5, email);
+        st.execute();
+    }
+
+    /**
+     * Creates new registration table entry
+     */
+    private void createRegistration(int grade, int student_id, int registration_id, int school_id) throws SQLException {
+        String registration = "INSERT INTO registration (registration_id, grade, registration_date, student_id, school_id, status, allowedit) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement reg = db.prepareStatement(registration);
+        reg.setInt(1, registration_id);
+        reg.setInt(2, grade);
+        reg.setDate(3, Date.valueOf(java.time.LocalDate.now()));
+        reg.setInt(4, student_id);
+        reg.setInt(5, school_id);
+        reg.setString(6, "Under review");
+        reg.setString(7, "N");
+        reg.execute();
+    }
+
+    /**
+     * Checks if a guardian already exists
+     */
+    private boolean checkGuardianExists(String email) throws SQLException {
+        String query = "SELECT * FROM guardian WHERE guardian_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, email);
+        ResultSet rs = st.executeQuery();
+        return rs.next();
+    }
+
+    /**
+     * Checks if an account already exists
+     */
+    public boolean accountExists(String email) throws SQLException {
+        String query = "SELECT * FROM account WHERE account_id LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, email);
+        ResultSet rs = st.executeQuery();
+        return rs.next();
+    }
+
+    /**
+     * Creates new form ID
+     */
+//    public int newFormID() throws Exception {
+//        String query = "SELECT MAX(form_id) FROM form;";
+//        PreparedStatement st = db.prepareStatement(query);
+//        ResultSet rs = st.executeQuery();
+//        int newID = 1;
+//
+//        while() {
+//
+//        }
+//
+//        // if there are no rows
+//        return ;
+//    }
+
+    /**
+     * Creates new student ID
+     */
+    public int newStudentID() throws Exception {
+        String query = "SELECT MAX(student_id) FROM student;";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+        int newID;
+
+        // if there are no rows
+        if (!rs.next()) {
+            return 1;
+        } else {
+            newID = rs.getInt(1) + 1;
+        }
+        return newID;
+    }
+
+    /**
+     * Creates new registration ID
+     */
+    public int newRegistrationID() throws Exception {
+        openConnection();
+        boolean foundID = false;
+        ArrayList<Integer> takenIDs = new ArrayList<>();
+        String query = "SELECT registration_id FROM registration";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+        while (rs.next()) {
+            takenIDs.add(rs.getInt(1));
+        }
+        int newID = 0;
+        while (!foundID) {
+            Random rnd = new Random();
+            newID = rnd.nextInt(999999);
+            if (!takenIDs.contains(newID)) {
+                foundID = true;
+            }
+        }
+        closeConnection();
+        return newID;
+    }
+
+    /**
+     * Gets the school ID depending on the school name
+     */
+    public int getSchoolID(String schoolName) throws Exception {
+        String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, schoolName);
+        ResultSet rs = st.executeQuery();
+
+        int schoolID;
+        if (!rs.next()) {
+            throw new Exception("No school found");
+        } else {
+            schoolID = rs.getInt(1);
+        }
+        return schoolID;
+    }
+
+    @Path("{id}")
+    @DELETE
+    public void deleteForm(@PathParam("id") int form_id) throws SQLException {
+        openConnection();
+        String query = "DELETE FROM form WHERE form_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, form_id);
+        st.executeQuery();
+        closeConnection();
+    }
+
+    @Path("{id}/{question}")
+    @DELETE
+    public void deleteField(@PathParam("id") int formID, @PathParam("question") String question) throws SQLException {
+        openConnection();
+        String query = "DELETE FROM fields WHERE form_id = ? AND question = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, formID);
+        st.setString(2, question);
+        st.executeQuery();
+        closeConnection();
     }
 
     /**
@@ -84,26 +417,5 @@ public class FormResource {
             }
         }
         return 12;
-    }
-
-    /**
-     * Make a new field for a particular form ID
-     */
-    @Path("/createField")
-    @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces(MediaType.TEXT_HTML)
-    public void createField(@FormParam("formID") int formID, @FormParam("question") String question, @FormParam("inputType") String inputType) throws SQLException {
-        openConnection();
-        String cmd = "INSERT INTO fields (form_id, question, inputType) VALUES (?, ?, ?)";
-        PreparedStatement st = db.prepareStatement(cmd);
-        st.setInt(1, formID);
-        st.setString(2, question);
-        st.setString(3, inputType);
-        st.execute();
-
-        //TODO make the new field show up in the front end
-
-        closeConnection();
     }
 }

@@ -34,7 +34,8 @@
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications" width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
+                                                           width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href=""><p>notifications</p></a></li>
             </div>
@@ -47,7 +48,8 @@
             </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children" width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href="children.html"><img src="images/menu/Heart.svg" alt="children"
+                                                                        width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="children.html"><p>my children</p></a></li>
             </div>
@@ -71,111 +73,53 @@
         </div>
 
     </div>
-    <div class="dark visualBox text-center justify-content-center">
+    <div class="dark visualBox text-center justify-content-center" id="allmessages">
 
-        <div class="popup" id="popup">
-            <div class="fixedbar">
-                <h2 style="line-height: 2" id="messageHeader">New message:</h2>
-                <img src="images/menu/closeX.svg" alt="close" class="closeImage" onclick="closePopup()">
-                <!--                <button type="button" class="btn-secondary" style="font-size: 16px;padding: 0 64px;position: fixed;right: 5px;top: 5px;" onclick="closePopup()">X</button>-->
-            </div>
-            <!--            <h2>New message:</h2>-->
+<!--        <div class="popup" id="popup">-->
+<!--            <div class="fixedbar">-->
+<!--                <h2 style="line-height: 2" id="messageHeader">New message:</h2>-->
+<!--                <img src="images/menu/closeX.svg" alt="close" class="closeImage" onclick="closePopup()">-->
+<!--            </div>-->
+<!--            <div style="padding: 0 30px 30px">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-8 container">-->
+<!--                        <p style="color: #000000">Hello. How are you today?</p>-->
+<!--                        <span class="time-right">11:00</span>-->
+<!--                    </div>-->
+<!--                    <div class="col-4"></div>-->
+<!--                </div>-->
 
-            <div style="padding: 0 30px 30px">
-                <div class="row">
-                    <div class="col-8 container">
-                        <p style="color: #000000">Hello. How are you today?</p>
-                        <span class="time-right">11:00</span>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-4"></div>-->
+<!--                    <div class="col-8 container darker">-->
+<!--                        <p style="color: #000000">Hey! I'm fine. Thanks for asking!</p>-->
+<!--                        <span class="time-left">11:01</span>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-8 container darker">
-                        <p style="color: #000000">Hey! I'm fine. Thanks for asking!</p>
-                        <span class="time-left">11:01</span>
-                    </div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-8 container">-->
+<!--                        <p style="color: #000000">Sweet! So, what do you wanna do today?</p>-->
+<!--                        <span class="time-right">11:02</span>-->
+<!--                    </div>-->
+<!--                    <div class="col-4"></div>-->
+<!--                </div>-->
 
-                <div class="row">
-                    <div class="col-8 container">
-                        <p style="color: #000000">Sweet! So, what do you wanna do today?</p>
-                        <span class="time-right">11:02</span>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-4"></div>-->
+<!--                    <div class="col-8 container darker">-->
+<!--                        <p style="color: #000000">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>-->
+<!--                        <span class="time-left">11:05</span>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-8 container darker">
-                        <p style="color: #000000">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                        <span class="time-left">11:05</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--                <div class="fixedbar">-->
+<!--                    <input type="text">-->
+<!--                    <button class="btn-primary" style="font-size: 15px">Send</button>-->
+<!--                </div>-->
 
-        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
-            <div class="col-1">
-                <div class="status"></div>
-            </div>
-            <div class="col-2">
-                <p class="date messageText">Yesterday at 15:12</p>
-            </div>
-            <div class="col-1">
-                <p class="messageText">from:</p>
-            </div>
-            <div class="col-4">
-                <h3 class="miniHeader messageText">School Enschede</h3>
-            </div>
-            <div class="col-1">
-                <p class="messageText">Subject:</p>
-            </div>
-            <div class="col-3">
-                <p class="subject messageText">Missing documents!</p>
-            </div>
-        </div>
-        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
-            <div class="col-1">
-                <div class="status"></div>
-            </div>
-            <div class="col-2">
-                <p class="date messageText">Yesterday at 15:12</p>
-            </div>
-            <div class="col-1">
-                <p class="messageText">from:</p>
-            </div>
-            <div class="col-4">
-                <h3 class="miniHeader messageText">School Enschede</h3>
-            </div>
-            <div class="col-1">
-                <p class="messageText">Subject:</p>
-            </div>
-            <div class="col-3">
-                <p class="subject messageText">Missing documents!</p>
-            </div>
-        </div>
-        <div class="row messageData light visualBox" style="cursor: pointer" onclick="openPopup()">
-            <div class="col-1">
-                <div class="status"></div>
-            </div>
-            <div class="col-2">
-                <p class="date messageText">Yesterday at 15:12</p>
-            </div>
-            <div class="col-1">
-                <p class="messageText">from:</p>
-            </div>
-            <div class="col-4">
-                <h3 class="miniHeader messageText">School Enschede</h3>
-            </div>
-            <div class="col-1">
-                <p class="messageText">Subject:</p>
-            </div>
-            <div class="col-3">
-                <p class="subject messageText">Missing documents!</p>
-            </div>
-        </div>
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </div>
 

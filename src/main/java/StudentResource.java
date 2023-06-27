@@ -1,7 +1,4 @@
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 import java.sql.*;
@@ -78,22 +75,32 @@ public class StudentResource {
         }
         closeConnection();
         return queriedStudent;
-//
-//        int queriedId = -1;
-//        String queriedBsn = null;
-//        String queriedName = null;
-//        String queriedBirthDate = null;
-//        int queriedGuardian_id = -1;
-//
-//        while (rs.next()) {
-//            queriedId = rs.getInt(1);
-//            queriedBsn = rs.getString(2);
-//            queriedName = rs.getString(3);
-//            queriedBirthDate = String.valueOf(rs.getDate(4));
-//            queriedGuardian_id = rs.getInt(5);
-//        }
-
-//        return new Student(queriedId, queriedBsn, queriedName, queriedBirthDate, queriedGuardian_id);
     }
+
+    @Path("editName/{id}/{name}")
+    @POST
+    public void editChildName(@PathParam("id") int s_id, @PathParam("name") String name) throws SQLException {
+        openConnection();
+        String query = "UPDATE student SET name = ? WHERE student_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1,name);
+        st.setInt(2, s_id);
+        st.executeQuery();
+        closeConnection();
+    }
+
+    @Path("editBirthDate/{id}/{birth_date}")
+    @POST
+    public void editBirthDate(@PathParam("id") int id, @PathParam("birth_date") Date birth_date) throws SQLException {
+        openConnection();
+        String birthdate = String.valueOf(birth_date);
+        String query = "UPDATE TABLE student SET birth_date = ? WHERE student_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, birthdate);
+        st.setInt(2, id);
+        st.executeQuery();
+        closeConnection();
+    }
+
 }
 

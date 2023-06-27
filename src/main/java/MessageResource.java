@@ -32,7 +32,6 @@ public class MessageResource {
      */
     @Path("/sendaccountmessage/{senderid}/{receiverid}/{subject}/{content}")
     @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public void sendAccountMessage(@PathParam("senderid") String senderid,
                                    @PathParam("receiverid") String receiverid,
                                    @PathParam("content") String content,

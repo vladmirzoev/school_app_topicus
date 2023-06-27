@@ -126,7 +126,7 @@ public class RegistrationResource {
      */
     @Path("/fetchregistrationsghost/{bsn}")
     @GET
-    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Produces(MediaType.TEXT_PLAIN)
     public int fetchRegistrationID(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException {
         String encodedBSN = hashBSN(bsn);
         String query = "SELECT r.registration_id" +
@@ -160,4 +160,6 @@ public class RegistrationResource {
         }
         return hexString.toString();
     }
+
+    @Path("editResponse/{}")
 }
