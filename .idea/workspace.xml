@@ -10,57 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/AccountResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/FormResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/MessageResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ParentResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/RegistrationResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/SchoolAdminResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/SchoolResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/SignUpResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/StudentResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/TopicusAdmTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/adminPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/styles/style3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/styles/style3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/styles/style3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/styles/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
     </list>
-    <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
-    </list>
+    <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -81,15 +37,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="3" changelist="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" />
-        <range start1="46" end1="47" start2="45" end2="46" changelist="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" />
-        <range start1="66" end1="66" start2="65" end2="109" changelist="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -119,41 +66,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/University Stuff/Module 4/di22-topicus6/src/main/testingpurposes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/University Stuff/Module 4/di22-topicus6/src/main/testingpurposes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redshift&quot;,
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\testingpurposes" />
@@ -309,7 +256,8 @@
       <workItem from="1687772947091" duration="19366000" />
       <workItem from="1687867717599" duration="16267000" />
       <workItem from="1687935653701" duration="25000" />
-      <workItem from="1687953024894" duration="13079000" />
+      <workItem from="1687953024894" duration="13291000" />
+      <workItem from="1687966391805" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

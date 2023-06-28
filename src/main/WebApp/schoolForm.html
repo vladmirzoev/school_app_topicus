@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/styleForm.css">
+<!--    <link rel="stylesheet" href="styles/style.css">-->
+<!--    <link rel="stylesheet" href="styles/styleExtras.css">-->
+    <meta charset="UTF-8">
+    <title>School Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="blackbox">
+            <div class="formbold-main-wrapper">
+                <!-- Author: FormBold Team -->
+                <!-- Learn More: https://formbold.com -->
+                <h2>Form - SCHOOL NAME</h2>
+                <div class="nav-bar"></div>
+                <div class="formbold-form-wrapper">
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="formbold-mb-5">
+                            <label for="email" class="formbold-form-label">
+                                Your email:
+                            </label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        class="formbold-form-input"
+                                    />
+                                </div>
+                                <div class="col-2">
+                                    <div class="removeBtn" onclick="deleteField()">
+                                        <img src="images/forms/binDelete.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-bar"></div>
+
+                        <div class="formbold-mb-5">
+                            <label for="numberForm" class="formbold-form-label"  contenteditable="true">
+                                Please fill in the official number:
+                            </label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input
+                                            type="number"
+                                            name="numberForm"
+                                            id="numberForm"
+                                            placeholder="xxx-xxx-xx"
+                                            class="formbold-form-input"
+                                    />
+                                </div>
+                                <div class="col-2">
+                                    <div class="removeBtn" onclick="deleteField()">
+                                        <img src="images/forms/binDelete.svg">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="nav-bar"></div>
+
+                        <div class="formbold-mb-5">
+                            <label for="dateForm" class="formbold-form-label">
+                                Please fill in the official number:
+                            </label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input
+                                        type="date"
+                                        name="dateForm"
+                                        id="dateForm"
+                                        placeholder="Enter your email"
+                                        class="formbold-form-input"
+                                    />
+                                </div>
+                                <div class="col-2">
+                                    <div class="removeBtn">
+                                        <img src="images/forms/binDelete.svg">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="nav-bar"></div>
+
+                        <div class="formbold-mb-5">
+                            <label for="textForm" class="formbold-form-label">
+                                Any remarks?
+                            </label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input
+                                            type="text"
+                                            name="text"
+                                            id="textForm"
+                                            placeholder="Enter your text"
+                                            class="formbold-form-input"
+                                    />
+                                </div>
+                                <div class="col-2">
+                                    <div class="removeBtn" onclick="deleteField()">
+                                        <img src="images/forms/binDelete.svg">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="nav-bar"></div>
+
+                        <div class="formbold-mb-5">
+                            <label for="telForm" class="formbold-form-label">
+                                Phone number of a parent:
+                            </label>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input
+                                            type="telForm"
+                                            name="telForm"
+                                            id="telForm"
+                                            placeholder="Enter your phone number"
+                                            class="formbold-form-input"
+                                    />
+                                </div>
+                                <div class="col-2">
+                                    <div class="removeBtn" onclick="deleteField()">
+                                        <img src="images/forms/binDelete.svg">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="nav-bar"></div>
+
+                        <div class="mb-6 pt-4">
+                            <label class="formbold-form-label formbold-form-label-2">
+                                Upload File
+                            </label>
+
+
+                            <div class="formbold-mb-5 formbold-file-input">
+                                <input type="file" name="file" id="file" />
+                                <label for="file">
+                                    <div>
+                                        <span class="formbold-drop-file"> Drop files here </span>
+                                        <span class="formbold-or"> Or </span>
+                                        <span class="formbold-browse"> Browse </span>
+                                    </div>
+                                </label>
+                            </div>
+
+
+                            <div class="col-2">
+                                <div class="removeBtn" onclick="deleteField()">
+                                    <img src="images/forms/binDelete.svg">
+                                </div>
+                            </div>
+
+
+                            <div class="formbold-file-list formbold-mb-5">
+                                <div class="formbold-file-item">
+                                    <span class="formbold-file-name"> banner-design.png </span>
+                                    <button>
+                                        <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 10 10"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
+                                                    fill="currentColor"
+                                            />
+                                            <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
+                                                    fill="currentColor"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="formbold-file-list formbold-mb-5">
+                                <div class="formbold-file-item">
+                                    <span class="formbold-file-name"> banner-design.png </span>
+                                    <button>
+                                        <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 10 10"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
+                                                    fill="currentColor"
+                                            />
+                                            <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
+                                                    fill="currentColor"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="formbold-progress-bar">
+                                    <div class="formbold-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="formbold-btn w-full">Send File</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts"
+</body>
+</html>
