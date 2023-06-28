@@ -25,15 +25,16 @@
     </div>
     <ul class="nav-links" id="schoolMenu">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg" alt="notifications"
-                                                           width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg"
+                                                                             alt="notifications"
+                                                                             width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="registrations.html"><p>registrations</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
             <div class="col-4 menuPicture"><a href="messages.html"><img src="images/menu/Messages.svg" alt="messages"
-                                                           width="100%"></a></div>
+                                                                        width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="messages.html"><p>contact parents</p></a></li>
             </div>
@@ -72,42 +73,20 @@
         </div>
 
     </div>
-    <div class="dark visualBox text-center justify-content-center" id="registrations">
-        <div class="row messageData light visualBox">
-            <div class="row">
-                <div class="col-5">
-                    <p class="messageText">Name</p>
-                </div>
-                <div class="col-2">
-                    <p class="date messageText">Date of birth</p>
-                </div>
-                <div class="col-2">
-                    <p class="messageText">Errors</p>
-                </div>
-                <div class="col-2">
-                    <p class="messageText">Status</p>
-                </div>
-
+    <div class="row" style="padding-bottom: 10px">
+        <div class="col-1"></div>
+        <div class="row">
+            <div class="col-4">
+                <select class="inputs" style="border-color: black;" id="dropdown" onchange="reorder();" onfocus="this.selectedIndex = -1;">
+                    <option value="name-asc">Name - Ascending</option>
+                    <option value="name-desc">Name - Descending</option>
+                    <option value="registration_date-asc">Registration Date - Ascending</option>
+                    <option value="registration_date-desc">Registration Date - Descending</option>
+                </select>
             </div>
-            <div class="row lastRow">
-                <div class="col-5 registrationContent">
-                    <h3 class="miniHeader messageText">Vladislav Mirzoev</h3>
-                </div>
-                <div class="col-2 registrationContent">
-                    <p class="date messageText">7.06.2023</p>
-                </div>
-                <div class="col-2 registrationContent">
-                    <p class="messageText">Files: BSN</p>
-                </div>
-                <div class="col-2 registrationContent">
-                    <div class="status missingFiles">
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </div>
+    <div class="dark visualBox text-center justify-content-center" id="registrations"></div>
 </div>
 
 <script src="scripts/script.js"></script>

@@ -54,8 +54,8 @@ public class AccountResource {
     public Response login(@FormParam("regularEmail") String email,
                           @FormParam("regularPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
         openConnection();
-        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLogin.html");
-        URI success = new java.net.URI("http://localhost:8080/Topicus/userDashboard.html");
+        URI failed = new URI("http://localhost:8080/Topicus/failedLogin.html");
+        URI success = new URI("http://localhost:8080/Topicus/userDashboard.html");
 
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
@@ -81,8 +81,8 @@ public class AccountResource {
     public Response adminLogin(@FormParam("adminEmail") String email,
                                @FormParam("adminPass") String pass) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
         openConnection();
-        URI failed = new java.net.URI("http://localhost:8080/Topicus/failedLoginadmin.html");
-        URI success = new java.net.URI("http://localhost:8080/Topicus/registrations.html");
+        URI failed = new URI("http://localhost:8080/Topicus/failedLoginadmin.html");
+        URI success = new URI("http://localhost:8080/Topicus/registrations.html");
 
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));

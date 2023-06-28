@@ -1,7 +1,6 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-import javax.print.attribute.standard.Media;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +43,40 @@ public class SchoolAdminResource {
 
         String query = "SELECT DISTINCT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit " +
                 "FROM registration r, schooladmin sa, student s " +
-                "WHERE r.student_id = s.student_id AND sa.school_id = r.school_id AND sa.account_id = ?";
+                "WHERE r.student_id = s.student_id AND sa.school_id = r.school_id AND sa.account_id = ? ORDER BY s.name";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, adminID);
+        ResultSet result = st.executeQuery();
+
+        while (result.next()) {
+            Registration queriedReg = new Registration();
+            queriedReg.setId(result.getInt(1));
+            queriedReg.setGrade(result.getInt(2));
+            queriedReg.setRegistration_date(String.valueOf(result.getDate(3)));
+            queriedReg.setStudent_id(result.getInt(4));
+            queriedReg.setName(result.getString(5));
+            queriedReg.setSchool_id(result.getInt(6));
+            queriedReg.setStatus(result.getString(7));
+            queriedReg.setAllowedit(result.getString(8));
+            regs.add(queriedReg);
+        }
+        closeConnection();
+        return regs;
+    }
+
+    /**
+     * Gets all registrations concerning the school ordered
+     */
+    @Path("/getschoolregistrations/{id}/{column}/{asc_dsc}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<Registration> getSchoolRegistrationsOrdered(@PathParam("id") String adminID, @PathParam("column") String column, @PathParam("asc_dsc") String asc_dsc) throws Exception {
+        String query = "SELECT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit " +
+                "FROM registration r, schooladmin sa, student s " +
+                "WHERE r.student_id = s.student_id AND sa.school_id = r.school_id AND sa.account_id = ? ";
+        openConnection();
+        List<Registration> regs = new ArrayList<>();
+        query+= " ORDER BY " + column + " " + asc_dsc.toUpperCase();
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, adminID);
         ResultSet result = st.executeQuery();

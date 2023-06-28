@@ -6,6 +6,7 @@ function render() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
+                let blackbox = document.getElementById("registrations")
                 let students = JSON.parse(xhr.responseText);
                 let regs = [];
                 //gets all students into an array
@@ -21,55 +22,244 @@ function render() {
                     reg[7] = students[i].allowedit;
                     regs[i] = reg;
 
-                    let currentreg = document.createElement("div")
-                    let path = document.getElementById("registrations")
-                    currentreg.className = "row messageData light visualBox"
-                    currentreg.append(reg);
-                    path.append(currentreg);
+                    //creates a registration entry
+                    let whitebox = document.createElement("div")
+                    whitebox.className = "row messageData light visualBox"
+
+                    //creates the top row full of headers
+                    let toprow = document.createElement("div");
+                    toprow.className = "row";
+
+                    let nameheader = document.createElement("div");
+                    nameheader.className = "col-5";
+                    let nameheadertext = document.createElement("p");
+                    nameheadertext.className = "messageText";
+                    nameheadertext.innerText = "Name";
+                    nameheader.append(nameheadertext);
+                    toprow.append(nameheader);
+
+                    let registrationdateheader = document.createElement("div");
+                    registrationdateheader.className = "col-2";
+                    let registrationdateheadertext = document.createElement("p");
+                    registrationdateheadertext.className = "date messageText";
+                    registrationdateheadertext.innerText = "Registration Date";
+                    registrationdateheader.append(registrationdateheadertext);
+                    toprow.append(registrationdateheader);
+
+                    let gradeheader = document.createElement("div");
+                    gradeheader.className = "col-2";
+                    let gradeheadertext = document.createElement("p");
+                    gradeheadertext.className = "messageText";
+                    gradeheadertext.innerText = "Grade";
+                    gradeheader.append(gradeheadertext);
+                    toprow.append(gradeheader);
+
+                    let statusheader = document.createElement("div");
+                    statusheader.className = "col-2";
+                    let statusheadertext = document.createElement("p");
+                    statusheadertext.className = "messageText";
+                    statusheadertext.innerText = "Status";
+                    statusheader.append(statusheadertext);
+                    toprow.append(statusheader);
+
+                    whitebox.append(toprow);
+
+                    //creates the bottom row full of parsed data (from the json)
+                    let bottomrow = document.createElement("div");
+                    bottomrow.className = "row lastRow"
+
+                    let namediv = document.createElement("div");
+                    namediv.className = "col-5 registrationContent";
+                    let name = document.createElement("h3");
+                    name.className = "miniHeader messageText";
+                    name.innerText = students[i].name;
+                    namediv.append(name);
+                    bottomrow.append(namediv);
+
+                    let datediv = document.createElement("div");
+                    datediv.className = "col-2 registrationContent";
+                    let date = document.createElement("p");
+                    date.className = "date messageText";
+                    date.innerText = students[i].registration_date;
+                    datediv.append(date);
+                    bottomrow.append(datediv);
+
+                    let gradediv = document.createElement("div");
+                    gradediv.className = "col-2 registrationContent";
+                    let grade = document.createElement("p");
+                    grade.className = "messageText";
+                    grade.innerText = students[i].grade;
+                    gradediv.append(grade);
+                    bottomrow.append(gradediv);
+
+                    let statusdiv = document.createElement("div");
+                    statusdiv.className = "col-2 registrationContent";
+                    let status = document.createElement("p");
+                    status.className = "status";
+                    switch (students[i].status) {
+                        case "Under review":
+                            status.classList.add("underReview");
+                            break;
+                        case "Accepted":
+                            status.classList.add("accepted");
+                            break;
+                        case "Rejected":
+                            status.classList.add("rejected")
+                            break;
+                        default:
+                            status.classList.add("bugged");
+                            break;
+                    }
+
+                    statusdiv.append(status);
+                    bottomrow.append(statusdiv);
+
+                    whitebox.append(bottomrow);
+                    blackbox.append(whitebox);
                 }
                 console.log(regs)
-
-                // for (let i = 0; i < regs.length; i++) {
-                //     let row = document.createElement("div");
-                //     row.className = "row messageData light visualBox";
-                //     let path = document.getElementById("registrations")
-                //     path.append(regs[i])
-                // }
-
-                // for (let y = 0; y < students.length; y++) {
-                //     let registrations = document.createElement("div")
-                //     registrations.className = "row messageData light visualBox"
-                //     let path = document.getElementById("registrations")
-                //     console.log(students[y])
-                //     path.append(registrations)
-                //     for (let i = 0; i <; i++) {
-                //         let reg = [];
-                //         reg[0] = students[y].id;
-                //         reg[1] = students[y].grade;
-                //         reg[2] = students[y].registration_date;
-                //         reg[3] = students[y].student_id;
-                //         reg[4] = students[y].name;
-                //         reg[5] = students[y].school_id;
-                //         reg[6] = students[y].status;
-                //         reg[7] = students[y].allowedit;
-                //         regs[i] = reg;
-                //     }
-                // }
             }
         }
     };
     xhr.send();
+}
 
-    // for (let i = 0; i < regs.length; i++) {
-    //     let row = document.createElement("div");
-    //     row.className = "row messageData light visualBox";
-    //     let path = document.getElementById("registrations")
-    //     path.append(regs[i])
-    //     console.log(regs[i])
-    // }
+function reorder() {
+    let dropdownvalue = document.getElementById("dropdown").value;
+    let blackbox = document.getElementById("registrations")
+    let id = sessionStorage.getItem("id");
+    let terms = dropdownvalue.split("-");
+    let column = terms[0];
+    console.log(column);
+    let asc_dsc = terms[1];
+    console.log(asc_dsc);
 
-    // let registrations = document.createElement("div")
-    // reg.className = "row messageData light visualBox"
-    // let path = document.getElementById("registrations")
-    // path.append(reg)
+    let xhr = new XMLHttpRequest();
+    let methodcall = './api/schooladmin/getschoolregistrations/' + id + '/' + column + '/' + asc_dsc
+
+    //remove previous divs
+    while (blackbox.firstChild) {
+        blackbox.removeChild(blackbox.firstChild);
+    }
+
+    xhr.open('GET', methodcall, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let students = JSON.parse(xhr.responseText);
+
+                let regs = [];
+                //gets all students into an array
+                for (let i = 0; i < students.length; i++) {
+                    let reg = [];
+                    reg[0] = students[i].id;
+                    reg[1] = students[i].grade;
+                    reg[2] = students[i].registration_date;
+                    reg[3] = students[i].student_id;
+                    reg[4] = students[i].name;
+                    reg[5] = students[i].school_id;
+                    reg[6] = students[i].status;
+                    reg[7] = students[i].allowedit;
+                    regs[i] = reg;
+
+                    //creates a registration entry
+                    let whitebox = document.createElement("div")
+                    whitebox.className = "row messageData light visualBox"
+
+                    //creates the top row full of headers
+                    let toprow = document.createElement("div");
+                    toprow.className = "row";
+
+                    let nameheader = document.createElement("div");
+                    nameheader.className = "col-5";
+                    let nameheadertext = document.createElement("p");
+                    nameheadertext.className = "messageText";
+                    nameheadertext.innerText = "Name";
+                    nameheader.append(nameheadertext);
+                    toprow.append(nameheader);
+
+                    let registrationdateheader = document.createElement("div");
+                    registrationdateheader.className = "col-2";
+                    let registrationdateheadertext = document.createElement("p");
+                    registrationdateheadertext.className = "date messageText";
+                    registrationdateheadertext.innerText = "Registration Date";
+                    registrationdateheader.append(registrationdateheadertext);
+                    toprow.append(registrationdateheader);
+
+                    let gradeheader = document.createElement("div");
+                    gradeheader.className = "col-2";
+                    let gradeheadertext = document.createElement("p");
+                    gradeheadertext.className = "messageText";
+                    gradeheadertext.innerText = "Grade";
+                    gradeheader.append(gradeheadertext);
+                    toprow.append(gradeheader);
+
+                    let statusheader = document.createElement("div");
+                    statusheader.className = "col-2";
+                    let statusheadertext = document.createElement("p");
+                    statusheadertext.className = "messageText";
+                    statusheadertext.innerText = "Status";
+                    statusheader.append(statusheadertext);
+                    toprow.append(statusheader);
+
+                    whitebox.append(toprow);
+
+                    //creates the bottom row full of parsed data (from the json)
+                    let bottomrow = document.createElement("div");
+                    bottomrow.className = "row lastRow"
+
+                    let namediv = document.createElement("div");
+                    namediv.className = "col-5 registrationContent";
+                    let name = document.createElement("h3");
+                    name.className = "miniHeader messageText";
+                    name.innerText = students[i].name;
+                    namediv.append(name);
+                    bottomrow.append(namediv);
+
+                    let datediv = document.createElement("div");
+                    datediv.className = "col-2 registrationContent";
+                    let date = document.createElement("p");
+                    date.className = "date messageText";
+                    date.innerText = students[i].registration_date;
+                    datediv.append(date);
+                    bottomrow.append(datediv);
+
+                    let gradediv = document.createElement("div");
+                    gradediv.className = "col-2 registrationContent";
+                    let grade = document.createElement("p");
+                    grade.className = "messageText";
+                    grade.innerText = students[i].grade;
+                    gradediv.append(grade);
+                    bottomrow.append(gradediv);
+
+                    let statusdiv = document.createElement("div");
+                    statusdiv.className = "col-2 registrationContent";
+                    let status = document.createElement("p");
+                    status.className = "status";
+                    switch (students[i].status) {
+                        case "Under review":
+                            status.classList.add("underReview");
+                            break;
+                        case "Accepted":
+                            status.classList.add("accepted");
+                            break;
+                        case "Rejected":
+                            status.classList.add("rejected")
+                            break;
+                        default:
+                            status.classList.add("bugged");
+                            break;
+                    }
+
+                    statusdiv.append(status);
+                    bottomrow.append(statusdiv);
+
+                    whitebox.append(bottomrow);
+                    blackbox.append(whitebox);
+                }
+                console.log(regs)
+            }
+        }
+    };
+    xhr.send();
 }

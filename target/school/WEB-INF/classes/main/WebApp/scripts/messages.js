@@ -21,7 +21,6 @@ function render() {
                     currentmessage[4] = obj[i].content;
                     messages[i] = currentmessage;
                 }
-                console.log(messages);
 
                 let prevmessages = [];
 
@@ -33,9 +32,7 @@ function render() {
                         //check for duplicates
                         if (prevmessages.includes("" + messages[i][0] + messages[i][3])) {}
                         else {
-                            console.log(prevmessages);
                             prevmessages.push("" + messages[i][0] + messages[i][3])
-                            console.log(prevmessages);
 
                             //makes a popup
                             let popupdiv = document.createElement("div");
@@ -219,10 +216,6 @@ function render() {
 //For sending a message
 function sendMessage(receiver, subject, content) {
     let senderid = sessionStorage.getItem("id");
-    // let receiverid = document.getElementById("receiverid").value;
-    // let subject = document.getElementById("subject").value;
-    // let content = document.getElementById("content").value;
-    // let receiveridsplit = receiverid.split("");
     let receiveridsplit = receiver.split("");
 
     let methodcall;

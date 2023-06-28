@@ -210,8 +210,21 @@ p {
 }
 
 /*Registration*/
-.missingFiles {
-    background-color: orange;
+
+.accepted {
+    background-color: green;
+}
+
+.underReview {
+    background-color: yellow;
+}
+
+.rejected {
+    background-color: red;
+}
+
+.bugged {
+    background-color: black;
 }
 
 .registrationContent {
@@ -385,7 +398,7 @@ input[type="file"]{
     font-size: 15px;
     top: 25%;
     box-shadow: none !important;
-    margin-left: !important;
+    margin-left: auto !important; /*TODO might be a problem??*/
     background-color: #ededed;
     width: 200px;
     border: 0;
