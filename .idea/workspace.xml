@@ -10,22 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
+      <change afterPath="$PROJECT_DIR$/src/main/WebApp/loginAdmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLoginadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/messages.js" afterDir="false" />
     </list>
-    <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
-    </list>
+    <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -96,7 +93,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -115,11 +112,11 @@
       <recent name="C:\Users\gugap\OneDrive\Documents\GitHub\di22-topicus6\src\main\WebApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\children" />
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\menu" />
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\school" />
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\svg" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\scripts" />
     </key>
   </component>
   <component name="RunManager">
@@ -256,7 +253,9 @@
       <workItem from="1687503186928" duration="18822000" />
       <workItem from="1687770117089" duration="2523000" />
       <workItem from="1687772947091" duration="19366000" />
-      <workItem from="1687867717599" duration="14570000" />
+      <workItem from="1687867717599" duration="16267000" />
+      <workItem from="1687935653701" duration="25000" />
+      <workItem from="1687953024894" duration="5566000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
