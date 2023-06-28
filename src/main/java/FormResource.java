@@ -29,6 +29,9 @@ public class FormResource {
         db.close();
     }
 
+    /**
+     * Creates a new form for a particular school
+     */
     @Path("{id}")
     @POST
     public void newForm(@PathParam("id") int school_id) throws SQLException {
@@ -42,6 +45,9 @@ public class FormResource {
         closeConnection();
     }
 
+    /**
+     * Sets the student-grade range of which the form can be accessed
+     */
     @Path("{form_id}/{max_grade}")
     @POST
     public void setFormGrade(@PathParam("form_id") int form_id, @PathParam("max_grade") int max_grade) throws SQLException, Exception {
@@ -54,24 +60,31 @@ public class FormResource {
         closeConnection();
     }
 
+    /**
+     * Generates an ID for a new form
+     */
     private int newFormID() throws SQLException {
         String query = "SELECT MAX(form_id) FROM form";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
         int maxID = 0;
-        while(rs.next()) {
+        while (rs.next()) {
             maxID = rs.getInt(1);
         }
         return maxID + 1;
     }
 
+    /**
+     * Creates a question field of an input-type, for a particular form ID
+     */
     @Path("/field/{form_id}/{question}/{input_type}")
     @POST
     public void createField(@PathParam("form_id") int id, @PathParam("question") String question, @PathParam("input_type") String type) throws SQLException {
         openConnection();
         String query = "INSERT INTO fields (form_id, question, input_type) VALUES (?, ?, ?)";
         PreparedStatement st = db.prepareStatement(query);
-        st.setInt(1, id);st.setString(2, question);
+        st.setInt(1, id);
+        st.setString(2, question);
         st.setString(3, type);
         st.executeQuery();
         closeConnection();
@@ -84,14 +97,14 @@ public class FormResource {
     @POST
     @Produces(MediaType.TEXT_HTML)
     public void uploadRegistrationNoAccount(@PathParam("childname") String childName,
-                                   @PathParam("guardianname") String guardianName,
-                                   @PathParam("telephone1") String telephone1,
-                                   @PathParam("telephone2") String telephone2,
-                                   @PathParam("bsn") String bsn,
-                                   @PathParam("birthdate") Date birth_date,
-                                   @PathParam("grade") int grade,
-                                   @PathParam("schoolname") String schoolName,
-                                   @PathParam("address") String address) throws Exception {
+                                            @PathParam("guardianname") String guardianName,
+                                            @PathParam("telephone1") String telephone1,
+                                            @PathParam("telephone2") String telephone2,
+                                            @PathParam("bsn") String bsn,
+                                            @PathParam("birthdate") Date birth_date,
+                                            @PathParam("grade") int grade,
+                                            @PathParam("schoolname") String schoolName,
+                                            @PathParam("address") String address) throws Exception {
         openConnection();
         int student_id = newStudentID();
         int registration_id = newRegistrationID();
@@ -106,7 +119,7 @@ public class FormResource {
         if (!checkGuardianExists(email)) {
             createGuardian(email);
         }
-        if(!studentExists(bsn)) {
+        if (!studentExists(bsn)) {
             createStudent(childName, email, bsn, birth_date, student_id);
         }
         createRegistration(grade, student_id, registration_id, school_id);
@@ -143,7 +156,7 @@ public class FormResource {
         if (!checkGuardianExists(email)) {
             createGuardian(email);
         }
-        if(!studentExists(bsn)) {
+        if (!studentExists(bsn)) {
             createStudent(childName, email, bsn, birth_date, student_id);
         }
         createRegistration(grade, student_id, registration_id, school_id);
@@ -156,10 +169,9 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, bsn);
         ResultSet rs = st.executeQuery();
-        if(rs.next()) {
+        if (rs.next()) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -218,8 +230,10 @@ public class FormResource {
         guard.execute();
     }
 
-    //Hash BSN
-    private static String hashLoginPass(byte[] hash) {
+    /**
+     * Turns a string into a byte array for hashing
+     */
+    private static String stringToByteArray(byte[] hash) {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
@@ -231,10 +245,13 @@ public class FormResource {
         return hexString.toString();
     }
 
+    /**
+     * Hashes the BSN with SHA-256
+     */
     private static String hashBSN(String bsn) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] byteBSN = digest.digest(bsn.getBytes(StandardCharsets.UTF_8));
-        String hashedBSN = hashLoginPass(byteBSN);
+        String hashedBSN = stringToByteArray(byteBSN);
         return hashedBSN;
     }
 
@@ -294,23 +311,6 @@ public class FormResource {
     }
 
     /**
-     * Creates new form ID
-     */
-//    public int newFormID() throws Exception {
-//        String query = "SELECT MAX(form_id) FROM form;";
-//        PreparedStatement st = db.prepareStatement(query);
-//        ResultSet rs = st.executeQuery();
-//        int newID = 1;
-//
-//        while() {
-//
-//        }
-//
-//        // if there are no rows
-//        return ;
-//    }
-
-    /**
      * Creates new student ID
      */
     public int newStudentID() throws Exception {
@@ -354,23 +354,8 @@ public class FormResource {
     }
 
     /**
-     * Gets the school ID depending on the school name
+     * Deletes a form based on its form ID
      */
-    public int getSchoolID(String schoolName) throws Exception {
-        String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
-        PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, schoolName);
-        ResultSet rs = st.executeQuery();
-
-        int schoolID;
-        if (!rs.next()) {
-            throw new Exception("No school found");
-        } else {
-            schoolID = rs.getInt(1);
-        }
-        return schoolID;
-    }
-
     @Path("{id}")
     @DELETE
     public void deleteForm(@PathParam("id") int form_id) throws SQLException {
@@ -382,6 +367,9 @@ public class FormResource {
         closeConnection();
     }
 
+    /**
+     * Deletes a field based on its form ID and the question of the field
+     */
     @Path("{id}/{question}")
     @DELETE
     public void deleteField(@PathParam("id") int formID, @PathParam("question") String question) throws SQLException {
@@ -395,14 +383,17 @@ public class FormResource {
     }
 
     /**
-     * Gets school-specific form
+     * Gets school-specific form by taking in the school name and the grade
      */
-    @Path("{id}/{grade}")
+    @Path("{schoolname}/{grade}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Form getForm(@PathParam("id") int id, @PathParam("grade") int grade) throws SQLException {
+    public Form getForm(@PathParam("schoolname") String schoolname, @PathParam("grade") int grade) throws Exception {
         openConnection();
+        int id = getSchoolID(schoolname);
         Form form = new Form();
+
+
         String query = "SELECT grade FROM form WHERE school_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
@@ -440,6 +431,9 @@ public class FormResource {
         return form;
     }
 
+    /**
+     * For the range of grades applicable for a form
+     */
     private static int getFinalGrade(int grade, ArrayList<Integer> gradeSet) {
         boolean check = false;
         while (!check) {
@@ -453,5 +447,23 @@ public class FormResource {
             }
         }
         return 12;
+    }
+
+    /**
+     * Gets the school ID depending on the school name
+     */
+    public int getSchoolID(String schoolName) throws Exception {
+        String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, schoolName);
+        ResultSet rs = st.executeQuery();
+
+        int schoolID;
+        if (!rs.next()) {
+            throw new Exception("No school found");
+        } else {
+            schoolID = rs.getInt(1);
+        }
+        return schoolID;
     }
 }

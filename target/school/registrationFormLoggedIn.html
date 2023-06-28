@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
 </head>
-<body style="background-color: #EAEDF0;">
+
+<!--TODO input validation-->
+
+<body style="background-color: #EAEDF0;" onload="render()">
 <div class="blackbox mx-auto">
     <div class="container text-center">
         <h1 class="mainHeader">Enter Child Details</h1>
@@ -20,17 +23,21 @@
     <div class="formText3">Child's BSN number:</div>
     <input class="inputs" type="text" style="width: 600px;" id="bsn">
     <div class="formText3">Grade of study</div>
-    <input class="inputs required" id="grade" type="number" min="1" max="12" placeholder="Only Number"
-           style="width: 600px;" id="grade" required onkeyup="enableSubmit()">
+    <input class="inputs required" id="grade" type="number" min="1" max="12" placeholder="Only Number" style="width: 600px;" id="grade">
     <div class="formText3">School:</div>
-    <select class="inputs" type="text" style="width: 600px" required id="dropdown">
-    </select>
+    <select class="inputs" type="text" style="width: 600px" required id="dropdown"></select>
     <div class="row justify-content-center align-items-center">
         <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
+    </div>
+    <div class="popup2" id="popup2">
+        <h2>Thank you!</h2>
+        <p style="color: #000000">Successfully added a child!<br>You may now proceed to the school form.</p>
+        <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Continue">
     </div>
 </div>
 
 <script src="scripts/registrationformloggedin.js"></script>
+<script src="scripts/popup.js"></script>
 
 </body>
 </html>

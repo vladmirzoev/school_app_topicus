@@ -6,10 +6,8 @@ import java.util.ArrayList;
 public class Form {
     public int form_id;
     public int school_id;
-
     public String school_name;
     public int grade;
-
     public ArrayList<Field> fields;
 
     public Form() {
@@ -57,9 +55,9 @@ public class Form {
         fields.add(field);
     }
 
+
     @XmlRootElement
-    static
-    class Field {
+    static class Field {
         public String question;
 
         public String getQuestion() {
@@ -69,7 +67,6 @@ public class Form {
         public void setQuestion(String question) {
             this.question = question;
         }
-
     }
 }
 

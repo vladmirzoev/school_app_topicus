@@ -1,34 +1,42 @@
-.dark{
+.dark {
     background-color: #242F36;
 }
-.light{
+
+.light {
     background-color: #EAEDF0;
 }
-.houseColour{
+
+.houseColour {
     background-color: #F8E800;
 }
 
 /*Home page*/
-#superHeading{
+#superHeading {
     margin-top: 256px;
 }
-#loginButtons{
+
+#loginButtons {
     margin-top: 160px;
 }
-#loginSubheading{
+
+#loginSubheading {
     margin-top: 64px;
 }
-#loginFormBtn{
+
+#loginFormBtn {
     margin-top: 32px;
 }
-#openBtn-div{
+
+#openBtn-div {
     transition: 0.5s;
 }
+
 /*Dashboard*/
-.dashboardContainer{
+.dashboardContainer {
     padding: 20px 60px;
 }
-.side-bar-menu{
+
+.side-bar-menu {
     width: 250px;
     /*height: 100vh;*/
     /*position: fixed;*/
@@ -38,36 +46,44 @@
     z-index: 1;
     transition: 0.5s;
 }
-.nav-links{
+
+.nav-links {
     list-style: none;
     position: relative;
     padding: 0;
     transition: 0.5s;
 }
-.nav-links li{
+
+.nav-links li {
     margin: 24px 0;
 }
-.nav-links li a{
+
+.nav-links li a {
     font: 16px Helvetica;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
 }
-.nameBox{
+
+.nameBox {
     position: absolute;
     bottom: 20px;
 }
-.children{
+
+.children {
     margin-bottom: 20px;
 }
-.column2{
+
+.column2 {
     margin-left: 20px;
 }
-.visualBox{
+
+.visualBox {
     border-radius: 12px;
     padding: 12px;
 }
-#dashboardHeading{
+
+#dashboardHeading {
     margin: 60px 0;
     font-family: 'Helvetica', serif;
     font-weight: 700;
@@ -76,15 +92,16 @@
     color: #404040;
 }
 
-.userAvatar{
+.userAvatar {
     margin-top: 16px;
 }
 
-#lastElement{
+#lastElement {
     margin-bottom: 600px;
 }
+
 /*Text*/
-.mainHeader{
+.mainHeader {
     font: 64px Helvetica;
     align-content: center;
     font-weight: 700;
@@ -92,7 +109,7 @@
     color: #ffffff;
 }
 
-.subHeader{
+.subHeader {
     font: 32px Helvetica;
     align-content: center;
     font-weight: 700;
@@ -100,27 +117,29 @@
     color: #ffffff;
 }
 
-.miniHeader{
+.miniHeader {
     font: 24px Helvetica;
     align-content: center;
     font-weight: 700;
     letter-spacing: -1.8px;
     color: #ffffff;
 }
-p{
+
+p {
     font: 16px Helvetica;
     font-weight: 500;
     color: #ffffff;
     letter-spacing: 0.2px;
     margin: 0;
 }
+
 /*Bootstrap*/
-.row{
+.row {
 
 }
 
 /*Buttons*/
-.btn-primary{
+.btn-primary {
     padding: 16px 64px;
     font: 32px Helvetica;
     font-weight: bold;
@@ -130,7 +149,7 @@ p{
     border-radius: 6px;
 }
 
-.btn-secondary{
+.btn-secondary {
     padding: 16px 64px;
     font: 32px Helvetica;
     font-weight: bold;
@@ -141,11 +160,12 @@ p{
 }
 
 /*School Page*/
-.schoolContents{
+.schoolContents {
     width: 100%;
     position: center;
 }
-.bgPhoto{
+
+.bgPhoto {
     display: flex;
     align-items: center;
     background-image: radial-gradient(78.13% 78.13% at 50% 50%, #EAEDF0 14.9%, rgba(234, 237, 240, 0) 100%),
@@ -155,13 +175,13 @@ p{
     background-size: cover;
 }
 
-.editIcon{
+.editIcon {
     position: absolute;
     top: 15px;
     right: 15px;
 }
 
-.editIcon:hover{
+.editIcon:hover {
     outline: #1a1d20 solid 2px;
     border-radius: 10px;
     background-color: #1a1d20;
@@ -169,17 +189,19 @@ p{
 }
 
 /*Messages*/
-.messageData{
+.messageData {
     width: 95%;
     display: inline-flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.messageText{
+
+.messageText {
     color: #1a1d20;
     letter-spacing: -1.8px;
 }
-.status{
+
+.status {
     width: 15px;
     height: 15px;
     border-radius: 100px;
@@ -188,23 +210,38 @@ p{
 }
 
 /*Registration*/
-.missingFiles{
-    background-color: orange;
+
+.accepted {
+    background-color: green;
 }
-.registrationContent{
+
+.underReview {
+    background-color: yellow;
+}
+
+.rejected {
+    background-color: red;
+}
+
+.bugged {
+    background-color: black;
+}
+
+.registrationContent {
     justify-content: center;
     /* text-align: center; */
     align-items: start;
     display: inline-flex;
 }
-.lastRow{
+
+.lastRow {
     margin-top: 15px;
 }
 
 /*PopUp*/
-.popup{
+.popup {
     width: 1000px;
-    height: 400px;
+    height: 475px;
     border-radius: 6px;
     position: absolute;
     top: 50%;
@@ -216,10 +253,10 @@ p{
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     background: #242F36;
-    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.8);
 }
 
-.popup2{
+.popup2 {
     width: 400px;
     /*height: 200px;*/
     border-radius: 6px;
@@ -233,20 +270,19 @@ p{
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     background: #EAEDF0;
-    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.8);
 }
 
-.open-popup{
+.open-popup {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
     z-index: 1;
 }
 
-.childrenRow{
+.childrenRow {
     margin: 20px 0;
 }
-
 /*Edit profile*/
 
 body{
@@ -362,7 +398,7 @@ input[type="file"]{
     font-size: 15px;
     top: 25%;
     box-shadow: none !important;
-    margin-left: !important;
+    margin-left: auto !important; /*TODO might be a problem??*/
     background-color: #ededed;
     width: 200px;
     border: 0;
@@ -478,10 +514,10 @@ fieldset textarea,input{
     background-color: #f7f7f7;
     box-shadow: 0 0 0 1px #F8E800;
     padding: 5px;
-    /*width: 75%;*/
+    width: 75%;
     margin: 5px auto;
     border: 0;
-    border-radius: 3px;
+    border-radius: 2.5px;
     outline: 0;
     transition: 0.3s ease;
 }
@@ -710,4 +746,60 @@ input.Btn:hover{
     .profile{
         width: 90%;
     }
+}
+
+/* Chat containers */
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: initial;
+    color: #000000;
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+    text-align: end;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.fixedbar{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #242F36;
+}
+
+#messageHeader{
+    display: inline;
+}
+
+.closeImage{
+    position: absolute;
+    cursor:pointer;
+    right: 5px;
+    top: 5px;
 }

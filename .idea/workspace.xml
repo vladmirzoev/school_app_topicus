@@ -10,11 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/adminPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/styles/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/styles/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/styles/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/styles/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" afterDir="false" />
     </list>
     <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
@@ -257,7 +276,8 @@
       <workItem from="1687867717599" duration="16267000" />
       <workItem from="1687935653701" duration="25000" />
       <workItem from="1687953024894" duration="13291000" />
-      <workItem from="1687966391805" duration="1253000" />
+      <workItem from="1687966391805" duration="4903000" />
+      <workItem from="1687973176258" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

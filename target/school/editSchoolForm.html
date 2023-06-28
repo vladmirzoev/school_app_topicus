@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized form</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/styleForm.css">
+</head>
+<body class="light" style="display: flex" onload="listener()">
+<div class="side-bar-menu dark" id="sideBar">
+    <div class="row justify-content-between">
+
+        <div class="text-center" id="openBtn-div">
+            <a href="" class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
+                <img src="images/menu/openMenu.svg" alt="open menu" width="50%">
+            </a>
+            <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">
+                <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
+            </a>
+        </div>
+
+
+    </div>
+    <ul class="nav-links" id="schoolMenu">
+        <div class="row align-items-center">
+            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg" alt="notifications"
+                                                                             width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="registrations.html"><p>registrations</p></a></li>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 menuPicture"><a href="messages.html"><img src="images/menu/Messages.svg" alt="messages"
+                                                                        width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="messages.html"><p>contact parents</p></a></li>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a>
+            </div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>my school</p></a></li>
+            </div>
+        </div>
+        <div class="row align-items-center" id="lastElement">
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a>
+            </div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>forms</p></a></li>
+            </div>
+        </div>
+
+        <div class="row" id="logInText">
+            <p>Logged in as</p>
+        </div>
+        <div class="row align-items-center userAvatar">
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
+            <!-- TODO the bottom left name -->
+            <div class="col 8 sideMenuText"><p id="bottomleftname">N. Surname</p></div>
+        </div>
+    </ul>
+
+</div>
+<div class="container dashboardContainer">
+    <div class="row justify-content-end text-end">
+        <div class="row col-12">
+            <h1 class="mainHeader" id="dashboardHeading">The form is empty</h1>
+        </div>
+
+    </div>
+
+    <p style="color: black">Personalize your form:</p>
+    <div>
+        <label for="backgroundForm">Background Color:</label>
+        <input type="color" id="backgroundForm" name="backgroundForm" value="#242F36" style="width: 70px; height: 30px">
+        <button onclick="changeBackgroundColor()">Change</button>
+    </div>
+    <div>
+        <label for="questionBox">Question Box Color:</label>
+        <input type="color" id="questionBox" name="questionBox" value="#F8E800" style="width: 70px; height: 30px">
+    </div>
+
+    <div class="wrapper" id="fieldsTypes">
+        <fieldset class="addFields">
+            <legend>Select a field type:</legend>
+            <div>
+                <input type="radio" id="header" name="newField" value="header" checked class="addInputForm">
+                <label for="header">Header</label>
+            </div>
+
+            <div>
+                <input type="radio" id="text" name="newField" value="text" class="addInputForm">
+                <label for="text">Text</label>
+            </div>
+
+            <div>
+                <input type="radio" id="formEmail" name="newField" value="email" class="addInputForm">
+                <label for="formEmail">Email</label>
+            </div>
+
+            <div>
+                <input type="radio" id="number" name="newField" value="number" class="addInputForm">
+                <label for="number">Number</label>
+            </div>
+
+            <div>
+                <input type="radio" id="phone" name="newField" value="phone" class="addInputForm">
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <div>
+                <input type="radio" id="date" name="newField" value="date" class="addInputForm">
+                <label for="date">Date</label>
+            </div>
+
+            <div>
+                <input type="radio" id="file" name="newField" value="file" class="addInputForm">
+                <label for="file">File Submission</label>
+            </div>
+
+            <div>
+                <input type="submit" id="confirm" name="newField" value="Add the field" class="" onclick="createField()">
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="col-5" id="path">
+
+    </div>
+
+<!--    hidden elements-->
+    <div class="formbold-mb-5" style="display: none" id="emailForm">
+        <label for="email" class="formbold-form-label">
+            Your email:
+        </label>
+        <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                class="formbold-form-input"
+        />
+    </div>
+
+<!--    <div class="formbold-mb-5" id="numberForm" contenteditable="true">-->
+<!--        <label for="numberForm" class="formbold-form-label">-->
+<!--            Please fill in the official number:-->
+<!--        </label>-->
+<!--        <input-->
+<!--                type="number"-->
+<!--                name="numberForm"-->
+<!--                id="numberF"-->
+<!--                placeholder="xxx-xxx-xx"-->
+<!--                class="formbold-form-input"-->
+<!--        />-->
+<!--    </div>-->
+
+<!--    <div class="formbold-mb-5" id="dateForm">-->
+<!--        <label for="dateForm" class="formbold-form-label" contenteditable="true">-->
+<!--            Please fill in the official number:-->
+<!--        </label>-->
+<!--        <input-->
+<!--                type="date"-->
+<!--                name="dateForm"-->
+<!--                id="dateF"-->
+<!--                placeholder="Enter your email"-->
+<!--                class="formbold-form-input"-->
+<!--        />-->
+<!--    </div>-->
+
+<!--    <div class="formbold-mb-5" id="textForm">-->
+<!--        <label for="textForm" class="formbold-form-label" contenteditable="true">-->
+<!--            Any remarks?-->
+<!--        </label>-->
+<!--        <input-->
+<!--                type="text"-->
+<!--                name="text"-->
+<!--                id="textF"-->
+<!--                placeholder="Enter your text"-->
+<!--                class="formbold-form-input"-->
+<!--        />-->
+<!--    </div>-->
+
+<!--    <div class="formbold-mb-5" id="telForm">-->
+<!--        <label for="telForm" class="formbold-form-label" contenteditable="true">-->
+<!--            Phone number of a parent:-->
+<!--        </label>-->
+<!--        <input-->
+<!--                type="telForm"-->
+<!--                name="telForm"-->
+<!--                id="telF"-->
+<!--                placeholder="Enter your phone number"-->
+<!--                class="formbold-form-input"-->
+<!--        />-->
+<!--    </div>-->
+
+<!--    <div class="mb-6 pt-4" style="display: none" id="uploadForm">-->
+<!--        <label class="formbold-form-label formbold-form-label-2" contenteditable="true">-->
+<!--            Description-->
+<!--        </label>-->
+
+<!--        <div class="formbold-mb-5 formbold-file-input">-->
+<!--            <input type="file" name="file" id="fileForm" />-->
+<!--            <label for="file">-->
+<!--                <div>-->
+<!--                    <span class="formbold-drop-file"> Drop files here </span>-->
+<!--                    <span class="formbold-or"> Or </span>-->
+<!--                    <span class="formbold-browse"> Browse </span>-->
+<!--                </div>-->
+<!--            </label>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="row">
+        <div class="col-5 nav-bar"></div>
+        <div class="col-2 plus">
+            <img src="images/forms/plusForm.svg" alt="add" id="plusImg" onclick="addNewField()">
+        </div>
+        <div class="col-5 nav-bar"></div>
+    </div>
+    <div style="text-align: center">
+    <input type="submit" value="Create a form" class="btn-primary" style="font-size: 24px">
+</div>
+</div>
+
+<script src="scripts/script.js"></script>
+<script src="scripts/formLogic.js"></script>
+</body>
+</html>
