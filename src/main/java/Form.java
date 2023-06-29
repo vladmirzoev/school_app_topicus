@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 @XmlRootElement
 public class Form {
-    public int form_id;
-    public int school_id;
-    public String school_name;
-    public int grade;
-    public ArrayList<Field> fields;
+    private int form_id;
+    private int school_id;
+    private String school_name;
+    private int grade;
+    private ArrayList<Field> fields;
 
     public Form() {
         this.fields = new ArrayList<>();
@@ -58,7 +58,25 @@ public class Form {
 
     @XmlRootElement
     static class Field {
-        public String question;
+        private String question;
+        private String input_type;
+        private int question_id;
+
+        public String getInput_type() {
+            return input_type;
+        }
+
+        public void setInput_type(String input_type) {
+            this.input_type = input_type;
+        }
+
+        public int getQuestion_id() {
+            return question_id;
+        }
+
+        public void setQuestion_id(int question_id) {
+            this.question_id = question_id;
+        }
 
         public String getQuestion() {
             return question;

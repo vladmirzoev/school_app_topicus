@@ -411,45 +411,50 @@ public class FormResource {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Form getForm(@PathParam("schoolname") String schoolname, @PathParam("grade") int grade) throws Exception {
-        openConnection();
         int id = getSchoolID(schoolname);
         Form form = new Form();
 
-
         String query = "SELECT grade FROM form WHERE school_id = ?";
+        openConnection();
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ArrayList<Integer> formGrades = new ArrayList<>();
         ResultSet rs = st.executeQuery();
+        closeConnection();
         while (rs.next()) {
             formGrades.add(rs.getInt(1));
         }
 
         int finalgrade = getFinalGrade(grade, formGrades);
 
-        String query2 = "SELECT b.question FROM form a, fields b WHERE a.form_id = b.form_id AND a.school_id = ? AND a.grade = ?";
+        String query2 = "SELECT b.question, b.input_type, b.question_id FROM form a, fields b WHERE a.form_id = b.form_id AND a.school_id = ? AND a.grade = ?";
+        openConnection();
         PreparedStatement st2 = db.prepareStatement(query2);
         st2.setInt(1, id);
         st2.setInt(2, finalgrade);
         ResultSet rs2 = st2.executeQuery();
+        closeConnection();
         while (rs2.next()) {
             Form.Field question = new Form.Field();
             question.setQuestion(rs2.getString(1));
+            question.setInput_type(rs2.getString(2));
+            question.setQuestion_id(rs2.getInt(3));
             form.appendField(question);
         }
 
         String query3 = "SELECT a.form_id, a.school_id, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.school_id = ? AND a.grade = ?";
+        openConnection();
         PreparedStatement st3 = db.prepareStatement(query3);
         st3.setInt(1, id);
         st3.setInt(2, finalgrade);
         ResultSet rs3 = st3.executeQuery();
+        closeConnection();
         while (rs3.next()) {
             form.setForm_id(rs3.getInt(1));
             form.setGrade(grade);
             form.setSchool_id(rs3.getInt(2));
             form.setSchool_name(rs3.getString(3));
         }
-        closeConnection();
         return form;
     }
 

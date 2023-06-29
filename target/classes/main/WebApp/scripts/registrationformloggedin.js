@@ -1,11 +1,11 @@
 function render() {
     let methodcall = './api/school/getschools/';
-    let req = new XMLHttpRequest();
-    req.open('GET', methodcall, true);
-    req.onreadystatechange = function () {
-        if (req.readyState === XMLHttpRequest.DONE) {
-            if (req.status === 200) {
-                let obj = JSON.parse(req.responseText);
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', methodcall, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let obj = JSON.parse(xhr.responseText);
                 for (let i = 0; i < obj.length; i++) {
                     let x = document.getElementById("dropdown")
                     let y = document.createElement("option")
@@ -16,7 +16,7 @@ function render() {
             }
         }
     };
-    req.send();
+    xhr.send();
 }
 
 function createChild() {
@@ -24,13 +24,15 @@ function createChild() {
     let childname = document.getElementById("childName").value;
     let dob = document.getElementById("birth_date").value;
     let bsn = document.getElementById("bsn").value;
-    let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
+    let grade = document.getElementById("grade").value;
+    let schoolname = document.getElementById("dropdown").value;
 
     //store the school name to fetch the form in the next page
-    let schoolname = document.getElementById("dropdown").value;
     sessionStorage.setItem("school", schoolname);
+    sessionStorage.setItem("grade", grade);
 
     let xhr = new XMLHttpRequest();
+    let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
     xhr.open('POST', methodcall, true);
     xhr.send();
     openPopup2();

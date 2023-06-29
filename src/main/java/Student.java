@@ -28,10 +28,6 @@ public class Student {
         this.school_name = school_name;
     }
 
-    public Student(){
-
-    }
-
     public int getId() {
         return id;
     }

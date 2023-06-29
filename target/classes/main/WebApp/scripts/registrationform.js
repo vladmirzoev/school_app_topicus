@@ -1,11 +1,11 @@
 function render() {
     let methodcall = './api/school/getschools/';
-    let req = new XMLHttpRequest();
-    req.open('GET', methodcall, true);
-    req.onreadystatechange = function () {
-        if (req.readyState === XMLHttpRequest.DONE) {
-            if (req.status === 200) {
-                let obj = JSON.parse(req.responseText);
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', methodcall, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let obj = JSON.parse(xhr.responseText);
                 for (let i = 0; i < obj.length; i++) {
                     let x = document.getElementById("dropdown")
                     let y = document.createElement("option")
@@ -16,7 +16,7 @@ function render() {
             }
         }
     };
-    req.send();
+    xhr.send();
 }
 
 function submitform() {
@@ -38,6 +38,7 @@ function submitform() {
 
     //store the school name to fetch the form in the next page
     sessionStorage.setItem("school", schoolname);
+    sessionStorage.setItem("grade", grade);
 
     xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);

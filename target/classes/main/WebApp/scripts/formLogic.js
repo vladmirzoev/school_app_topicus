@@ -2,18 +2,14 @@ let fieldCounter = 0
 let pageHeader = document.getElementById("dashboardHeading")
 
 function listener() {
-    //function for the bottom left name
-    namerender()
-
-    if (
-        fieldCounter == 0){
-        pageHeader.innerText = "The form is empty. Click a + to add a field"
-    } else {
+    if (fieldCounter !== 0) {
         pageHeader.innerText = "Form is being edited"
+    } else {
+        pageHeader.innerText = "The form is empty. Click a + to add a field"
     }
 }
 
-function changeBackgroundColor(){
+function changeBackgroundColor() {
     let bgColor = document.getElementById("backgroundForm").value
     let bodyBG = document.body
     bodyBG.style.backgroundColor = bgColor
@@ -26,12 +22,8 @@ function changeBackgroundColor(){
 // }
 
 
-
-
-
-
-
 let typeChoice = document.getElementById("fieldsTypes")
+
 function addNewField() {
     typeChoice.style.display = "block"
 }
@@ -70,7 +62,7 @@ function createDate() {
 // Create the remove button div
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -103,6 +95,7 @@ function createDate() {
 
 
 }
+
 function createText() {
     // Create the div element
     let divElement = document.createElement('div');
@@ -138,7 +131,7 @@ function createText() {
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
     // removeBtnDivElement.setAttribute('onclick', 'deleteField()');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -171,6 +164,7 @@ function createText() {
 
 
 }
+
 function createEmail() {
     // Create the div element
     let divElement = document.createElement('div');
@@ -206,7 +200,7 @@ function createEmail() {
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
     // removeBtnDivElement.setAttribute('onclick', 'deleteField()');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -238,6 +232,7 @@ function createEmail() {
     parentElement.appendChild(divElement);
 
 }
+
 function createNumber() {
     // Create the div element
     let divElement = document.createElement('div');
@@ -274,7 +269,7 @@ function createNumber() {
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
     // removeBtnDivElement.setAttribute('onclick', 'deleteField()');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -306,6 +301,7 @@ function createNumber() {
 
 
 }
+
 function createPhone() {
     // Create the div element
     let divElement = document.createElement('div');
@@ -341,7 +337,7 @@ function createPhone() {
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
     // removeBtnDivElement.setAttribute('onclick', 'deleteField()');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -373,6 +369,7 @@ function createPhone() {
 
 
 }
+
 function createFile() {
     // Create the div element
     let divElement = document.createElement('div');
@@ -433,7 +430,7 @@ function createFile() {
     let removeBtnDivElement = document.createElement('div');
     removeBtnDivElement.classList.add('removeBtn');
     // removeBtnDivElement.setAttribute('onclick', 'deleteField()');
-    removeBtnDivElement.addEventListener("click", function (){
+    removeBtnDivElement.addEventListener("click", function () {
         divElement.remove()
         fieldCounter--
         listener()
@@ -456,13 +453,14 @@ function createFile() {
     parentElement.appendChild(divElement);
 
 }
-function createHeader() {
 
+function createHeader() {
+    //TODO createHeader case
 }
 
 function createField() {
     let selectedOption = document.querySelector('input[name="newField"]:checked').value;
-    switch (selectedOption){
+    switch (selectedOption) {
         case 'header':
             createHeader()
             break;
