@@ -219,7 +219,7 @@ body {
 }
 
 .wrapper{
-    width: 250px;
+    width: 500px;
 }
 
 .addFields{
@@ -241,4 +241,8 @@ body {
 .row{
     justify-content: space-around;
     align-items: center;
+}
+
+.rangeInput{
+    display: flex;
 }

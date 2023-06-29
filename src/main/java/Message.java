@@ -2,11 +2,11 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Message {
-    private String sender;
-    private String receiver;
-    private String content;
-    private String dateSent;
-    private String subject;
+    public String sender;
+    public String receiver;
+    public String content;
+    public String dateSent;
+    public String subject;
 
     public String getSubject() {
         return subject;

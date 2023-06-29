@@ -1,16 +1,27 @@
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 
 @XmlRootElement
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Registration {
-    private int id;
-    private int grade;
-    private String registration_date;
-    private int student_id;
-    private String name;
-    private int school_id;
-    private String status;
-    private String allowedit;
+    public int id;
+    public int grade;
+    public String registration_date;
+    public int student_id;
+    public String name;
+    public int school_id;
+    public String status;
+    public String allowedit;
+    public int registration_id;
+
+    public int getRegistration_id() {
+        return registration_id;
+    }
+
+    public void setRegistration_id(int registration_id) {
+        this.registration_id = registration_id;
+    }
 
     public int getId() {
         return id;
@@ -68,7 +79,11 @@ public class Registration {
         this.name = name;
     }
 
-    public String getAllowedit(){return allowedit;}
+    public String getAllowedit() {
+        return allowedit;
+    }
 
-    public void setAllowedit(String edit){this.allowedit = edit;}
+    public void setAllowedit(String edit) {
+        this.allowedit = edit;
+    }
 }

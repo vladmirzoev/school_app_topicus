@@ -2,11 +2,11 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class School {
-    private int school_id;
-    private String school_name;
-    private String address;
-    private int tuition;
-    private String contact_number;
+    public int school_id;
+    public String school_name;
+    public String address;
+    public int tuition;
+    public String contact_number;
 
     public int getSchool_id() {
         return school_id;

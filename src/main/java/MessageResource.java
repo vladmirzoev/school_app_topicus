@@ -17,8 +17,9 @@ public class MessageResource {
 
     public void openConnection() {
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -144,7 +145,6 @@ public class MessageResource {
                 contentBytes[i] = Byte.parseByte(st3[i]);
             }
             String content = new String(contentBytes, StandardCharsets.UTF_8);
-            System.out.println(content);
 
             currentMessage.setContent(content);
             currentMessage.setDateSent(rs.getDate(4).toString());

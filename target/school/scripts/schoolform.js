@@ -1,4 +1,12 @@
 //TODO function to check the role of the account, to display admin resources
+let fieldcounter = 0;
+let questionidlist = [];
+
+function submit() {
+    for (let i = 0; i < questionidlist; i++) {
+
+    }
+}
 
 function redirect() {
     //TODO make this redirect depending on role
@@ -26,6 +34,7 @@ function render() {
                     currentfield[1] = formfields[i].input_type;
                     currentfield[2] = formfields[i].question;
                     fields[i] = currentfield;
+                    questionidlist[i] = formfields[i].question;
                 }
                 console.log(fields);
 
@@ -35,26 +44,29 @@ function render() {
 
                 for (let i = 0; i < fields.length; i++) {
                     switch (fields[i][1]) {
-                        case "header":
-                            createHeader(fields[i][2]);
-                            break;
                         case "text":
-                            createText(fields[i][2]);
+                            createText(fields[i][0], fields[i][2]);
+                            fieldcounter++;
                             break;
                         case "email":
-                            createEmail(fields[i][2]);
+                            createEmail(fields[i][0], fields[i][2])
+                            fieldcounter++;
                             break;
                         case "number":
-                            createNumber(fields[i][2]);
+                            createNumber(fields[i][0], fields[i][2]);
+                            fieldcounter++;
                             break;
                         case "tel":
-                            createPhone(fields[i][2]);
+                            createPhone(fields[i][0], fields[i][2]);
+                            fieldcounter++;
                             break;
                         case "date":
-                            createDate(fields[i][2]);
+                            createDate(fields[i][0], fields[i][2]);
+                            fieldcounter++;
                             break;
                         case "file":
-                            createFile(fields[i][2]);
+                            createFile(fields[i][0], fields[i][2]);
+                            fieldcounter++;
                             break;
                         default:
                             break;
@@ -64,39 +76,24 @@ function render() {
         }
     }
     xhr.send();
+
+    let xhr2 = new XMLHttpRequest();
+    let methodcall2 = "./api/registration/fetchRegId/" + sessionStorage.getItem("registrationID");
+    xhr2.open('GET', methodcall2, true);
+    xhr2.onreadystatechange = function () {
+        if (xhr2.readyState === XMLHttpRequest.DONE) {
+            if (xhr2.status === 200) {
+                let obj = JSON.parse(xhr2.responseText);
+                console.log(obj);
+                sessionStorage.removeItem("registrationID");
+                sessionStorage.setItem("registrationID", obj.registration_id);
+            }
+        }
+    }
+    xhr2.send();
 }
 
-function createHeader(question) {
-    // Create the div element
-    let divElement = document.createElement('div');
-    divElement.classList.add('formbold-mb-5');
-
-// Create the h4 element
-    let headerElement = document.createElement('h4');
-    headerElement.setAttribute('for', 'textForm');
-    headerElement.classList.add('subHeader');
-    headerElement.textContent = question;
-
-// Create the row div
-    let rowDivElement = document.createElement('div');
-    rowDivElement.classList.add('row');
-
-// Create the col-10 div
-    let col10DivElement = document.createElement('div');
-    col10DivElement.classList.add('col-10');
-
-// Append the col-2 divs to the row div
-    rowDivElement.appendChild(col10DivElement);
-
-// Append the label element and row div to the main div
-    divElement.appendChild(headerElement);
-
-// Append the div element to the desired parent element in the DOM
-    let parentElement = document.getElementById('maindiv'); // Replace 'path' with the actual ID of the desired parent element
-    parentElement.appendChild(divElement);
-}
-
-function createDate(question) {
+function createDate(id, question) {
     // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
@@ -119,7 +116,7 @@ function createDate(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'date');
     inputElement.setAttribute('name', 'dateForm');
-    inputElement.id = question;
+    inputElement.id = id;
     inputElement.setAttribute('placeholder', 'Enter your email');
     inputElement.classList.add('formbold-form-input');
 
@@ -140,7 +137,7 @@ function createDate(question) {
 
 }
 
-function createText(question) {
+function createText(id, question) {
 // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
@@ -163,7 +160,7 @@ function createText(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'text');
     inputElement.setAttribute('name', 'text');
-    inputElement.id = question;
+    inputElement.id = id;
     inputElement.setAttribute('placeholder', 'Enter your text');
     inputElement.classList.add('formbold-form-input');
 
@@ -182,7 +179,7 @@ function createText(question) {
     parentElement.appendChild(divElement);
 }
 
-function createEmail(question) {
+function createEmail(id, question) {
     // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
@@ -205,7 +202,7 @@ function createEmail(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'email');
     inputElement.setAttribute('name', 'email');
-    inputElement.id = question;
+    inputElement.id = id;
     inputElement.setAttribute('placeholder', 'Enter your email');
     inputElement.classList.add('formbold-form-input');
 
@@ -225,7 +222,7 @@ function createEmail(question) {
 
 }
 
-function createNumber(question) {
+function createNumber(id, question) {
     // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
@@ -249,7 +246,7 @@ function createNumber(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'number');
     inputElement.setAttribute('name', 'numberForm');
-    inputElement.id = question;
+    inputElement.id = id;
     inputElement.setAttribute('placeholder', 'xxx-xxx-xx');
     inputElement.classList.add('formbold-form-input');
 
@@ -270,7 +267,7 @@ function createNumber(question) {
 
 }
 
-function createPhone(question) {
+function createPhone(id, question) {
     // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
@@ -293,7 +290,7 @@ function createPhone(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'tel');
     inputElement.setAttribute('name', 'telForm');
-    inputElement.id = question;
+    inputElement.id = id;
     inputElement.setAttribute('placeholder', 'Enter your phone number');
     inputElement.classList.add('formbold-form-input');
 
@@ -314,7 +311,7 @@ function createPhone(question) {
 
 }
 
-function createFile(question) {
+function createFile(id, question) {
     // Create the div element
     let divElement = document.createElement('div');
     divElement.classList.add('mb-6', 'pt-4');
@@ -332,11 +329,11 @@ function createFile(question) {
     let fileInputElement = document.createElement('input');
     fileInputElement.setAttribute('type', 'file');
     fileInputElement.setAttribute('name', 'file');
-    fileInputElement.id = question;
+    fileInputElement.id = id;
 
 // Create the label for the file input
     let fileInputLabelElement = document.createElement('label');
-    fileInputLabelElement.setAttribute('for', 'file');
+    fileInputLabelElement.setAttribute('for', id);
 
 // Create the inner div for the file input label
     let fileInputLabelDivElement = document.createElement('div');

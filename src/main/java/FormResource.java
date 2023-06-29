@@ -19,8 +19,9 @@ public class FormResource {
 
     public void openConnection() {
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -64,7 +65,6 @@ public class FormResource {
      * Generates an ID for a new form
      */
     private int newFormID() throws SQLException {
-        openConnection();
         String query = "SELECT MAX(form_id) FROM form";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
@@ -72,7 +72,6 @@ public class FormResource {
         while (rs.next()) {
             maxID = rs.getInt(1);
         }
-        closeConnection();
         return maxID + 1;
     }
 
@@ -169,12 +168,10 @@ public class FormResource {
      * Used to reduce redundancy.
      */
     private boolean studentExists(String bsn) throws SQLException {
-        openConnection();
         String query = "SELECT * FROM STUDENT WHERE bsn = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, bsn);
         ResultSet rs = st.executeQuery();
-        closeConnection();
         if (rs.next()) {
             return true;
         } else {
@@ -185,16 +182,22 @@ public class FormResource {
     /**
      * Creates a child as a logged in parent
      */
-    @Path("/createChild/{accountid}/{name}/{dob}/{bsn}")
+    @Path("/createChild/{accountid}/{name}/{dob}/{bsn}/{grade}/{schoolname}")
     @POST
     @Produces(MediaType.TEXT_HTML)
     public void createChild(@PathParam("accountid") String accountid,
                             @PathParam("name") String childname,
                             @PathParam("dob") Date birth_date,
-                            @PathParam("bsn") String bsn) throws Exception {
+                            @PathParam("bsn") String bsn,
+                            @PathParam("grade") int grade,
+                            @PathParam("schoolname") String schoolname) throws Exception {
         openConnection();
         int student_id = newStudentID();
+        int registration_id = newRegistrationID();
+        int school_id = getSchoolID(schoolname);
+
         createStudent(childname, accountid, bsn, birth_date, student_id);
+        createRegistration(grade, student_id, registration_id, school_id);
         closeConnection();
     }
 
@@ -203,7 +206,6 @@ public class FormResource {
      * Creates new account table entry
      */
     private void createAccount(String guardianName, String telephone1, String telephone2, String email, String address) throws SQLException {
-        openConnection();
         String account = "INSERT INTO account (account_id, name, address, phone_number_1, phone_number_2, role) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement acc = db.prepareStatement(account);
         acc.setString(1, email);
@@ -213,33 +215,28 @@ public class FormResource {
         acc.setString(5, telephone2);
         acc.setString(6, "G");
         acc.execute();
-        closeConnection();
     }
 
     /**
      * Updates existing account table entry
      */
     private void updateAccount(String telephone1, String telephone2, String email) throws SQLException {
-        openConnection();
         String account = "UPDATE account SET phone_number_1 = ?, phone_number_2 = ? WHERE account_id LIKE ?";
         PreparedStatement acc = db.prepareStatement(account);
         acc.setString(1, telephone1);
         acc.setString(2, telephone2);
         acc.setString(3, email);
         acc.execute();
-        closeConnection();
     }
 
     /**
      * Creates new guardian table entry
      */
     private void createGuardian(String email) throws SQLException {
-        openConnection();
         String guardian = "INSERT INTO guardian VALUES (?)";
         PreparedStatement guard = db.prepareStatement(guardian);
         guard.setString(1, email);
         guard.execute();
-        closeConnection();
     }
 
     /**
@@ -271,7 +268,6 @@ public class FormResource {
      * Creates new student entry
      */
     private void createStudent(String childName, String email, String bsn, Date birth_date, int student_id) throws SQLException, NoSuchAlgorithmException {
-        openConnection();
         String student = "INSERT INTO student (student_id, bsn, name, birth_date, guardian_id) VALUES (?, ?, ?, ?, ?)";
 
         String hashedBSN = hashBSN(bsn);
@@ -283,14 +279,12 @@ public class FormResource {
         st.setDate(4, birth_date);
         st.setString(5, email);
         st.execute();
-        closeConnection();
     }
 
     /**
      * Creates new registration table entry
      */
     private void createRegistration(int grade, int student_id, int registration_id, int school_id) throws SQLException {
-        openConnection();
         String registration = "INSERT INTO registration (registration_id, grade, registration_date, student_id, school_id, status, allowedit) VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement reg = db.prepareStatement(registration);
         reg.setInt(1, registration_id);
@@ -301,19 +295,16 @@ public class FormResource {
         reg.setString(6, "Under review");
         reg.setString(7, "N");
         reg.execute();
-        closeConnection();
     }
 
     /**
      * Checks if a guardian already exists
      */
     private boolean checkGuardianExists(String email) throws SQLException {
-        openConnection();
         String query = "SELECT * FROM guardian WHERE guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         ResultSet rs = st.executeQuery();
-        closeConnection();
         return rs.next();
     }
 
@@ -321,12 +312,10 @@ public class FormResource {
      * Checks if an account already exists
      */
     public boolean accountExists(String email) throws SQLException {
-        openConnection();
         String query = "SELECT * FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, email);
         ResultSet rs = st.executeQuery();
-        closeConnection();
         return rs.next();
     }
 
@@ -334,7 +323,6 @@ public class FormResource {
      * Creates new student ID
      */
     public int newStudentID() throws Exception {
-        openConnection();
         String query = "SELECT MAX(student_id) FROM student;";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
@@ -346,7 +334,6 @@ public class FormResource {
         } else {
             newID = rs.getInt(1) + 1;
         }
-        closeConnection();
         return newID;
     }
 
@@ -354,7 +341,6 @@ public class FormResource {
      * Creates new registration ID
      */
     public int newRegistrationID() throws Exception {
-        openConnection();
         boolean foundID = false;
         ArrayList<Integer> takenIDs = new ArrayList<>();
         String query = "SELECT registration_id FROM registration";
@@ -371,7 +357,6 @@ public class FormResource {
                 foundID = true;
             }
         }
-        closeConnection();
         return newID;
     }
 
@@ -411,16 +396,15 @@ public class FormResource {
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Form getForm(@PathParam("schoolname") String schoolname, @PathParam("grade") int grade) throws Exception {
+        openConnection();
         int id = getSchoolID(schoolname);
         Form form = new Form();
 
         String query = "SELECT grade FROM form WHERE school_id = ?";
-        openConnection();
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ArrayList<Integer> formGrades = new ArrayList<>();
         ResultSet rs = st.executeQuery();
-        closeConnection();
         while (rs.next()) {
             formGrades.add(rs.getInt(1));
         }
@@ -428,12 +412,10 @@ public class FormResource {
         int finalgrade = getFinalGrade(grade, formGrades);
 
         String query2 = "SELECT b.question, b.input_type, b.question_id FROM form a, fields b WHERE a.form_id = b.form_id AND a.school_id = ? AND a.grade = ?";
-        openConnection();
         PreparedStatement st2 = db.prepareStatement(query2);
         st2.setInt(1, id);
         st2.setInt(2, finalgrade);
         ResultSet rs2 = st2.executeQuery();
-        closeConnection();
         while (rs2.next()) {
             Form.Field question = new Form.Field();
             question.setQuestion(rs2.getString(1));
@@ -443,18 +425,17 @@ public class FormResource {
         }
 
         String query3 = "SELECT a.form_id, a.school_id, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.school_id = ? AND a.grade = ?";
-        openConnection();
         PreparedStatement st3 = db.prepareStatement(query3);
         st3.setInt(1, id);
         st3.setInt(2, finalgrade);
         ResultSet rs3 = st3.executeQuery();
-        closeConnection();
         while (rs3.next()) {
             form.setForm_id(rs3.getInt(1));
             form.setGrade(grade);
             form.setSchool_id(rs3.getInt(2));
             form.setSchool_name(rs3.getString(3));
         }
+        closeConnection();
         return form;
     }
 
@@ -480,7 +461,6 @@ public class FormResource {
      * Gets the school ID depending on the school name
      */
     public int getSchoolID(String schoolName) throws Exception {
-        openConnection();
         String query = "SELECT school_id FROM school WHERE school_name LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, schoolName);
@@ -492,7 +472,6 @@ public class FormResource {
         } else {
             schoolID = rs.getInt(1);
         }
-        closeConnection();
         return schoolID;
     }
 }

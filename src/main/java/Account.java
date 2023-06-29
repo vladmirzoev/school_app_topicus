@@ -2,12 +2,12 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Account {
-    private String account_id;
-    private String name;
-    private String address;
-    private String phone_number_1;
-    private String phone_number_2;
-    private String password;
+    public String account_id;
+    public String name;
+    public String address;
+    public String phone_number_1;
+    public String phone_number_2;
+    public String password;
 
     public String getAccount_id() {
         return account_id;

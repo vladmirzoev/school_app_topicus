@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/styleForm.css">
 </head>
-<body class="light" style="display: flex" onload="listener()">
+<body class="light" style="display: flex" onload="listener(); renderEditForm()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -24,35 +24,41 @@
     </div>
     <ul class="nav-links" id="schoolMenu">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg"
-                                                                             alt="notifications"
+            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg" alt="notifications"
                                                                              width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="registrations.html"><p>registrations</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
-                                                           width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href="messages.html"><img src="images/menu/Messages.svg" alt="messages"
+                                                                        width="100%"></a></div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>contact parents</p></a></li>
+                <li><a href="messages.html"><p>contact parents</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="schoolPage.html"><img src="images/menu/school.svg" alt="children"
-                                                                          width="100%"></a>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a>
             </div>
             <div class="col-8 sideMenuText">
-                <li><a href="schoolPage.html"><p>my school</p></a></li>
+                <li><a href=""><p>my school</p></a></li>
             </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href="schoolForms.html"><img src="images/menu/Forms.svg" alt="children"
-                                                                           width="100%"></a>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a>
             </div>
             <div class="col-8 sideMenuText">
-                <li><a href="schoolForms.html"><p>forms</p></a></li>
+                <li><a href=""><p>forms</p></a></li>
             </div>
+        </div>
+
+        <div class="row" id="logInText">
+            <p>Logged in as</p>
+        </div>
+        <div class="row align-items-center userAvatar">
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
+            <!-- TODO the bottom left name -->
+            <div class="col 8 sideMenuText"><p id="bottomleftname">N. Surname</p></div>
         </div>
     </ul>
 
@@ -64,16 +70,29 @@
         </div>
 
     </div>
+    <div class="wrapper">
+        <div class="rangeInput">
+            <div class="startInput">
+                <label for="startingYear">From (incl.):</label>
+                <input type="number" id="startingYear">
+            </div>
+            <div class="endInput">
+                <label for="endingYear">To (incl.):</label>
+                <input type="number" id="endingYear">
+            </div>
 
-    <p style="color: black">Personalize your form:</p>
-    <div>
-        <label for="backgroundForm">Background Color:</label>
-        <input type="color" id="backgroundForm" name="backgroundForm" value="#242F36" style="width: 70px; height: 30px">
-        <button onclick="changeBackgroundColor()">Change</button>
-    </div>
-    <div>
-        <label for="questionBox">Question Box Color:</label>
-        <input type="color" id="questionBox" name="questionBox" value="#F8E800" style="width: 70px; height: 30px">
+
+        </div>
+        <p style="color: black">Personalize your form:</p>
+        <div>
+            <label for="backgroundForm">Background Color:</label>
+            <input type="color" id="backgroundForm" name="backgroundForm" value="#242F36" style="width: 70px; height: 30px">
+            <button onclick="changeBackgroundColor()">Change</button>
+        </div>
+        <div>
+            <label for="questionBox">Question Box Color:</label>
+            <input type="color" id="questionBox" name="questionBox" value="#F8E800" style="width: 70px; height: 30px">
+        </div>
     </div>
 
     <div class="wrapper" id="fieldsTypes">
@@ -115,7 +134,7 @@
             </div>
 
             <div>
-                <input type="button" id="confirm" name="newField" value="Add the field" class="" onclick="createField()">
+                <input type="submit" id="confirm" name="newField" value="Add the field" class="" onclick="createField()">
             </div>
         </fieldset>
     </div>
@@ -125,18 +144,18 @@
     </div>
 
     <!--    hidden elements-->
-    <div class="formbold-mb-5" style="display: none" id="emailForm">
-        <label for="email" class="formbold-form-label">
-            Your email:
-        </label>
-        <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                class="formbold-form-input"
-        />
-    </div>
+    <!--    <div class="formbold-mb-5" style="display: none" id="emailForm">-->
+    <!--        <label for="email" class="formbold-form-label">-->
+    <!--            Your email:-->
+    <!--        </label>-->
+    <!--        <input-->
+    <!--                type="email"-->
+    <!--                name="email"-->
+    <!--                id="email"-->
+    <!--                placeholder="Enter your email"-->
+    <!--                class="formbold-form-input"-->
+    <!--        />-->
+    <!--    </div>-->
 
     <!--    <div class="formbold-mb-5" id="numberForm" contenteditable="true">-->
     <!--        <label for="numberForm" class="formbold-form-label">-->
@@ -215,12 +234,11 @@
         <div class="col-5 nav-bar"></div>
     </div>
     <div style="text-align: center">
-        <input type="submit" value="Create a form" class="btn-primary" style="font-size: 24px">
+        <input onclick="submitForm()" type="submit" value="Create form" class="btn-primary" style="font-size: 24px">
     </div>
 </div>
 
 <script src="scripts/script.js"></script>
 <script src="scripts/formLogic.js"></script>
-
 </body>
 </html>

@@ -17,8 +17,9 @@ public class AccountResTest {
         String password = "uZQ2Mqk82/Kx6s5l";
         Connection db = null;
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

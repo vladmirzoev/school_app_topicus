@@ -19,8 +19,9 @@ public class SignUpResource {
 
     public void openConnection() {
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

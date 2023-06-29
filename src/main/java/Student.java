@@ -4,13 +4,13 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Student {
-    private int id;
-    private String bsn;
-    private String name;
-    private String birthdate;
-    private String guardian_id;
-    private String status;
-    private String school_name;
+    public int id;
+    public String bsn;
+    public String name;
+    public String birthdate;
+    public String guardian_id;
+    public String status;
+    public String school_name;
 
     public String getStatus() {
         return status;

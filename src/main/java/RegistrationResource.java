@@ -6,6 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 @Path("/registration")
 public class RegistrationResource {
@@ -19,8 +20,9 @@ public class RegistrationResource {
 
     public void openConnection() {
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -125,17 +127,46 @@ public class RegistrationResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String fetchGhostLogin(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException {
         String encodedBSN = hashBSN(bsn);
-        String query = "SELECT r.registration_id" +
-                "FROM registration r, student s" +
-                "WHERE s.student_id = r.student_id AND s.bsn = ?";
+        String query = "SELECT registration.registration_id " +
+                "FROM registration, student " +
+                "WHERE student.student_id = registration.student_id " +
+                "AND student.bsn LIKE ?";
+        openConnection();
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, encodedBSN);
         ResultSet rs = st.executeQuery();
+        closeConnection();
         int reg_id = -1;
         while (rs.next()) {
             reg_id = rs.getInt(1);
         }
         return reg_id + "@studieportal.nl" ;
+    }
+
+    /**
+     * Returns student_id based on the bsn, returning a Registration JSON object instead
+     */
+    @Path("/fetchRegId/{bsn}")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Registration fetchRegIds(@PathParam("bsn") String bsn) throws SQLException, NoSuchAlgorithmException, InterruptedException {
+        openConnection();
+        String hashedBSN = hashBSN(bsn);
+        Registration queriedStudent = new Registration();
+
+        String query = "SELECT r.registration_id " +
+                "FROM registration r, student s " +
+                "WHERE r.student_id = s.student_id AND " +
+                "s.bsn LIKE ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, hashedBSN);
+        ResultSet rs = st.executeQuery();
+
+        while (rs.next()) {
+            queriedStudent.setRegistration_id(rs.getInt(1));
+        }
+        closeConnection();
+        return queriedStudent;
     }
 
     private static String hashBSN(String bsn) throws NoSuchAlgorithmException {

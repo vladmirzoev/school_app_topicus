@@ -4,11 +4,11 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Parent {
-    private String id;
-    private String name;
-    private String address;
-    private String phone_1;
-    private String phone_2;
+    public String id;
+    public String name;
+    public String address;
+    public String phone_1;
+    public String phone_2;
 
     public String getId() {
         return id;

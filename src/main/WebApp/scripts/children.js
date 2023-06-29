@@ -10,16 +10,9 @@ function render() {
                 let obj = JSON.parse(xhr1.responseText);
                 console.log(obj)
                 for (let i = 0; i < obj.length; i++) {
-                    let child = [];
-                    child[0] = obj[i].id;
-                    child[1] = obj[i].name;
-                    child[2] = obj[i].birthdate;
                     addChild(obj[i].id, obj[i].name, obj[i].birthdate, obj[i].school_name, obj[i].status);
                 }
             }
-            //TODO make cards based off the children array
-            //TODO displace the 'Add child' button based on how many cards there are
-            //TODO add home page button
         }
     }
 
@@ -56,7 +49,9 @@ function addChild(id, name, birthdate, schoolname, registration_status){
     let childId = document.createElement("p")
     let school = document.createElement("p");
     let regstatus = document.createElement("p");
-    let photoFrame = document.createElement("div")
+    let photoFrame = document.createElement("div");
+    let bin = document.createElement('img');
+    bin.src = 'images/forms/binDelete.svg'
     photoFrame.className = "align-text-center"
     photoFrame.style.borderRadius = "50%"
     photoFrame.style.height = "150px"
@@ -94,9 +89,17 @@ function addChild(id, name, birthdate, schoolname, registration_status){
     childBox.append(childId);
     childBox.append(school);
     childBox.append(regstatus);
+    childBox.append(bin);
     cardSpace.append(childBox);
     parent.append(cardSpace);
     document.getElementsByClassName('row')
+
+    bin.addEventListener('click', function() {
+        let result = confirm('Are you sure you want to deregister this child?');
+        if (result) {
+            childBox.remove();
+        }
+    });
 }
 function redirect() {
     window.location.href = "registrationFormLoggedIn.html";

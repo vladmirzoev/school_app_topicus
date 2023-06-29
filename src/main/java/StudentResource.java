@@ -1,6 +1,9 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -16,8 +19,9 @@ public class StudentResource {
 
     public void openConnection() {
         try {
+            Class.forName("org.postgresql.Driver");
             db = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -83,7 +87,7 @@ public class StudentResource {
         openConnection();
         String query = "UPDATE student SET name = ? WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1,name);
+        st.setString(1, name);
         st.setInt(2, s_id);
         st.executeQuery();
         closeConnection();
@@ -101,6 +105,5 @@ public class StudentResource {
         st.executeQuery();
         closeConnection();
     }
-
 }
 
