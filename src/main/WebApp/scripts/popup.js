@@ -18,12 +18,9 @@ function closePopup2() {
 
 function enableSubmit(){
     let inputs = document.getElementsByClassName('required')
-    let btn = document.querySelector('input[type="submit"]')
-    // const email = document.getElementById("mail")
+    let btn = document.querySelector('input[type="button"]')
     const bsn = document.getElementById("bsn")
     const grade = document.getElementById("grade")
-    // const tel = document.getElementById("tel")
-    // const name = document.getElementById("name")
     let isValid = true
     for (let i = 0; i < inputs.length; i++){
         let changedInput = inputs[i]
@@ -74,15 +71,15 @@ function enableSubmit2(){
             isValid = false
             break
         }
-        else if (pass != conf_pass){
+        else if (pass !== conf_pass){
             document.getElementById("message2").innerHTML = "*Passwords are not the same!*"
             isValid = false
             break
         }
-        else if (pass == conf_pass){
+        else if (pass === conf_pass){
             document.getElementById("message2").innerHTML = ""
         }
-        else if (email.validity.valid || email.value.trim() === "" || email.value === null){
+        else if (email.validity.valid || email.value.trim() === ""){
             document.getElementById("message2").innerHTML = ""
         }
         else if (!(changedInput.value.trim() === "") || !(changedInput.value === null)){

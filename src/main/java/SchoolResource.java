@@ -77,4 +77,26 @@ public class SchoolResource {
         closeConnection();
         return queriedSchool;
     }
+
+    /**
+     * Gets a specific school depending on their school ID
+     */
+    @Path("/adminSearch/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public SchoolAdmin findSchoolbyAdmin(@PathParam("id") String id) throws Exception {
+        openConnection();
+        String query = "SELECT * FROM schooladmin WHERE account_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, id);
+        ResultSet rs = st.executeQuery();
+
+        SchoolAdmin queriedAdmin = new SchoolAdmin();
+        while (rs.next()) {
+            queriedAdmin.setSchool_id(rs.getInt(1));
+            queriedAdmin.setAccount_id(rs.getString(2));
+        }
+        closeConnection();
+        return queriedAdmin;
+    }
 }

@@ -18,7 +18,6 @@ function createAccount(fname, lname, email, p_no1, p_no2, address, pass) {
     let xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);
     xhr.send();
-
     openPopup2();
 }
 

@@ -17,7 +17,6 @@ function render() {
                     addChild(obj[i].id, obj[i].name, obj[i].birthdate)
                     children[i] = child;
                 }
-                console.log(children);
             }
             //TODO make cards based off the children array
             //TODO displace the 'Add child' button based on how many cards there are

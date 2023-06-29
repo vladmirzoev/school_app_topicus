@@ -1,13 +1,14 @@
 function render() {
+    //creates registration list
     let id = sessionStorage.getItem("id");
-    let methodcall = './api/schooladmin/getschoolregistrations/' + id;
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', methodcall, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
+    let methodcall1 = './api/schooladmin/getschoolregistrations/' + id;
+    let xhr1 = new XMLHttpRequest();
+    xhr1.open('GET', methodcall1, true);
+    xhr1.onreadystatechange = function () {
+        if (xhr1.readyState === XMLHttpRequest.DONE) {
+            if (xhr1.status === 200) {
                 let blackbox = document.getElementById("registrations")
-                let students = JSON.parse(xhr.responseText);
+                let students = JSON.parse(xhr1.responseText);
                 let regs = [];
                 //gets all students into an array
                 for (let i = 0; i < students.length; i++) {
@@ -117,11 +118,26 @@ function render() {
                     whitebox.append(bottomrow);
                     blackbox.append(whitebox);
                 }
-                console.log(regs)
             }
         }
     };
-    xhr.send();
+
+
+    let xhr2 = new XMLHttpRequest();
+    let methodcall2 = "./api/school/adminSearch/" + id
+
+    xhr2.open('GET', methodcall2, true);
+    xhr2.onreadystatechange = function () {
+        if (xhr2.readyState === XMLHttpRequest.DONE) {
+            if (xhr2.status === 200) {
+                let obj = JSON.parse(xhr2.responseText);
+                sessionStorage.setItem("schoolID", obj.school_id); //TODO sessionstorage cleanup
+            }
+        }
+    };
+
+    xhr2.send();
+    xhr1.send();
 }
 
 function reorder() {
@@ -130,9 +146,7 @@ function reorder() {
     let id = sessionStorage.getItem("id");
     let terms = dropdownvalue.split("-");
     let column = terms[0];
-    console.log(column);
     let asc_dsc = terms[1];
-    console.log(asc_dsc);
 
     let xhr = new XMLHttpRequest();
     let methodcall = './api/schooladmin/getschoolregistrations/' + id + '/' + column + '/' + asc_dsc
@@ -257,7 +271,6 @@ function reorder() {
                     whitebox.append(bottomrow);
                     blackbox.append(whitebox);
                 }
-                console.log(regs)
             }
         }
     };

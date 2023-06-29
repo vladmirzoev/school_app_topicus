@@ -30,8 +30,8 @@ function render() {
                     //checks for duplicates
                     if (messages[i][0] !== id) {
                         //check for duplicates
-                        if (prevmessages.includes("" + messages[i][0] + messages[i][3])) {}
-                        else {
+                        if (prevmessages.includes("" + messages[i][0] + messages[i][3])) {
+                        } else {
                             prevmessages.push("" + messages[i][0] + messages[i][3])
 
                             //makes a popup
@@ -228,6 +228,4 @@ function sendMessage(receiver, subject, content) {
     xhr.open('POST', methodcall, true);
     xhr.send();
     location.reload();
-
-    //TODO update the popup window with the new message
 }

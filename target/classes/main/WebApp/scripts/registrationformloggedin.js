@@ -26,15 +26,16 @@ function createChild() {
     let bsn = document.getElementById("bsn").value;
     let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
 
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', methodcall, true)
-    xhr.send();
+    //store the school name to fetch the form in the next page
+    let schoolname = document.getElementById("dropdown").value;
+    sessionStorage.setItem("school", schoolname);
 
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', methodcall, true);
+    xhr.send();
     openPopup2();
 }
 
 function redirect() {
-    let school = document.getElementById("dropdown").value;
-    sessionStorage.setItem("school", school); //TODO clean this sessionstorage item at some point
     window.location.href = "schoolForm.html";
 }
