@@ -63,7 +63,12 @@ public class ParentResource {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public ArrayList<Student> getChildren(@PathParam("gid") String gid) throws Exception {
         openConnection();
-        String query = "SELECT s.student_id, s.name, s.birth_date FROM student s, guardian g WHERE g.guardian_id = s.guardian_id AND g.guardian_id = ?";
+        String query = "SELECT s.student_id, s.name, s.birth_date, r.status, sc.school_name " +
+                "FROM student s, guardian g, registration r, school sc " +
+                "WHERE g.guardian_id = s.guardian_id " +
+                "AND s.student_id = r.student_id " +
+                "AND r.school_id = sc.school_id " +
+                "AND g.guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, gid);
         ResultSet result = st.executeQuery();
@@ -74,6 +79,8 @@ public class ParentResource {
             queriedStudent.setId(result.getInt(1));
             queriedStudent.setName(result.getString(2));
             queriedStudent.setBirthdate(String.valueOf(result.getDate(3)));
+            queriedStudent.setStatus(result.getString(4));
+            queriedStudent.setSchool_name(result.getString(5));
             studentList.add(queriedStudent);
         }
         closeConnection();

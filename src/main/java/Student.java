@@ -9,6 +9,24 @@ public class Student {
     private String name;
     private String birthdate;
     private String guardian_id;
+    private String status;
+    private String school_name;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getSchool_name() {
+        return school_name;
+    }
+
+    public void setSchool_name(String school_name) {
+        this.school_name = school_name;
+    }
 
     public Student(){
 

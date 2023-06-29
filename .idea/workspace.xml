@@ -10,23 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
+      <change afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationspage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" afterDir="false" />
     </list>
     <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
@@ -273,7 +263,7 @@
       <workItem from="1687973176258" duration="1592000" />
       <workItem from="1687980355695" duration="961000" />
       <workItem from="1687982707898" duration="817000" />
-      <workItem from="1688022384760" duration="3987000" />
+      <workItem from="1688022384760" duration="5823000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
