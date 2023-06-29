@@ -1,5 +1,6 @@
 let fieldCounter = 0
 let pageHeader = document.getElementById("dashboardHeading")
+
 function listener() {
     //function for the bottom left name
     namerender()

@@ -1,7 +1,4 @@
 function render() {
-    //displays the name in the bottomleft
-    namerender();
-
     //creates registration list
     let id = sessionStorage.getItem("id");
     let methodcall1 = './api/schooladmin/getschoolregistrations/' + id;
