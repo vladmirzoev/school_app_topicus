@@ -1,7 +1,11 @@
 let fieldCounter = 0
 let pageHeader = document.getElementById("dashboardHeading")
 function listener() {
-    if (fieldCounter == 0){
+    //function for the bottom left name
+    namerender()
+
+    if (
+        fieldCounter == 0){
         pageHeader.innerText = "The form is empty. Click a + to add a field"
     } else {
         pageHeader.innerText = "Form is being edited"

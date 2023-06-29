@@ -59,11 +59,11 @@ public class SchoolResource {
     @Path("{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public School findSchool(@PathParam("id") String id) throws Exception {
+    public School findSchool(@PathParam("id") int id) throws Exception {
         openConnection();
         String query = "SELECT school_id, school_name, address, tuition, contact_number FROM school WHERE school_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, id);
+        st.setInt(1, id);
         ResultSet rs = st.executeQuery();
 
         School queriedSchool = new School();

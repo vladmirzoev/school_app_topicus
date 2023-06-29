@@ -62,7 +62,7 @@ function addChild(id, name, birthdate, schoolname, registration_status){
     photoFrame.style.height = "150px"
     photoFrame.style.width = "150px"
     photoFrame.style.display = "inline-block"
-    photoFrame.style.backgroundImage = "url('images/menu/User.svg')"
+    photoFrame.style.backgroundImage = "url('images/menu/User.svg')" //TODO change placeholder avatar to proper picture
     photoFrame.style.backgroundSize = "cover"
     childName.className = "miniHeader"
     childName.innerText = name;

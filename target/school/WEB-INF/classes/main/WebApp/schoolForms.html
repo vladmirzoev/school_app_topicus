@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style3.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SomStudie</title>
 </head>
-<body class="light" style="display: flex">
+<body class="light" style="display: flex" onload="namerender()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
@@ -25,28 +25,40 @@
     </div>
     <ul class="nav-links" id="schoolMenu">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Registrations.svg" alt="notifications" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href="index.html"><p>registrations</p></a></li></div>
+            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg"
+                                                                             alt="notifications" width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="registrations.html"><p>registrations</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>contact parents</p></a></li></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
+                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href=""><p>contact parents</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>my school</p></a></li></div>
+            <div class="col-4 menuPicture"><a href="schoolPage.html"><img src="images/menu/school.svg" alt="children"
+                                                                          width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="schoolPage.html"><p>my school</p></a></li>
+            </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a></div>
-            <div class="col-8 sideMenuText"><li><a href=""><p>forms</p></a></li></div>
+            <div class="col-4 menuPicture"><a href="schoolForms.html"><img src="images/menu/Forms.svg" alt="children"
+                                                                           width="100%"></a></div>
+            <div class="col-8 sideMenuText">
+                <li><a href="schoolForms.html"><p>forms</p></a></li>
+            </div>
         </div>
 
         <div class="row" id="logInText">
             <p>Logged in as</p>
         </div>
         <div class="row align-items-center userAvatar">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
-            <div class="col 8 sideMenuText"><p>N. Surname</p></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/User.svg" alt="user" width="100%"></a></div>
+            <div class="col 8 sideMenuText"><p id="bottomleftname"></p></div>
         </div>
     </ul>
 
@@ -57,9 +69,10 @@
         <div class="form"></div>
         <div class="form"></div>
     </div>
-
-
 </div>
-</body>
+
+<script src="scripts/namerender.js"></script>
 <script src="scripts/script.js"></script>
+
+</body>
 </html>

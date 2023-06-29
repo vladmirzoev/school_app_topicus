@@ -29,8 +29,6 @@ public class SchoolAdminResource {
         db.close();
     }
 
-
-
     /**
      * Gets all registrations concerning the school
      */

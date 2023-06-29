@@ -24,31 +24,34 @@
     </div>
     <ul class="nav-links" id="schoolMenu">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg" alt="notifications"
+            <div class="col-4 menuPicture"><a href="registrations.html"><img src="images/menu/Registrations.svg"
+                                                                             alt="notifications"
                                                                              width="100%"></a></div>
             <div class="col-8 sideMenuText">
                 <li><a href="registrations.html"><p>registrations</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="messages.html"><img src="images/menu/Messages.svg" alt="messages"
-                                                                        width="100%"></a></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Messages.svg" alt="messages"
+                                                           width="100%"></a></div>
             <div class="col-8 sideMenuText">
-                <li><a href="messages.html"><p>contact parents</p></a></li>
+                <li><a href=""><p>contact parents</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/school.svg" alt="children" width="100%"></a>
+            <div class="col-4 menuPicture"><a href="schoolPage.html"><img src="images/menu/school.svg" alt="children"
+                                                                          width="100%"></a>
             </div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>my school</p></a></li>
+                <li><a href="schoolPage.html"><p>my school</p></a></li>
             </div>
         </div>
         <div class="row align-items-center" id="lastElement">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Forms.svg" alt="children" width="100%"></a>
+            <div class="col-4 menuPicture"><a href="schoolForms.html"><img src="images/menu/Forms.svg" alt="children"
+                                                                           width="100%"></a>
             </div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>forms</p></a></li>
+                <li><a href="schoolForms.html"><p>forms</p></a></li>
             </div>
         </div>
 
@@ -56,9 +59,8 @@
             <p>Logged in as</p>
         </div>
         <div class="row align-items-center userAvatar">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/user.svg" alt="user" width="100%"></a></div>
-            <!-- TODO the bottom left name -->
-            <div class="col 8 sideMenuText"><p id="bottomleftname">N. Surname</p></div>
+            <div class="col-4 menuPicture"><a href=""><img src="images/menu/User.svg" alt="user" width="100%"></a></div>
+            <div class="col 8 sideMenuText"><p id="bottomleftname"></p></div>
         </div>
     </ul>
 
@@ -121,7 +123,8 @@
             </div>
 
             <div>
-                <input type="submit" id="confirm" name="newField" value="Add the field" class="" onclick="createField()">
+                <input type="submit" id="confirm" name="newField" value="Add the field" class=""
+                       onclick="createField()">
             </div>
         </fieldset>
     </div>
@@ -130,7 +133,7 @@
 
     </div>
 
-<!--    hidden elements-->
+    <!--    hidden elements-->
     <div class="formbold-mb-5" style="display: none" id="emailForm">
         <label for="email" class="formbold-form-label">
             Your email:
@@ -144,74 +147,74 @@
         />
     </div>
 
-<!--    <div class="formbold-mb-5" id="numberForm" contenteditable="true">-->
-<!--        <label for="numberForm" class="formbold-form-label">-->
-<!--            Please fill in the official number:-->
-<!--        </label>-->
-<!--        <input-->
-<!--                type="number"-->
-<!--                name="numberForm"-->
-<!--                id="numberF"-->
-<!--                placeholder="xxx-xxx-xx"-->
-<!--                class="formbold-form-input"-->
-<!--        />-->
-<!--    </div>-->
+    <!--    <div class="formbold-mb-5" id="numberForm" contenteditable="true">-->
+    <!--        <label for="numberForm" class="formbold-form-label">-->
+    <!--            Please fill in the official number:-->
+    <!--        </label>-->
+    <!--        <input-->
+    <!--                type="number"-->
+    <!--                name="numberForm"-->
+    <!--                id="numberF"-->
+    <!--                placeholder="xxx-xxx-xx"-->
+    <!--                class="formbold-form-input"-->
+    <!--        />-->
+    <!--    </div>-->
 
-<!--    <div class="formbold-mb-5" id="dateForm">-->
-<!--        <label for="dateForm" class="formbold-form-label" contenteditable="true">-->
-<!--            Please fill in the official number:-->
-<!--        </label>-->
-<!--        <input-->
-<!--                type="date"-->
-<!--                name="dateForm"-->
-<!--                id="dateF"-->
-<!--                placeholder="Enter your email"-->
-<!--                class="formbold-form-input"-->
-<!--        />-->
-<!--    </div>-->
+    <!--    <div class="formbold-mb-5" id="dateForm">-->
+    <!--        <label for="dateForm" class="formbold-form-label" contenteditable="true">-->
+    <!--            Please fill in the official number:-->
+    <!--        </label>-->
+    <!--        <input-->
+    <!--                type="date"-->
+    <!--                name="dateForm"-->
+    <!--                id="dateF"-->
+    <!--                placeholder="Enter your email"-->
+    <!--                class="formbold-form-input"-->
+    <!--        />-->
+    <!--    </div>-->
 
-<!--    <div class="formbold-mb-5" id="textForm">-->
-<!--        <label for="textForm" class="formbold-form-label" contenteditable="true">-->
-<!--            Any remarks?-->
-<!--        </label>-->
-<!--        <input-->
-<!--                type="text"-->
-<!--                name="text"-->
-<!--                id="textF"-->
-<!--                placeholder="Enter your text"-->
-<!--                class="formbold-form-input"-->
-<!--        />-->
-<!--    </div>-->
+    <!--    <div class="formbold-mb-5" id="textForm">-->
+    <!--        <label for="textForm" class="formbold-form-label" contenteditable="true">-->
+    <!--            Any remarks?-->
+    <!--        </label>-->
+    <!--        <input-->
+    <!--                type="text"-->
+    <!--                name="text"-->
+    <!--                id="textF"-->
+    <!--                placeholder="Enter your text"-->
+    <!--                class="formbold-form-input"-->
+    <!--        />-->
+    <!--    </div>-->
 
-<!--    <div class="formbold-mb-5" id="telForm">-->
-<!--        <label for="telForm" class="formbold-form-label" contenteditable="true">-->
-<!--            Phone number of a parent:-->
-<!--        </label>-->
-<!--        <input-->
-<!--                type="telForm"-->
-<!--                name="telForm"-->
-<!--                id="telF"-->
-<!--                placeholder="Enter your phone number"-->
-<!--                class="formbold-form-input"-->
-<!--        />-->
-<!--    </div>-->
+    <!--    <div class="formbold-mb-5" id="telForm">-->
+    <!--        <label for="telForm" class="formbold-form-label" contenteditable="true">-->
+    <!--            Phone number of a parent:-->
+    <!--        </label>-->
+    <!--        <input-->
+    <!--                type="telForm"-->
+    <!--                name="telForm"-->
+    <!--                id="telF"-->
+    <!--                placeholder="Enter your phone number"-->
+    <!--                class="formbold-form-input"-->
+    <!--        />-->
+    <!--    </div>-->
 
-<!--    <div class="mb-6 pt-4" style="display: none" id="uploadForm">-->
-<!--        <label class="formbold-form-label formbold-form-label-2" contenteditable="true">-->
-<!--            Description-->
-<!--        </label>-->
+    <!--    <div class="mb-6 pt-4" style="display: none" id="uploadForm">-->
+    <!--        <label class="formbold-form-label formbold-form-label-2" contenteditable="true">-->
+    <!--            Description-->
+    <!--        </label>-->
 
-<!--        <div class="formbold-mb-5 formbold-file-input">-->
-<!--            <input type="file" name="file" id="fileForm" />-->
-<!--            <label for="file">-->
-<!--                <div>-->
-<!--                    <span class="formbold-drop-file"> Drop files here </span>-->
-<!--                    <span class="formbold-or"> Or </span>-->
-<!--                    <span class="formbold-browse"> Browse </span>-->
-<!--                </div>-->
-<!--            </label>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--        <div class="formbold-mb-5 formbold-file-input">-->
+    <!--            <input type="file" name="file" id="fileForm" />-->
+    <!--            <label for="file">-->
+    <!--                <div>-->
+    <!--                    <span class="formbold-drop-file"> Drop files here </span>-->
+    <!--                    <span class="formbold-or"> Or </span>-->
+    <!--                    <span class="formbold-browse"> Browse </span>-->
+    <!--                </div>-->
+    <!--            </label>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
     <div class="row">
         <div class="col-5 nav-bar"></div>
@@ -221,11 +224,13 @@
         <div class="col-5 nav-bar"></div>
     </div>
     <div style="text-align: center">
-    <input type="submit" value="Create a form" class="btn-primary" style="font-size: 24px">
-</div>
+        <input type="submit" value="Create a form" class="btn-primary" style="font-size: 24px">
+    </div>
 </div>
 
 <script src="scripts/script.js"></script>
+<script src="scripts/namerender.js"></script>
 <script src="scripts/formLogic.js"></script>
+
 </body>
 </html>
