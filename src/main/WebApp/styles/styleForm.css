@@ -229,6 +229,7 @@ body {
 }
 
 .addInputForm{
+    width: auto;
     box-shadow: none;
     background: transparent;
 }

@@ -24,13 +24,15 @@ function createChild() {
     let childname = document.getElementById("childName").value;
     let dob = document.getElementById("birth_date").value;
     let bsn = document.getElementById("bsn").value;
-    let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
+    let grade = document.getElementById("grade").value;
+    let schoolname = document.getElementById("dropdown").value;
 
     //store the school name to fetch the form in the next page
-    let schoolname = document.getElementById("dropdown").value;
     sessionStorage.setItem("school", schoolname);
+    sessionStorage.setItem("grade", grade);
 
     let xhr = new XMLHttpRequest();
+    let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn
     xhr.open('POST', methodcall, true);
     xhr.send();
     openPopup2();
