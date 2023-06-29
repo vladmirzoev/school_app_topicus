@@ -17,15 +17,16 @@
         <h1 class="mainHeader">Enter Child Details</h1>
     </div>
     <div class="formText3">Child name</div>
-    <input class="inputs" type="text" placeholder="Name and Surname" style="width: 600px;" id="childName">
+    <input class="inputs required" type="text" placeholder="Name and Surname" style="width: 600px;" id="childName" required onkeyup="enableSubmit3()">
     <div class="formText3">Child Date of Birth</div>
-    <input class="inputs" type="date" style="width: 600px;" id="birth_date">
+    <input class="inputs required" type="date" style="width: 600px;" id="birth_date" required onkeyup="enableSubmit3()">
     <div class="formText3">Child's BSN number:</div>
-    <input class="inputs" type="text" style="width: 600px;" id="bsn">
+    <input class="inputs required" type="text" style="width: 600px;" id="bsn" required onkeyup="enableSubmit3()">
     <div class="formText3">Grade of study</div>
-    <input class="inputs required" type="number" min="1" max="12" placeholder="Only Number" style="width: 600px;" id="grade">
+    <input class="inputs required" type="number" min="1" max="12" placeholder="Only Number" style="width: 600px;" id="grade" required onkeyup="enableSubmit3()">
     <div class="formText3">School:</div>
-    <select class="inputs" type="text" style="width: 600px" required id="dropdown"></select>
+    <select class="inputs required" type="text" style="width: 600px" required id="dropdown"></select>
+    <span id = "message1" style="color:red" onkeyup="enableSubmit3()"></span>
     <div class="row justify-content-center align-items-center">
         <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
     </div>

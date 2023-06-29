@@ -1,5 +1,9 @@
 //TODO function to check the role of the account, to display admin resources
 
+function redirect() {
+    //TODO make this redirect depending on role
+}
+
 function render() {
     let schoolname = sessionStorage.getItem("school");
     let grade = sessionStorage.getItem("grade");
@@ -115,7 +119,7 @@ function createDate(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'date');
     inputElement.setAttribute('name', 'dateForm');
-    inputElement.id = 'dateForm';
+    inputElement.id = question;
     inputElement.setAttribute('placeholder', 'Enter your email');
     inputElement.classList.add('formbold-form-input');
 
@@ -159,7 +163,7 @@ function createText(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'text');
     inputElement.setAttribute('name', 'text');
-    inputElement.id = 'textForm';
+    inputElement.id = question;
     inputElement.setAttribute('placeholder', 'Enter your text');
     inputElement.classList.add('formbold-form-input');
 
@@ -201,7 +205,7 @@ function createEmail(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'email');
     inputElement.setAttribute('name', 'email');
-    inputElement.id = 'email';
+    inputElement.id = question;
     inputElement.setAttribute('placeholder', 'Enter your email');
     inputElement.classList.add('formbold-form-input');
 
@@ -245,7 +249,7 @@ function createNumber(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'number');
     inputElement.setAttribute('name', 'numberForm');
-    inputElement.id = 'numberForm';
+    inputElement.id = question;
     inputElement.setAttribute('placeholder', 'xxx-xxx-xx');
     inputElement.classList.add('formbold-form-input');
 
@@ -289,7 +293,7 @@ function createPhone(question) {
     let inputElement = document.createElement('input');
     inputElement.setAttribute('type', 'tel');
     inputElement.setAttribute('name', 'telForm');
-    inputElement.id = 'telForm';
+    inputElement.id = question;
     inputElement.setAttribute('placeholder', 'Enter your phone number');
     inputElement.classList.add('formbold-form-input');
 
@@ -328,7 +332,7 @@ function createFile(question) {
     let fileInputElement = document.createElement('input');
     fileInputElement.setAttribute('type', 'file');
     fileInputElement.setAttribute('name', 'file');
-    fileInputElement.id = 'file';
+    fileInputElement.id = question;
 
 // Create the label for the file input
     let fileInputLabelElement = document.createElement('label');
