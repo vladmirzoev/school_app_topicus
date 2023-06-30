@@ -42,7 +42,7 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, form_id);
         st.setInt(2, school_id);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 
@@ -57,7 +57,7 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, form_id);
         st.setInt(2, max_grade);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 
@@ -87,7 +87,7 @@ public class FormResource {
         st.setInt(1, id);
         st.setString(2, question);
         st.setString(3, type);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 
@@ -370,7 +370,7 @@ public class FormResource {
         String query = "DELETE FROM form WHERE form_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, form_id);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 
@@ -385,7 +385,7 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, formID);
         st.setString(2, question);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 

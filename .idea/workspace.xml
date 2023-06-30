@@ -10,33 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c04d6474-cda1-4b16-bf9b-013bb006698a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c35657622e3b0c567673cdfddaa0eb16052a71bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
     </list>
     <list id="93561447-1f6c-444e-bc09-6e00921b7128" name="Changes by reyna" comment="" />
     <option name="SHOW_DIALOG" value="false" />
