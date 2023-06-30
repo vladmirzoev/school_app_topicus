@@ -55,8 +55,8 @@ public class FormResource {
         openConnection();
         String query = "UPDATE form SET grade = ? WHERE form_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setInt(1, form_id);
-        st.setInt(2, max_grade);
+        st.setInt(1, max_grade);
+        st.setInt(2, form_id);
         st.execute();
         closeConnection();
     }

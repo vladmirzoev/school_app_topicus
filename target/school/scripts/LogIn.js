@@ -29,27 +29,15 @@ function logInCode() {
     loginCode.item(0).style.display = "block"
 }
 
+function logInParentCode() {
+    let email = document.getElementById("parentCodeValue").value;
+    sessionStorage.setItem("id", email)
+}
+
+
 function logInNormal() {
     let loginNormal = document.getElementsByClassName("loginNormal")
     let loginCode = document.getElementsByClassName("loginCode")
     loginNormal.item(0).style.display = "block"
     loginCode.item(0).style.display = "none"
 }
-
-
-// let tabHeader = tab.querySelector("tab-header");
-// let tabHeaderElements = tab.querySelectorAll("tab-header>div");
-// let tabBody = tab.querySelector("tab-body");
-// let tabBodyElements = tab.querySelectorAll("tab-body>div");
-//
-// function switchLog() {
-//     for(let i=0; i<tabHeaderElements.length; i++){
-//         tabHeaderElements[i].addEventListener("click", function (){
-//             tabHeader.querySelector("active").classList.remove("active");
-//             tabHeaderElements[i].classList.add("active");
-//             tabBody.querySelector("active").classList.remove("active");
-//             tabBodyElements[i].classList.add("active");
-//         })
-//     }
-//
-// }

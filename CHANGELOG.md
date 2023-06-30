@@ -57,7 +57,6 @@
 - "schoolForm.html" - Page that contains a specific school form
 - "editSchoolForm.html" - Page to edit a specific school form
 - "schoolForms.html" - Page that contains all forms a school may have
-- "schoolPage.html" - Page with a school information
 - "schoolPageAdmin.html" - Create and edit a school
 - "signupSchoolAdmin.html" - Page to register a new school admin 
 - Export files in "registrations.html"

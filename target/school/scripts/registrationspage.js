@@ -179,9 +179,8 @@ function sendStatusUpdate() {
         }
     };
     xhr2.send();
-
     closePopup2();
-
+    location.reload();
 }
 
 function reorder() {

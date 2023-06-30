@@ -521,20 +521,34 @@ function addForm(el) {
         subHeaderElement.id = el.form_id;
         sessionStorage.setItem("formID", subHeaderElement.id)
     }
+    let anchorElement2 = document.createElement('a');
+    anchorElement.setAttribute('href', 'editSchoolForm.html');
+    anchorElement.onclick = function () {
+        subHeaderElement.id = el.form_id;
+        sessionStorage.setItem("formID", subHeaderElement.id)
+    }
 
 // Create the edit image element
     let editImageElement = document.createElement('img');
     editImageElement.setAttribute('src', 'images/school/children/edit.svg');
     editImageElement.setAttribute('alt', 'edit form');
+// Create the delete button
+    let deleteImageElement = document.createElement('img');
+    deleteImageElement.setAttribute('src', 'images/forms/binDelete.svg');
+    deleteImageElement.setAttribute('alt', 'delete form');
+    deleteImageElement.onclick = function () {
+        deleteForm(el.form_id);
+    }
 
 // Append the edit image element to the anchor element
     anchorElement.appendChild(editImageElement);
-
+    anchorElement2.appendChild(deleteImageElement);
 // Append the subheader element to the col-10 div element
     col10DivElement.appendChild(subHeaderElement);
 
 // Append the anchor element to the col-2 div element
     col2DivElement.appendChild(anchorElement);
+    col2DivElement.appendChild(anchorElement2)
 
 // Append the col-10 and col-2 div elements to the row div element
     rowDivElement.appendChild(col10DivElement);
@@ -1016,6 +1030,13 @@ function submitForm() {
     deletexhr.open("DELETE", deletecall, true);
     deletexhr.send();
 
+    //set maxgrade
+    let maxgrade = document.getElementById("endingYear").value;
+    let gradexhr = new XMLHttpRequest();
+    let gradecall = "./api/form/setformgrade/" + formID + "/" + maxgrade;
+    gradexhr.open("POST", gradecall, true);
+    gradexhr.send();
+
     let fields = document.getElementsByClassName("formbold-form-label");
     for (let i = 0; i < fields.length; i++) {
         let question = fields[i].textContent;
@@ -1039,23 +1060,18 @@ function submitForm() {
                 break;
             default:
                 input_type = 'file';
+                break;
         }
 
         //creates the form in the db
-        let methodcall = './api/form/field/' + formID + '/' + question + '/' + input_type;
-        console.log(methodcall);
+        let questioncall = './api/form/field/' + formID + '/' + question + '/' + input_type;
+        console.log(questioncall);
         xhr = new XMLHttpRequest();
-        xhr.open('POST', methodcall, true);
+        xhr.open('POST', questioncall, true);
         xhr.send()
     }
-    let maxgrade = document.getElementById("endingYear")
-    let gradexhr = new XMLHttpRequest();
-    let methodcall = "./api/setformgrade/" + formID + "/" + maxgrade;
-    gradexhr.open("POST", methodcall, true);
-    gradexhr.send();
 
-    let timeout;
-    setTimeout(function () { location.href = 'schoolForms.html' }, 3000);
+    setTimeout(function () {location.href = 'schoolForms.html'}, 3000);
 }
 
 function getLabel(el) {
@@ -1077,6 +1093,10 @@ function createNewForm() {
     location.reload();
 }
 
-// function deleteField() {
-//     fieldCounter--
-// }
+function deleteForm(id) {
+    let xhr = new XMLHttpRequest();
+    let methodcall = "./api/form/" + id;
+    xhr.open('DELETE', methodcall, true);
+    xhr.send();
+    location.reload();
+}

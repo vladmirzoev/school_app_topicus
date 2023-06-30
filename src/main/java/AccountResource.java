@@ -75,6 +75,36 @@ public class AccountResource {
     }
 
     /**
+     * Parent login
+     */
+    @Path("/loginCode/")
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public Response loginCode(@FormParam("parentCode") String email) throws SQLException, URISyntaxException, NoSuchAlgorithmException {
+        openConnection();
+        URI failed = new URI("http://localhost:8080/Topicus/failedLogin.html");
+        URI success = new URI("http://localhost:8080/Topicus/userDashboard.html");
+
+
+        if (!attemptCodeLogin(email)) {
+            closeConnection();
+            return Response.seeOther(failed).build();
+        } else {
+            closeConnection();
+            return Response.seeOther(success).build();
+        }
+    }
+
+    private boolean attemptCodeLogin(String email) throws SQLException {
+        String query = "SELECT * FROM account WHERE account_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, email);
+        ResultSet rs = st.executeQuery();
+        return rs.next();
+    }
+
+    /**
      * Admin login
      */
     @Path("/loginadmin")
