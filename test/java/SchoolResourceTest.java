@@ -38,20 +38,6 @@ class SchoolResourceTest {
         int id = 1 ;//test1's school id in the database;
         String schoolName = "test1";
         assertTrue(school.findSchool(id).getSchool_name().equals(schoolName));
-//        List<School> getSchools = school.getSchools();
-//        boolean foundSchool = false;
-//        for (School checkschool1 : getSchools) {
-//            if (checkschool1.getSchool_name().equals(school1)) {
-//                School queriedSchool = new School();
-//                queriedSchool.setSchool_id(checkschool1.getSchool_id());
-//                queriedSchool.setSchool_name(checkschool1.getSchool_name());
-//                if (queriedSchool.getSchool_name().equals(school1)) {
-//                    foundSchool = true;
-//                    break;
-//                }
-//            }
-//        }
-//        assertTrue(foundSchool);
     }
 
 }

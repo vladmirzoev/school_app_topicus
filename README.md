@@ -1,5 +1,11 @@
 # StudiePortal - school administration
 ## Topicus Group 6
+### About
+
+***StudiePortal*** **is a platform that delivers the paperless school enrollment process and transparent communication between schools and parents.**
+The web application features children registrations, messages between schools and guardians and school administration
+
+# Usage
 
 To start with, the project has **3 types of users**: 
 - G (Guardian/parent)
@@ -57,7 +63,7 @@ Edit mode functionalities:
   - Email
   - Date
   - File*
-- Change font
+- Change background colour*
 - Edit fields textual values (Questions or clarifications for user's inputs)
 - Assign a form to a range of school grades from 1 to 12
 After pressing "create form", the form will be published, thus will be accessible via 'forms' page and will be displayed to parents who have indicated a particular school while registering a child
@@ -91,3 +97,19 @@ By clicking a button 'Add School Admin', a new page is displayed in order to cre
 - Phone
 - Password
 - Password confirmation
+
+# Contribution
+In the project, we used external libraries: Bootstrap (https://getbootstrap.com/)and html2pdf (https://github.com/eKoopmans/html2pdf.js/tree/master/dist)
+
+# Contact
+### Back-end
+**Reynard Enriza** muhammadreynardenriza@student.utwente.nl
+
+**Samer Saleh** samerashrafwiliamhanasaleh@student.utwente.nl
+
+**Gustavo Silva Prado** g.silvaprado@student.utwente.nl
+
+### Front-end
+**Vladislav Mirzoev** v.mirzoev@student.utwente.nl
+
+**Giovanni Falsetti** g.falsetti@student.utwente.nl

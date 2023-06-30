@@ -10,16 +10,16 @@ class ParentResourceTest {
     ParentResource par = new ParentResource();
     StudentResource child = new StudentResource();
     Parent p = new Parent();
-
+//todo
     @Test
     void getChildrenTest() throws Exception{
-        String childName = "TEST";
-        Date bd = Date.valueOf("2001-10-20");
+        String childName = "TEST 2";
+        String bd = "0001-01-01";
         String parentID = "ab@cd";
         boolean childOfABCD = false;
         List<Student> childrenOfABCD = par.getChildren(parentID);
         for (Student child : childrenOfABCD){
-            if (child.getBirthdate().compareTo(String.valueOf(bd)) == 0 && child.getName().equals(childName)){
+            if (child.getName().equals(childName) && child.getBirthdate().equals(bd)){
                 childOfABCD = true;
                 break;
             }

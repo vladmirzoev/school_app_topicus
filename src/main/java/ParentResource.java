@@ -88,20 +88,6 @@ public class ParentResource {
         return studentList;
     }
 
-//    @Path("{messages}")
-//    @GET
-//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-//    public Messages retrieveMessages() throws exception{
-//
-//    }
-//
-//    @Path("{messages}")
-//    @POST
-//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-//    public Messages sendMessages() throws exception{
-//
-//    }
-
     /**
      * Gets all parents in the system
      */
@@ -133,7 +119,7 @@ public class ParentResource {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Parent getParentDetails(@PathParam("id") String id) throws Exception {
         openConnection();
-        String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id LIKE ?";
+        String query = "SELECT account_id, name, address, phone_number_1, phone_number_2 FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, id);
         ResultSet rs = st.executeQuery();
@@ -144,6 +130,7 @@ public class ParentResource {
             queriedParent.setName(rs.getString(2));
             queriedParent.setAddress(rs.getString(3));
             queriedParent.setPhone_1(rs.getString(4));
+            queriedParent.setPhone_2(rs.getString(5));
         }
         closeConnection();
         return queriedParent;

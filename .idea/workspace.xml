@@ -11,37 +11,29 @@
   <component name="ChangeListManager">
     <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignments/Assignment 2/Assignment 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assignments/Assignment 2/Assignment 2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdminResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StudentResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/formLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/formLogic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdminResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/StudentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AccountResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AccountResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ParentResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ParentResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SchoolResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SchoolResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/AccountResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/AccountResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/ParentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/ParentResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" afterDir="false" />
     </list>
-    <list id="22e85130-f972-4774-b897-a827cbb37472" name="Changes by gifal" comment="">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentResource.java" afterDir="false" />
     </list>
-    <list id="da261883-d086-4685-941a-f15b1189c5a4" name="Changes by gugap" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-    </list>
-    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="" />
     <list id="17e4e5de-d622-469e-8d72-e379c0109d7d" name="Changes by vladm" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,29 +49,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/WebApp/scripts/LogIn.js">
-      <ranges>
-        <range start1="30" end1="30" start2="30" end2="36" changelist="da261883-d086-4685-941a-f15b1189c5a4" />
-        <range start1="37" end1="55" start2="43" end2="43" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js">
-      <ranges>
-        <range start1="523" end1="523" start2="523" end2="529" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
-        <range start1="528" end1="528" start2="534" end2="541" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
-        <range start1="531" end1="532" start2="544" end2="545" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
-        <range start1="537" end1="537" start2="550" end2="551" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
-        <range start1="1017" end1="1017" start2="1031" end2="1038" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1041" end1="1041" start2="1062" end2="1063" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1044" end1="1046" start2="1066" end2="1068" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1047" end1="1048" start2="1069" end2="1070" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1050" end1="1055" start2="1072" end2="1072" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1056" end1="1058" start2="1073" end2="1074" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="1079" end1="1082" start2="1095" end2="1102" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -136,11 +105,39 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.8">
+    <configuration name="AccountResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountResourceTest.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="school" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AccountResourceTest" />
       <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParentResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParentResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParentResourceTest.getChildrenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParentResourceTest" />
+      <option name="METHOD_NAME" value="getChildrenTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -234,11 +231,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AccountResourceTest" />
       <item itemvalue="JUnit.AccountResourceTest.loginTest" />
+      <item itemvalue="JUnit.ParentResourceTest" />
+      <item itemvalue="JUnit.ParentResourceTest.getChildrenTest" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParentResourceTest.getChildrenTest" />
+        <item itemvalue="JUnit.ParentResourceTest" />
+        <item itemvalue="JUnit.AccountResourceTest" />
         <item itemvalue="JUnit.AccountResourceTest.loginTest" />
       </list>
     </recent_temporary>
@@ -251,7 +254,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688129676138</updated>
-      <workItem from="1688129678805" duration="21168000" />
+      <workItem from="1688129678805" duration="24296000" />
     </task>
     <servers />
   </component>

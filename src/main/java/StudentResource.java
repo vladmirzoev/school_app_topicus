@@ -1,9 +1,6 @@
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -33,13 +30,11 @@ public class StudentResource {
     /**
      * Gets all registered students regardless of school
      */
-    @GET
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public ArrayList<Student> getStudents() throws Exception {
         ArrayList<Student> studentList = new ArrayList<>();
         openConnection();
 
-        String query = "SELECT student_id, name FROM student ";
+        String query = "SELECT student_id, name, birth_date FROM student";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
 
@@ -47,6 +42,7 @@ public class StudentResource {
             Student queriedStudent = new Student();
             queriedStudent.setId(rs.getInt(1));
             queriedStudent.setName(rs.getString(2));
+            queriedStudent.setBirthdate(rs.getString(3));
             studentList.add(queriedStudent);
         }
         closeConnection();
@@ -87,9 +83,9 @@ public class StudentResource {
         openConnection();
         String query = "UPDATE student SET name = ? WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, name);
+        st.setString(1,name);
         st.setInt(2, s_id);
-        st.executeQuery();
+        st.executeUpdate();
         closeConnection();
     }
 
@@ -97,13 +93,13 @@ public class StudentResource {
     @POST
     public void editBirthDate(@PathParam("id") int id, @PathParam("birth_date") Date birth_date) throws SQLException {
         openConnection();
-        String birthdate = String.valueOf(birth_date);
-        String query = "UPDATE TABLE student SET birth_date = ? WHERE student_id = ?";
+        String query = "UPDATE student SET birth_date = ? WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
-        st.setString(1, birthdate);
+        st.setDate(1, birth_date);
         st.setInt(2, id);
-        st.executeQuery();
+        st.executeUpdate();
         closeConnection();
     }
+
 }
 

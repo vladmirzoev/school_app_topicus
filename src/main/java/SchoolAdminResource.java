@@ -105,7 +105,7 @@ public class SchoolAdminResource {
         openConnection();
         List<Registration> regs = new ArrayList<>();
         String query = "SELECT DISTINCT r.registration_id, r.grade, r.registration_date, r.student_id, s.name, r.school_id, r.status, r.allowedit" +
-                "FROM registration r, guardian g, student s" +
+                " FROM registration r, guardian g, student s " +
                 "WHERE r.student_id = s.student_id AND g.guardian_id = s.guardian_id AND g.guardian_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, parentid);
@@ -139,7 +139,7 @@ public class SchoolAdminResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, status);
         st.setInt(2, studentID);
-        st.executeQuery();
+        st.executeUpdate();
         closeConnection();
     }
 
@@ -155,7 +155,7 @@ public class SchoolAdminResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, edit);
         st.setInt(2, studentID);
-        st.executeQuery();
+        st.executeUpdate();
         closeConnection();
     }
 
@@ -169,7 +169,7 @@ public class SchoolAdminResource {
         String query = "DELETE FROM registration WHERE student_id = ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, studentID);
-        st.executeQuery();
+        st.execute();
         closeConnection();
     }
 

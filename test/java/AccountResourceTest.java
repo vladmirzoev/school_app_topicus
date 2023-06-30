@@ -8,8 +8,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 class AccountResourceTest {
-
-
     SignUpResource user = new SignUpResource();
     AccountResource acc = new AccountResource();
 
