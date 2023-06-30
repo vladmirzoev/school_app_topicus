@@ -1,92 +1,90 @@
-# di22-topicus6
+# StudiePortal - school administration
+## Topicus Group 6
+
+To start with, the project has **3 types of users**: 
+- G (Guardian/parent)
+- A (School Admin)
+- T (Topicus/System Admin)
+
+## G-Guardian Flow
+### Sign-up
+Account registration process implies classic sign-up with user's email, phone, home address, name and surname 
+### Login
+After creating an account, guardian can log in with the corresponding credentials. It should be done with the selected "Login" tab. 
+### Filling a form
+Guardian may fill in the form for his/her child without registering an account by clicking "Link to a form" button. After confirming it, user will be redirected to a particular school's form, which is mandatory to be filled in.
+Filling a form / adding a child is also accessible to users with an account via dashboard or sidebar menu, which will be expanded in the following chapters.
+### Parent dashboard
+Parent Dashboard is a visual representation of StudiePortal. By clicking any of the boxes, a user will be redirected to an assigned page:
+- Messages page
+- Children page
+- New Form page
+### Adding and edit child
+To add a child, a parent can fill in a new form which is accessible via dashboard or 'my children' page -> '+'.
+On 'my children' page, a guardian can see the kids assign to them in boxes. It is possible to edit an existing child by clicking the corresponding box. Then, a user will be redirected to a separate page, where guardian can input new data in the field.
+Guardian can remove a child from the system by using "bin" button on a kid's box.
+### Communication with schools
+Schools update registrations status. It means that they can notify a guardian once a registration was updated. In this case, a parent will see a designated chat on 'messages' page. A parent can ask questions via this chat window. Users can access it by double-clicking a needed box with messages;
+**A parent cannot start a chat**, he/she can only reply, asking questions that arise after school's actions
+### Edit user's profile
+Users can also edit their profiles. A special page is accessible via the sidebar menu (user icon)
+The functionality is the same as on 'edit child' page.
+
+**NB: parent cannot change the email, since the account is linked with database via this address.**
 
 
+## A-School Admin Flow
+### Sign-up
+Sign up is done by system administrator.
+### Login
+Login details are supposed to be sent by system administrator. 
 
-## Getting started
+To login, a School Admin should access the same page as Parents, however, the tab "Admin Login" should be chosen.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Creating and editing form
+Forms overview is accessible via the sidebar menu -> forms.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+To create a form, a school administrator has to press '+' button.
 
-## Add your files
+To edit a form, click on an existing one from the list and an admin will be redirected to edit mode. 
+Edit mode functionalities:
+- Add fields of diverse types
+  - Text
+  - Number
+  - Phone
+  - Email
+  - Date
+  - File*
+- Change font
+- Edit fields textual values (Questions or clarifications for user's inputs)
+- Assign a form to a range of school grades from 1 to 12
+After pressing "create form", the form will be published, thus will be accessible via 'forms' page and will be displayed to parents who have indicated a particular school while registering a child
+    
+### Registrations management
+In 'registrations' page, the list with registrations to a particular school is displayed. 
+By clicking a specific registration, the popup-window is opened.
+Therefore, admin can export a registration or send a message to a parent while updating the status of this registration. Note, admins cannot update the status without sending a message to a parent, moreover, each new subject will create a corresponding chat.
+### Communication with parents
+School admins can start conversation via registrations (prev. chapter) or, if a chat is already created, can directly send a message in 'contact parents' page.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.utwente.nl/s2956896/di22-topicus6.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.utwente.nl/s2956896/di22-topicus6/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## T-Topicus Admin Flow
+Topicus admin is a person that manages the whole application: creates schools, assigns administrators for them, deletes and edits the institutions' accounts
+### Login
+Login is done via a separate page that is not accessible to other types of users.
+Login page: 'loginTopicus.html'
+Credentials:
+- username: admin@topicus.com
+- pw: 1
+### Managing schools
+The admin will be redirected to 'adminPage.html' where a button 'add' is displayed.
+- 'Add' -> leads to a page where admin needs to fill in the school details: name, address, tuition fee, contact number
+- 'Edit' -> leads to a page where admin can edit the existing details: name, address, tuition fee, contact number
+- 'Delete' -> displays the confirmation alert before deleting a school.
+### Adding school Admin (A)
+By clicking a button 'Add School Admin', Fields with admin details
+- Name & Surname
+- Address
+- Email
+- Phone
+- Password
+- Password confirmation

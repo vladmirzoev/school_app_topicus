@@ -11,29 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignments/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignments/Assignment 1/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignments/Assignment 1/Assignment_1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TopicusAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TopicusAdminResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUpSuccessful.html" beforeDir="false" />
     </list>
-    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/AccountResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/AccountResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/ParentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/ParentResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/StudentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/StudentResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" afterDir="false" />
-    </list>
+    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,14 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java">
-      <ranges>
-        <range start1="11" end1="11" start2="11" end2="12" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
-        <range start1="177" end1="177" start2="178" end2="215" changelist="e6e7bfb8-b200-4755-b625-89a7ae613fab" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -222,7 +195,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688129676138</updated>
-      <workItem from="1688129678805" duration="5072000" />
+      <workItem from="1688129678805" duration="6503000" />
     </task>
     <servers />
   </component>
