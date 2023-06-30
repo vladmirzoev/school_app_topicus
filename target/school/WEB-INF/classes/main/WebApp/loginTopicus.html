@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomStudie Login</title>
+</head>
+
+<body style="background: #000000">
+
+<script type="text/javascript" src="scripts/LogIn.js"></script>
+<script src="scripts/session.js"></script>
+
+<div class="tab-form blackbox mx-auto">
+    <h2 style="color: #FFFFFF">Please, enter your credentials</h2>
+    <form action="./api/sysAdmin/login" method="post">
+        <div class="form-input">
+            <label style="color: #FFFFFF" class="formText3">Email</label>
+            <input type="email" name="adminEmail" class="inputs" style="width: 100%" id="adminEmailValue">
+        </div>
+        <div class="form-input">
+            <label style="color: #FFFFFF" class="formText3">Password</label>
+            <input type="password" class="inputs" style="width: 100%" name="adminPass">
+        </div>
+        <div class="form-input">
+            <input type="submit" value="Login as Admin" class="submitButton" onclick="storeSessionAdmin()">
+        </div>
+    </form>
+</div>
+</body>

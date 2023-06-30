@@ -301,7 +301,7 @@ public class TopicusAdminResource {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] bytePass = digest.digest(pass.getBytes(StandardCharsets.UTF_8));
         String hashedPass = hashLoginPass(bytePass);
-        
+
         if (!attemptTopicusLogin(email, hashedPass)) {
             closeConnection();
             return Response.seeOther(failed).build();

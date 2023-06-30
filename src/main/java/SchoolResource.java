@@ -39,15 +39,16 @@ public class SchoolResource {
     public ArrayList<School> getSchools() throws SQLException {
         ArrayList<School> schoolList = new ArrayList<>();
         openConnection();
-
-        String query = "SELECT school_id, school_name FROM school";
+        String query = "SELECT * FROM school";
         PreparedStatement st = db.prepareStatement(query);
         ResultSet rs = st.executeQuery();
-
         while (rs.next()) {
             School queriedSchool = new School();
             queriedSchool.setSchool_id(rs.getInt(1));
             queriedSchool.setSchool_name(rs.getString(2));
+            queriedSchool.setAddress(rs.getString(3));
+            queriedSchool.setTuition(rs.getInt(4));
+            queriedSchool.setContact_number(rs.getString(5));
             schoolList.add(queriedSchool);
         }
         closeConnection();

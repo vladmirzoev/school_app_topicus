@@ -10,142 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/editUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/loginAdminFailed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/loginTopicus.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/WebApp/signupSchoolAdmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editChild.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/loginAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/administratorLoginFailed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/adminPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/adminPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/children.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/userdashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/userdashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ResponseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResponseResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Form$Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Form$Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Form.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Parent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResponseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ResponseResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/School.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/School.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SchoolAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SchoolAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/editChild.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/editSchoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/loginAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/loginAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/messageSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPageAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/children.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/schoolform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/userdashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/userdashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/userDashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form$Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form$Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Form.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Parent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ResponseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ResponseResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/School.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/School.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SchoolAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editChild.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editSchoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/loginAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/loginAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messageSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPageAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/children.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/schoolform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/userdashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/userdashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/userDashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editChild.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editSchoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/failedLoginadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/failedLoginadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/loginAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/loginAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messageSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/schoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/children.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/children.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/schoolform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/scripts/userdashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/userdashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/loginAdmin.html" beforeDir="false" />
     </list>
     <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
@@ -397,7 +269,7 @@
       <workItem from="1688036690380" duration="25438000" />
       <workItem from="1688084428731" duration="1397000" />
       <workItem from="1688104764835" duration="3413000" />
-      <workItem from="1688109136264" duration="14632000" />
+      <workItem from="1688109136264" duration="15086000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>
