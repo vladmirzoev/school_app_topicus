@@ -73,6 +73,7 @@ function render() {
                     namediv.className = "col-5 registrationContent";
                     let name = document.createElement("h3");
                     name.className = "miniHeader messageText";
+                    name.id = "name$" + students[i].student_id;
                     name.innerText = students[i].name;
                     namediv.append(name);
                     bottomrow.append(namediv);
@@ -81,6 +82,7 @@ function render() {
                     datediv.className = "col-2 registrationContent";
                     let date = document.createElement("p");
                     date.className = "date messageText";
+                    date.id = "date$" + students[i].student_id;
                     date.innerText = students[i].registration_date;
                     datediv.append(date);
                     bottomrow.append(datediv);
@@ -89,6 +91,7 @@ function render() {
                     gradediv.className = "col-2 registrationContent";
                     let grade = document.createElement("p");
                     grade.className = "messageText";
+                    grade.id = "grade$" + students[i].student_id;
                     grade.innerText = students[i].grade;
                     gradediv.append(grade);
                     bottomrow.append(gradediv);
@@ -97,6 +100,7 @@ function render() {
                     statusdiv.className = "col-2 registrationContent";
                     let status = document.createElement("p");
                     status.className = "status";
+                    status.id = "status$" + students[i].student_id;
                     switch (students[i].status) {
                         case "Under review":
                             status.classList.add("underReview");

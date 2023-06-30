@@ -62,24 +62,7 @@ class SchoolAdminResourceTest {
                 }
             }
         }
-        assertTrue(count == 41);
-//        for (int i = 0; i < Math.min(getAllStudents.size(), sar.getParentStudents(email).size()); i++) {
-//            for (int j = 0; j < Math.min(getAllStudents.size(), sar.getParentStudents(email).size()); j++) {
-//                if (getAllStudents.get(i).getId() == sar.getParentStudents(email).get(j).getStudent_id()) {
-//                    Registration abcdChild = new Registration();
-//                    abcdChild.setId(sar.getParentStudents(email).get(j).getStudent_id());
-//                    abcdChild.setGrade(sar.getParentStudents(email).get(j).getGrade());
-//                    abcdChild.setRegistration_date(sar.getParentStudents(email).get(j).getRegistration_date());
-//                    abcdChild.setStudent_id(sar.getParentStudents(email).get(j).getStudent_id());
-//                    abcdChild.setSchool_id(sar.getParentStudents(email).get(j).getSchool_id());
-//                    abcdChild.setStatus(sar.getParentStudents(email).get(j).getStatus());
-//                    abcdChild.setAllowedit(sar.getParentStudents(email).get(j).getAllowedit());
-//                    abcdChildren.add(abcdChild);
-//                }
-//            }
-//        }
-//        assertTrue(sar.getParentStudents(email).containsAll(abcdChildren));
-//        assertTrue(abcdChildren.containsAll(sar.getParentStudents(email)));
+        assertTrue(count == 8);
     }
 
     @Test

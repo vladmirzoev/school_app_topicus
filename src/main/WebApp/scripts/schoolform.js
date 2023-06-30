@@ -395,7 +395,7 @@ function createFile(id, question) {
     fileInputElement.setAttribute('name', 'file');
     fileInputElement.id = id;
     fileInputElement.classList.add('required');
-    fileInputElement.onclick = function () {
+    fileInputElement.onchange = function () {
         enableSubmit5()
     };
 

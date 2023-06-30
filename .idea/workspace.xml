@@ -11,10 +11,20 @@
   <component name="ChangeListManager">
     <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/signUpSuccessful.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegistrationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/TopicusAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/TopicusAdminResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" />
     </list>
-    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="" />
+    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
+      <change beforePath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +89,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.8">
     <configuration name="AccountResourceTest.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="school" />
       <option name="PACKAGE_NAME" value="" />
@@ -195,7 +205,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688129676138</updated>
-      <workItem from="1688129678805" duration="6503000" />
+      <workItem from="1688129678805" duration="7632000" />
     </task>
     <servers />
   </component>
