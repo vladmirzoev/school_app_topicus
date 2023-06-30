@@ -15,22 +15,22 @@
     <div class="row justify-content-between">
 
         <div class="text-center" id="openBtn-div">
-            <a href="" class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
-                <img src="images/menu/openMenu.svg" alt="open menu" width="50%">
-            </a>
-            <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">
+            <div class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
+                <img src="images/menu/openMenu.svg" alt="open menu" width="20px">
+            </div>
+            <div class="closebtn" id="closeBtn" onclick="closeNav()">
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
-            </a>
+            </div>
         </div>
 
 
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
+            <div class="col-4 menuPicture"><a href="userDashboard.html"><img src="images/menu/Notifications.svg" alt="home"
                                                            width="100%"></a></div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>notifications</p></a></li> <!-- TODO add notifications page -->
+                <li><a href="userDashboard.html"><p>home</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">
@@ -70,7 +70,7 @@
     </div>
     <div class="row justify-content-between childrenRow">
         <div class="col">
-            <div class="dark visualBox text-center" onclick="redirect()">
+            <div class="dark visualBox text-center" onclick="redirect()" id="addImage">
                 <h3 class="miniHeader">Add new child</h3>
                 <img src="images/school/children/plus.svg" alt="add" width="50px">
             </div>

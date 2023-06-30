@@ -6,32 +6,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SomStudie</title>
+    <title>StudiePortal</title>
 </head>
 <body class="light" style="display: flex" onload="render()">
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
         <div class="text-center" id="openBtn-div">
-            <a href="" class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
-                <img src="images/menu/openMenu.svg" alt="open menu" width="50%">
-            </a>
-            <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">
+            <div class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
+                <img src="images/menu/openMenu.svg" alt="open menu" width="20px">
+            </div>
+            <div class="closebtn" id="closeBtn" onclick="closeNav()">
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
-            </a>
+            </div>
         </div>
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="">
-                <img src="images/menu/Notifications.svg" alt="notifications" width="100%"></a>
+            <div class="col-4 menuPicture"><a href="userDashboard.html">
+                <img src="images/menu/Notifications.svg" alt="home" width="100%"></a>
             </div>
             <div class="col-8 sideMenuText">
                 <li>
-                    <a href="">
-                        <p>notifications</p>
+                    <a href="userDashboard.html">
+                        <p>home</p>
                     </a>
-                </li> <!-- TODO add notifications page -->
+                </li>
             </div>
         </div>
         <div class="row align-items-center">
@@ -77,7 +77,7 @@
     <div class="row justify-content-end">
         <div class="col-5">
             <div class="dark visualBox text-center" onclick="redirectNotifications()">
-                <h3 class="miniHeader">notifications</h3>
+                <h3 class="miniHeader">messages</h3>
                 <img src="images/svg/notifications.svg" alt="notifications" width="100%">
             </div>
         </div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #EAEDF0;">
+<div class="blackbox mx-auto" style="height: 650px">
+    <div class="container text-center">
+        <h1 class="mainHeader">Sign Up</h1>
+    </div>
+    <div>
+        <div class="formText2">Name and Surname:</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="name" id="name" required
+               onkeyup="enableSubmit4()">
+        <div class="formText2">Contact e-mail:</div>
+        <input class="inputs required" type="email" style="width: 600px;" name="email" id="email" required
+               onkeyup="enableSubmit4()">
+        <div class="formText2">Phone number:</div>
+        <input class="inputs required" type="text" minlength="10" maxlength="10" style="width: 600px" name="p_no1" id="p_no1" required
+               onkeyup="enableSubmit4()">
+        <div class="formText2">Address:</div>
+        <input class="inputs required" type="text" style="width: 600px;" name="address" id="address" required
+               onkeyup="enableSubmit4()">
+        <div class="formText2">Password</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="pass" id="pass" required
+               onkeyup="enableSubmit4()">
+        <div class="formText2">Password confirmation:</div>
+        <input class="inputs required" type="password" style="width: 600px;" name="conf_pass" id="conf_pass" required
+               onkeyup="enableSubmit4()">
+        <span id="message2" style="color:red" onkeyup="enableSubmit2()"></span>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-6" style="margin-top: 20px">
+            <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="createNewAdmin()">
+        </div>
+    </div>
+
+    <div class="popup2" id="popup2">
+        <h2>Thank you!</h2>
+        <p style="color: #000000">New admin signed up!</p>
+        <a href="adminPage.html">
+            <input type="button" class="btn-primary" style="font-size: 16px" onclick="redirect()" value="Go back">
+        </a>
+    </div>
+</div>
+<script src="scripts/popup.js"></script>
+<script src="scripts/signup.js"></script>
+<script src="scripts/adminPage.js"></script>
+</body>

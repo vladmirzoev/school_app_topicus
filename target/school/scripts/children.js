@@ -8,7 +8,6 @@ function render() {
         if (xhr1.readyState === XMLHttpRequest.DONE) {
             if (xhr1.status === 200) {
                 let obj = JSON.parse(xhr1.responseText);
-                console.log(obj)
                 for (let i = 0; i < obj.length; i++) {
                     addChild(obj[i].id, obj[i].name, obj[i].birthdate, obj[i].school_name, obj[i].status);
                 }

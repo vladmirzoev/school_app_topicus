@@ -21,14 +21,14 @@
     <div class="formText3">Child Date of Birth</div>
     <input class="inputs required" type="date" style="width: 600px;" id="birth_date" required onkeyup="enableSubmit3()">
     <div class="formText3">Child's BSN number:</div>
-    <input class="inputs required" type="text" style="width: 600px;" id="bsn" min="10000000" max="999999999" required onkeyup="enableSubmit3()">
+    <input class="inputs required" type="number" style="width: 600px;" id="bsn" min="10000000" max="999999999" required onkeyup="enableSubmit3()">
     <div class="formText3">Grade of study</div>
     <input class="inputs required" type="number" min="1" max="12" placeholder="Only Number" style="width: 600px;" id="grade" required onkeyup="enableSubmit3()">
     <div class="formText3">School:</div>
     <select class="inputs required" type="text" style="width: 600px" required id="dropdown"></select>
     <span id = "message1" style="color:red" onkeyup="enableSubmit3()"></span>
     <div class="row justify-content-center align-items-center">
-        <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
+        <input type="button" value="Confirm" class="btn btn-primary" disabled onclick="createChild()">
     </div>
     <div class="popup2" id="popup2">
         <h2>Thank you!</h2>

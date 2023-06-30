@@ -35,8 +35,7 @@ function render() {
 }
 
 function redirectNotifications() {
-    window.location.href = "";
-    //TODO add notifications.html page
+    window.location.href = "messages.html";
 }
 
 function redirectChildren() {
@@ -44,6 +43,5 @@ function redirectChildren() {
 }
 
 function redirectForm() {
-    window.location.href = ""
-    //TODO add form for logged in
+    window.location.href = "registrationFormLoggedIn.html"
 }

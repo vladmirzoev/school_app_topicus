@@ -27,7 +27,8 @@ function createChild() {
     let grade = document.getElementById("grade").value;
     let schoolname = document.getElementById("dropdown").value;
 
-    //store the school name to fetch the form in the next page
+    //store the school name and grade to fetch the form in the next page
+    //the bsn stored in regID is a placeholder
     sessionStorage.setItem("school", schoolname);
     sessionStorage.setItem("grade", grade);
     sessionStorage.setItem("regID", bsn);

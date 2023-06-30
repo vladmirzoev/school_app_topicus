@@ -9,35 +9,24 @@
     <title>Messages</title>
 </head>
 <body class="light" style="display: flex" onload="render()">
-
-<!-- TODO BELOW IS THE MESSAGE SYSTEM INPUTS-->
-
-<!--    Receiver-->
-<!--    <input type="text" id="receiverid">-->
-<!--    Subject-->
-<!--    <input type="text" id="subject">-->
-<!--    Your Message-->
-<!--    <input type="text" id="content">-->
-<!--    <input type="button" value="Send" onclick="sendMessage()">-->
-
 <div class="side-bar-menu dark" id="sideBar">
     <div class="row justify-content-between">
 
         <div class="text-center" id="openBtn-div">
-            <a href="" class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
-                <img src="images/menu/openMenu.svg" alt="open menu" width="50%">
-            </a>
-            <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">
+            <div class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
+                <img src="images/menu/openMenu.svg" alt="open menu" width="20px">
+            </div>
+            <div class="closebtn" id="closeBtn" onclick="closeNav()">
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
-            </a>
+            </div>
         </div>
     </div>
     <ul class="nav-links">
         <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href=""><img src="images/menu/Notifications.svg" alt="notifications"
+            <div class="col-4 menuPicture"><a href="userDashboard.html"><img src="images/menu/Notifications.svg" alt="home"
                                                            width="100%"></a></div>
             <div class="col-8 sideMenuText">
-                <li><a href=""><p>notifications</p></a></li>
+                <li><a href="userDashboard.html"><p>home</p></a></li>
             </div>
         </div>
         <div class="row align-items-center">

@@ -166,6 +166,9 @@ public class AccountResource {
         return rs.next();
     }
 
+    /**
+     * Gets the role of a particular account id
+     */
     @Path("/checkrole/{account_id}")
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})

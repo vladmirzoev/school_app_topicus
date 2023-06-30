@@ -13,12 +13,12 @@
     <div class="row justify-content-between">
 
         <div class="text-center" id="openBtn-div">
-            <a href="" class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
-                <img src="images/menu/openMenu.svg" alt="open menu" width="50%">
-            </a>
-            <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()">
+            <div class="openbtn" id="openBtn" style="display: none" onclick="openNav()">
+                <img src="images/menu/openMenu.svg" alt="open menu" width="20px">
+            </div>
+            <div class="closebtn" id="closeBtn" onclick="closeNav()">
                 <img src="images/menu/closeMenu.svg" alt="close menu" width="20px">
-            </a>
+            </div>
         </div>
 
 
@@ -103,7 +103,7 @@
 <script src="libraries/html2pdf.bundle.min.js"></script>
 <script>
     document.getElementById('exportBtn').onclick = function (){
-        let element = document.getElementById('messageText')
+        let element = document.getElementById('neededData')
         let opt = {
             margin: 1,
             filename: 'registrations.pdf',

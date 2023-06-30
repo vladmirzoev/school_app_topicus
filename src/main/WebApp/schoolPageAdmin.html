@@ -8,15 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SomStudie</title>
 </head>
-<body class="light" style="display: flex">
+<body class="light" style="display: flex" onload="loadPlaceholders();">
 <div class="schoolContents">
   <div class="bgPhoto align-items-center justify-content-center">
     <h1>Study Portal</h1>
-    <a href="" onclick="">
-      <div class="editIcon">
-        <img src="images/school/children/edit.svg" alt="editData">
-      </div>
-    </a>
   </div>
 
   <div class="blackbox mx-auto">
@@ -24,20 +19,20 @@
       <h1 class="mainHeader">Enter School Details</h1>
     </div>
     <div class="formText3">School Name</div>
-    <input class="inputs" type="text" style="width: 600px;">
+    <input id="schoolName" name="schoolName" class="inputs" type="text" style="width: 600px;">
     <div class="formText3">Address</div>
-    <input class="inputs" type="text" style="width: 600px;">
+    <input id="address" name="address" class="inputs" type="text" style="width: 600px;">
     <div class="formText3">Tuition per year</div>
-    <input class="inputs" type="text" style="width: 600px;">
+    <input id="tuition" name="tuition" class="inputs" type="text" style="width: 600px;">
     <div class="formText3">Contact number</div>
-    <input class="inputs" type="text" style="width: 600px;">
+    <input id="contactNumber" name="contactNumber" class="inputs" type="text" style="width: 600px;">
     <div class="row justify-content-center align-items-center">
-      <input type="button" value="Confirm" class="btn btn-primary" onclick="createChild()">
+      <input type="button" value="Confirm" class="btn btn-primary" onclick="sendSchool();">
     </div>
   </div>
 
 
 </div>
 </body>
-<script src="scripts/script.js"></script>
+<script src="scripts/adminPage.js"></script>
 </html>
