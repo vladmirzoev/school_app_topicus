@@ -9,18 +9,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
+    <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c35657622e3b0c567673cdfddaa0eb16052a71bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/loginAdmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AccountResTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/RegistrationResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/ParentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/ParentResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/StudentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/StudentResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" afterDir="false" />
     </list>
-    <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
-    <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
+    <list id="3c762a71-c61c-44b6-ac16-cb291b365924" name="Changes by gugap" comment="" />
+    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
+      <change beforePath="$PROJECT_DIR$/test/AccountResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/FormResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MessageResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ParentResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SchoolAdminResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SchoolResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SignUpResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StudentResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TopicusAdmTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,14 +66,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,83 +90,31 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
-  </component>
-  <component name="ProjectId" id="2QpqtJo16yTmgu0HUdBCVNbrqz7" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2RvThXhdAm90It5ogIU5pFsGJLo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/University Stuff/Module 4/di22-topicus6/src/main/WebApp/scripts",
+    "last_opened_file_path": "D:/University Stuff/Module 4/.Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
-    ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\scripts" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\java" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\styles" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\testingpurposes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\test" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\children" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\menu" />
-      <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp\images\school" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 10.1.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -145,7 +125,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="7ae514f5-9fa1-4a9b-bebc-e83779802b79" />
+        <option name="BASE_DIRECTORY_NAME" value="0f8c88b6-5e8f-4c05-97c4-cda838fa6518" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -153,7 +133,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53124" />
+        <option name="DEBUG_PORT" value="61780" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -226,132 +206,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)" />
-      <created>1686061083787</created>
+      <changelist id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="" />
+      <created>1688129676138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686061083787</updated>
-      <workItem from="1686061085917" duration="1986000" />
-      <workItem from="1686063090492" duration="223000" />
-      <workItem from="1686063325394" duration="534000" />
-      <workItem from="1686063883780" duration="1019000" />
-      <workItem from="1686065679169" duration="1943000" />
-      <workItem from="1686069473329" duration="1127000" />
-      <workItem from="1686070622900" duration="554000" />
-      <workItem from="1686125414705" duration="4865000" />
-      <workItem from="1686403019030" duration="1072000" />
-      <workItem from="1686411030800" duration="1604000" />
-      <workItem from="1686557587214" duration="671000" />
-      <workItem from="1686558283424" duration="436000" />
-      <workItem from="1686558932224" duration="3609000" />
-      <workItem from="1686662447477" duration="1440000" />
-      <workItem from="1686725323826" duration="13404000" />
-      <workItem from="1687172204803" duration="8000" />
-      <workItem from="1687174900306" duration="1321000" />
-      <workItem from="1687245811345" duration="29803000" />
-      <workItem from="1687362164935" duration="6188000" />
-      <workItem from="1687383124522" duration="267000" />
-      <workItem from="1687383470883" duration="29000" />
-      <workItem from="1687422772893" duration="20899000" />
-      <workItem from="1687469060540" duration="1034000" />
-      <workItem from="1687503186928" duration="18822000" />
-      <workItem from="1687770117089" duration="2523000" />
-      <workItem from="1687772947091" duration="19366000" />
-      <workItem from="1687867717599" duration="16267000" />
-      <workItem from="1687935653701" duration="25000" />
-      <workItem from="1687953024894" duration="13291000" />
-      <workItem from="1687966391805" duration="4903000" />
-      <workItem from="1687973176258" duration="1592000" />
-      <workItem from="1687980355695" duration="961000" />
-      <workItem from="1687982707898" duration="817000" />
-      <workItem from="1688022384760" duration="7288000" />
-      <workItem from="1688029689915" duration="2896000" />
-      <workItem from="1688036690380" duration="25438000" />
-      <workItem from="1688084428731" duration="1397000" />
-      <workItem from="1688104764835" duration="3413000" />
-      <workItem from="1688109136264" duration="15086000" />
+      <updated>1688129676138</updated>
+      <workItem from="1688129678805" duration="2971000" />
     </task>
-    <task id="LOCAL-00001" summary="Fixed file structure">
-      <created>1686061693401</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1686061693401</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fixed file structure">
-      <created>1686062126140</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1686062126140</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Fixed file structure">
-      <created>1686064032172</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686064032172</updated>
-    </task>
-    <task id="LOCAL-00004" summary="potentially fixed 404 errors????????">
-      <created>1686070709872</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1686070709872</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Merge Gio into Main">
-      <created>1687183026632</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687183026632</updated>
-    </task>
-    <task id="LOCAL-00006" summary="New Merge (unversioned files)">
-      <created>1687183823871</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687183823871</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed file structure" />
-    <MESSAGE value="potentially fixed 404 errors????????" />
-    <MESSAGE value="Merge Gio into Main" />
-    <MESSAGE value="New Merge (unversioned files)" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Merge (unversioned files)" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

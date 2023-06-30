@@ -390,6 +390,78 @@ public class FormResource {
     }
 
     /**
+     * Gets all forms related to a school_id
+     */
+    @Path("{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public ArrayList<Form> getFormsBySchoolID(@PathParam("id") int id) throws Exception {
+        ArrayList<Form> forms = new ArrayList<>();
+        openConnection();
+
+
+        String query = "SELECT a.form_id, a.grade, a.school_id, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.school_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, id);
+        ResultSet rs = st.executeQuery();
+        while(rs.next()) {
+            Form form = new Form();
+            form.setForm_id(rs.getInt(1));
+            form.setGrade(rs.getInt(2));
+            form.setSchool_id(rs.getInt(3));
+            form.setSchool_name(rs.getString(4));
+            String query2 = "SELECT * from fields WHERE form_id = ?";
+            PreparedStatement st2 = db.prepareStatement(query2);
+            st2.setInt(1, rs.getInt(1));
+            ResultSet rs2 = st2.executeQuery();
+            while(rs2.next()) {
+                Form.Field field = new Form.Field();
+                field.setQuestion(rs2.getString(2));
+                field.setInput_type(rs2.getString(3));
+                field.setQuestion_id(rs2.getInt(4));
+                form.appendField(field);
+            }
+            forms.add(form);
+        }
+        closeConnection();
+        return forms;
+    }
+
+    /**
+     * Gets a form based on its id
+     */
+    @Path("/getbyid/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Form getFormByID(@PathParam("id") int id) throws Exception {
+        Form form = new Form();
+        openConnection();
+        String query = "SELECT a.form_id, a.grade, a.school_id, b.school_name FROM form a, school b WHERE a.school_id = b.school_id AND a.form_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, id);
+        ResultSet rs = st.executeQuery();
+        while(rs.next()) {
+            form.setForm_id(rs.getInt(1));
+            form.setGrade(rs.getInt(2));
+            form.setSchool_id(rs.getInt(3));
+            form.setSchool_name(rs.getString(4));
+            String query2 = "SELECT * from fields WHERE form_id = ?";
+            PreparedStatement st2 = db.prepareStatement(query2);
+            st2.setInt(1, rs.getInt(1));
+            ResultSet rs2 = st2.executeQuery();
+            while(rs2.next()) {
+                Form.Field field = new Form.Field();
+                field.setQuestion(rs2.getString(2));
+                field.setInput_type(rs2.getString(3));
+                field.setQuestion_id(rs2.getInt(4));
+                form.appendField(field);
+            }
+        }
+        closeConnection();
+        return form;
+    }
+
+    /**
      * Gets school-specific form by taking in the school name and the grade
      */
     @Path("{schoolname}/{grade}")
