@@ -396,7 +396,7 @@ function createFile(id, question) {
     fileInputElement.id = id;
     fileInputElement.classList.add('required');
     fileInputElement.onchange = function () {
-        enableSubmit5()
+        enableSubmit5();
     };
 
 // Create the label for the file input

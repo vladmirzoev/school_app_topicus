@@ -148,4 +148,26 @@ public class ParentResource {
         closeConnection();
         return queriedParent;
     }
+
+    /**
+     * Gets parent from registration_id
+     */
+    @Path("/getparentfromreg/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Parent getParentFromRegistration(@PathParam("id") int id) throws Exception {
+        openConnection();
+        String query = "SELECT b.guardian_id FROM registration a, student b WHERE a.student_id = b.student_id AND a.registration_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, id);
+        ResultSet rs = st.executeQuery();
+
+        Parent queriedParent = new Parent();
+        while (rs.next()) {
+            queriedParent.setId(rs.getString(1));
+        }
+        closeConnection();
+        return queriedParent;
+    }
+
 }

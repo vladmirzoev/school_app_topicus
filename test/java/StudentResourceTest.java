@@ -108,7 +108,7 @@ class StudentResourceTest {
                 initial.setBsn(student.getBsn());
                 initial.setGuardian_id(student.getGuardian_id());
 
-                sr.editBirthDate(initial.getId(), Date.valueOf("2001-11-15")); // Change name to Mangaha
+                sr.editBirthDate(initial.getId(), Date.valueOf("2001-11-15")); // change birth date to 15-11-2001
 
                 List<Student> getAllStudents2 = sr.getStudents(); // Update list of students
 
@@ -120,7 +120,7 @@ class StudentResourceTest {
                         changed.setId(changedName.getId());
                         changed.setBsn(changedName.getBsn());
                         changed.setGuardian_id(changedName.getGuardian_id());
-                        if (changed.getId() == initial.getId() && !changed.getBirthdate().equals(initial.getBirthdate())) {
+                        if (changed.getId() == initial.getId() && !changed.getBirthdate().equals(initial.getBirthdate())) {//checks if it's the same student but the name is changed
                             dateChanged = true; // Set nameChanged to true if the condition is met
                             break;
                         }

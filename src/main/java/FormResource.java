@@ -49,7 +49,7 @@ public class FormResource {
     /**
      * Sets the student-grade range of which the form can be accessed
      */
-    @Path("{form_id}/{max_grade}")
+    @Path("/setformgrade/{form_id}/{max_grade}")
     @POST
     public void setFormGrade(@PathParam("form_id") int form_id, @PathParam("max_grade") int max_grade) throws SQLException, Exception {
         openConnection();
@@ -80,15 +80,60 @@ public class FormResource {
      */
     @Path("/field/{form_id}/{question}/{input_type}")
     @POST
-    public void createField(@PathParam("form_id") int id, @PathParam("question") String question, @PathParam("input_type") String type) throws SQLException {
+    public void createField(@PathParam("form_id") int id,
+                            @PathParam("question") String question, @PathParam("input_type") String type) throws SQLException, InterruptedException {
         openConnection();
-        String query = "INSERT INTO fields (form_id, question, input_type) VALUES (?, ?, ?)";
+        String query = "INSERT INTO fields (form_id, question, input_type, question_id) VALUES (?, ?, ?, ?)";
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         st.setString(2, question);
         st.setString(3, type);
+        st.setInt(4, getNewQuestionID());
         st.execute();
         closeConnection();
+    }
+
+    /**
+     * Creates a question field of an input-type, for a particular form ID
+     */
+    @Path("/update/{question_id}/{question}/")
+    @POST
+    public void updateField(@PathParam("question_id") int q_id,
+                            @PathParam("question") String question) throws SQLException {
+        openConnection();
+        String query = "UPDATE fields SET question = ? WHERE question_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, question);
+        st.setInt(2, q_id);
+        st.execute();
+        closeConnection();
+    }
+
+    /**
+     * Checks if a field exists in the db
+     */
+    public boolean fieldExists(int question_id, String input_type) throws SQLException {
+        String query = "SELECT * FROM fields WHERE question_id = ? AND input_type = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, question_id);
+        st.setString(2, input_type);
+        ResultSet rs = st.executeQuery();
+        return rs.next();
+    }
+
+    /**
+     * Creates a new question_id
+     */
+    public int getNewQuestionID() throws SQLException, InterruptedException {
+        int newID = 0;
+        String query = "SELECT MAX(question_id) FROM fields";
+        PreparedStatement st = db.prepareStatement(query);
+        Thread.sleep(new Random().nextInt(1500));
+        ResultSet rs = st.executeQuery();
+        while (rs.next()) {
+            newID = rs.getInt(1);
+        }
+        return newID + 1;
     }
 
     /**
@@ -392,7 +437,7 @@ public class FormResource {
     /**
      * Gets all forms related to a school_id
      */
-    @Path("{id}")
+    @Path("/getformsbyschoolid/{id}")
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public ArrayList<Form> getFormsBySchoolID(@PathParam("id") int id) throws Exception {
@@ -404,7 +449,7 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ResultSet rs = st.executeQuery();
-        while(rs.next()) {
+        while (rs.next()) {
             Form form = new Form();
             form.setForm_id(rs.getInt(1));
             form.setGrade(rs.getInt(2));
@@ -414,7 +459,7 @@ public class FormResource {
             PreparedStatement st2 = db.prepareStatement(query2);
             st2.setInt(1, rs.getInt(1));
             ResultSet rs2 = st2.executeQuery();
-            while(rs2.next()) {
+            while (rs2.next()) {
                 Form.Field field = new Form.Field();
                 field.setQuestion(rs2.getString(2));
                 field.setInput_type(rs2.getString(3));
@@ -440,7 +485,7 @@ public class FormResource {
         PreparedStatement st = db.prepareStatement(query);
         st.setInt(1, id);
         ResultSet rs = st.executeQuery();
-        while(rs.next()) {
+        while (rs.next()) {
             form.setForm_id(rs.getInt(1));
             form.setGrade(rs.getInt(2));
             form.setSchool_id(rs.getInt(3));
@@ -449,7 +494,7 @@ public class FormResource {
             PreparedStatement st2 = db.prepareStatement(query2);
             st2.setInt(1, rs.getInt(1));
             ResultSet rs2 = st2.executeQuery();
-            while(rs2.next()) {
+            while (rs2.next()) {
                 Form.Field field = new Form.Field();
                 field.setQuestion(rs2.getString(2));
                 field.setInput_type(rs2.getString(3));
@@ -545,5 +590,19 @@ public class FormResource {
             schoolID = rs.getInt(1);
         }
         return schoolID;
+    }
+
+    /**
+     * Deletes a form for overwriting
+     */
+    @Path("/deleteForm/{formid}")
+    @DELETE
+    public void deleteExistingForm(@PathParam("formid") int id) throws SQLException {
+        openConnection();
+        String query = "DELETE FROM fields WHERE form_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setInt(1, id);
+        st.execute();
+        closeConnection();
     }
 }

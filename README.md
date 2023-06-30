@@ -19,7 +19,7 @@ Parent Dashboard is a visual representation of StudiePortal. By clicking any of 
 - Messages page
 - Children page
 - New Form page
-### Adding and edit child
+### Adding and editing child
 To add a child, a parent can fill in a new form which is accessible via dashboard or 'my children' page -> '+'.
 On 'my children' page, a guardian can see the kids assign to them in boxes. It is possible to edit an existing child by clicking the corresponding box. Then, a user will be redirected to a separate page, where guardian can input new data in the field.
 Guardian can remove a child from the system by using "bin" button on a kid's box.
@@ -30,7 +30,9 @@ Schools update registrations status. It means that they can notify a guardian on
 Users can also edit their profiles. A special page is accessible via the sidebar menu (user icon)
 The functionality is the same as on 'edit child' page.
 
-**NB: parent cannot change the email, since the account is linked with database via this address.**
+**NB:**
+- **parent cannot change the email, since the account is linked with database via this address.**
+- **a user without a normal account cannot create one after registering his/her child, since he/she already has a full access as a parent with the 'ghost account' (only with the code number provided).**
 
 
 ## A-School Admin Flow
@@ -59,7 +61,8 @@ Edit mode functionalities:
 - Edit fields textual values (Questions or clarifications for user's inputs)
 - Assign a form to a range of school grades from 1 to 12
 After pressing "create form", the form will be published, thus will be accessible via 'forms' page and will be displayed to parents who have indicated a particular school while registering a child
-    
+
+*the front-end implementation, but not functioning back-end
 ### Registrations management
 In 'registrations' page, the list with registrations to a particular school is displayed. 
 By clicking a specific registration, the popup-window is opened.
@@ -81,7 +84,7 @@ The admin will be redirected to 'adminPage.html' where a button 'add' is display
 - 'Edit' -> leads to a page where admin can edit the existing details: name, address, tuition fee, contact number
 - 'Delete' -> displays the confirmation alert before deleting a school.
 ### Adding school Admin (A)
-By clicking a button 'Add School Admin', Fields with admin details
+By clicking a button 'Add School Admin', a new page is displayed in order to create a School Admin account for the specific school. The following details should be filled in:
 - Name & Surname
 - Address
 - Email

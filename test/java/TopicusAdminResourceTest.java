@@ -131,14 +131,14 @@ class TopicusAdminResourceTest {
         tar.removeAdmin(email);
 
         List<Account> allAccounts = acc.getAllAccounts();
-        boolean removedAdmin = false;
+        boolean didNotremoveAdmin = false;
         for (Account admin : allAccounts) {
-            if (!admin.getAccount_id().equals(email)){
-                removedAdmin = true;
+            if (admin.getAccount_id().equals(email)){
+                didNotremoveAdmin = true;
                 break;
             }
         }
-        assertTrue(removedAdmin);
+        assertFalse(didNotremoveAdmin);
     }
 
     @Test

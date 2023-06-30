@@ -38,13 +38,6 @@
                 <li><a href="messageSchool.html"><p>contact parents</p></a></li>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-4 menuPicture"><a href="schoolPage.html"><img src="images/menu/school.svg" alt="children" width="100%"></a>
-            </div>
-            <div class="col-8 sideMenuText">
-                <li><a href="schoolPage.html"><p>my school</p></a></li>
-            </div>
-        </div>
         <div class="row align-items-center" id="lastElement">
             <div class="col-4 menuPicture"><a href="schoolForms.html"><img src="images/menu/Forms.svg" alt="children" width="100%"></a>
             </div>
@@ -79,9 +72,17 @@
     <div class="popup2" id="popup2">
         <img src="images/menu/closeX.svg" alt="close" class="closeImage" style="margin: 15px; position: initial" onclick="closePopup2()">
         <p style="color: #000000">Download the registration file:</p>
-        <button class="btn btn-primary" style="margin: 15px; font-size: 16px" id="exportBtn">here</button> <br>
+        <button class="btn btn-primary" style="margin: 15px; font-size: 16px" id="exportBtn">Export</button> <br>
         <button id="btn-message" onclick="startMessage()">Send a message to PARENT</button>
         <div style="display: none" id="startMessage">
+            <div class="form-input">
+                <p style="color: #000000">Registration Status:</p>
+                <select class="inputs" type="text" id="statusdropdown">
+                    <option value="Accepted">Accepted</option>
+                    <option value="Under review">Under Review</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
             <div class="form-input">
                 <p style="color: #000000">Subject:</p>
                 <input type="text" name="subject" id="subject">
@@ -90,9 +91,7 @@
                 <p style="color: #000000">Message Content:</p>
                 <textarea type="text" id="content-message"></textarea>
             </div>
-            <a href="messageSchool.html">
-                <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="redirect()" value="Send">
-            </a>
+                <input type="button" class="btn btn-primary" style="font-size: 16px" onclick="sendStatusUpdate();" value="Send">
         </div>
     </div>
 </div>
@@ -103,7 +102,7 @@
 <script src="libraries/html2pdf.bundle.min.js"></script>
 <script>
     document.getElementById('exportBtn').onclick = function (){
-        let element = document.getElementById('neededData')
+        let element = document.getElementById('neededData').innerHTML;
         let opt = {
             margin: 1,
             filename: 'registrations.pdf',

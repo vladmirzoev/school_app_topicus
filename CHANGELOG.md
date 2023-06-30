@@ -1,9 +1,10 @@
 # Change Log
 ### Topicus project - group 6
 
-*The beck-end work and the database structure in java followed the events according to the front-end development
+*The back-end and front-end works were developed concurrently
 
-**The JavaScripts files were developed according to the HTML pages creation
+**The JavaScript files were developed in parallel with the HTML pages
+
 
 ## Sprint 1
 ### Added
@@ -17,7 +18,7 @@
 - Add prepared statements (security)
 - Styles implementation
 ### Changed
-### Fixed
+### Fixed 
  
 ## Sprint 2
 ### Added
@@ -58,7 +59,7 @@
 - "schoolForms.html" - Page that contains all forms a school may have
 - "schoolPage.html" - Page with a school information
 - "schoolPageAdmin.html" - Create and edit a school
-- "signupSchoolAdmin.html" - Page to register a new school admin !
+- "signupSchoolAdmin.html" - Page to register a new school admin 
 - Export files in "registrations.html"
 ### Changed
 - "registrations.html" - Able to delete registrations

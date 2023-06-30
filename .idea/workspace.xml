@@ -11,19 +11,63 @@
   <component name="ChangeListManager">
     <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/images/school/children/edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/images/school/children/edit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/formLogic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationspage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ParentResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegistrationResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/AccountResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/ParentResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/RegistrationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/SignUpResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/TopicusAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/TopicusAdminResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPageAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editChild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editSchoolForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/images/school/children/edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/images/school/children/edit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messageSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/formLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/formLogic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationspage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/signUpSuccessful.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/userDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SchoolAdminResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SchoolAdminResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SchoolResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SchoolResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TopicusAdminResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TopicusAdminResourceTest.class" afterDir="false" />
+    </list>
+    <list id="dcdeb7f8-8ea7-4d72-89e0-37325a38be98" name="Changes by gifal" comment="">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <list id="da261883-d086-4685-941a-f15b1189c5a4" name="Changes by gugap" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
     </list>
     <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
-      <change beforePath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/StudentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/StudentResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" afterDir="false" />
+    </list>
+    <list id="17e4e5de-d622-469e-8d72-e379c0109d7d" name="Changes by vladm" comment="">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/children.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editChild.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editChild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/userDashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +83,25 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/WebApp/registrations.html">
+      <ranges>
+        <range start1="40" end1="47" start2="40" end2="40" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
+        <range start1="81" end1="82" start2="74" end2="75" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
+        <range start1="84" end1="84" start2="77" end2="85" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
+        <range start1="92" end1="95" start2="93" end2="94" changelist="da261883-d086-4685-941a-f15b1189c5a4" />
+        <range start1="105" end1="106" start2="104" end2="105" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/CHANGELOG.md">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="dcdeb7f8-8ea7-4d72-89e0-37325a38be98" />
+        <range start1="5" end1="6" start2="5" end2="7" changelist="dcdeb7f8-8ea7-4d72-89e0-37325a38be98" />
+        <range start1="19" end1="20" start2="20" end2="21" changelist="17e4e5de-d622-469e-8d72-e379c0109d7d" />
+        <range start1="60" end1="61" start2="61" end2="62" changelist="dcdeb7f8-8ea7-4d72-89e0-37325a38be98" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -64,6 +127,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Notification.DisplayName-DoNotAsk-CodeWithMeHost": "Code With Me session notifications",
+    "Notification.DoNotAsk-CodeWithMeHost": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -205,7 +270,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688129676138</updated>
-      <workItem from="1688129678805" duration="7632000" />
+      <workItem from="1688129678805" duration="18313000" />
     </task>
     <servers />
   </component>

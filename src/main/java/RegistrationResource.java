@@ -201,4 +201,19 @@ public class RegistrationResource {
 
         closeConnection();
     }
+
+    @Path("editStatus/{reg_id}/{status}")
+    @POST
+    public void editStatus(@PathParam("reg_id") int r_id,
+                             @PathParam("status") String status) throws SQLException{
+        openConnection();
+        String query = "UPDATE registration SET status = ? WHERE registration_id = ?";
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, status);
+        st.setInt(2, r_id);
+        st.executeQuery();
+
+        closeConnection();
+    }
+
 }

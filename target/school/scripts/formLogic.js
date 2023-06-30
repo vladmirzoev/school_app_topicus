@@ -24,7 +24,7 @@ function changeBackgroundColor() {
 function render() {
     let xhr = new XMLHttpRequest();
     let schoolID = sessionStorage.getItem("schoolID");
-    let methodcall = './api/form/' + schoolID;
+    let methodcall = './api/form/getformsbyschoolid/' + schoolID;
     xhr.open('GET', methodcall, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -60,7 +60,7 @@ function renderEditForm() {
 }
 
 function addFormFields(question) {
-    switch(question.input_type) {
+    switch (question.input_type) {
         case "text":
             makeText(question);
             break;
@@ -92,6 +92,7 @@ function makeText(field) {
     labelElement.classList.add('formbold-form-label');
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
+
 
 // Create the row div
     let rowDivElement = document.createElement('div');
@@ -135,6 +136,7 @@ function makeDate(field) {
     labelElement.classList.add('formbold-form-label');
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
+
 
 // Create the row div
     let rowDivElement = document.createElement('div');
@@ -202,6 +204,7 @@ function makeEmail(field) {
     labelElement.classList.add('formbold-form-label');
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
+
 
 // Create the row div
     let rowDivElement = document.createElement('div');
@@ -271,6 +274,7 @@ function makeNumber(field) {
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
 
+
 // Create the row div
     let rowDivElement = document.createElement('div');
     rowDivElement.classList.add('row');
@@ -338,6 +342,7 @@ function makeTel(field) {
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
 
+
 // Create the row div
     let rowDivElement = document.createElement('div');
     rowDivElement.classList.add('row');
@@ -403,6 +408,7 @@ function makeFile(field) {
     labelElement.classList.add('formbold-form-label', 'formbold-form-label-2');
     labelElement.textContent = field.question;
     labelElement.setAttribute('contenteditable', 'true');
+
 
 // Create the file input div
     let fileInputDivElement = document.createElement('div');
@@ -511,12 +517,14 @@ function addForm(el) {
 // Create the anchor element
     let anchorElement = document.createElement('a');
     anchorElement.setAttribute('href', 'editSchoolForm.html');
-    anchorElement.onclick =     function() {subHeaderElement.id = el.form_id;
-        sessionStorage.setItem("formID", subHeaderElement.id)}
+    anchorElement.onclick = function () {
+        subHeaderElement.id = el.form_id;
+        sessionStorage.setItem("formID", subHeaderElement.id)
+    }
 
 // Create the edit image element
     let editImageElement = document.createElement('img');
-    editImageElement.setAttribute('src', 'images/children/edit.svg');
+    editImageElement.setAttribute('src', 'images/school/children/edit.svg');
     editImageElement.setAttribute('alt', 'edit form');
 
 // Append the edit image element to the anchor element
@@ -1000,6 +1008,14 @@ function createField() {
 }
 
 function submitForm() {
+    let formID = sessionStorage.getItem("formID")
+
+    //delete the form
+    let deletecall = "./api/form/deleteForm/" + formID;
+    let deletexhr = new XMLHttpRequest();
+    deletexhr.open("DELETE", deletecall, true);
+    deletexhr.send();
+
     let fields = document.getElementsByClassName("formbold-form-label");
     for (let i = 0; i < fields.length; i++) {
         let question = fields[i].textContent;
@@ -1024,13 +1040,22 @@ function submitForm() {
             default:
                 input_type = 'file';
         }
-        let formID = sessionStorage.getItem("formID")
+
+        //creates the form in the db
         let methodcall = './api/form/field/' + formID + '/' + question + '/' + input_type;
+        console.log(methodcall);
         xhr = new XMLHttpRequest();
         xhr.open('POST', methodcall, true);
         xhr.send()
-        location.href = 'schoolForms.html'
     }
+    let maxgrade = document.getElementById("endingYear")
+    let gradexhr = new XMLHttpRequest();
+    let methodcall = "./api/setformgrade/" + formID + "/" + maxgrade;
+    gradexhr.open("POST", methodcall, true);
+    gradexhr.send();
+
+    let timeout;
+    setTimeout(function () { location.href = 'schoolForms.html' }, 3000);
 }
 
 function getLabel(el) {

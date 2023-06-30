@@ -25,7 +25,13 @@ function render() {
 
                     //creates a registration entry
                     let whitebox = document.createElement("div")
-                    whitebox.className = "row messageData light visualBox"
+                    whitebox.className = "row messageData light visualBox";
+                    whitebox.id = "neededData";
+                    whitebox.onclick = function () {
+                        sessionStorage.setItem("regID", reg[0]);
+                        sessionStorage.setItem("studentID", reg[3]);
+                        openPopup2();
+                    }
 
                     //creates the top row full of headers
                     let toprow = document.createElement("div");
@@ -144,6 +150,40 @@ function render() {
     xhr1.send();
 }
 
+function sendStatusUpdate() {
+    let xhr = new XMLHttpRequest();
+    let status = document.getElementById("statusdropdown").value;
+    let methodcall = ("./api/registration/editStatus/" + sessionStorage.getItem("regID") + '/' + status);
+    console.log(status)
+
+    xhr.open('POST', methodcall, true);
+    xhr.send();
+
+    let xhr2 = new XMLHttpRequest();
+    let methodcall2 = ("./api/parent/getparentfromreg/" + sessionStorage.getItem("regID"));
+    let receiver;
+    xhr2.open('GET', methodcall2, true);
+    xhr2.onreadystatechange = function () {
+        if (xhr2.readyState === XMLHttpRequest.DONE) {
+            if (xhr2.status === 200) {
+                let obj = JSON.parse(xhr2.responseText);
+                receiver = obj.id;
+                let sender = sessionStorage.getItem("id")
+                let subject = document.getElementById("subject").value;
+                let content = document.getElementById("content-message").value;
+                let xhr3 = new XMLHttpRequest();
+                let methodcall3 = "./api/message/sendaccountmessage/" + sender + '/' + receiver + '/' + subject + '/' + content;
+                xhr3.open('POST', methodcall3, true);
+                xhr3.send();
+            }
+        }
+    };
+    xhr2.send();
+
+    closePopup2();
+
+}
+
 function reorder() {
     let dropdownvalue = document.getElementById("dropdown").value;
     let blackbox = document.getElementById("registrations")
@@ -183,6 +223,9 @@ function reorder() {
                     //creates a registration entry
                     let whitebox = document.createElement("div")
                     whitebox.className = "row messageData light visualBox"
+                    whitebox.onclick = function () {
+                        openPopup2();
+                    }
 
                     //creates the top row full of headers
                     let toprow = document.createElement("div");
