@@ -2,8 +2,8 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class SchoolAdmin {
-    public int school_id;
-    public String account_id;
+    private int school_id;
+    private String account_id;
 
     public int getSchool_id() {
         return school_id;

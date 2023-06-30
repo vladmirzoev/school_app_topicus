@@ -1,8 +1,13 @@
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 
+import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Arrays;
 
 @Path("/response")
 public class ResponseResource {
@@ -26,5 +31,19 @@ public class ResponseResource {
         db.close();
     }
 
-//    @Path("/sendresponse/{registration_id}/{question_id}/{response}")
+    @Path("/sendresponse/{registration_id}/{question_id}/{response}")
+    @POST
+    public void sendResponse(@PathParam("registration_id") int registration_id,
+                             @PathParam("question_id") int question_id,
+                             @PathParam("response") String response) throws SQLException {
+        byte[] responsebytes = response.getBytes(StandardCharsets.UTF_8);
+        String cmd = "INSERT INTO responses (response, registration_id, question_id) VALUES (?, ?, ?)";
+        openConnection();
+        PreparedStatement st = db.prepareStatement(cmd);
+        st.setString(1, Arrays.toString(responsebytes));
+        st.setInt(2, registration_id);
+        st.setInt(3, question_id);
+        st.execute();
+        closeConnection();
+    }
 }

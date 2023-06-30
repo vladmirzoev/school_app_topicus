@@ -30,7 +30,7 @@ function createChild() {
     //store the school name to fetch the form in the next page
     sessionStorage.setItem("school", schoolname);
     sessionStorage.setItem("grade", grade);
-    sessionStorage.setItem("registrationID", bsn);
+    sessionStorage.setItem("regID", bsn);
 
     let xhr = new XMLHttpRequest();
     let methodcall = "./api/form/createChild/" + guardianid + "/" + childname + "/" + dob + "/" + bsn + "/" + grade + "/" + schoolname

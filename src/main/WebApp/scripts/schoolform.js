@@ -1,21 +1,47 @@
-//TODO function to check the role of the account, to display admin resources
 let fieldcounter = 0;
 let questionidlist = [];
 
 function submit() {
-    for (let i = 0; i < questionidlist; i++) {
+    let registration_id = sessionStorage.getItem("regID");
 
+    //iterate through all the question ids stored in the list and get their values
+    //parse each value through the xhr to post a response in the db
+    for (let i = 0; i < questionidlist; i++) {
+        let response = document.getElementById(questionidlist[i]).value;
+        // let encoder = new TextEncoder();
+        // let responsebytes = encoder.encode(response);
+
+        let methodcall = "./api/response/sendresponse/" + registration_id + "/" + questionidlist[i] + "/" + response;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', methodcall, true);
+        xhr.send();
     }
 }
 
-function redirect() {
-    //TODO make this redirect depending on role
+function fetchRegistrationID() {
+    //removes the bsn placeholder and replaces it with the actual registration id
+    //it might be because of a concurrency issue, but placing this in the registration form javascript
+    //did not return the registration id in time, when it was clearly in the database
+    let xhr2 = new XMLHttpRequest();
+    let methodcall2 = "./api/registration/fetchRegId/" + sessionStorage.getItem("regID");
+    xhr2.open('GET', methodcall2, true);
+    xhr2.onreadystatechange = function () {
+        if (xhr2.readyState === XMLHttpRequest.DONE) {
+            if (xhr2.status === 200) {
+                let obj = JSON.parse(xhr2.responseText);
+                console.log(obj);
+                sessionStorage.removeItem("regID")
+                sessionStorage.setItem("regID", obj.registration_id);
+            }
+        }
+    }
+    xhr2.send();
 }
 
-function render() {
+function createDivs() {
     let schoolname = sessionStorage.getItem("school");
     let grade = sessionStorage.getItem("grade");
-
     let xhr = new XMLHttpRequest();
     let methodcall = "./api/form/" + schoolname + "/" + grade;
     xhr.open('GET', methodcall, true);
@@ -24,7 +50,9 @@ function render() {
             if (xhr.status === 200) {
                 //TODO if there are no forms for a grade or for a school, do something else
 
-                //parses the json object into an array
+                //parses the json object into an array to be used for the divs
+                //a list of the question ids will be stored in the questionidlist global variable
+                //this list will be used for making responses
                 let obj = JSON.parse(xhr.responseText);
                 let formfields = obj.fields;
                 let fields = [];
@@ -34,7 +62,7 @@ function render() {
                     currentfield[1] = formfields[i].input_type;
                     currentfield[2] = formfields[i].question;
                     fields[i] = currentfield;
-                    questionidlist[i] = formfields[i].question;
+                    questionidlist[i] = formfields[i].question_id;
                 }
                 console.log(fields);
 
@@ -76,21 +104,24 @@ function render() {
         }
     }
     xhr.send();
+}
 
-    let xhr2 = new XMLHttpRequest();
-    let methodcall2 = "./api/registration/fetchRegId/" + sessionStorage.getItem("registrationID");
-    xhr2.open('GET', methodcall2, true);
-    xhr2.onreadystatechange = function () {
-        if (xhr2.readyState === XMLHttpRequest.DONE) {
-            if (xhr2.status === 200) {
-                let obj = JSON.parse(xhr2.responseText);
-                console.log(obj);
-                sessionStorage.removeItem("registrationID");
-                sessionStorage.setItem("registrationID", obj.registration_id);
-            }
-        }
-    }
-    xhr2.send();
+//TODO function to check the role of the account, to display admin resources
+function checkRole() {
+    //checks the db based on the account id what role the user has
+    //this includes checking whether the user is a ghost account
+    let xhr = new XMLHttpRequest();
+
+}
+
+function redirect() {
+    //TODO make this redirect depending on role
+}
+
+function render() {
+    checkRole();
+    fetchRegistrationID();
+    createDivs();
 }
 
 function createDate(id, question) {
@@ -98,7 +129,7 @@ function createDate(id, question) {
     let divElement = document.createElement('div');
     divElement.classList.add('formbold-mb-5');
 
-// Create the label element
+    // Create the label element
     let labelElement = document.createElement('label');
     labelElement.setAttribute('for', 'dateForm');
     labelElement.classList.add('formbold-form-label');
@@ -133,8 +164,6 @@ function createDate(id, question) {
 // Append the div element to the desired parent element in the DOM
     let parentElement = document.getElementById('maindiv'); // Replace 'path' with the actual ID of the desired parent element
     parentElement.appendChild(divElement);
-
-
 }
 
 function createText(id, question) {

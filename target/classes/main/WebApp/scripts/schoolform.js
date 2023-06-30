@@ -77,16 +77,18 @@ function render() {
     }
     xhr.send();
 
+
+
     let xhr2 = new XMLHttpRequest();
-    let methodcall2 = "./api/registration/fetchRegId/" + sessionStorage.getItem("registrationID");
+    let methodcall2 = "./api/registration/fetchRegId/" + sessionStorage.getItem("regID");
     xhr2.open('GET', methodcall2, true);
     xhr2.onreadystatechange = function () {
         if (xhr2.readyState === XMLHttpRequest.DONE) {
             if (xhr2.status === 200) {
                 let obj = JSON.parse(xhr2.responseText);
                 console.log(obj);
-                sessionStorage.removeItem("registrationID");
-                sessionStorage.setItem("registrationID", obj.registration_id);
+                sessionStorage.removeItem("regID")
+                sessionStorage.setItem("regID", obj.registration_id);
             }
         }
     }

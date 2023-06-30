@@ -165,4 +165,21 @@ public class AccountResource {
         ResultSet rs = st.executeQuery();
         return rs.next();
     }
+
+    @Path("/checkrole/{account_id}")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Account fetchRole(@PathParam("account_id") String account_id) throws SQLException {
+        String query = "SELECT account_id, role FROM account WHERE account_id LIKE ?";
+        openConnection();
+        PreparedStatement st = db.prepareStatement(query);
+        st.setString(1, account_id);
+        ResultSet rs = st.executeQuery();
+        Account account = new Account();
+        while (rs.next()) {
+            account.setAccount_id(rs.getString(1));
+            account.setRole(rs.getString(2));
+        }
+        return account;
+    }
 }

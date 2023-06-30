@@ -5,15 +5,15 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Registration {
-    public int id;
-    public int grade;
-    public String registration_date;
-    public int student_id;
-    public String name;
-    public int school_id;
-    public String status;
-    public String allowedit;
-    public int registration_id;
+    private int id;
+    private int grade;
+    private String registration_date;
+    private int student_id;
+    private String name;
+    private int school_id;
+    private String status;
+    private String allowedit;
+    private int registration_id;
 
     public int getRegistration_id() {
         return registration_id;

@@ -2,9 +2,9 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class RegResponse {
-    public String response;
-    public int registration_id;
-    public int question_id;
+    private String response;
+    private int registration_id;
+    private int question_id;
 
     public String getResponse() {
         return response;

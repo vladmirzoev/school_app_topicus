@@ -36,13 +36,16 @@ function submitform() {
 
     let methodcall = './api/form/uploadBasicReqNoAccount/' + childname + '/' + guardianname + '/' + telephone1 + '/' + telephone2 + '/' + bsn + '/' + birthdate + '/' + grade + '/' + schoolname + '/' + address;
 
-    //store the school name to fetch the form in the next page
+    //store the school name and grade to fetch the form in the next page
+    //the bsn stored in regID is a placeholder
     sessionStorage.setItem("school", schoolname);
     sessionStorage.setItem("grade", grade);
+    sessionStorage.setItem("regID", bsn);
 
     xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);
     xhr.send();
+
     openPopup2();
 }
 

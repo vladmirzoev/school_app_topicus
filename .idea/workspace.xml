@@ -11,11 +11,55 @@
   <component name="ChangeListManager">
     <list default="true" id="4cf5a487-3d65-4edf-9459-6d07cf7dd2e8" name="Changes" comment="New Merge (unversioned files)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/editSchoolForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messageSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolForms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ResponseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResponseResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SchoolAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SchoolAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/editSchoolForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/messageSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/WebApp/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/editSchoolForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messageSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/main/WebApp/scripts/schoolform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/editSchoolForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/editSchoolForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messageSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messageSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrationFormLoggedIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/registrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/registrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolForms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolForms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/schoolPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/schoolPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/registrationformloggedin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/school/scripts/schoolform.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/scripts/schoolform.js" afterDir="false" />
     </list>
     <list id="7ba120aa-f5af-4e0c-a59c-f921fbe6a9ed" name="Changes by gugap" comment="" />
     <list id="bc7369cd-94a0-414a-a51a-12106cefc7f9" name="Changes by samer" comment="" />
@@ -57,7 +101,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2QpqtJo16yTmgu0HUdBCVNbrqz7" />
   <component name="ProjectLevelVcsManager">
@@ -67,41 +111,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/University Stuff/Module 4/di22-topicus6/src/main/WebApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/University Stuff/Module 4/di22-topicus6/src/main/WebApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redshift&quot;,
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\University Stuff\Module 4\di22-topicus6\src\main\WebApp" />
@@ -264,7 +308,9 @@
       <workItem from="1687982707898" duration="817000" />
       <workItem from="1688022384760" duration="7288000" />
       <workItem from="1688029689915" duration="2896000" />
-      <workItem from="1688036690380" duration="24780000" />
+      <workItem from="1688036690380" duration="25438000" />
+      <workItem from="1688084428731" duration="1397000" />
+      <workItem from="1688104764835" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed file structure">
       <created>1686061693401</created>

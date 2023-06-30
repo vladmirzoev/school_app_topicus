@@ -39,10 +39,12 @@ function submitform() {
     //store the school name to fetch the form in the next page
     sessionStorage.setItem("school", schoolname);
     sessionStorage.setItem("grade", grade);
+    sessionStorage.setItem("regID", bsn);
 
     xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);
     xhr.send();
+
     openPopup2();
 }
 
