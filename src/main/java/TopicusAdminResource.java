@@ -9,6 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Path("/sysAdmin")
 public class TopicusAdminResource {
@@ -174,6 +175,43 @@ public class TopicusAdminResource {
         //TODO either restrict inputs to avoid NULLs or have a response/check for empty fields
 
         closeConnection();
+    }
+
+    public List<School> getAllSchools() throws Exception{
+        openConnection();
+        List<School> schools = new ArrayList<>();
+        String query = "SELECT * FROM school";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet res = st.executeQuery();
+        while (res.next()){
+            School queriedSchool = new School();
+            queriedSchool.setSchool_id(res.getInt(1));
+            queriedSchool.setSchool_name(res.getString(2));
+            queriedSchool.setAddress(res.getString(3));
+            queriedSchool.setTuition(res.getInt(4));
+            queriedSchool.setContact_number(res.getString(5));
+            schools.add(queriedSchool);
+        }
+        closeConnection();
+
+        return schools;
+    }
+
+    public List<SchoolAdmin> getAllAdmins() throws Exception{
+        openConnection();
+        List<SchoolAdmin> schoolAdmins = new ArrayList<>();
+        String query = "SELECT * FROM schooladmin";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet res = st.executeQuery();
+        while (res.next()){
+            SchoolAdmin queriedAdmin = new SchoolAdmin();
+            queriedAdmin.setSchool_id(res.getInt(1));
+            queriedAdmin.setAccount_id(res.getString(2));
+            schoolAdmins.add(queriedAdmin);
+        }
+        closeConnection();
+
+        return schoolAdmins;
     }
 
     /**

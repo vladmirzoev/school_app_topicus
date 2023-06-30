@@ -31,7 +31,7 @@ public class SignUpResource {
     }
 
     //Hash login pass to see if it is similar to the hashed pass in the database
-    private static String hashLoginPass(byte[] hash) {
+    public static String hashLoginPass(byte[] hash) {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);

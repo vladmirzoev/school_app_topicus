@@ -8,6 +8,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("/account")
 public class AccountResource {
@@ -33,7 +35,7 @@ public class AccountResource {
 
 
     //Hash login pass to see if it is similar to the hashed pass in the database
-    private static String hashLoginPass(byte[] hash) {
+    public static String hashLoginPass(byte[] hash) {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
@@ -126,7 +128,7 @@ public class AccountResource {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Parent fetchAccountDetails(@PathParam("id") String id) throws Exception {
         openConnection();
-        String query = "SELECT account_id, name, address, phone_number_1 FROM account WHERE account_id LIKE ?";
+        String query = "SELECT account_id, name, address, phone_number_1, phone_number_2 FROM account WHERE account_id LIKE ?";
         PreparedStatement st = db.prepareStatement(query);
         st.setString(1, id);
         ResultSet rs = st.executeQuery();
@@ -137,6 +139,7 @@ public class AccountResource {
             queriedParent.setName(rs.getString(2));
             queriedParent.setAddress(rs.getString(3));
             queriedParent.setPhone_1(rs.getString(4));
+            queriedParent.setPhone_2(rs.getString(5));
         }
         closeConnection();
         return queriedParent;
@@ -184,5 +187,26 @@ public class AccountResource {
             account.setRole(rs.getString(2));
         }
         return account;
+    }
+
+    public List<Account> getAllAccounts() throws Exception{
+        openConnection();
+        String query = "SELECT account_id, name, address, phone_number_1, phone_number_2 FROM account";
+        PreparedStatement st = db.prepareStatement(query);
+        ResultSet rs = st.executeQuery();
+        List<Account> allAccounts = new ArrayList<>();
+
+        while (rs.next()){
+            Account queriedAccount = new Account();
+            queriedAccount.setAccount_id(rs.getString(1));
+            queriedAccount.setName(rs.getString(2));
+            queriedAccount.setAddress(rs.getString(3));
+            queriedAccount.setPhone_number_1(rs.getString(4));
+            queriedAccount.setPhone_number_2(rs.getString(5));
+            allAccounts.add(queriedAccount);
+        }
+
+        closeConnection();
+        return allAccounts;
     }
 }

@@ -58,8 +58,6 @@ public class RegistrationResource {
         return registrationlist;
     }
 
-    //TODO fetch all registrations of a specific school
-
     /**
      * Gets a specific registration depending on their student_id
      */

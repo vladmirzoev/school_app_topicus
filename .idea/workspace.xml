@@ -10,53 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab76e88f-0fea-41e2-9772-45404bf60e8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3419c344-51b8-41a8-afeb-496ecdc293f0/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/topicusdatabase.iAAvZw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06b14c6-5954-4f49-b28d-e04f84d46199/storage_v2/_src_/database/dab_di22232b_81.qLaOIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c35657622e3b0c567673cdfddaa0eb16052a71bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school.iml" beforeDir="false" afterPath="$PROJECT_DIR$/school.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FormResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/school.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/school/WEB-INF/classes/FormResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AccountResTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/RegistrationResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignments/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignments/Assignment 1/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignments/Assignment 1/Assignment_1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WebApp/schoolPageAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AccountResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AccountResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegistrationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegistrationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SignUpResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TopicusAdminResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TopicusAdminResource.class" afterDir="false" />
+    </list>
+    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AccountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/java/AccountResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/AccountResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/ParentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/ParentResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolAdminResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SchoolResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/SignUpResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/StudentResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/StudentResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/TopicusAdminResourceTest.java" afterDir="false" />
-    </list>
-    <list id="3c762a71-c61c-44b6-ac16-cb291b365924" name="Changes by gugap" comment="" />
-    <list id="e6e7bfb8-b200-4755-b625-89a7ae613fab" name="Changes by samer" comment="">
-      <change beforePath="$PROJECT_DIR$/test/AccountResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/FormResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/MessageResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ParentResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SchoolAdminResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SchoolResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SignUpResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/StudentResTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TopicusAdmTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +48,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/TopicusAdminResource.java">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="12" changelist="ab76e88f-0fea-41e2-9772-45404bf60e8b" />
+        <range start1="177" end1="177" start2="178" end2="215" changelist="e6e7bfb8-b200-4755-b625-89a7ae613fab" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -114,7 +98,25 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="AccountResourceTest.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="school" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountResourceTest" />
+      <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -202,6 +204,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AccountResourceTest.loginTest" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.8" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AccountResourceTest.loginTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -211,7 +222,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688129676138</updated>
-      <workItem from="1688129678805" duration="2971000" />
+      <workItem from="1688129678805" duration="5072000" />
     </task>
     <servers />
   </component>
