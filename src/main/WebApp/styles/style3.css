@@ -398,7 +398,7 @@ input[type="file"]{
     font-size: 15px;
     top: 25%;
     box-shadow: none !important;
-    margin-left: auto !important; /*TODO might be a problem??*/
+    margin-left: auto !important;
     background-color: #ededed;
     width: 200px;
     border: 0;

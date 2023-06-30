@@ -49,8 +49,6 @@ public class StudentResource {
         return studentList;
     }
 
-    //TODO fetch all students under a particular school id
-
     /**
      * Fetches a student of a particular student id
      */

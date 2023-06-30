@@ -165,7 +165,6 @@ function enableSubmit4() {
     btn.disabled = !isValid
 }
 
-//TODO giovanni do this
 function enableSubmit5() {
     let inputs = document.getElementsByClassName('required')
     let btn = document.querySelector('input[type="button"]')

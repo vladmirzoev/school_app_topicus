@@ -31,7 +31,6 @@ function render() {
     };
     xhr.send();
 
-    //TODO maybe add profile picture functionality
 }
 
 function redirectNotifications() {

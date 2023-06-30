@@ -141,7 +141,7 @@ function render() {
         if (xhr2.readyState === XMLHttpRequest.DONE) {
             if (xhr2.status === 200) {
                 let obj = JSON.parse(xhr2.responseText);
-                sessionStorage.setItem("schoolID", obj.school_id); //TODO sessionstorage cleanup
+                sessionStorage.setItem("schoolID", obj.school_id);
             }
         }
     };

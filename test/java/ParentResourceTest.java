@@ -10,7 +10,6 @@ class ParentResourceTest {
     ParentResource par = new ParentResource();
     StudentResource child = new StudentResource();
     Parent p = new Parent();
-//todo
     @Test
     void getChildrenTest() throws Exception{
         String childName = "TEST 2";

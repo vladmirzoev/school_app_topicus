@@ -77,7 +77,7 @@ public class TopicusAdminResource {
             queriedAdmin.setName(rs.getString(2));
             queriedAdmin.setAddress(rs.getString(3));
             queriedAdmin.setPhone_number_1(rs.getString(4));
-            queriedAdmin.setPassword(rs.getString(6)); //TODO this method must also get the admin's unhashed password
+            queriedAdmin.setPassword(rs.getString(6));
         }
 
         return queriedAdmin;
@@ -105,8 +105,6 @@ public class TopicusAdminResource {
         st.setString(5, contactNumber);
         st.execute();
         closeConnection();
-
-        //TODO some response saying 'School Successfully Added!" and then redirect back to the main SysAdmin page
     }
 
 
@@ -146,8 +144,6 @@ public class TopicusAdminResource {
         st2.setString(2, accountID);
         st2.execute();
 
-        //TODO some response saying 'Successfully added admin!'
-
         closeConnection();
     }
 
@@ -171,8 +167,6 @@ public class TopicusAdminResource {
         st.setString(4, contactNumber);
         st.setInt(5, id);
         st.execute();
-
-        //TODO either restrict inputs to avoid NULLs or have a response/check for empty fields
 
         closeConnection();
     }
@@ -234,8 +228,6 @@ public class TopicusAdminResource {
         st.setString(4, pass);
         st.setString(5, accountID);
         st.execute();
-
-        //TODO either restrict inputs to avoid NULLs or have a response/check for empty fields
 
         closeConnection();
     }

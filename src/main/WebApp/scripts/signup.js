@@ -13,7 +13,6 @@ function getValues() {
 
 function createAccount(fname, lname, email, p_no1, p_no2, address, pass) {
 
-    //TODO security issue, people can inspect and use this method call
     let methodcall = "./api/signup/newaccount/" + fname + "/" + lname + "/" + email + "/" + p_no1 + "/" + p_no2 + "/" + address + "/" + pass;
     let xhr = new XMLHttpRequest();
     xhr.open('POST', methodcall, true);

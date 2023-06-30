@@ -118,7 +118,6 @@ function render() {
 
                             popupdiv.append(inputdiv);
                             document.getElementById("container").append(popupdiv);
-                            //TODO fix the problem with the input field being at the very bottom
 
                             //creates a row
                             let msgrow = document.createElement("div");

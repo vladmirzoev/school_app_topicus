@@ -44,7 +44,6 @@ function createDivs() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                //TODO if there are no forms for a grade or for a school, do something else
 
                 //parses the json object into an array to be used for the divs
                 //a list of the question ids will be stored in the questionidlist global variable
